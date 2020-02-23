@@ -66,7 +66,7 @@ $scrool          = !empty($scrool) ? $scrool : 'false';
             <!--Repeat product-->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
-                    <label for="lcsp_ap"><?php esc_html_e('Repeat Product', LCG_TEXTDOMAIN); ?></label>
+                    <label for="lcsp_ap"><?php esc_html_e('Repeat Logo', LCG_TEXTDOMAIN); ?></label>
                 </div>
                 <div class="cmb-td">
                     <ul class="cmb2-radio-list cmb2-list">

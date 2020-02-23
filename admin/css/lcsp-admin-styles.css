@@ -1,0 +1,351 @@
+.lcsp-tabs-menu {
+    margin-top: 30px;
+    margin-bottom: 0;
+    height: 39px;
+    clear: both;
+} 
+
+.lcsp-tabs-menu li {
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    margin-right: 8px;
+    background-color: #e4e4e4;
+    border-top: 1px solid #d4d4d1;
+    border-right: 1px solid #d4d4d1;
+    border-left: 1px solid #d4d4d1;
+    margin-bottom: 0;
+    padding: 4px 7px;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.lcsp-tabs-menu a:active, .lcsp-tabs-menu a:focus, .lcsp-tabs-menu .current a:active, .lcsp-tabs-menu .current a:focus {
+    box-shadow: none;
+}
+
+.lcsp-tabs-menu li a {
+    padding: 10px;
+    color: #555;
+    text-decoration: none; 
+}
+
+.lcsp-tabs-menu li:hover {
+    background-color: #fff;
+    color: #464646;
+}
+
+.lcsp-tabs-menu li.current {
+    position: relative;
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+    z-index: 5;
+}
+
+.lcsp-tabs-menu .current a {
+    color: #000;
+}
+
+.lcsp-tab {
+    border: 1px solid #d4d4d1;
+    background-color: #fff;
+    margin-bottom: 20px;
+    width: auto;
+}
+
+.lcsp-tab-content {
+    padding: 20px;
+    display: none;
+}
+
+#lcsp-tab-1 {
+    display: block;   
+}
+
+.lcsp_shortcode {
+    background-color: #71BBDE;
+    color: #ffffff;
+    padding: 8px 8px;
+    text-align: center;
+}
+
+#poststuff .lcsp_shortcode h2 {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 0!important;
+    line-height: normal;
+    border-bottom: 1px solid #fff;
+    font-weight: bold;
+    font-size: 1.5em; 
+    padding: 0 0 3px;
+}
+
+.lcsp_shortcode textarea { 
+    text-align: center; 
+}
+
+.lcsp_shortcode p {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.lcsp_shortcode textarea {
+    padding: 4px 0px;
+}
+
+.lcsp_settings_page .metabox-holder {
+    background: #ffffff;
+}
+
+.lcsp_settings_page input.regular-text {
+    width: 15em;
+}
+
+#lcsp_style_settings .regular-text, #lcsp_slider_settings .regular-text {
+    width: 105px;
+}
+
+.lcsp-th {
+    color: #222;
+    float: left;
+    font-weight: 600;
+    line-height: 1.3;
+    padding: 20px 10px 20px 0;
+    vertical-align: top;
+    width: 200px;
+}
+
+.lcsp-th label {
+    display: block;
+    padding: 5px 0;
+}
+
+.postbox-container .lcsp-th {
+    width: 10%;
+    padding: 0 1% 0 0;
+}
+
+.postbox-container .lcsp-row {
+    padding: 0 0 1.8em;
+    margin: 0 0 .8em;
+}
+
+.postbox-container .lcsp-th+.lcsp-td {
+    width: 89%;
+    float: right;
+}
+
+.postbox-container .lcsp-row {
+    padding: 0 0 1.8em;
+    margin: 0 0 .8em;
+}
+
+input.lcsp-text-input {
+    width: 250px;
+}
+
+.lcsp_settings_page .metabox-holder {
+    padding: 0 7px;
+}
+
+.post-type-lcsp_sgenerator .wrap h1 a.page-title-action {
+    background: #F66095;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.post-type-lcsp_sgenerator .wrap h1 a.page-title-action:hover {
+    background: #DC4178;
+    color: #ffffff;
+}
+
+.lcsp-checkbox-wrapper {
+    margin-left: 24px;
+    padding: 8px 10px;
+    background: #F5F5F5;
+    font-size: 13px;
+}
+
+.lcsp-checkbox-wrapper ul li {
+    display: inline-block;
+    padding: 0px 9px;
+}
+
+.lcsp-checkbox-wrapper ul li:first-child {
+    padding-left: 0;
+}
+
+.lcsp_active {
+    display: block!important;
+}
+
+.lfm.lcsp_active {
+    display: inline-block!important;
+}
+
+#lcsp_logos_byid {
+    margin-left: 26px;
+    margin-bottom: 5px;
+    width: 205px;
+}
+
+#lcsp_logos_from_year {
+    margin-left: 26px;
+    margin-bottom: 5px;
+}
+
+#lcsp_logos_from_month {
+    margin-left: 26px;
+    margin-bottom: 5px;
+}
+
+#lcsp_logos_from_month_year {
+    margin-left: 6px;
+}
+
+#lcsp-tab-4 h2 {
+    font-size: 23px;
+    font-weight: 400;
+    padding: 9px 15px 4px 0;
+    line-height: 29px;
+    margin: 0;
+}
+
+#lcsp-tab-4 p {
+    margin-top: 6px;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+/* style for lcs support page*/
+.lcs_support_wrapper{
+    margin-top: 20px;
+}
+
+.lcs_support_wrapper .wrap{
+    float: left;
+    margin-right: 20px;
+}
+
+.lcs_support_wrapper .wrap.wrap_left {
+    width: 60%;
+}
+
+.lcs_support_wrapper .wrap.wrap_left .postbox h2{
+    margin: 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ededed;
+}
+
+.lcs_support_wrapper .wrap.wrap_right {
+    width: 30%;
+}
+
+.lcs_support_wrapper .wrap.wrap_right .text-center{
+    margin-left: 23px;
+}
+
+.lcs_support_wrapper .wrap.wrap_right .postbox{
+    background: #f0f9dc;
+    padding: 0 0 10px;
+}
+
+.lcs_pro_features li{
+    font-size: 13px;
+    line-height: 22px;
+    color: #333;
+    position: relative;
+    margin-bottom: 6px;
+}
+.lcs_pro_features li:before{
+    content: "\f522";
+    font-family: 'dashicons', san-serif;
+    margin-right: 4px;
+    display: inline-block;
+    vertical-align: -1.9px;
+}
+.lcs-upgrade-content-wrapper-right h3 {
+    font-size: 15px;
+    font-weight: normal;
+    color: #ffffff;
+    background: #0085ba;
+    text-align: center;
+    padding: 12px 0;
+    margin: 0;
+}
+
+ul.lcs_pro_features {
+    padding: 0 23px;
+}
+
+
+/* style for lcs support page*/
+.lcs_support_wrapper{
+    margin-top: 20px;
+}
+
+.lcs_support_wrapper .wrap{
+    float: left;
+    margin-right: 20px;
+}
+
+.lcs_support_wrapper .wrap.wrap_left {
+    width: calc(100% - 350px);
+}
+
+.lcs_support_wrapper .wrap.wrap_left .postbox h2{
+    margin: 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ededed;
+}
+
+.lcs_support_wrapper .wrap.wrap_right {
+    width: 300px;
+}
+
+.lcs_support_wrapper .wrap.wrap_right .text-center{
+    text-align: center;
+}
+
+.lcs_support_wrapper .wrap.wrap_right .postbox{
+    background: #f0f9dc;
+    padding: 0 0 10px;
+}
+
+.lcs_pro_features li{
+    font-size: 13px;
+    line-height: 22px;
+    color: #333;
+    position: relative;
+    margin-bottom: 6px;
+}
+.lcs_pro_features li:before{
+    content: "\f522";
+    font-family: 'dashicons', san-serif;
+    margin-right: 4px;
+    display: inline-block;
+    vertical-align: -1.9px;
+}
+.lcs-upgrade-content-wrapper-right h3 {
+    font-size: 15px;
+    font-weight: normal;
+    color: #ffffff;
+    background: #0085ba;
+    text-align: center;
+    padding: 12px 0;
+    margin: 0;
+}
+
+ul.lcs_pro_features {
+    padding: 0 23px;
+}
+.wrap .lcs-upgrade-content-wrapper {
+    padding: 25px;
+}
+span.lcg_new_feature {
+    background: #0085ba;
+    color: #ffffff;
+    padding: 2px 4px;
+    font-size: 75%;
+    border-radius: 2px;
+}

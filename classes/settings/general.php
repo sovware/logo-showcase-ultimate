@@ -166,13 +166,13 @@ $target          = !empty($target) ? $target : '_blank';
                             </label>
                         </li>
                     </ul>
-                    <p class="cmb2-metabox-description"><?php esc_html_e('If logos are not in the same size, this feature is helpful. It automatically resizes and crops. Note: your image must be higher than/equal to the cropping size set below. Otherwise, you may need to enable image upscaling feature from the settings below.', LCG_TEXTDOMAIN); ?></p>
+                    <p class="cmb2-metabox-description"><?php esc_html_e('If logos are not in the same size, this feature is helpful. It automatically resizes and crops. Note: your image must be higher than/equal to the cropping size set below.', LCG_TEXTDOMAIN); ?></p>
                 </div>
             </div>
-            <div class="cmb-row cmb-type-radio">
+            <!--<div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
                     <label for="lcsp_upscale">
-                        <?php esc_html_e('Enable Image Upscaling', LCG_TEXTDOMAIN); ?>
+                        <?php /*esc_html_e('Enable Image Upscaling', LCG_TEXTDOMAIN); */?>
                     </label>
                 </div>
                 <div class="cmb-td">
@@ -181,9 +181,9 @@ $target          = !empty($target) ? $target : '_blank';
                             <input type="radio" class="cmb2-option" 
                             name="lcg_scode[upscale]" 
                             id="lcsp_upscale1" 
-                            value="yes" <?php checked('yes', $upscale, true);  ?>>
+                            value="yes" <?php /*checked('yes', $upscale, true);  */?>>
                             <label for="lcsp_upscale1">
-                                <?php esc_html_e('Yes', LCG_TEXTDOMAIN); ?>
+                                <?php /*esc_html_e('Yes', LCG_TEXTDOMAIN); */?>
                             </label>
                         </li>
                         <li>
@@ -191,15 +191,15 @@ $target          = !empty($target) ? $target : '_blank';
                             class="cmb2-option" 
                             name="lcg_scode[upscale]" 
                             id="lcsp_upscale2" 
-                            value="no" <?php checked('no', $upscale, true);  ?>>
+                            value="no" <?php /*checked('no', $upscale, true);  */?>>
                             <label for="lcsp_upscale2">
-                                <?php esc_html_e('No', LCG_TEXTDOMAIN); ?>
+                                <?php /*esc_html_e('No', LCG_TEXTDOMAIN); */?>
                             </label>
                         </li>
                     </ul>
-                    <p class="cmb2-metabox-description"><?php esc_html_e('If the logo size is less than the cropping size set below then by default, image will break. However, you can solve this problem by enabling upscaling.', LCG_TEXTDOMAIN); ?></p>
+                    <p class="cmb2-metabox-description"><?php /*esc_html_e('If the logo size is less than the cropping size set below then by default, image will break. However, you can solve this problem by enabling upscaling.', LCG_TEXTDOMAIN); */?></p>
                 </div>
-            </div>
+            </div>-->
 
 
             <div class="cmb-row cmb-type-text-medium">

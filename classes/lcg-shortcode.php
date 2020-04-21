@@ -180,21 +180,22 @@ class Lcg_shortcode
 						                            $tooltip  = get_post_meta(get_the_id(),'img_tool',true);
 		    										$img_link = get_post_meta(get_the_id(),'img_link',true);
 						                            $image_id = get_post_thumbnail_id();
-						                            $im = wp_get_attachment_image_src($image_id,'full',true);
-						                            $img = aq_resize($im[0], $image_width, $image_height,true,true, $upscale);
+						                            //$im = wp_get_attachment_image_src($image_id,'full',true);
+						                            //$img = aq_resize($im[0], $image_width, $image_height,true,true, $upscale);
+                                                    $thumb = get_post_thumbnail_id();
+                                                    // crop the image if the cropping is enabled.
+                                                    if (!empty($image_crop) && 'no' != $image_crop){
+                                                        $lcg_img = lcg_image_cropping($thumb, $image_width, $image_height, true, 100)['url'];
+                                                    }else{
+                                                        $aazz_thumb = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'large' );
+                                                        $lcg_img = $aazz_thumb['0'];
+                                                    }
 						                            ?>
                                                 <div class="alc_single_slide" >
                                                     <div class="alc_item" data-toggle="tooltip" title="<?php if( !empty($tooltip) && $tooltip_show != 'no') { echo $tooltip;}?>" data-placement="<?=  $tooltip_posi;?>">
                                                         <figure>
                                                             <a <?php if(!empty($img_link)) {?>href="<?php if( !empty($img_link)) { echo $img_link;}?>" target="<?php echo $target;?>" <?php } ?>>
-                                                                <?php
-                                                                    if( !empty($image_crop) && 'no' != $image_crop) { ?>
-                                                                    <img src="<?php echo $img;?>" alt="">
-                                                                <?php
-                                                                    }else {?>
-                                                                    <img src="<?php echo $im[0];?>" alt="">
-                                                                <?php	}
-                                                                ?>
+                                                                <img src="<?php echo $lcg_img;?>" alt="">
                                                             </a>
                                                         </figure>
                                                     </div>
@@ -246,20 +247,21 @@ class Lcg_shortcode
                                                     $img_link = get_post_meta(get_the_id(),'img_link',true);
                                                     $image_id = get_post_thumbnail_id();
                                                     $im = wp_get_attachment_image_src($image_id,'full',true);
-                                                    $img = aq_resize($im[0], $image_width, $image_height,true,true, $upscale);
+                                                    //$img = aq_resize($im[0], $image_width, $image_height,true,true, $upscale);
+                                                    $thumb = get_post_thumbnail_id();
+                                                    // crop the image if the cropping is enabled.
+                                                    if (!empty($image_crop) && 'no' != $image_crop){
+                                                        $lcg_img = lcg_image_cropping($thumb, $image_width, $image_height, true, 100)['url'];
+                                                    }else{
+                                                        $aazz_thumb = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'large' );
+                                                        $lcg_img = $aazz_thumb['0'];
+                                                    }
                                                     ?>
                                                     <div class="alc_single_slide">
                                                         <div class="alc_item" data-toggle="tooltip" title="<?php if( !empty($tooltip) && $tooltip_show != 'no') { echo $tooltip;}?>" data-placement="<?=  $tooltip_posi;?>">
                                                             <figure>
                                                                 <a <?php if(!empty($img_link)) {?>href="<?php if( !empty($img_link)) { echo $img_link;}?>" target="<?php echo $target;?>" <?php } ?>>
-                                                                    <?php
-                                                                    if( !empty($image_crop) && 'no' != $image_crop) {?>
-                                                                        <img src="<?php echo $img;?>" alt="">
-                                                                        <?php
-                                                                    }else {?>
-                                                                        <img src="<?php echo $im[0];?>" alt="">
-                                                                    <?php	}
-                                                                    ?>
+                                                                    <img src="<?php echo $lcg_img;?>" alt="">
                                                                 </a>
                                                             </figure>
                                                         </div>
@@ -312,20 +314,21 @@ class Lcg_shortcode
                                                     $img_link = get_post_meta(get_the_id(),'img_link',true);
                                                     $image_id = get_post_thumbnail_id();
                                                     $im = wp_get_attachment_image_src($image_id,'full',true);
-                                                    $img = aq_resize($im[0], $image_width, $image_height,true,true, $upscale);
+                                                    //$img = aq_resize($im[0], $image_width, $image_height,true,true, $upscale);
+                                                    $thumb = get_post_thumbnail_id();
+                                                    // crop the image if the cropping is enabled.
+                                                    if (!empty($image_crop) && 'no' != $image_crop){
+                                                        $lcg_img = lcg_image_cropping($thumb, $image_width, $image_height, true, 100)['url'];
+                                                    }else{
+                                                        $aazz_thumb = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'large' );
+                                                        $lcg_img = $aazz_thumb['0'];
+                                                    }
                                                     ?>
                                                     <div class="alc_single_slide">
                                                         <div class="alc_item" data-toggle="tooltip" title="<?php if( !empty($tooltip) && $tooltip_show != 'no') { echo $tooltip;}?>" data-placement="<?=  $tooltip_posi;?>">
                                                             <figure>
                                                                 <a <?php if(!empty($img_link)) {?>href="<?php if( !empty($img_link)) { echo $img_link;}?>" target="<?php echo $target;?>" <?php } ?>>
-                                                                    <?php
-                                                                    if( !empty($image_crop) && 'no' != $image_crop) {?>
-                                                                        <img src="<?php echo $img;?>" alt="">
-                                                                        <?php
-                                                                    }else {?>
-                                                                        <img src="<?php echo $im[0];?>" alt="">
-                                                                    <?php	}
-                                                                    ?>
+                                                                    <img src="<?php echo $lcg_img;?>" alt="">
                                                                 </a>
                                                             </figure>
                                                         </div>
@@ -373,21 +376,21 @@ class Lcg_shortcode
                                                 $img_link = get_post_meta(get_the_id(),'img_link',true);
                                                 $image_id = get_post_thumbnail_id();
                                                 $im = wp_get_attachment_image_src($image_id,'full',true);
-                                                $img = aq_resize($im[0], $image_width, $image_height,true,true, $upscale);
-
+                                                //$img = aq_resize($im[0], $image_width, $image_height,true,true, $upscale);
+                                                $thumb = get_post_thumbnail_id();
+                                                // crop the image if the cropping is enabled.
+                                                if (!empty($image_crop) && 'no' != $image_crop){
+                                                    $lcg_img = lcg_image_cropping($thumb, $image_width, $image_height, true, 100)['url'];
+                                                }else{
+                                                    $aazz_thumb = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'large' );
+                                                    $lcg_img = $aazz_thumb['0'];
+                                                }
                                                 ?>
                                                 <div class="alc_single_grid-<?=  $g_columns;?> alc_column_tab-<?=  $g_columns_tablet;?> alc_column_mobile-<?= $g_columns_mobile;?>" data-toggle="tooltip" title="<?php if( !empty($tooltip) && $tooltip_show != 'no') { echo $tooltip;}?>" data-placement="<?=  $tooltip_posi;?>">
                                                     <div class="alc_item">
                                                         <figure>
                                                             <a <?php if(!empty($img_link)) {?>href="<?php if( !empty($img_link)) { echo $img_link;}?>" target="<?php echo $target;?>" <?php } ?>>
-                                                                <?php
-                                                                if( !empty($image_crop) && 'no' != $image_crop) {?>
-                                                                    <img src="<?php echo $img;?>" alt="">
-                                                                    <?php
-                                                                }else {?>
-                                                                    <img src="<?php echo $im[0];?>" alt="">
-                                                                <?php	}
-                                                                ?>
+                                                                <img src="<?php echo $lcg_img;?>" alt="">
                                                             </a>
                                                         </figure>
                                                     </div>
@@ -433,20 +436,21 @@ class Lcg_shortcode
                                                     $img_link = get_post_meta(get_the_id(),'img_link',true);
                                                     $image_id = get_post_thumbnail_id();
                                                     $im = wp_get_attachment_image_src($image_id,'full',true);
-                                                    $img = aq_resize($im[0], $image_width, $image_height,true,true, $upscale);
+                                                    //$img = aq_resize($im[0], $image_width, $image_height,true,true, $upscale);
+                                                    $thumb = get_post_thumbnail_id();
+                                                    // crop the image if the cropping is enabled.
+                                                    if (!empty($image_crop) && 'no' != $image_crop){
+                                                        $lcg_img = lcg_image_cropping($thumb, $image_width, $image_height, true, 100)['url'];
+                                                    }else{
+                                                        $aazz_thumb = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'large' );
+                                                        $lcg_img = $aazz_thumb['0'];
+                                                    }
                                                     ?>
                                                     <div class="alc_single_grid-<?=  $g_columns;?> alc_column_tab-<?=  $g_columns_tablet;?> alc_column_mobile-<?= $g_columns_mobile;?>">
                                                     <div class="alc_item" data-toggle="tooltip" title="<?php if( !empty($tooltip) && $tooltip_show != 'no') { echo $tooltip;}?>" data-placement="<?=  $tooltip_posi;?>">
                                                         <figure>
                                                             <a <?php if(!empty($img_link)) {?>href="<?php if( !empty($img_link)) { echo $img_link;}?>" target="<?php echo $target;?>" <?php } ?>>
-                                                                <?php
-                                                                if( !empty($image_crop) && 'no' != $image_crop) {?>
-                                                                    <img src="<?php echo $img;?>" alt="">
-                                                                    <?php
-                                                                }else {?>
-                                                                    <img src="<?php echo $im[0];?>" alt="">
-                                                                <?php	}
-                                                                ?>
+                                                                <img src="<?php echo $lcg_img;?>" alt="">
                                                             </a>
                                                         </figure>
                                                     </div>
@@ -491,21 +495,21 @@ class Lcg_shortcode
                                                 $img_link = get_post_meta(get_the_id(),'img_link',true);
                                                 $image_id = get_post_thumbnail_id();
                                                 $im = wp_get_attachment_image_src($image_id,'full',true);
-                                                $img = aq_resize($im[0], $image_width, $image_height,true,true, $upscale);
-
+                                                //$img = aq_resize($im[0], $image_width, $image_height,true,true, $upscale);
+                                                $thumb = get_post_thumbnail_id();
+                                                // crop the image if the cropping is enabled.
+                                                if (!empty($image_crop) && 'no' != $image_crop){
+                                                    $lcg_img = lcg_image_cropping($thumb, $image_width, $image_height, true, 100)['url'];
+                                                }else{
+                                                    $aazz_thumb = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'large' );
+                                                    $lcg_img = $aazz_thumb['0'];
+                                                }
                                                 ?>
                                                <div class="alc_single_grid-<?=  $g_columns;?> alc_column_tab-<?=  $g_columns_tablet;?> alc_column_mobile-<?= $g_columns_mobile;?> alc-margin-right" data-toggle="tooltip" title="<?php if( !empty($tooltip) && $tooltip_show != 'no') { echo $tooltip;}?>" data-placement="<?=  $tooltip_posi;?>">
                                                     <div class="alc_item">
                                                         <figure>
                                                             <a <?php if(!empty($img_link)) {?>href="<?php if( !empty($img_link)) { echo $img_link;}?>" target="<?php echo $target;?>" <?php } ?>>
-                                                                <?php
-                                                                if( !empty($image_crop) && 'no' != $image_crop) {?>
-                                                                    <img src="<?php echo $img;?>" alt="">
-                                                                    <?php
-                                                                }else {?>
-                                                                    <img src="<?php echo $im[0];?>" alt="">
-                                                                <?php	}
-                                                                ?>
+                                                                <img src="<?php echo $lcg_img;?>" alt="">
                                                             </a>
                                                         </figure>
                                                     </div>

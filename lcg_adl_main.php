@@ -3,7 +3,7 @@
 Plugin Name: Logo Showcase Ultimate
 Plugin URI: https://aazztech.com/product/logo-showcase-ultimate-pro/
 Description: This plugin allows you to easily create Logo Showcase to display logos of your clients, partners, sponsors and affiliates etc in a beautiful carousel, slider and grid.
-Version:     1.1.0
+Version:     1.1.1
 Author:      AazzTech
 Author URI:  https://aazztech.com
 License:     GPL2
@@ -172,5 +172,11 @@ if (!class_exists('Adl_Lcg_Main_Class')) {
 }//end if
 
 new Adl_Lcg_Main_Class;
+function lcg_image_cropping($attachmentId, $width, $height, $crop = true, $quality = 100)
+{
+    $resizer = new Lcg_Image_resizer($attachmentId);
+
+    return $resizer->resize($width, $height, $crop, $quality);
+}
 
 

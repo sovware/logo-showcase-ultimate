@@ -11,7 +11,7 @@ It allows you to easily create Logo Showcase to display logos of your clients, p
 
 == Description ==
 
-Live demo: <https://aazztech.com/demos/plugins/logo-showcase-ultimate-carousel-slider-grid>
+Live demo: <https://demo.aazztech.com/plugin/logo-showcase-ultimate-carousel-slider-grid/>
 
 Logo Showcase Ultimate is an excellent and best plugin to display the logos of your clients, partners, sponsors, and affiliates and more along with a title, tooltip, and URL on your website. It is 100% responsive and mobile friendly. You can generate dynamic shortcode by just a few mouse clicks and use the shortcode anywhere in your posts, pages or widgets to display your logos. Your users from any devices can view the logo carousel/slider/grid nicely.
 

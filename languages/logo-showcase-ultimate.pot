@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
-"POT-Creation-Date: 2019-08-03 14:22+0600\n"
+"POT-Creation-Date: 2020-08-12 10:42+0600\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your Name <you@example.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -275,17 +275,17 @@ msgstr ""
 msgid "No shortcode ID provided"
 msgstr ""
 
-#: classes/settings/carousel.php:16 classes/settings/grid.php:8
+#: classes/settings/carousel.php:17 classes/settings/grid.php:8
 msgid "Select Theme"
 msgstr ""
 
-#: classes/settings/carousel.php:43
+#: classes/settings/carousel.php:44
 msgid "Auto Play"
 msgstr ""
 
-#: classes/settings/carousel.php:52 classes/settings/carousel.php:77
-#: classes/settings/general.php:64 classes/settings/general.php:156
-#: classes/settings/general.php:186 classes/settings/style/c_style1.php:25
+#: classes/settings/carousel.php:53 classes/settings/carousel.php:78
+#: classes/settings/carousel.php:103 classes/settings/general.php:64
+#: classes/settings/general.php:156 classes/settings/style/c_style1.php:25
 #: classes/settings/style/c_style1.php:57
 #: classes/settings/style/c_style2.php:22
 #: classes/settings/style/g_style1.php:23
@@ -294,9 +294,9 @@ msgstr ""
 msgid "Yes"
 msgstr ""
 
-#: classes/settings/carousel.php:59 classes/settings/carousel.php:85
-#: classes/settings/general.php:73 classes/settings/general.php:165
-#: classes/settings/general.php:196 classes/settings/style/c_style1.php:35
+#: classes/settings/carousel.php:60 classes/settings/carousel.php:85
+#: classes/settings/carousel.php:111 classes/settings/general.php:73
+#: classes/settings/general.php:165 classes/settings/style/c_style1.php:35
 #: classes/settings/style/c_style1.php:67
 #: classes/settings/style/c_style2.php:32
 #: classes/settings/style/g_style1.php:33
@@ -305,83 +305,87 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: classes/settings/carousel.php:68
+#: classes/settings/carousel.php:69
+msgid "Repeat Logo"
+msgstr ""
+
+#: classes/settings/carousel.php:94
 msgid "Stop on Hover"
 msgstr ""
 
-#: classes/settings/carousel.php:95
+#: classes/settings/carousel.php:121
 msgid "Logo items (on Desktop, screen larger than 1198px)"
 msgstr ""
 
-#: classes/settings/carousel.php:103
+#: classes/settings/carousel.php:129
 msgid ""
 "Maximum amount of items to display at a time on Desktop that screen size "
 "larger than 1198px"
 msgstr ""
 
-#: classes/settings/carousel.php:111
+#: classes/settings/carousel.php:137
 msgid "Logo items (on Desktop, screen larger than 978px)"
 msgstr ""
 
-#: classes/settings/carousel.php:119
+#: classes/settings/carousel.php:145
 msgid ""
 "Maximum amount of items to display at a time on Desktop that screen size "
 "larger than 978px"
 msgstr ""
 
-#: classes/settings/carousel.php:126
+#: classes/settings/carousel.php:152
 msgid "Logo items (on Tablet)"
 msgstr ""
 
-#: classes/settings/carousel.php:134
+#: classes/settings/carousel.php:160
 msgid "Maximum amount of items to display at a time on Tablet"
 msgstr ""
 
-#: classes/settings/carousel.php:141
+#: classes/settings/carousel.php:167
 msgid "Logo items (on Mobile)"
 msgstr ""
 
-#: classes/settings/carousel.php:149
+#: classes/settings/carousel.php:175
 msgid "Maximum amount of items to display at a time on Mobile"
 msgstr ""
 
-#: classes/settings/carousel.php:156
+#: classes/settings/carousel.php:182
 msgid "Slide Speed"
 msgstr ""
 
-#: classes/settings/carousel.php:164
+#: classes/settings/carousel.php:190
 msgid "Here 1000 is equal to 1 second. So provide a speed accordingly"
 msgstr ""
 
-#: classes/settings/carousel.php:171
+#: classes/settings/carousel.php:197
 msgid "Slide Timeout"
 msgstr ""
 
-#: classes/settings/carousel.php:179
+#: classes/settings/carousel.php:205
 msgid "Here 1000 is equal to 1 second. So provide a timeout accordingly"
 msgstr ""
 
-#: classes/settings/carousel.php:186
+#: classes/settings/carousel.php:212
 msgid "Scroll"
 msgstr ""
 
-#: classes/settings/carousel.php:197
+#: classes/settings/carousel.php:223
 msgid "Per Item"
 msgstr ""
 
-#: classes/settings/carousel.php:205
+#: classes/settings/carousel.php:231
 msgid "Per Page"
 msgstr ""
 
-#: classes/settings/carousel.php:215
+#: classes/settings/carousel.php:241
 msgid "Carousel Scrolling Direction"
 msgstr ""
 
-#: classes/settings/carousel.php:219
+#: classes/settings/carousel.php:245
 msgid "Slide from Right to Left"
 msgstr ""
 
-#: classes/settings/carousel.php:220
+#: classes/settings/carousel.php:246
 msgid "Slide from Left to Right"
 msgstr ""
 
@@ -445,19 +449,7 @@ msgstr ""
 msgid ""
 "If logos are not in the same size, this feature is helpful. It "
 "automatically resizes and crops. Note: your image must be higher than/"
-"equal to the cropping size set below. Otherwise, you may need to enable "
-"image upscaling feature from the settings below."
-msgstr ""
-
-#: classes/settings/general.php:175
-msgid "Enable Image Upscaling"
-msgstr ""
-
-#: classes/settings/general.php:200
-msgid ""
-"If the logo size is less than the cropping size set below then by "
-"default, image will break. However, you can solve this problem by "
-"enabling upscaling."
+"equal to the cropping size set below."
 msgstr ""
 
 #: classes/settings/general.php:208

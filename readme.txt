@@ -2,8 +2,8 @@
 Contributors: AazzTech
 Tags: Logo, logo showcase, logo carousel, logo grid, logo slider
 Requires at least: 4.0
-Tested up to: 5.4
-Stable tag: 1.1.1
+Tested up to: 5.5
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -52,7 +52,7 @@ More amazing features available in [__Pro version__](https://aazztech.com/produc
 *   Short description text color change option.
 *   And many more…
 
-Live demo: <https://aazztech.com/demos/plugins/logo-showcase-ultimate-carousel-slider-grid/#proversion>
+Live demo: <https://demo.aazztech.com/plugin/logo-showcase-ultimate-carousel-slider-grid/#proversion>
 
 
 == Installation ==
@@ -82,6 +82,10 @@ After successfully installing and activating the plugin, you will find "Logo Sho
 15. Backend: Logo Categories
 
 == Changelog ==
+= 1.1.2 =
+* Add: WordPress 5.5 compatibility
+* Fix: Image Cropping issue
+* Fix: Translate issue
 = 1.1.1 =
 * Fix: Image Cropping issue
 = 1.1.0 =

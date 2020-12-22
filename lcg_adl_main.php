@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Logo Showcase Ultimate
-Plugin URI: https://aazztech.com/product/logo-showcase-ultimate-pro/
+Plugin URI: https://wpwax.com/product/logo-showcase-ultimate-pro/
 Description: This plugin allows you to easily create Logo Showcase to display logos of your clients, partners, sponsors and affiliates etc in a beautiful carousel, slider and grid.
-Version:     1.1.2
-Author:      AazzTech
-Author URI:  https://aazztech.com
+Version:     1.1.3
+Author:      wpWax
+Author URI:  https://wpwax.com
 License:     GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: logo-showcase-ultimate
@@ -111,7 +111,7 @@ if (!class_exists('Adl_Lcg_Main_Class')) {
 
         //method for pro plugin's link
         public function display_pro_version_logo_link( $links ) {
-            $links[] = '<a href="'.esc_url('https://aazztech.com/product/logo-showcase-ultimate-pro/').'" target="_blank">'.esc_html__('Pro Version', LCG_TEXTDOMAIN).'</a>';
+            $links[] = '<a href="'.esc_url('https://wpwax.com/product/logo-showcase-ultimate-pro/').'" target="_blank">'.esc_html__('Pro Version', LCG_TEXTDOMAIN).'</a>';
             return $links;
         }
 

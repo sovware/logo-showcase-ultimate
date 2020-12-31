@@ -1,5 +1,5 @@
 ﻿=== Logo Showcase Ultimate - Carousel, Slider & Grid ===
-Contributors: AazzTech
+Contributors: wpwax
 Tags: Logo, logo showcase, logo carousel, logo grid, logo slider
 Requires at least: 4.0
 Tested up to: 5.6

@@ -1,5 +1,6 @@
 /* wpWax logo SHowcase Grid 1 */
-.wpwax-logo-showcase-wrap.wpwax-logo-showcase-grid-1 {
+.wpwax-logo-showcase-wrap.wpwax-logo-showcase-grid-1
+  .wpwax-logo-showcase-content {
   display: flex;
   align-items: center;
   justify-content: center;

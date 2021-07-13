@@ -1,7 +1,7 @@
 <!-- wpwax logo Grid Theme-1  -->
 
 <div class="wpwax-logo-showcase-wrap wpwax-logo-showcase-grid-1">
-
+    <h4 class="wpwax-logo-showcase-title">Grid Theme #1</h4>
     <div class="wpwax-logo-showcase-content">
         <?php
         while($adl_logo -> have_posts()) : $adl_logo->the_post();
@@ -20,7 +20,11 @@
         }
         ?>
         <div class="wpwax-logo-showcase-item">
-            <img src="<?php echo ! empty( $lcg_img ) ? $lcg_img : ''; ?>" alt="<?php the_title(); ?>">
+            
+            <a href="">
+                <img src="<?php echo ! empty( $lcg_img ) ? $lcg_img : ''; ?>" alt="<?php the_title(); ?>">
+            </a>
+            
         </div>
         <?php
         endwhile;

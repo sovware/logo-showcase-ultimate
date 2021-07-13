@@ -37,6 +37,7 @@ class Lcg_shortcode
         $lcg_type 			= !empty($lcg_type) ? $lcg_type : 'latest';
         $layout   			= !empty($layout) ? $layout : 'carousel';
         $c_theme  			= !empty($c_theme) ? $c_theme : 'c_theme1';
+        $g_theme  			= !empty($g_theme) ? $g_theme : 'g_theme1';
         $image_crop 		= !empty($image_crop) ? $image_crop : "yes";
 		$upscale		   	= !empty($upscale) ? $upscale : "yes";
         $image_width 		= !empty($image_width) ? $image_width : 185; // Image width for cropping
@@ -72,7 +73,7 @@ class Lcg_shortcode
         $adl_logo = new WP_Query( $args );
 
         if ( $adl_logo->have_posts() ) {
-            include LCG_PLUGIN_DIR . 'template/theme-1.php';
+            include LCG_PLUGIN_DIR . 'template/' . $g_theme .'.php';
         }
 		$true =  ob_get_clean();
 		return $true;

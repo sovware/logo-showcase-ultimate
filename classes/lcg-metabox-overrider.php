@@ -83,8 +83,8 @@ if ( ! defined( 'ABSPATH' ) ) die( 'direct access not allow' );
 		 */
 		function change_featured_image_metabox_content_for_lcg($content) {
 			if ( $this->get_featured_image_metabox_post_type_for_lcg() === $this->post_type ) {
-				$content = str_replace(  'Set featured image' , $this->set_text, $content );
-				$content = str_replace(  'Remove featured image' , $this->remove_text, $content );
+				$content = str_replace( 'Set featured image' , $this->set_text, $content );
+				$content = str_replace( 'Remove featured image' , $this->remove_text, $content );
 			}
 
 			return $content;

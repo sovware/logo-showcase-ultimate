@@ -13,42 +13,59 @@ Domain Path: /languages/
 */
 if ( ! defined( 'ABSPATH' ) ) die( 'Direct access is not allow' );
 
-
-if (!class_exists('Adl_Lcg_Main_Class')) {
-
-	class Adl_Lcg_Main_Class
+if (!class_exists('Lcg_Main_Class')) {
+	class Lcg_Main_Class
 	{
-		public function __construct() {
+        /**
+        *
+        * @since 1.0.0
+        */
+        private static $instance;
 
-			//define all constants
-			$this->define_lcg_adl_constants();
-			// lets include all the required files
-        	$this->lcg_include_required_files();
-        	new Lcg_Custom_Post;
-            new Lcg_Featured_Img_Customizer(array(
-                'post_type'     => 'lcg_mainpost',
-                'metabox_title' => esc_html__( 'Logo', LCG_TEXTDOMAIN ),
-                'set_text'      => esc_html__( 'Set logo', LCG_TEXTDOMAIN ),
-                'remove_text'   => esc_html__( 'Remove logo', LCG_TEXTDOMAIN )
-            ));
-            new Lcg_Metabox;
-            new Lcg_shortcode;
-			//include all style and script
-			add_action( 'template_redirect', array($this, 'lcg_enqueue_style_front') );
+        /**
+         * all metabox
+         * @since 2.0.0
+         */
+        public $metabox;
 
-			add_action( 'plugins_loaded', array( $this, 'lcg_load_textdomain' ) );
-            //  include style and script for admin
-            add_action( 'admin_enqueue_scripts', array($this, 'lcg_admin_enqueue_scripts') );
-            // add a link to the pro version on the plugin activation screen
-            add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), array($this, 'display_pro_version_logo_link') );
-            // add usage and support menu to the admin menu
-            add_action('admin_menu', array($this, 'lcg_hook_usage_and_support_submenu'));
-            // support svg format
-            add_filter('upload_mimes', array($this, 'lcg_support_svg'));
-            register_activation_hook(plugin_basename(__FILE__), array($this,'adl_activation_hook'));
-            register_deactivation_hook(plugin_basename(__FILE__), array($this,'adl_deactivation_hook'));
+        /**
+         * custom post
+         * @since 2.0.0
+        */
+        public $custom_post;
 
-		}
+        /**
+         * all shortcode
+         * @since 2.0.0
+        */
+        public $shortcode;
+
+        public static function instance() {
+            if(!isset(self::$instance) && !(self::$instance instanceof Lcg_Main_Class)) {
+                self::$instance = new Lcg_Main_Class;
+                //if woocmmerce plugin not activate
+                self::$instance->define_lcg_adl_constants();
+                add_action('plugin_loaded',array( self::$instance,'lcg_load_textdomain' ) );
+                add_action('admin_enqueue_scripts',array(self::$instance, 'lcg_admin_enqueue_scripts'));
+                add_action('template_redirect',array(self::$instance, 'lcg_enqueue_style_front'));
+                add_action('admin_menu',array(self::$instance,'lcg_hook_usage_and_support_submenu'));
+                add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), array( self::$instance, 'display_pro_version_logo_link' ) );
+                // support svg format
+                add_filter( 'upload_mimes', array( self::$instance, 'lcg_support_svg' ) );
+                self::$instance->lcg_include_required_files();
+                self::$instance->custom_post                = new Lcg_Custom_Post();
+                self::$instance->featured_img_customizer    = new Lcg_Featured_Img_Customizer( array(
+                    'post_type'     => 'lcg_mainpost',
+                    'metabox_title' => esc_html__( 'Logo', LCG_TEXTDOMAIN ),
+                    'set_text'      => esc_html__( 'Set logo', LCG_TEXTDOMAIN ),
+                    'remove_text'   => esc_html__( 'Remove logo', LCG_TEXTDOMAIN )
+                ) );
+                self::$instance->metabox                    = new Lcg_Metabox();
+                self::$instance->shortcode                  = new Lcg_shortcode();
+            }
+    
+            return self::$instance;
+        }
 
 
         /**
@@ -70,25 +87,13 @@ if (!class_exists('Adl_Lcg_Main_Class')) {
             require_once LCG_PLUGIN_DIR . 'classes/lcg-adl-metabox.php';
             require_once LCG_PLUGIN_DIR . 'classes/lcg-resize.php';
             require_once LCG_PLUGIN_DIR . 'classes/lcg-shortcode.php';
-            require_once LCG_PLUGIN_DIR . 'gc-mce-shortcode-button.php';
 
         }
 
         //enqueues all the styles and scripts
         public function lcg_enqueue_style_front() {
 
-        	wp_register_style( 'lcg-animate-style', LCG_PLUGIN_URI . '/assets/css/animate.css' );
-            wp_register_style( 'lcg-carousel-style', LCG_PLUGIN_URI . '/assets/css/owl.carousel.css' );
-            wp_register_style( 'lcg-responsive', LCG_PLUGIN_URI . '/assets/css/responsive.css' );
-            wp_register_style( 'lcg-icons', LCG_PLUGIN_URI . '/assets/css/simple-line-icons.css' );
-            wp_register_style( 'lcg-theme', LCG_PLUGIN_URI . '/assets/css/theme.css' );
-            wp_register_style( 'lcg-tooltip', LCG_PLUGIN_URI . '/assets/css/tooltip.css' );
             wp_register_style( 'lcg-style', LCG_PLUGIN_URI . '/assets/css/style.css' );
-
-            wp_register_script( 'lcg-owl-carousel-js', LCG_PLUGIN_URI . '/assets/js/owl.carousel.min.js', array('jquery'));
-            wp_register_script( 'lcg-popper-min-js', LCG_PLUGIN_URI . '/assets/js/popper.min.js', array('jquery'));
-            wp_register_script( 'lcg-tooltip-js', LCG_PLUGIN_URI . '/assets/js/tooltip.js', array('jquery'));
-            wp_register_script( 'lcg-util-js', LCG_PLUGIN_URI . '/assets/js/util.js', array('lcg-tooltip-js'));
             wp_register_script( 'main-js', LCG_PLUGIN_URI . '/assets/js/main.js', array('jquery'));
             
         }
@@ -124,7 +129,7 @@ if (!class_exists('Adl_Lcg_Main_Class')) {
             require_once LCG_PLUGIN_DIR . 'classes/lcg-usages-support.php';
         }
 
-        public function lcg_support_svg ( $mimes) {
+        public function lcg_support_svg ( $mimes ) {
             $mimes['svg'] = 'image/svg+xml';
             $mimes['svgz'] = 'image/svg+xml';
 
@@ -136,9 +141,9 @@ if (!class_exists('Adl_Lcg_Main_Class')) {
          * @param $data
          * @return string
          */
-        public static function adl_enc_serialize($data) {
+        public static function adl_enc_serialize( $data ) {
 
-            return base64_encode(serialize($data));
+            return base64_encode( serialize( $data ) );
         }
 
         //decode the data and then unserialize the data and return it
@@ -147,23 +152,9 @@ if (!class_exists('Adl_Lcg_Main_Class')) {
          * @param $data
          * @return mixed
          */
-        public static function adl_enc_unserialize($data) {
+        public static function adl_enc_unserialize( $data ) {
 
-            return unserialize(base64_decode($data));
-        }
-
-        /**
-         *activation hook
-         */
-        public function adl_activation_hook() {
-            flush_rewrite_rules();
-        }
-
-        /**
-         * deactivation hook
-         */
-        public function adl_deactivation_hook() {
-            flush_rewrite_rules();
+            return unserialize( base64_decode( $data ) );
         }
 
 	}//end class
@@ -171,7 +162,12 @@ if (!class_exists('Adl_Lcg_Main_Class')) {
 
 }//end if
 
-new Adl_Lcg_Main_Class;
+function lcg() {
+    return Lcg_Main_Class::instance();
+}
+
+lcg();
+
 function lcg_image_cropping($attachmentId, $width, $height, $crop = true, $quality = 100)
 {
     $resizer = new Lcg_Image_resizer($attachmentId);

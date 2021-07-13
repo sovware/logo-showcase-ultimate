@@ -1,0 +1,18 @@
+/* wpWax logo SHowcase Grid 1 */
+.wpwax-logo-showcase-wrap.wpwax-logo-showcase-grid-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wpwax-logo-showcase-wrap.wpwax-logo-showcase-grid-1 .wpwax-logo-showcase-item {
+  border: 1px solid #eaeaf1;
+  flex: 0 0 16.6667%;
+  width: 16.6667%;
+  padding: 35px 56px;
+}
+
+.wpwax-logo-showcase-wrap.wpwax-logo-showcase-grid-1
+  .wpwax-logo-showcase-item:not(:last-child) {
+  border-right: 0 none;
+}

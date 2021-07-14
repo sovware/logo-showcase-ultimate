@@ -1,0 +1,144 @@
+// Variable
+$dark: #202428;
+$primary: #ff5500;
+
+/* Logo Showcase Grid */
+.wpwax-logo-showcase-wrap {
+  &.wpwax-logo-showcase-grid {
+    &.wpwax-logo-col-1 {
+      .wpwax-logo-showcase-item {
+        flex: 0 0 100%;
+        width: 100%;
+      }
+    }
+    &.wpwax-logo-col-2 {
+      .wpwax-logo-showcase-item {
+        flex: 0 0 50%;
+        width: 50%;
+      }
+    }
+    &.wpwax-logo-col-3 {
+      .wpwax-logo-showcase-item {
+        flex: 0 0 33.33%;
+        width: 33.33%;
+      }
+    }
+    &.wpwax-logo-col-4 {
+      .wpwax-logo-showcase-item {
+        flex: 0 0 25%;
+        width: 25%;
+      }
+    }
+    &.wpwax-logo-col-5 {
+      .wpwax-logo-showcase-item {
+        flex: 0 0 20%;
+        width: 20%;
+      }
+    }
+    &.wpwax-logo-col-6 {
+      .wpwax-logo-showcase-item {
+        flex: 0 0 16.6667%;
+        width: 16.6667%;
+      }
+    }
+  }
+}
+
+/* wpwax Logo Showcase Title */
+.wpwax-logo-showcase-wrap {
+  .wpwax-logo-showcase-title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 68px;
+    color: $dark;
+    text-align: center;
+    .wpwax-logo-showcase-serial {
+      color: $primary;
+    }
+  }
+}
+
+/* wpwax Logo Showcase Tooltip */
+.wpwax-logo-showcase-wrap {
+  .wpwax-logo-showcase-item {
+    position: relative;
+    &:hover {
+      &:before,
+      &:after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &:before {
+      font-size: 13px;
+      color: #fff;
+      position: absolute;
+      left: 0;
+      bottom: calc(100% + 10px);
+      width: 100%;
+      padding: 10.5px 4px;
+      text-align: center;
+      line-height: 1.5;
+      opacity: 0;
+      visibility: hidden;
+      border-radius: 4px;
+      content: attr(data-wpwaxtooltip);
+      background-color: $dark;
+      transition: 0.35s;
+    }
+    &:after {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 100%;
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 10px solid $dark;
+      content: "";
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.35s;
+    }
+  }
+}
+
+/* Logo Showcase Item hover */
+.wpwax-logo-showcase-wrap {
+  .wpwax-logo-showcase-item {
+    img {
+      width: 100%;
+      max-width: 150px;
+      transition: 0.35s;
+      transform: scale(1);
+    }
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+/* wpWax logo Showcase Grid 1 */
+.wpwax-logo-showcase-wrap {
+  &.wpwax-logo-showcase-grid {
+    .wpwax-logo-showcase-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .wpwax-logo-showcase-item {
+      border: 1px solid #eaeaf1;
+      margin: -1px 0 0 -1px;
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 0 35px;
+        min-height: 150px;
+      }
+    }
+  }
+}

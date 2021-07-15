@@ -70,13 +70,14 @@ $primary: #ff5500;
       }
     }
     &:before {
-      font-size: 13px;
+      font-size: 14px;
       color: #fff;
       position: absolute;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
       bottom: calc(100% + 10px);
-      width: 100%;
-      padding: 10.5px 4px;
+      width: auto;
+      padding: 9.5px 15px;
       text-align: center;
       line-height: 1.5;
       opacity: 0;

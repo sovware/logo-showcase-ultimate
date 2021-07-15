@@ -1,7 +1,9 @@
-<!-- wpwax logo Grid Theme-1  -->
+<!-- wpwax logo Grid Theme-2  -->
 
-<div class="wpwax-logo-showcase-wrap wpwax-logo-showcase-grid wpwax-grid-theme-1 wpwax-logo-col-2">
-    <h4 class="wpwax-logo-showcase-title">Grid Theme <span class="wpwax-logo-showcase-serial">#1</span> </h4>
+<div class="wpwax-logo-showcase-wrap wpwax-logo-showcase-grid wpwax-grid-theme-2 wpwax-logo-col-4">
+
+    <h4 class="wpwax-logo-showcase-title">Grid Theme <span class="wpwax-logo-showcase-serial">#2</span> </h4>
+                                                                                                                                   
     <div class="wpwax-logo-showcase-content">
         <?php
         while($adl_logo -> have_posts()) : $adl_logo->the_post();
@@ -19,11 +21,17 @@
             $lcg_img = $aazz_thumb['0'];
         }
         ?>
-        <div class="wpwax-logo-showcase-item" data-wpwaxTooltip="Company Name">
-            
-            <a href="">
-                <img src="<?php echo ! empty( $lcg_img ) ? $lcg_img : ''; ?>" alt="<?php the_title(); ?>">
-            </a>
+        <div class="wpwax-logo-showcase-item">
+
+            <div class="wpwax-logo-showcase-item-inner" data-wpwaxTooltip="Company Name">
+
+                <a href="">
+
+                    <img src="<?php echo ! empty( $lcg_img ) ? $lcg_img : ''; ?>" alt="<?php the_title(); ?>">
+
+                </a>
+
+            </div>
             
         </div>
         <?php

@@ -19,11 +19,13 @@
             $lcg_img = $aazz_thumb['0'];
         }
         ?>
-        <div class="wpwax-logo-showcase-item" data-wpwaxTooltip="Company Name">
-            
-            <a href="">
-                <img src="<?php echo ! empty( $lcg_img ) ? $lcg_img : ''; ?>" alt="<?php the_title(); ?>">
-            </a>
+        <div class="wpwax-logo-showcase-item">
+
+            <div class="wpwax-logo-showcase-item-inner" data-wpwaxTooltip="Company Name">
+                <a href=""> 
+                    <img src="<?php echo ! empty( $lcg_img ) ? $lcg_img : ''; ?>" alt="<?php the_title(); ?>">
+                </a>
+            </div>
             
         </div>
         <?php

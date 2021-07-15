@@ -61,46 +61,51 @@ $primary: #ff5500;
 /* wpwax Logo Showcase Tooltip */
 .wpwax-logo-showcase-wrap {
   .wpwax-logo-showcase-item {
-    position: relative;
     &:hover {
-      &:before,
-      &:after {
-        opacity: 1;
-        visibility: visible;
+      .wpwax-logo-showcase-item-inner {
+        &:before,
+        &:after {
+          opacity: 1;
+          visibility: visible;
+        }
       }
     }
-    &:before {
-      font-size: 14px;
-      color: #fff;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: calc(100% + 10px);
-      width: auto;
-      padding: 9.5px 15px;
-      text-align: center;
-      line-height: 1.5;
-      opacity: 0;
-      visibility: hidden;
-      border-radius: 4px;
-      content: attr(data-wpwaxtooltip);
-      background-color: $dark;
-      transition: 0.35s;
-    }
-    &:after {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 100%;
-      width: 0;
-      height: 0;
-      border-left: 5px solid transparent;
-      border-right: 5px solid transparent;
-      border-top: 10px solid $dark;
-      content: "";
-      opacity: 0;
-      visibility: hidden;
-      transition: 0.35s;
+    .wpwax-logo-showcase-item-inner {
+      position: relative;
+      &:before {
+        font-size: 14px;
+        color: #fff;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: calc(100% + 10px);
+        min-width: 170px;
+        max-width: 180px;
+        padding: 9.5px 10px;
+        text-align: center;
+        line-height: 1.5;
+        opacity: 0;
+        visibility: hidden;
+        border-radius: 4px;
+        content: attr(data-wpwaxtooltip);
+        background-color: $dark;
+        transition: 0.35s;
+      }
+      &:after {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 100%;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 10px solid $dark;
+        content: "";
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.35s;
+      }
     }
   }
 }
@@ -130,8 +135,10 @@ $primary: #ff5500;
       align-items: center;
     }
     .wpwax-logo-showcase-item {
-      border: 1px solid #eaeaf1;
-      margin: -1px 0 0 -1px;
+      .wpwax-logo-showcase-item-inner {
+        border: 1px solid #eaeaf1;
+        margin: -1px 0 0 -1px;
+      }
       a {
         display: flex;
         align-items: center;
@@ -139,6 +146,48 @@ $primary: #ff5500;
         width: 100%;
         padding: 0 35px;
         min-height: 150px;
+      }
+    }
+  }
+}
+
+/* wpWax logo Showcase Grid Theme 2 */
+.wpwax-logo-showcase-wrap {
+  &.wpwax-grid-theme-2 {
+    .wpwax-logo-showcase-content {
+      margin: -10px;
+    }
+    .wpwax-logo-showcase-item {
+      padding: 10px;
+    }
+  }
+}
+
+/* wpWax logo Showcase Grid Theme 3 */
+.wpwax-logo-showcase-wrap {
+  &.wpwax-grid-theme-3 {
+    .wpwax-logo-showcase-content {
+      margin: 0px -50px;
+    }
+    .wpwax-logo-showcase-item {
+      padding: 0px 50px;
+      &:hover {
+        .wpwax-logo-showcase-item-inner {
+          a {
+            img {
+              opacity: 1;
+            }
+          }
+        }
+      }
+      .wpwax-logo-showcase-item-inner {
+        border: 0 none;
+        a {
+          padding: 0;
+          img {
+            opacity: 0.5;
+          }
+        }
       }
     }
   }

@@ -73,7 +73,7 @@ class Lcg_shortcode
         $adl_logo = new WP_Query( $args );
 
         if ( $adl_logo->have_posts() ) {
-            include LCG_PLUGIN_DIR . 'template/' . $g_theme .'.php';
+            include LCG_PLUGIN_DIR . 'template/' . $c_theme .'.php';
         }
 		$true =  ob_get_clean();
 		return $true;

@@ -23,7 +23,6 @@ class Lcg_shortcode
                 )
             );
 
-
 		if ( empty( $id) ) {
                 return esc_html__('No shortcode ID provided', LCG_TEXTDOMAIN);
         }
@@ -52,7 +51,11 @@ class Lcg_shortcode
         $g_columns_mobile   = !empty($g_columns_mobile) ? intval($g_columns_mobile) : 2;
         $tooltip_posi       = !empty($tooltip_posi) ? $tooltip_posi : "top";
         $total_logos        = !empty($total_logos) ? intval($total_logos) : 12;
-
+        if( 'carousel' == $layout ) {
+            $theme = $c_theme;
+        } else {
+            $theme = $g_theme;
+        }
         $args = array();
         $common_args = [
             'post_type' => 'lcg_mainpost',
@@ -73,7 +76,7 @@ class Lcg_shortcode
         $adl_logo = new WP_Query( $args );
 
         if ( $adl_logo->have_posts() ) {
-            include LCG_PLUGIN_DIR . 'template/' . $c_theme .'.php';
+            include LCG_PLUGIN_DIR . 'template/' . $theme .'.php';
         }
 		$true =  ob_get_clean();
 		return $true;

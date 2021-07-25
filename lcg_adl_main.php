@@ -94,7 +94,9 @@ if (!class_exists('Lcg_Main_Class')) {
         public function lcg_enqueue_style_front() {
 
             wp_register_style( 'lcg-style', LCG_PLUGIN_URI . '/assets/css/style.css' );
-            wp_register_script( 'main-js', LCG_PLUGIN_URI . '/assets/js/main.js', array('jquery'));
+            wp_register_style( 'lcg-swiper-min-css', LCG_PLUGIN_URI . '/assets/css/vendor/swiper-bundle.min.css' );
+            wp_register_script( 'main-js', LCG_PLUGIN_URI . '/assets/js/main.js', array('jquery') );
+            wp_register_script( 'lcg-swiper-min-js', LCG_PLUGIN_URI . '/assets/js/vendor/swiper-bundle.min.js', array('jquery','main-js') );
             
         }
 

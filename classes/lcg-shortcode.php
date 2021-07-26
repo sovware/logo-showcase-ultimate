@@ -85,9 +85,12 @@ class Lcg_shortcode
 	//enqueue all files to shortcode
 	public function lcg_enqueue_files () {
 		wp_enqueue_style('lcg-style');
+        wp_enqueue_style('lcg-tooltip');
         wp_enqueue_style('lcg-swiper-min-css');
 
 		wp_enqueue_script('main-js');
         wp_enqueue_script('lcg-swiper-min-js');
+        wp_enqueue_script('lcg-popper-js');
+        wp_enqueue_script('lcg-tooltip-js');
 	}
 }

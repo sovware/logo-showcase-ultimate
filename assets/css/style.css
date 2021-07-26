@@ -49,14 +49,14 @@
 }
 
 /* wpwax Logo Showcase Tooltip */
-.wpwax-lsu-logo-showcase-wrap .wpwax-lsu-logo-showcase-item:hover .wpwax-lsu-logo-showcase-item-inner:before, .wpwax-lsu-logo-showcase-wrap .wpwax-lsu-logo-showcase-item:hover .wpwax-lsu-logo-showcase-item-inner:after {
+.wpwax-lsu-logo-showcase-item:hover .wpwax-lsu-logo-showcase-item-inner:before, .wpwax-lsu-logo-showcase-item:hover .wpwax-lsu-logo-showcase-item-inner:after {
   opacity: 1;
   visibility: visible;
 }
-.wpwax-lsu-logo-showcase-wrap .wpwax-lsu-logo-showcase-item .wpwax-lsu-logo-showcase-item-inner {
+.wpwax-lsu-logo-showcase-item .wpwax-lsu-logo-showcase-item-inner {
   position: relative;
 }
-.wpwax-lsu-logo-showcase-wrap .wpwax-lsu-logo-showcase-item .wpwax-lsu-logo-showcase-item-inner:before {
+.wpwax-lsu-logo-showcase-item .wpwax-lsu-logo-showcase-item-inner:before {
   font-size: 14px;
   color: #fff;
   position: absolute;
@@ -79,7 +79,7 @@
   -o-transition: 0.35s;
   transition: 0.35s;
 }
-.wpwax-lsu-logo-showcase-wrap .wpwax-lsu-logo-showcase-item .wpwax-lsu-logo-showcase-item-inner:after {
+.wpwax-lsu-logo-showcase-item .wpwax-lsu-logo-showcase-item-inner:after {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -117,6 +117,9 @@
 }
 
 /* wpWax logo Showcase Grid 1 */
+.wpwax-lsu-logo-showcase-wrap.wpwax-lsu-logo-showcase-grid.wpwax-lsu-grid-theme-2 .wpwax-lsu-logo-showcase-item .wpwax-lsu-logo-showcase-item .wpwax-lsu-logo-showcase-item-inner {
+  margin: -1px 0 0 -1px;
+}
 .wpwax-lsu-logo-showcase-wrap.wpwax-lsu-logo-showcase-grid .wpwax-lsu-logo-showcase-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -129,7 +132,6 @@
 }
 .wpwax-lsu-logo-showcase-wrap.wpwax-lsu-logo-showcase-grid .wpwax-lsu-logo-showcase-item .wpwax-lsu-logo-showcase-item-inner {
   border: 1px solid #eaeaf1;
-  margin: -1px 0 0 -1px;
 }
 .wpwax-lsu-logo-showcase-wrap.wpwax-lsu-logo-showcase-grid .wpwax-lsu-logo-showcase-item a {
   display: -webkit-box;
@@ -141,7 +143,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
   padding: 0 35px;
   min-height: 150px;
 }
@@ -172,4 +173,19 @@
 }
 .wpwax-lsu-logo-showcase-wrap.wpwax-lsu-grid-theme-3 .wpwax-lsu-logo-showcase-item .wpwax-lsu-logo-showcase-item-inner a img {
   opacity: 0.5;
+}
+
+.wpwax-lsu-grid-theme-carousel {
+  overflow: hidden;
+  padding: 0 15px;
+}
+
+.wpwax-lsu-logo-showcase-carousel {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: initial;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
 }

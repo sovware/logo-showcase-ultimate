@@ -165,22 +165,25 @@
 .wpwax-lsu-logo-showcase-wrap.wpwax-lsu-grid-theme-3 .wpwax-lsu-logo-showcase-item:hover .wpwax-lsu-logo-showcase-item-inner a img {
   opacity: 1;
 }
-.wpwax-lsu-logo-showcase-wrap.wpwax-lsu-grid-theme-3 .wpwax-lsu-logo-showcase-item .wpwax-lsu-logo-showcase-item-inner {
-  border: 0 none;
-}
-.wpwax-lsu-logo-showcase-wrap.wpwax-lsu-grid-theme-3 .wpwax-lsu-logo-showcase-item .wpwax-lsu-logo-showcase-item-inner a {
-  padding: 0;
-}
 .wpwax-lsu-logo-showcase-wrap.wpwax-lsu-grid-theme-3 .wpwax-lsu-logo-showcase-item .wpwax-lsu-logo-showcase-item-inner a img {
   opacity: 0.5;
 }
 
-.wpwax-lsu-grid-theme-carousel {
+/* wpWax logo Showcase Grid borderless */
+.wpwax-lsu-logo-showcase-wrap.wpwax-lsu-grid-theme-borderless .wpwax-lsu-logo-showcase-item .wpwax-lsu-logo-showcase-item-inner {
+  border: 0 none;
+}
+.wpwax-lsu-logo-showcase-wrap.wpwax-lsu-grid-theme-borderless .wpwax-lsu-logo-showcase-item .wpwax-lsu-logo-showcase-item-inner a {
+  padding: 0;
+}
+
+/* wpWax logo Showcase Grid Carousel */
+.wpwax-lsu-grid-carousel {
   overflow: hidden;
   padding: 0 15px;
 }
 
-.wpwax-lsu-logo-showcase-carousel {
+.wpwax-lsu-carousel {
   margin-left: auto;
   margin-right: auto;
   position: relative;

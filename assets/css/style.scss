@@ -187,9 +187,7 @@ $primary: #ff5500;
         }
       }
       .wpwax-lsu-logo-showcase-item-inner {
-        border: 0 none;
         a {
-          padding: 0;
           img {
             opacity: 0.5;
           }
@@ -198,11 +196,27 @@ $primary: #ff5500;
     }
   }
 }
-.wpwax-lsu-grid-theme-carousel{
+
+/* wpWax logo Showcase Grid borderless */
+.wpwax-lsu-logo-showcase-wrap{
+  &.wpwax-lsu-grid-theme-borderless{
+    .wpwax-lsu-logo-showcase-item{
+      .wpwax-lsu-logo-showcase-item-inner {
+        border: 0 none;
+        a {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+/* wpWax logo Showcase Grid Carousel */
+.wpwax-lsu-grid-carousel{
   overflow: hidden;
   padding: 0 15px;
 }
-.wpwax-lsu-logo-showcase-carousel{
+.wpwax-lsu-carousel{
   margin-left: auto;
   margin-right: auto;
   position: relative;

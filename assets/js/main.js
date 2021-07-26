@@ -37,11 +37,17 @@
             // speed: checkData(parseInt(el.dataset.lsuSpeed), 3000),
             // autoplay: checkData(JSON.parse(el.dataset.lsuAutoplay), {}),
             navigation: {
-                nextEl: '.wpwax-lsu-carousel-nav__btn--next',
-                prevEl: '.wpwax-lsu-carousel-nav__btn--prev',
+                nextEl: '.wpwax-lsu-carousel-nav__btn-next',
+                prevEl: '.wpwax-lsu-carousel-nav__btn-prev',
             },
             // breakpoints: checkData(JSON.parse(el.dataset.lsuResponsive), {})
         })
     });
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+    });
+    console.log(tooltipTriggerList)
 
 })(jQuery);

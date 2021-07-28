@@ -48,6 +48,13 @@
   color: #ff5500;
 }
 
+/* Tooltip Style */
+.tooltip {
+  font-size: 16px;
+  line-height: 2;
+  padding: 0 10px;
+}
+
 /* Logo Showcase Item hover */
 .wpwax-lsu-logo-showcase-wrap .wpwax-lsu-logo-showcase-item img {
   width: 100%;
@@ -93,7 +100,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0 35px;
-  min-height: 150px;
+  min-height: 130px;
 }
 
 /* wpWax logo Showcase Grid Theme 2 */
@@ -127,6 +134,22 @@
 }
 .wpwax-lsu-logo-showcase-wrap.wpwax-lsu-grid-theme-borderless .wpwax-lsu-logo-showcase-item .wpwax-lsu-logo-showcase-item-inner a {
   padding: 0;
+}
+
+/* wpWax logo Showcase Grid raised */
+.wpwax-lsu-logo-showcase-wrap.wpwax-lsu-grid-theme-raised .wpwax-lsu-carousel {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.wpwax-lsu-logo-showcase-wrap.wpwax-lsu-grid-theme-raised .wpwax-lsu-carousel .swiper-wrapper {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.wpwax-lsu-logo-showcase-wrap.wpwax-lsu-grid-theme-raised .wpwax-lsu-logo-showcase-item .wpwax-lsu-logo-showcase-item-inner {
+  border: 0 none;
+  background-color: #fff;
+  -webkit-box-shadow: 0 5px 10px rgba(84, 77, 124, 0.1);
+          box-shadow: 0 5px 10px rgba(84, 77, 124, 0.1);
 }
 
 /* wpWax logo Showcase Grid Carousel */
@@ -184,6 +207,9 @@
   color: #fff;
   fill: #fff;
 }
+.wpwax-lsu-carousel-nav .wpwax-lsu-carousel-nav__btn.wpwax-lsu-carousel-nav__btn-round {
+  border-radius: 50%;
+}
 .wpwax-lsu-carousel-nav .wpwax-lsu-carousel-nav__btn.wpwax-lsu-carousel-nav__btn-prev {
   margin-right: 12px;
 }
@@ -211,4 +237,21 @@
 .wpwax-lsu-carousel-nav.wpwax-lsu-carousel-nav--around .wpwax-lsu-carousel-nav__btn.wpwax-lsu-carousel-nav__btn-next {
   left: auto;
   right: 0px;
+}
+
+/* wpWax logo Showcase Grid Carousel Pagination */
+.wpwax-lsu-carousel-pagination {
+  text-align: center;
+}
+.wpwax-lsu-carousel-pagination.swiper-pagination-bullets {
+  margin-top: 32px;
+}
+.wpwax-lsu-carousel-pagination.swiper-pagination-bullets .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  background-color: #00000020;
+}
+.wpwax-lsu-carousel-pagination.swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #000000;
 }

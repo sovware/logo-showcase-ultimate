@@ -1,10 +1,9 @@
 <!-- wpwax logo Carousel Theme-2  -->
 
-<div
-    class="wpwax-lsu-logo-showcase-wrap wpwax-lsu-logo-showcase-grid wpwax-lsu-grid-theme-borderless wpwax-lsu-grid-carousel">
-    <h4 class="wpwax-lsu-logo-showcase-title">Client <span class="wpwax-lsu-logo-showcase-serial">#1</span> </h4>
+<div class="wpwax-lsu-logo-showcase-wrap wpwax-lsu-logo-showcase-grid wpwax-lsu-grid-theme-borderless">
+    <h4 class="wpwax-lsu-logo-showcase-title">Client <span class="wpwax-lsu-logo-showcase-serial">#2</span> </h4>
 
-    <div class="wpwax-lsu-carousel wpwax-lsu-carousel-theme-2 wpwax-lsu-carousel-nav-around" data-lsu-items="4"
+    <div class="wpwax-lsu-carousel wpwax-lsu-carousel-theme-2 wpwax-lsu-carousel-nav-around" data-lsu-items="3"
         data-lsu-margin="80" data-lsu-loop="true" data-lsu-perslide="1" data-lsu-speed="300"
         data-lsu-autoplay='{"delay": "3000", "pauseOnMouseEnter": "true", "disableOnInteraction": "false"}'
         data-lsu-responsive='{"320": {"slidesPerView": "2", "spaceBetween": "20"}, "480": {"slidesPerView": "3", "spaceBetween": "30"}, "640": {"slidesPerView": "4", "spaceBetween": "30"}}'>
@@ -41,10 +40,10 @@
             ?>
         </div>
         <div class="wpwax-lsu-carousel-nav wpwax-lsu-carousel-nav--around">
-            <div class="wpwax-lsu-carousel-nav__btn wpwax-lsu-carousel-nav__btn-prev">
+            <div class="wpwax-lsu-carousel-nav__btn wpwax-lsu-carousel-nav__btn-round wpwax-lsu-carousel-nav__btn-prev">
                 <img src="<?php echo LCG_PLUGIN_URI . 'assets/icons/arrow-left.svg'; ?>" alt="" class="wpwax-lsu-svg">
             </div>
-            <div class="wpwax-lsu-carousel-nav__btn wpwax-lsu-carousel-nav__btn-next">
+            <div class="wpwax-lsu-carousel-nav__btn wpwax-lsu-carousel-nav__btn-round wpwax-lsu-carousel-nav__btn-next">
                 <img src="<?php echo LCG_PLUGIN_URI . 'assets/icons/arrow-right.svg'; ?>" alt="" class="wpwax-lsu-svg">
             </div>
         </div>

@@ -32,12 +32,14 @@
 
     lsuCarousel.each(function(i,el){
         let t = $(this);
+        console.log(typeof checkData(t.data('lsu-items'), 4))
+        console.log(t.data('lsu-items'))
         t.addClass('wpwax-lsu-carousel-'+i);
         t.find('.wpwax-lsu-carousel-nav__btn-next').addClass('wpwax-lsu-carousel-nav__btn-next-'+i);
         t.find('.wpwax-lsu-carousel-nav__btn-prev').addClass('wpwax-lsu-carousel-nav__btn-prev-'+i);
         t.find('.wpwax-lsu-carousel-pagination').addClass('wpwax-lsu-carousel-pagination-'+i);
         let swiper = new Swiper(".wpwax-lsu-carousel-"+i, {
-            slidesPerView: checkData(t.data('lsu-items'), 4),
+            slidesPerView: checkData(t.data('lsu-items'), 3),
             spaceBetween: checkData(t.data('lsu-margin'), 30),
             loop: checkData(t.data('lsu-loop'), true),
             slidesPerGroup: checkData(t.data('lsu-perslide'), 1),

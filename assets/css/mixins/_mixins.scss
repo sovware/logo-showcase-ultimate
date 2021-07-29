@@ -1,0 +1,32 @@
+// Media query mixin 
+// XX. Medium Devices (less than 576px)
+@mixin mobileMd() {
+    @media only screen and (max-width: 575px){
+        @content
+    }
+}
+      
+         
+    
+// XX. Medium Devices (less than 768px)
+@mixin mobileLg() {
+    @media only screen and (max-width: 767px){
+        @content 
+    }
+}
+      
+        
+     
+// XX. Medium Devices (less than 991px)
+@mixin tab() {
+    @media only screen and (max-width:991px){
+        @content
+    }
+}
+      
+// XX. Custom Devices
+@mixin customMq($min-width, $max-width){
+    @media only screen and (min-width: $min-width) and (max-width: $max-width){
+        @content
+    }
+}

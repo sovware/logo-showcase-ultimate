@@ -28,33 +28,28 @@
     };
 
     /* lsu Carousel */
-    let lsuCarousel = $(".wpwax-lsu-carousel")
-
-    lsuCarousel.each(function(i,el){
-        let t = $(this);
-        t.addClass('wpwax-lsu-carousel-'+i);
-        t.find('.wpwax-lsu-carousel-nav__btn-next').addClass('wpwax-lsu-carousel-nav__btn-next-'+i);
-        t.find('.wpwax-lsu-carousel-nav__btn-prev').addClass('wpwax-lsu-carousel-nav__btn-prev-'+i);
-        t.find('.wpwax-lsu-carousel-pagination').addClass('wpwax-lsu-carousel-pagination-'+i);
-        let swiper = new Swiper(".wpwax-lsu-carousel-"+i, {
-            slidesPerView: checkData(t.data('lsu-items'), 3),
-            spaceBetween: checkData(t.data('lsu-margin'), 30),
-            loop: checkData(t.data('lsu-loop'), true),
-            slidesPerGroup: checkData(t.data('lsu-perslide'), 1),
-            speed: checkData(t.data('lsu-speed'), 3000),
-            autoplay: checkData(t.data('lsu-autoplay'), {}),
-            navigation: {
-                nextEl: '.wpwax-lsu-carousel-nav__btn-next-'+i,
-                prevEl: '.wpwax-lsu-carousel-nav__btn-prev-'+i,
-            },
-            pagination: {
-                el: '.wpwax-lsu-carousel-pagination-'+i,
+     /* lsu Carousel */
+     let lsuCarousel = document.querySelectorAll('.wpwax-lsu-carousel');
+     lsuCarousel.forEach(function (el) {
+         let swiper = new Swiper(el, {
+             slidesPerView: checkData(parseInt(el.dataset.lsuItems), 4),
+             spaceBetween: checkData(parseInt(el.dataset.lsuMargin), 30),
+             loop: checkData(el.dataset.lsuLoop, true),
+             slidesPerGroup: checkData(parseInt(el.dataset.lsuPerslide), 1),
+             speed: checkData(parseInt(el.dataset.lsuSpeed), 3000),
+             autoplay: checkData(JSON.parse(el.dataset.lsuAutoplay), {}),
+             navigation: {
+                 nextEl: '.wpwax-lsu-carousel-nav__btn-next',
+                 prevEl: '.wpwax-lsu-carousel-nav__btn-prev',
+             },
+             pagination: {
+                el: '.wpwax-lsu-carousel-pagination',
                 type: 'bullets',
                 clickable: true,
             },
-            breakpoints: checkData(t.data('lsu-responsive'), {})
-        })
-    });
+             breakpoints: checkData(JSON.parse(el.dataset.lsuResponsive), {})
+         })
+     });
 
     /* Tooltip Initialization */
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))

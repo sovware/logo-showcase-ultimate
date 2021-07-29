@@ -1,3 +1,5 @@
+// Defaine Mixin File
+@import "./mixins/mixins";
 // Variable
 $dark: #202428;
 $primary: #ff5500;
@@ -15,30 +17,78 @@ $primary: #ff5500;
       .wpwax-lsu-logo-showcase-item {
         flex: 0 0 50%;
         width: 50%;
+        @include mobileMd{
+          flex: 0 0 100%;
+          width: 100%;
+        }
       }
     }
     &.wpwax-lsu-logo-col-3 {
       .wpwax-lsu-logo-showcase-item {
         flex: 0 0 33.33%;
         width: 33.33%;
+        @include tab{
+          flex: 0 0 50%;
+          width: 50%;
+        }
+        @include mobileMd{
+          flex: 0 0 100%;
+          width: 100%;
+        }
       }
     }
     &.wpwax-lsu-logo-col-4 {
       .wpwax-lsu-logo-showcase-item {
         flex: 0 0 25%;
         width: 25%;
+        @include tab{
+          flex: 0 0 33.33%;
+          width: 33.33%;
+        }
+        @include mobileLg{
+          flex: 0 0 50%;
+          width: 50%;
+        }
+        @include mobileMd{
+          flex: 0 0 100%;
+          width: 100%;
+        }
       }
     }
     &.wpwax-lsu-logo-col-5 {
       .wpwax-lsu-logo-showcase-item {
         flex: 0 0 20%;
         width: 20%;
+        @include tab{
+          flex: 0 0 33.33%;
+          width: 33.33%;
+        }
+        @include mobileLg{
+          flex: 0 0 50%;
+          width: 50%;
+        }
+        @include mobileMd{
+          flex: 0 0 100%;
+          width: 100%;
+        }
       }
     }
     &.wpwax-lsu-logo-col-6 {
       .wpwax-lsu-logo-showcase-item {
         flex: 0 0 16.6667%;
         width: 16.6667%;
+        @include tab{
+          flex: 0 0 33.33%;
+          width: 33.33%;
+        }
+        @include mobileLg{
+          flex: 0 0 50%;
+          width: 50%;
+        }
+        @include mobileMd{
+          flex: 0 0 100%;
+          width: 100%;
+        }
       }
     }
   }
@@ -56,13 +106,6 @@ $primary: #ff5500;
       color: $primary;
     }
   }
-}
-
-/* Tooltip Style */
-.tooltip{
-  font-size: 16px;
-  line-height: 2;
-  padding: 0 10px;
 }
 
 /* Logo Showcase Item hover */
@@ -130,10 +173,16 @@ $primary: #ff5500;
 .wpwax-lsu-logo-showcase-wrap {
   &.wpwax-lsu-grid-theme-3 {
     .wpwax-lsu-logo-showcase-content {
-      margin: 0px -50px;
+      margin: -15px -50px;
+      @include mobileMd{
+        margin: -15px 0px;
+      }
     }
     .wpwax-lsu-logo-showcase-item {
-      padding: 0px 50px;
+      padding: 15px 50px;
+      @include mobileMd{
+        padding: 15px 0;
+      }
       &:hover {
         .wpwax-lsu-logo-showcase-item-inner {
           a {

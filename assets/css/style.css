@@ -11,11 +11,35 @@
           flex: 0 0 50%;
   width: 50%;
 }
+@media only screen and (max-width: 575px) {
+  .wpwax-lsu-logo-showcase-wrap.wpwax-lsu-logo-showcase-grid.wpwax-lsu-logo-col-2 .wpwax-lsu-logo-showcase-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    width: 100%;
+  }
+}
 .wpwax-lsu-logo-showcase-wrap.wpwax-lsu-logo-showcase-grid.wpwax-lsu-logo-col-3 .wpwax-lsu-logo-showcase-item {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 33.33%;
           flex: 0 0 33.33%;
   width: 33.33%;
+}
+@media only screen and (max-width: 991px) {
+  .wpwax-lsu-logo-showcase-wrap.wpwax-lsu-logo-showcase-grid.wpwax-lsu-logo-col-3 .wpwax-lsu-logo-showcase-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .wpwax-lsu-logo-showcase-wrap.wpwax-lsu-logo-showcase-grid.wpwax-lsu-logo-col-3 .wpwax-lsu-logo-showcase-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    width: 100%;
+  }
 }
 .wpwax-lsu-logo-showcase-wrap.wpwax-lsu-logo-showcase-grid.wpwax-lsu-logo-col-4 .wpwax-lsu-logo-showcase-item {
   -webkit-box-flex: 0;
@@ -23,17 +47,89 @@
           flex: 0 0 25%;
   width: 25%;
 }
+@media only screen and (max-width: 991px) {
+  .wpwax-lsu-logo-showcase-wrap.wpwax-lsu-logo-showcase-grid.wpwax-lsu-logo-col-4 .wpwax-lsu-logo-showcase-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.33%;
+            flex: 0 0 33.33%;
+    width: 33.33%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .wpwax-lsu-logo-showcase-wrap.wpwax-lsu-logo-showcase-grid.wpwax-lsu-logo-col-4 .wpwax-lsu-logo-showcase-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .wpwax-lsu-logo-showcase-wrap.wpwax-lsu-logo-showcase-grid.wpwax-lsu-logo-col-4 .wpwax-lsu-logo-showcase-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    width: 100%;
+  }
+}
 .wpwax-lsu-logo-showcase-wrap.wpwax-lsu-logo-showcase-grid.wpwax-lsu-logo-col-5 .wpwax-lsu-logo-showcase-item {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 20%;
           flex: 0 0 20%;
   width: 20%;
 }
+@media only screen and (max-width: 991px) {
+  .wpwax-lsu-logo-showcase-wrap.wpwax-lsu-logo-showcase-grid.wpwax-lsu-logo-col-5 .wpwax-lsu-logo-showcase-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.33%;
+            flex: 0 0 33.33%;
+    width: 33.33%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .wpwax-lsu-logo-showcase-wrap.wpwax-lsu-logo-showcase-grid.wpwax-lsu-logo-col-5 .wpwax-lsu-logo-showcase-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .wpwax-lsu-logo-showcase-wrap.wpwax-lsu-logo-showcase-grid.wpwax-lsu-logo-col-5 .wpwax-lsu-logo-showcase-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    width: 100%;
+  }
+}
 .wpwax-lsu-logo-showcase-wrap.wpwax-lsu-logo-showcase-grid.wpwax-lsu-logo-col-6 .wpwax-lsu-logo-showcase-item {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 16.6667%;
           flex: 0 0 16.6667%;
   width: 16.6667%;
+}
+@media only screen and (max-width: 991px) {
+  .wpwax-lsu-logo-showcase-wrap.wpwax-lsu-logo-showcase-grid.wpwax-lsu-logo-col-6 .wpwax-lsu-logo-showcase-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.33%;
+            flex: 0 0 33.33%;
+    width: 33.33%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .wpwax-lsu-logo-showcase-wrap.wpwax-lsu-logo-showcase-grid.wpwax-lsu-logo-col-6 .wpwax-lsu-logo-showcase-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .wpwax-lsu-logo-showcase-wrap.wpwax-lsu-logo-showcase-grid.wpwax-lsu-logo-col-6 .wpwax-lsu-logo-showcase-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    width: 100%;
+  }
 }
 
 /* wpwax Logo Showcase Title */
@@ -46,13 +142,6 @@
 }
 .wpwax-lsu-logo-showcase-wrap .wpwax-lsu-logo-showcase-title .wpwax-lsu-logo-showcase-serial {
   color: #ff5500;
-}
-
-/* Tooltip Style */
-.tooltip {
-  font-size: 16px;
-  line-height: 2;
-  padding: 0 10px;
 }
 
 /* Logo Showcase Item hover */
@@ -113,10 +202,20 @@
 
 /* wpWax logo Showcase Grid Theme 3 */
 .wpwax-lsu-logo-showcase-wrap.wpwax-lsu-grid-theme-3 .wpwax-lsu-logo-showcase-content {
-  margin: 0px -50px;
+  margin: -15px -50px;
+}
+@media only screen and (max-width: 575px) {
+  .wpwax-lsu-logo-showcase-wrap.wpwax-lsu-grid-theme-3 .wpwax-lsu-logo-showcase-content {
+    margin: -15px 0px;
+  }
 }
 .wpwax-lsu-logo-showcase-wrap.wpwax-lsu-grid-theme-3 .wpwax-lsu-logo-showcase-item {
-  padding: 0px 50px;
+  padding: 15px 50px;
+}
+@media only screen and (max-width: 575px) {
+  .wpwax-lsu-logo-showcase-wrap.wpwax-lsu-grid-theme-3 .wpwax-lsu-logo-showcase-item {
+    padding: 15px 0;
+  }
 }
 .wpwax-lsu-logo-showcase-wrap.wpwax-lsu-grid-theme-3 .wpwax-lsu-logo-showcase-item:hover .wpwax-lsu-logo-showcase-item-inner a img {
   opacity: 1;

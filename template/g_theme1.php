@@ -21,8 +21,8 @@
         ?>
         <div class="wpwax-lsu-logo-showcase-item">
 
-            <div class="wpwax-lsu-logo-showcase-item-inner" data-wpwaxTooltip="Company Name">
-                <a href="">
+            <div class="wpwax-lsu-logo-showcase-item-inner">
+                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Conpany Name Sovware">
                     <img src="<?php echo !empty($lcg_img) ? $lcg_img : ''; ?>" alt="<?php the_title(); ?>">
                 </a>
             </div>

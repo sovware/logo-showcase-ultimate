@@ -3,10 +3,10 @@
 <div class="wpwax-lsu-logo-showcase-wrap wpwax-lsu-logo-showcase-grid">
     <h4 class="wpwax-lsu-logo-showcase-title">Client <span class="wpwax-lsu-logo-showcase-serial">#1</span> </h4>
 
-    <div class="wpwax-lsu-carousel wpwax-lsu-carousel-theme-1 wpwax-lsu-carousel-nav-top" data-lsu-items="2"
+    <div class="wpwax-lsu-carousel wpwax-lsu-carousel-theme-1 wpwax-lsu-carousel-nav-top" data-lsu-items="5"
         data-lsu-margin="20" data-lsu-loop="true" data-lsu-perslide="1" data-lsu-speed="300"
         data-lsu-autoplay='{"delay": "3000", "pauseOnMouseEnter": "true", "disableOnInteraction": "false"}'
-        data-lsu-responsive='{"320": {"slidesPerView": "2", "spaceBetween": "20"}, "480": {"slidesPerView": "3", "spaceBetween": "30"}, "640": {"slidesPerView": "2", "spaceBetween": "30"}}'>
+        data-lsu-responsive='{"0": {"slidesPerView": "1", "spaceBetween": "0"}, "575": {"slidesPerView": "2", "spaceBetween": "0"}, "767": {"slidesPerView": "3", "spaceBetween": "30"}, "992": {"slidesPerView": "5", "spaceBetween": "30"}}'>
         <div class="swiper-wrapper">
             <?php
             while ($adl_logo->have_posts()) : $adl_logo->the_post();

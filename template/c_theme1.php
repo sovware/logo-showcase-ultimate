@@ -1,12 +1,14 @@
 <!-- wpwax logo Carousel Theme-1  -->
 
 <div class="wpwax-lsu-logo-showcase-wrap wpwax-lsu-logo-showcase-grid">
+
     <h4 class="wpwax-lsu-logo-showcase-title">Client <span class="wpwax-lsu-logo-showcase-serial">#1</span> </h4>
 
     <div class="wpwax-lsu-carousel wpwax-lsu-carousel-theme-1 wpwax-lsu-carousel-nav-top" data-lsu-items="5"
         data-lsu-margin="20" data-lsu-loop="true" data-lsu-perslide="1" data-lsu-speed="300"
         data-lsu-autoplay='{"delay": "3000", "pauseOnMouseEnter": "true", "disableOnInteraction": "false"}'
         data-lsu-responsive='{"0": {"slidesPerView": "1", "spaceBetween": "0"}, "575": {"slidesPerView": "2", "spaceBetween": "0"}, "767": {"slidesPerView": "3", "spaceBetween": "30"}, "992": {"slidesPerView": "5", "spaceBetween": "30"}}'>
+        
         <div class="swiper-wrapper">
             <?php
             while ($adl_logo->have_posts()) : $adl_logo->the_post();
@@ -24,28 +26,42 @@
                     $lcg_img = $aazz_thumb['0'];
                 }
             ?>
+
             <div class="wpwax-lsu-logo-showcase-item swiper-slide">
 
                 <div class="wpwax-lsu-logo-showcase-item-inner" data-bs-toggle="tooltip" data-bs-placement="top"
                     title="Tooltip on right">
+                    
                     <a href="">
                         <img src="<?php echo !empty($lcg_img) ? $lcg_img : ''; ?>" alt="<?php the_title(); ?>">
                     </a>
+
                 </div>
 
             </div>
+
             <?php
             endwhile;
             wp_reset_postdata();
             ?>
         </div>
+
         <div class="wpwax-lsu-carousel-nav wpwax-lsu-carousel-nav--top-right">
+
             <div class="wpwax-lsu-carousel-nav__btn wpwax-lsu-carousel-nav__btn-prev">
+
                 <img src="<?php echo LCG_PLUGIN_URI . 'assets/icons/arrow-left.svg'; ?>" alt="" class="wpwax-lsu-svg">
+
             </div>
+
             <div class="wpwax-lsu-carousel-nav__btn wpwax-lsu-carousel-nav__btn-next">
+
                 <img src="<?php echo LCG_PLUGIN_URI . 'assets/icons/arrow-right.svg'; ?>" alt="" class="wpwax-lsu-svg">
+
             </div>
+
         </div>
+
     </div>
+    
 </div>

@@ -2,7 +2,9 @@
 
 <div
     class="wpwax-lsu-logo-showcase-wrap wpwax-lsu-logo-showcase-grid wpwax-lsu-grid-theme-3 wpwax-lsu-grid-theme-borderless wpwax-lsu-logo-col-3">
+
     <h4 class="wpwax-lsu-logo-showcase-title">Grid Theme <span class="wpwax-lsu-logo-showcase-serial">#3</span> </h4>
+
     <div class="wpwax-lsu-logo-showcase-content">
         <?php
         while ($adl_logo->have_posts()) : $adl_logo->the_post();
@@ -23,12 +25,17 @@
         <div class="wpwax-lsu-logo-showcase-item">
 
             <div class="wpwax-lsu-logo-showcase-item-inner">
+
                 <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Conpany Name Sovware">
+
                     <img src="<?php echo !empty($lcg_img) ? $lcg_img : ''; ?>" alt="<?php the_title(); ?>">
+                    
                 </a>
+
             </div>
 
         </div>
+        
         <?php
         endwhile;
         wp_reset_postdata();

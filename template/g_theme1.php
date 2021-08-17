@@ -1,8 +1,11 @@
 <!-- wpwax logo Grid Theme-1  -->
 
 <div class="wpwax-lsu-logo-showcase-wrap wpwax-lsu-logo-showcase-grid wpwax-lsu-grid-theme-1 wpwax-lsu-logo-col-2">
+
     <h4 class="wpwax-lsu-logo-showcase-title">Grid Theme <span class="wpwax-lsu-logo-showcase-serial">#1</span> </h4>
+
     <div class="wpwax-lsu-logo-showcase-content">
+
         <?php
         while ($adl_logo->have_posts()) : $adl_logo->the_post();
             $tooltip  = get_post_meta(get_the_id(), 'img_tool', true);
@@ -19,19 +22,26 @@
                 $lcg_img = $aazz_thumb['0'];
             }
         ?>
+
         <div class="wpwax-lsu-logo-showcase-item">
 
             <div class="wpwax-lsu-logo-showcase-item-inner">
+
                 <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Conpany Name Sovware">
+
                     <img src="<?php echo !empty($lcg_img) ? $lcg_img : ''; ?>" alt="<?php the_title(); ?>">
+
                 </a>
+
             </div>
 
         </div>
+
         <?php
         endwhile;
         wp_reset_postdata();
         ?>
+        
     </div>
 
 </div>

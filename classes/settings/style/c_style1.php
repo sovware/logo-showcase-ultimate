@@ -15,9 +15,9 @@ $c1_nav          = !empty($c1_nav) ? $c1_nav : 'yes';
             </label>
         </div>    
         <div class="cmb-td">
-            <ul class="cmb2-radio-list cmb2-list">
+            <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
                 <li>
-                    <input type="radio" class="cmb2-option" 
+                    <input type="radio" class="cmb2-option cmb2-radio-switch1" 
                     name="lcg_scode[c1_border]" 
                     id="lcg_scode[c1_border]1" 
                     value="yes" <?php checked('yes', $c1_border, true);  ?>>
@@ -27,7 +27,7 @@ $c1_nav          = !empty($c1_nav) ? $c1_nav : 'yes';
                 </li>
                 <li>
                     <input type="radio" 
-                    class="cmb2-option" 
+                    class="cmb2-option cmb2-radio-switch2" 
                     name="lcg_scode[c1_border]" 
                     id="lcg_scode[c1_border]2" 
                     value="no" <?php checked('no', $c1_border, true);  ?>>
@@ -47,9 +47,9 @@ $c1_nav          = !empty($c1_nav) ? $c1_nav : 'yes';
             </label>
         </div>    
         <div class="cmb-td">
-            <ul class="cmb2-radio-list cmb2-list">
+            <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
                 <li>
-                    <input type="radio" class="cmb2-option" 
+                    <input type="radio" class="cmb2-option cmb2-radio-switch1" 
                     name="lcg_scode[c1_nav]" 
                     id="lcg_scode[c1_nav]1" 
                     value="yes" <?php checked('yes', $c1_nav, true);  ?>>
@@ -59,7 +59,7 @@ $c1_nav          = !empty($c1_nav) ? $c1_nav : 'yes';
                 </li>
                 <li>
                     <input type="radio" 
-                    class="cmb2-option" 
+                    class="cmb2-option cmb2-radio-switch2" 
                     name="lcg_scode[c1_nav]" 
                     id="lcg_scode[c1_nav]2" 
                     value="no" <?php checked('no', $c1_nav, true);  ?>>

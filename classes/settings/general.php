@@ -7,7 +7,7 @@ $upscale         = !empty($upscale) ? $upscale : 'yes';
 $target          = !empty($target) ? $target : '_blank';
 ?>
 <!--TAB 1 General setting -->
-<div id="lcsp-tab-5" class="lcsp-tab-content">
+<div id="lcsp-tab-5" class="lcsp-tab-content" style="display:block">
     <div class="cmb2-wrap form-table">
         <div id="cmb2-metabox" class="cmb2-metabox cmb-field-list">
 
@@ -54,9 +54,9 @@ $target          = !empty($target) ? $target : '_blank';
                     </label>
                 </div>
                 <div class="cmb-td">
-                    <ul class="cmb2-radio-list cmb2-list">
+                    <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
                         <li>
-                            <input type="radio" class="cmb2-option"
+                            <input type="radio" class="cmb2-option cmb2-radio-switch1"
                                    name="lcg_scode[cg_title_show]"
                                    id="lcg_scode[cg_title_show]1"
                                    value="yes" <?php checked('yes', $cg_title_show, true);  ?>>
@@ -65,7 +65,7 @@ $target          = !empty($target) ? $target : '_blank';
                             </label>
                         </li>
                         <li>
-                            <input type="radio" class="cmb2-option"
+                            <input type="radio" class="cmb2-option cmb2-radio-switch2"
                                    name="lcg_scode[cg_title_show]"
                                    id="lcg_scode[cg_title_show]2"
                                    value="no" <?php checked('no', $cg_title_show, true);  ?>>
@@ -103,7 +103,7 @@ $target          = !empty($target) ? $target : '_blank';
                         </li>
                     </ul>
                     <p class="cmb2-metabox-description"><?php esc_html_e('What type of products to display in the logo showcase ultimate', LCG_TEXTDOMAIN); ?></p>
-                    <ul>
+                    <ul class="cmb2-radio-list-pro">
                         <p style="font-size: 14px; margin: 13px 0 5px 0; font-style: italic;">Following options available in <a href="https://aazztech.com/product/logo-showcase-ultimate-pro/" target="_blank">Pro Version</a>:</p>
                         <li>
                             <input type="radio" class="cmb2-option"
@@ -146,9 +146,9 @@ $target          = !empty($target) ? $target : '_blank';
                     </label>
                 </div>
                 <div class="cmb-td">
-                    <ul class="cmb2-radio-list cmb2-list">
+                    <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
                         <li>
-                            <input type="radio" class="cmb2-option" 
+                            <input type="radio" class="cmb2-option cmb2-radio-switch1" 
                             name="lcg_scode[image_crop]" 
                             id="lcsp_ic1" 
                             value="yes" <?php checked('yes', $image_crop, true);  ?>>
@@ -157,7 +157,7 @@ $target          = !empty($target) ? $target : '_blank';
                             </label>
                         </li>
                         <li>
-                            <input type="radio" class="cmb2-option" 
+                            <input type="radio" class="cmb2-option cmb2-radio-switch2" 
                             name="lcg_scode[image_crop]" 
                             id="lcsp_ic2" 
                             value="no" <?php checked('no', $image_crop, true);  ?>>

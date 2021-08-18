@@ -44,16 +44,16 @@ $scrool          = !empty($scrool) ? $scrool : 'false';
                     <label for="lcsp_ap"><?php esc_html_e('Auto Play', LCG_TEXTDOMAIN); ?></label>
                 </div>
                 <div class="cmb-td">
-                    <ul class="cmb2-radio-list cmb2-list">
+                    <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
                         <li>
-                            <input type="radio" class="cmb2-option" 
+                            <input type="radio" class="cmb2-option cmb2-radio-switch1" 
                             name="lcg_scode[A_play]" 
                             id="lcsp_ap1" 
                             value="yes" <?php checked('yes', $A_play, true); ?>> 
                             <label for="lcsp_ap1"><?php esc_html_e('Yes', LCG_TEXTDOMAIN); ?></label>
                         </li>
                         <li>
-                            <input type="radio" class="cmb2-option" 
+                            <input type="radio" class="cmb2-option cmb2-radio-switch2" 
                             name="lcg_scode[A_play]" 
                             id="lcsp_ap2" 
                             value="no" <?php checked('no', $A_play, true); ?>> 
@@ -64,21 +64,21 @@ $scrool          = !empty($scrool) ? $scrool : 'false';
             </div>
 
             <!--Repeat product-->
-            <div class="cmb-row cmb-type-radio">
+            <div class="cmb-row cmb-type-radio cmb2-radio-switch1">
                 <div class="cmb-th">
                     <label for="lcsp_ap"><?php esc_html_e('Repeat Logo', LCG_TEXTDOMAIN); ?></label>
                 </div>
                 <div class="cmb-td">
-                    <ul class="cmb2-radio-list cmb2-list">
+                    <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
                         <li>
-                            <input type="radio" class="cmb2-option"
+                            <input type="radio" class="cmb2-option cmb2-radio-switch1"
                                    name="lcg_scode[repeat_product]"
                                    id="repeat_product"
                                    value="yes" <?php checked('yes', $repeat_product, true); ?>>
                             <label for="repeat_product"><?php esc_html_e('Yes', LCG_TEXTDOMAIN); ?></label>
                         </li>
                         <li>
-                            <input type="radio" class="cmb2-option"
+                            <input type="radio" class="cmb2-option cmb2-radio-switch2"
                                    name="lcg_scode[repeat_product]"
                                    id="repeat_product"
                                    value="no" <?php checked('no', $repeat_product, true); ?>>
@@ -94,8 +94,8 @@ $scrool          = !empty($scrool) ? $scrool : 'false';
                     <label for="lcsp_soh"><?php esc_html_e('Stop on Hover', LCG_TEXTDOMAIN); ?></label>
                 </div>
                 <div class="cmb-td">
-                    <ul class="cmb2-radio-list cmb2-list">
-                        <li><input type="radio" class="cmb2-option" 
+                    <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
+                        <li><input type="radio" class="cmb2-option cmb2-radio-switch1" 
                             name="lcg_scode[stop_hover]" 
                             id="lcsp_soh1" 
                             value="true" <?php checked('true', $stop_hover, true); ?>> 
@@ -103,7 +103,7 @@ $scrool          = !empty($scrool) ? $scrool : 'false';
                                 <?php esc_html_e('Yes', LCG_TEXTDOMAIN); ?>
                             </label>
                         </li>
-                        <li><input type="radio" class="cmb2-option" 
+                        <li><input type="radio" class="cmb2-option cmb2-radio-switch2" 
                             name="lcg_scode[stop_hover]" 
                             id="lcsp_soh2" 
                             value="false" <?php checked('false', $stop_hover, true);  ?>> 

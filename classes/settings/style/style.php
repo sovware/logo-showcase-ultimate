@@ -16,9 +16,9 @@ $image_hover     = !empty($image_hover) ? $image_hover : 'yes';
                     </label>
                 </div>
                 <div class="cmb-td">
-                    <ul class="cmb2-radio-list cmb2-list">
+                    <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
                         <li>
-                            <input type="radio" class="cmb2-option" 
+                            <input type="radio" class="cmb2-option cmb2-radio-switch1" 
                             name="lcg_scode[image_hover]" 
                             id="lcg_scode[image_hover]1" 
                             value="yes" <?php checked('yes', $image_hover, true);  ?>>
@@ -28,7 +28,7 @@ $image_hover     = !empty($image_hover) ? $image_hover : 'yes';
                         </li>
                         <li>
                             <input type="radio" 
-                            class="cmb2-option" 
+                            class="cmb2-option cmb2-radio-switch2" 
                             name="lcg_scode[image_hover]" 
                             id="lcg_scode[image_hover]2" 
                             value="no" <?php checked('no', $image_hover, true);  ?>>
@@ -48,9 +48,9 @@ $image_hover     = !empty($image_hover) ? $image_hover : 'yes';
                     </label>
                 </div>
                 <div class="cmb-td">
-                    <ul class="cmb2-radio-list cmb2-list">
+                    <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
                         <li>
-                            <input type="radio" class="cmb2-option"
+                            <input type="radio" class="cmb2-option cmb2-radio-switch1"
                                    name="lcg_scode[tooltip]"
                                    id="lcg_scode[tooltip]1"
                                    value="yes" <?php checked('yes', $tooltip, true);  ?>>
@@ -60,7 +60,7 @@ $image_hover     = !empty($image_hover) ? $image_hover : 'yes';
                         </li>
                         <li>
                             <input type="radio"
-                                   class="cmb2-option"
+                                   class="cmb2-option cmb2-radio-switch2"
                                    name="lcg_scode[tooltip]"
                                    id="lcg_scode[tooltip]2"
                                    value="no" <?php checked('no', $tooltip, true);  ?>>
@@ -81,9 +81,9 @@ $image_hover     = !empty($image_hover) ? $image_hover : 'yes';
                         </label>
                     </div>
                     <div class="cmb-td">
-                        <ul class="cmb2-radio-list cmb2-list">
+                        <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
                             <li>
-                                <input type="radio" class="cmb2-option"
+                                <input type="radio" class="cmb2-option cmb2-radio-switch1"
                                 id="tooltip_pos_top"
                                 name="postition"
                                 top="top"
@@ -94,7 +94,7 @@ $image_hover     = !empty($image_hover) ? $image_hover : 'yes';
                             </li>
                             <li>
                                 <input type="radio"
-                                       class="cmb2-option"
+                                       class="cmb2-option cmb2-radio-switch2"
                                        id="tooltip_pos_bottom"
                                        name="postition"
                                        value="bottom"

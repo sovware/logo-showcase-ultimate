@@ -28,9 +28,8 @@
     };
 
     /* lsu Carousel */
-     /* lsu Carousel */
-     let lsuCarousel = document.querySelectorAll('.wpwax-lsu-carousel');
-     lsuCarousel.forEach(function (el) {
+    let lsuCarousel = document.querySelectorAll('.wpwax-lsu-carousel');
+    lsuCarousel.forEach(function (el) {
          let swiper = new Swiper(el, {
              slidesPerView: checkData(parseInt(el.dataset.lsuItems), 4),
              spaceBetween: checkData(parseInt(el.dataset.lsuMargin), 30),
@@ -49,7 +48,7 @@
             },
              breakpoints: checkData(JSON.parse(el.dataset.lsuResponsive), {})
          })
-     });
+    });
 
     /* Tooltip Initialization */
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))

@@ -7,7 +7,7 @@
     <div class="wpwax-lsu-carousel wpwax-lsu-carousel-theme-1 wpwax-lsu-carousel-nav-top" data-lsu-items="5"
         data-lsu-margin="20" data-lsu-loop="true" data-lsu-perslide="1" data-lsu-speed="300"
         data-lsu-autoplay='{"delay": "3000", "pauseOnMouseEnter": "true", "disableOnInteraction": "false"}'
-        data-lsu-responsive='{"0": {"slidesPerView": "1", "spaceBetween": "0"}, "575": {"slidesPerView": "2", "spaceBetween": "0"}, "767": {"slidesPerView": "3", "spaceBetween": "30"}, "992": {"slidesPerView": "5", "spaceBetween": "30"}}'>
+        data-lsu-responsive='{"0": {"slidesPerView": "2", "spaceBetween": "15"}, "768": {"slidesPerView": "2", "spaceBetween": "15"}, "979": {"slidesPerView": "4", "spaceBetween": "20"}, "1199": {"slidesPerView": "5", "spaceBetween": "30"}}'>
         
         <div class="swiper-wrapper">
             <?php

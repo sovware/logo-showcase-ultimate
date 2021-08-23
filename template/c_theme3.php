@@ -7,7 +7,7 @@
     <div class="wpwax-lsu-carousel wpwax-lsu-carousel-theme-3" data-lsu-items="3" data-lsu-margin="20"
         data-lsu-loop="true" data-lsu-perslide="1" data-lsu-speed="300"
         data-lsu-autoplay='{"delay": "3000", "pauseOnMouseEnter": "false", "disableOnInteraction": "false"}'
-        data-lsu-responsive='{"375": {"slidesPerView": "2", "spaceBetween": "20"}, "767": {"slidesPerView": "3", "spaceBetween": "30"}, "992": {"slidesPerView": "3", "spaceBetween": "30"}}'>
+        data-lsu-responsive='{"0": {"slidesPerView": "1", "spaceBetween": "0"},"768": {"slidesPerView": "2", "spaceBetween": "15"}, "979": {"slidesPerView": "3", "spaceBetween": "20"}, "1199": {"slidesPerView": "3", "spaceBetween": "30"}}'>
         
         <div class="swiper-wrapper">
             <?php

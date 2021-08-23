@@ -1,4 +1,4 @@
-(function ($) {
+(function($) {
 
     "use strict";
     /* Replace all SVG images with inline SVG */
@@ -23,36 +23,57 @@
     convertImages('img.wpwax-lsu-svg');
 
     /* Check lsu Carousel Data */
-    let checkData = function (data, value) {
+    let checkData = function(data, value) {
         return typeof data === 'undefined' ? value : data;
     };
 
     /* lsu Carousel */
     let lsuCarousel = document.querySelectorAll('.wpwax-lsu-carousel');
-    lsuCarousel.forEach(function (el) {
-         let swiper = new Swiper(el, {
-             slidesPerView: checkData(parseInt(el.dataset.lsuItems), 4),
-             spaceBetween: checkData(parseInt(el.dataset.lsuMargin), 30),
-             loop: checkData(el.dataset.lsuLoop, true),
-             slidesPerGroup: checkData(parseInt(el.dataset.lsuPerslide), 1),
-             speed: checkData(parseInt(el.dataset.lsuSpeed), 3000),
-             autoplay: checkData(JSON.parse(el.dataset.lsuAutoplay), {}),
-             navigation: {
-                 nextEl: '.wpwax-lsu-carousel-nav__btn-next',
-                 prevEl: '.wpwax-lsu-carousel-nav__btn-prev',
-             },
-             pagination: {
-                el: '.wpwax-lsu-carousel-pagination',
+    let hasPagination;
+
+    lsuCarousel.forEach(function(el, i) {
+
+        el.classList.add(`wpwax-lsu-carousel-${i}`);
+
+        el.childNodes.forEach(el => {
+
+            if (el.className === "wpwax-lsu-carousel-pagination") {
+                hasPagination = true;
+            }
+
+        });
+
+        let navBtnPrev = document.querySelectorAll('.wpwax-lsu-carousel-nav__btn-prev');
+        let navBtnNext = document.querySelectorAll('.wpwax-lsu-carousel-nav__btn-next');
+        const paginationElement = document.querySelectorAll(".wpwax-lsu-carousel-pagination");
+
+        navBtnPrev.forEach((el, i) => { el.classList.add(`wpwax-lsu-carousel-nav__btn-prev-${i}`); });
+        navBtnNext.forEach((el, i) => { el.classList.add(`wpwax-lsu-carousel-nav__btn-next-${i}`); });
+        hasPagination && paginationElement.forEach((el) => el.classList.add(`wpwax-lsu-carousel-pagination-${i}`));
+
+        let swiper = new Swiper(`.wpwax-lsu-carousel-${i}`, {
+            slidesPerView: checkData(parseInt(el.dataset.lsuItems), 4),
+            spaceBetween: checkData(parseInt(el.dataset.lsuMargin), 30),
+            loop: checkData(el.dataset.lsuLoop, true),
+            slidesPerGroup: checkData(parseInt(el.dataset.lsuPerslide), 1),
+            speed: checkData(parseInt(el.dataset.lsuSpeed), 3000),
+            autoplay: checkData(JSON.parse(el.dataset.lsuAutoplay), {}),
+            navigation: {
+                nextEl: `.wpwax-lsu-carousel-nav__btn-next-${i}`,
+                prevEl: `.wpwax-lsu-carousel-nav__btn-prev-${i}`,
+            },
+            pagination: {
+                el: `.wpwax-lsu-carousel-pagination-${i}`,
                 type: 'bullets',
                 clickable: true,
             },
-             breakpoints: checkData(JSON.parse(el.dataset.lsuResponsive), {})
-         })
+            breakpoints: checkData(JSON.parse(el.dataset.lsuResponsive), {})
+        })
     });
 
     /* Tooltip Initialization */
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl)
     });
 

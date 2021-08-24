@@ -1,10 +1,10 @@
 <!-- wpwax logo Carousel Theme-1  -->
 
-<div class="wpwax-lsu-logo-showcase-wrap wpwax-lsu-logo-showcase-grid wpwax-lsu-grid-theme-raised">
+<div class="wpwax-lsu-logo-showcase-wrap wpwax-lsu-logo-showcase-carousel-theme-3 wpwax-lsu-logo-showcase-grid wpwax-lsu-grid-theme-raised">
 
     <h4 class="wpwax-lsu-logo-showcase-title">Client <span class="wpwax-lsu-logo-showcase-serial">#3</span> </h4>
 
-    <div class="wpwax-lsu-carousel wpwax-lsu-carousel-theme-3" data-lsu-items="3" data-lsu-margin="20"
+    <div class="wpwax-lsu-carousel" data-lsu-items="3" data-lsu-margin="20"
         data-lsu-loop="true" data-lsu-perslide="1" data-lsu-speed="300"
         data-lsu-autoplay='{"delay": "3000", "pauseOnMouseEnter": "false", "disableOnInteraction": "false"}'
         data-lsu-responsive='{"0": {"slidesPerView": "1", "spaceBetween": "0"},"768": {"slidesPerView": "2", "spaceBetween": "15"}, "979": {"slidesPerView": "3", "spaceBetween": "20"}, "1199": {"slidesPerView": "3", "spaceBetween": "30"}}'>
@@ -33,6 +33,7 @@
                     title="Tooltip on right">
                     
                     <a href="">
+                        
                         <img src="<?php echo !empty($lcg_img) ? $lcg_img : ''; ?>" alt="<?php the_title(); ?>">
                    
                     </a>

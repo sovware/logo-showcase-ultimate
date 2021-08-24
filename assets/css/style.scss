@@ -17,78 +17,30 @@ $primary: #ff5500;
       .wpwax-lsu-logo-showcase-item {
         flex: 0 0 50%;
         width: 50%;
-        @include mobileMd {
-          flex: 0 0 100%;
-          width: 100%;
-        }
       }
     }
     &.wpwax-lsu-logo-col-3 {
       .wpwax-lsu-logo-showcase-item {
         flex: 0 0 33.33%;
         width: 33.33%;
-        @include tab {
-          flex: 0 0 50%;
-          width: 50%;
-        }
-        @include mobileMd {
-          flex: 0 0 100%;
-          width: 100%;
-        }
       }
     }
     &.wpwax-lsu-logo-col-4 {
       .wpwax-lsu-logo-showcase-item {
         flex: 0 0 25%;
         width: 25%;
-        @include tab {
-          flex: 0 0 33.33%;
-          width: 33.33%;
-        }
-        @include mobileLg {
-          flex: 0 0 50%;
-          width: 50%;
-        }
-        @include mobileMd {
-          flex: 0 0 100%;
-          width: 100%;
-        }
       }
     }
     &.wpwax-lsu-logo-col-5 {
       .wpwax-lsu-logo-showcase-item {
         flex: 0 0 20%;
         width: 20%;
-        @include tab {
-          flex: 0 0 33.33%;
-          width: 33.33%;
-        }
-        @include mobileLg {
-          flex: 0 0 50%;
-          width: 50%;
-        }
-        @include mobileMd {
-          flex: 0 0 100%;
-          width: 100%;
-        }
       }
     }
     &.wpwax-lsu-logo-col-6 {
       .wpwax-lsu-logo-showcase-item {
         flex: 0 0 16.6667%;
         width: 16.6667%;
-        @include tab {
-          flex: 0 0 33.33%;
-          width: 33.33%;
-        }
-        @include mobileLg {
-          flex: 0 0 50%;
-          width: 50%;
-        }
-        @include mobileMd {
-          flex: 0 0 100%;
-          width: 100%;
-        }
       }
     }
   }
@@ -205,6 +157,22 @@ $primary: #ff5500;
 .wpwax-lsu-logo-showcase-wrap {
   &.wpwax-lsu-grid-theme-borderless {
     .wpwax-lsu-logo-showcase-item {
+      a {
+        min-height: 45px;
+      }
+      .wpwax-lsu-logo-showcase-item-inner {
+        border: 0 none;
+        a {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+/* wpWax logo Showcase Grid borderless */
+.wpwax-lsu-logo-showcase-wrap {
+  .wpwax-lsu-logo-showcase-item {
+    &.wpwax-lsu-logo-showcase-item__bordered {
       a {
         min-height: 45px;
       }

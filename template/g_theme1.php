@@ -1,6 +1,6 @@
 <!-- wpwax logo Grid Theme-1  -->
 
-<div class="wpwax-lsu-logo-showcase-wrap wpwax-lsu-logo-showcase-grid wpwax-lsu-grid-theme-1 wpwax-lsu-logo-col-2">
+<div class="wpwax-lsu-logo-showcase-wrap wpwax-lsu-logo-showcase-grid wpwax-lsu-grid-theme-1 wpwax-lsu-logo-col-lg-2 wpwax-lsu-logo-col-md-2 wpwax-lsu-logo-col-sm-1">
 
     <h4 class="wpwax-lsu-logo-showcase-title">Grid Theme <span class="wpwax-lsu-logo-showcase-serial">#1</span> </h4>
 

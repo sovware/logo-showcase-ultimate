@@ -1,9 +1,9 @@
 <!-- wpwax logo Grid Theme-3  -->
-<h4 class="wpwax-lsu-logo-showcase-title">Grid Theme <span class="wpwax-lsu-logo-showcase-serial">#3</span> </h4>
+<h4 class="wpwax-lsu-title">Grid Theme <span class="wpwax-lsu-serial">#3</span> </h4>
 <div
-    class="wpwax-lsu-logo-showcase-wrap wpwax-lsu-logo-showcase-grid wpwax-lsu-grid-theme-3 wpwax-lsu-logo-col-lg-3 wpwax-lsu-logo-col-md-2 wpwax-lsu-logo-col-sm-1">
+    class="wpwax-lsu-ultimate wpwax-lsu-grid wpwax-lsu-grid-theme-3 wpwax-lsu-logo-col-lg-3 wpwax-lsu-logo-col-md-2 wpwax-lsu-logo-col-sm-1">
 
-    <div class="wpwax-lsu-logo-showcase-content">
+    <div class="wpwax-lsu-content">
         <?php
         while ($adl_logo->have_posts()) : $adl_logo->the_post();
             $tooltip  = get_post_meta(get_the_id(), 'img_tool', true);
@@ -20,9 +20,9 @@
                 $lcg_img = $aazz_thumb['0'];
             }
         ?>
-        <div class="wpwax-lsu-logo-showcase-item wpwax-lsu-logo-showcase-item__bordered">
+        <div class="wpwax-lsu-item wpwax-lsu-item__bordered">
 
-            <div class="wpwax-lsu-logo-showcase-item-inner">
+            <div class="wpwax-lsu-item-inner">
 
                 <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Conpany Name Sovware">
 

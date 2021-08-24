@@ -6,6 +6,8 @@ $primary: #ff5500;
 
 /* Logo Showcase Grid */
 .wpwax-lsu-logo-showcase-wrap {
+  position: relative;
+
   &.wpwax-lsu-logo-showcase-grid {
     &.wpwax-lsu-logo-col-1,
     &.wpwax-lsu-logo-col-2,
@@ -164,16 +166,15 @@ $primary: #ff5500;
 }
 
 /* wpwax Logo Showcase Title */
-.wpwax-lsu-logo-showcase-wrap {
-  .wpwax-lsu-logo-showcase-title {
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 68px;
-    color: $dark;
-    text-align: center;
-    .wpwax-lsu-logo-showcase-serial {
-      color: $primary;
-    }
+
+.wpwax-lsu-logo-showcase-title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 68px;
+  color: $dark;
+  text-align: center;
+  .wpwax-lsu-logo-showcase-serial {
+    color: $primary;
   }
 }
 
@@ -392,6 +393,7 @@ $primary: #ff5500;
     position: absolute;
     right: 0;
     top: 0;
+    z-index: 22;
   }
   &.wpwax-lsu-carousel-nav--around {
     .wpwax-lsu-carousel-nav__btn {

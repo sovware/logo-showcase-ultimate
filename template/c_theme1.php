@@ -1,8 +1,6 @@
 <!-- wpwax logo Carousel Theme-1  -->
-
+<h4 class="wpwax-lsu-logo-showcase-title">Client <span class="wpwax-lsu-logo-showcase-serial">#1</span> </h4>
 <div class="wpwax-lsu-logo-showcase-wrap wpwax-lsu-logo-showcase-carousel-theme-1 wpwax-lsu-logo-showcase-grid">
-
-    <h4 class="wpwax-lsu-logo-showcase-title">Client <span class="wpwax-lsu-logo-showcase-serial">#1</span> </h4>
 
     <div class="wpwax-lsu-carousel wpwax-lsu-carousel-nav-top" data-lsu-items="5"
         data-lsu-margin="20" data-lsu-loop="true" data-lsu-perslide="1" data-lsu-speed="300"
@@ -48,19 +46,19 @@
             ?>
         </div>
 
-        <div class="wpwax-lsu-carousel-nav wpwax-lsu-carousel-nav--top-right">
+    </div>
 
-            <div class="wpwax-lsu-carousel-nav__btn wpwax-lsu-carousel-nav__btn-prev">
+    <div class="wpwax-lsu-carousel-nav wpwax-lsu-carousel-nav--top-right">
 
-                <img src="<?php echo LCG_PLUGIN_URI . 'assets/icons/arrow-left.svg'; ?>" alt="" class="wpwax-lsu-svg">
+        <div class="wpwax-lsu-carousel-nav__btn wpwax-lsu-carousel-nav__btn-prev">
 
-            </div>
+            <img src="<?php echo LCG_PLUGIN_URI . 'assets/icons/arrow-left.svg'; ?>" alt="" class="wpwax-lsu-svg">
 
-            <div class="wpwax-lsu-carousel-nav__btn wpwax-lsu-carousel-nav__btn-next">
+        </div>
 
-                <img src="<?php echo LCG_PLUGIN_URI . 'assets/icons/arrow-right.svg'; ?>" alt="" class="wpwax-lsu-svg">
+        <div class="wpwax-lsu-carousel-nav__btn wpwax-lsu-carousel-nav__btn-next">
 
-            </div>
+            <img src="<?php echo LCG_PLUGIN_URI . 'assets/icons/arrow-right.svg'; ?>" alt="" class="wpwax-lsu-svg">
 
         </div>
 

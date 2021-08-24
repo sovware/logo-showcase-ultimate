@@ -1,8 +1,7 @@
 <!-- wpwax logo Carousel Theme-1  -->
+<h4 class="wpwax-lsu-logo-showcase-title">Client <span class="wpwax-lsu-logo-showcase-serial">#3</span> </h4>
 
 <div class="wpwax-lsu-logo-showcase-wrap wpwax-lsu-logo-showcase-carousel-theme-3 wpwax-lsu-logo-showcase-grid wpwax-lsu-grid-theme-raised">
-
-    <h4 class="wpwax-lsu-logo-showcase-title">Client <span class="wpwax-lsu-logo-showcase-serial">#3</span> </h4>
 
     <div class="wpwax-lsu-carousel" data-lsu-items="3" data-lsu-margin="20"
         data-lsu-loop="true" data-lsu-perslide="1" data-lsu-speed="300"

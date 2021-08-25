@@ -320,7 +320,7 @@ $primary: #ff5500;
       margin-left: 10px;
       margin-right: 10px;
     }
-    
+
     .wpwax-lsu-item {
       .wpwax-lsu-item-inner {
         border: 0 none;
@@ -345,7 +345,7 @@ $primary: #ff5500;
   }
 
   &.wpwax-lsu-carousel-nav-around {
-    padding: 0;
+    padding: 0 30px;
   }
 }
 
@@ -396,13 +396,13 @@ $primary: #ff5500;
   &.wpwax-lsu-carousel-nav--around {
     .wpwax-lsu-carousel-nav__btn {
       position: absolute;
-      left: -20px;
+      left: 0px;
       top: 50%;
       transform: translateY(-50%);
       z-index: 22;
       &.wpwax-lsu-carousel-nav__btn-next {
         left: auto;
-        right: -20px;
+        right: 0px;
       }
     }
   }

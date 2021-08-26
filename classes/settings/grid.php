@@ -15,11 +15,11 @@ $g_theme         = ! empty( $g_theme ) ? $g_theme : 'grid-theme-1';
                         <option value="grid-theme-1" <?php selected( $g_theme, 'grid-theme-1'); ?> >Theme-1</option>
                         <option value="grid-theme-2" <?php selected( $g_theme, 'grid-theme-2'); ?> >Theme-2</option>
                         <option value="grid-theme-3" <?php selected( $g_theme, 'grid-theme-3'); ?> >Theme-3</option>
-                        <option disabled>Theme-4 (Pro)</option>
-                        <option disabled>Theme-5 (Pro)</option>
-                        <option disabled>Theme-6 (Pro)</option>
-                        <option disabled>Theme-7 (Pro)</option>
-                        <option disabled>Theme-8 (Pro)</option>
+                        <option value="grid-theme-4" <?php selected( $g_theme, 'grid-theme-4'); ?>>Theme-4</option>
+                        <option value="grid-theme-5" <?php selected( $g_theme, 'grid-theme-5'); ?>>Theme-5</option>
+                        <option value="grid-theme-6" <?php selected( $g_theme, 'grid-theme-6'); ?>>Theme-6</option>
+                        <option value="grid-theme-7" <?php selected( $g_theme, 'grid-theme-7'); ?>>Theme-7</option>
+                        <option value="grid-theme-8" <?php selected( $g_theme, 'grid-theme-8'); ?>>Theme-8</option>
                     </select>
                 </div>
             </div>

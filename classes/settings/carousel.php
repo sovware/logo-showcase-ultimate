@@ -24,19 +24,19 @@ $carousel_pagination      = !empty($carousel_pagination) ? $carousel_pagination 
                         <option value="carousel-theme-1" <?php selected( $c_theme, 'carousel-theme-1'); ?> >Theme-1</option>
                         <option value="carousel-theme-2" <?php selected( $c_theme, 'carousel-theme-2'); ?> >Theme-2</option>
                         <option value="carousel-theme-3" <?php selected( $c_theme, 'carousel-theme-3'); ?> >Theme-3</option>
-                        <option disabled>Theme-4 (Pro)</option>
-                        <option disabled>Theme-5 (Pro)</option>
-                        <option disabled>Theme-6 (Pro)</option>
-                        <option disabled>Theme-7 (Pro)</option>
-                        <option disabled>Theme-8 (Pro)</option>
-                        <option disabled>Theme-9 (Pro)</option>
-                        <option disabled>Theme-10 (Pro)</option>
-                        <option disabled>Theme-11 (Pro)</option>
-                        <option disabled>Theme-12 (Pro)</option>
-                        <option disabled>Theme-13 (Pro)</option>
-                        <option disabled>Theme-14 (Pro)</option>
-                        <option disabled>Theme-15 (Pro)</option>
-                        <option disabled>Theme-16 (Pro)</option>
+                        <option value="carousel-theme-4" <?php selected( $c_theme, 'carousel-theme-4'); ?> >Theme-4</option>
+                        <option value="carousel-theme-5" <?php selected( $c_theme, 'carousel-theme-5'); ?> >Theme-5</option>
+                        <option value="carousel-theme-6" <?php selected( $c_theme, 'carousel-theme-6'); ?> >Theme-6</option>
+                        <option value="carousel-theme-7" <?php selected( $c_theme, 'carousel-theme-7'); ?> >Theme-7</option>
+                        <option value="carousel-theme-8" <?php selected( $c_theme, 'carousel-theme-8'); ?> >Theme-8</option>
+                        <option value="carousel-theme-9" <?php selected( $c_theme, 'carousel-theme-9'); ?> >Theme-9</option>
+                        <option value="carousel-theme-10" <?php selected( $c_theme, 'carousel-theme-10'); ?> >Theme-10</option>
+                        <option value="carousel-theme-11" <?php selected( $c_theme, 'carousel-theme-11'); ?> >Theme-11</option>
+                        <option value="carousel-theme-12" <?php selected( $c_theme, 'carousel-theme-12'); ?> >Theme-12</option>
+                        <option value="carousel-theme-13" <?php selected( $c_theme, 'carousel-theme-13'); ?> >Theme-13</option>
+                        <option value="carousel-theme-14" <?php selected( $c_theme, 'carousel-theme-14'); ?> >Theme-14</option>
+                        <option value="carousel-theme-15" <?php selected( $c_theme, 'carousel-theme-15'); ?> >Theme-15</option>
+                        <option value="carousel-theme-14" <?php selected( $c_theme, 'carousel-theme-16'); ?> >Theme-16</option>
                     </select>
                 </div>
             </div>

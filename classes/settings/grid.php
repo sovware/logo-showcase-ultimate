@@ -1,3 +1,6 @@
+<?php 
+$g_theme         = ! empty( $g_theme ) ? $g_theme : 'grid-theme-1';
+?>
 <!--TAB 3  Grid setting -->
 <div id="lcsp-tab-3" class="lcsp-tab-content">
     <div class="cmb2-wrap form-table">
@@ -9,9 +12,9 @@
                 </div>
                 <div class="cmb-td">
                     <select id="g_theme" name="lcg_scode[g_theme]">
-                        <option value="g_theme1">Theme-1</option>
-                        <option value="g_theme2" <?php if(!empty($g_theme) && $g_theme == "g_theme2"){ echo "selected";}?>>Theme-2</option>
-                        <option value="g_theme3" <?php if(!empty($g_theme) && $g_theme == "g_theme3"){ echo "selected";}?>>Theme-3</option>
+                        <option value="grid-theme-1" <?php selected( $g_theme, 'grid-theme-1'); ?> >Theme-1</option>
+                        <option value="grid-theme-2" <?php selected( $g_theme, 'grid-theme-2'); ?> >Theme-2</option>
+                        <option value="grid-theme-3" <?php selected( $g_theme, 'grid-theme-3'); ?> >Theme-3</option>
                         <option disabled>Theme-4 (Pro)</option>
                         <option disabled>Theme-5 (Pro)</option>
                         <option disabled>Theme-6 (Pro)</option>

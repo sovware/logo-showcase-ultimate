@@ -6,6 +6,9 @@ $repeat_product  = !empty($repeat_product) ? $repeat_product : 'yes';
 $pagination      = !empty($pagination) ? $pagination : 'yes';
 $scrol_direction = !empty($scrol_direction) ? $scrol_direction : 'left';
 $scrool          = !empty($scrool) ? $scrool : 'false';
+$c_theme         = ! empty( $c_theme ) ? $c_theme : 'carousel-theme-1';
+$navigation      = !empty($navigation) ? $navigation : 'yes';
+$carousel_pagination      = !empty($carousel_pagination) ? $carousel_pagination : 'no';
 ?>
 <!--TAB 2  Carousel setting -->
 <div id="lcsp-tab-2" class="lcsp-tab-content">
@@ -18,9 +21,9 @@ $scrool          = !empty($scrool) ? $scrool : 'false';
                 </div>
                 <div class="cmb-td">
                     <select id="c_theme" name="lcg_scode[c_theme]">
-                        <option value="c_theme1">Theme-1</option>
-                        <option value="c_theme2" <?php if(!empty($c_theme) && $c_theme == "c_theme2"){ echo "selected";}?>>Theme-2</option>
-                        <option value="c_theme3" <?php if(!empty($c_theme) && $c_theme == "c_theme3"){ echo "selected";}?>>Theme-3</option>
+                        <option value="carousel-theme-1" <?php selected( $c_theme, 'carousel-theme-1'); ?> >Theme-1</option>
+                        <option value="carousel-theme-2" <?php selected( $c_theme, 'carousel-theme-2'); ?> >Theme-2</option>
+                        <option value="carousel-theme-3" <?php selected( $c_theme, 'carousel-theme-3'); ?> >Theme-3</option>
                         <option disabled>Theme-4 (Pro)</option>
                         <option disabled>Theme-5 (Pro)</option>
                         <option disabled>Theme-6 (Pro)</option>
@@ -244,6 +247,58 @@ $scrool          = !empty($scrool) ? $scrool : 'false';
                     <ul class="cmb2-radio-list cmb2-list">
                         <li><input type="radio" class="cmb2-option" name="lcg_scode[scrol_direction]" id="lcg_scode[scrol_direction]2" value="left" <?php checked('left', $scrol_direction, true); ?>> <label for="lcg_scode[scrol_direction]2"><?php esc_html_e('Slide from Right to Left', LCG_TEXTDOMAIN); ?></label></li>
                         <li><input type="radio" class="cmb2-option" name="lcg_scode[scrol_direction]" id="lcg_scode[scrol_direction]1" value="right" <?php checked('right', $scrol_direction, true); ?>> <label for="lcg_scode[scrol_direction]1"><?php esc_html_e('Slide from Left to Right', LCG_TEXTDOMAIN); ?></label></li>                                </ul>
+                </div>
+            </div>
+            <!-- display navigation -->
+            <div class="cmb-row cmb-type-radio">
+                <div class="cmb-th">
+                    <label for="lcsp_soh"><?php esc_html_e('Navigation', LCG_TEXTDOMAIN); ?></label>
+                </div>
+                <div class="cmb-td">
+                    <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
+                        <li><input type="radio" class="cmb2-option cmb2-radio-switch1" 
+                            name="lcg_scode[navigation]" 
+                            id="lcsp_nav1" 
+                            value="yes" <?php checked('yes', $navigation, true); ?>> 
+                            <label for="lcsp_nav1">
+                                <?php esc_html_e('Yes', LCG_TEXTDOMAIN); ?>
+                            </label>
+                        </li>
+                        <li><input type="radio" class="cmb2-option cmb2-radio-switch2" 
+                            name="lcg_scode[navigation]" 
+                            id="lcsp_nav2" 
+                            value="no" <?php checked('no', $navigation, true);  ?>> 
+                            <label for="lcsp_nav2">
+                                <?php esc_html_e('No', LCG_TEXTDOMAIN); ?>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- display carousel_pagination -->
+            <div class="cmb-row cmb-type-radio">
+                <div class="cmb-th">
+                    <label for="lcsp_soh"><?php esc_html_e('carousel_pagination', LCG_TEXTDOMAIN); ?></label>
+                </div>
+                <div class="cmb-td">
+                    <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
+                        <li><input type="radio" class="cmb2-option cmb2-radio-switch1" 
+                            name="lcg_scode[carousel_pagination]" 
+                            id="lcsp_c_pagi1" 
+                            value="yes" <?php checked('yes', $carousel_pagination, true); ?>> 
+                            <label for="lcsp_c_pagi1">
+                                <?php esc_html_e('Yes', LCG_TEXTDOMAIN); ?>
+                            </label>
+                        </li>
+                        <li><input type="radio" class="cmb2-option cmb2-radio-switch2" 
+                            name="lcg_scode[carousel_pagination]" 
+                            id="lcsp_c_pagi2" 
+                            value="no" <?php checked('no', $carousel_pagination, true);  ?>> 
+                            <label for="lcsp_c_pagi2">
+                                <?php esc_html_e('No', LCG_TEXTDOMAIN); ?>
+                            </label>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <?php

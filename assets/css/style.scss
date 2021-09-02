@@ -641,6 +641,9 @@ $primary: #ff5500;
                 &:hover {
                     .wpwax-lsu-item-inner {
                         border-color: $primary;
+                        .wpwax-lsu-item-content {
+                            border-top-color: $primary;
+                        }
                     }
                 }
                 .wpwax-lsu-item-inner {
@@ -648,11 +651,13 @@ $primary: #ff5500;
                     border: 1px solid #eaeaf1;
                     text-align: center;
                     border-radius: 4px;
+                    transition: .3s;
                     .wpwax-lsu-item-image {
                         padding: 30px
                     }
                     .wpwax-lsu-item-content {
                         padding: 10px 15px;
+                        transition: .3s;
                         border-top: 1px solid #eaeaf1;
                         p {
                             font-size: 14px;
@@ -686,6 +691,49 @@ $primary: #ff5500;
                     align-items: center;
                     justify-content: center;
                     border: 1px solid transparent;
+                }
+            }
+        }
+    }
+}
+
+
+/* wpWax logo Showcase Grid Carousel Theme 9 */
+
+.wpwax-lsu-ultimate {
+    &.wpwax-lsu-carousel {
+        &.wpwax-lsu-carousel-theme-9 {
+            padding: 70px 30px 15px 30px;
+            .wpwax-lsu-item {
+                background-color: #fff;
+                box-shadow: 5px 5px 5px rgba(134, 152, 164, 0.10);
+                &:hover {
+                    .wpwax-lsu-item-inner {
+                        box-shadow: 0 5px 10px rgba(#544d7c, 0.1);
+                        padding-bottom: 20px;
+                        margin-bottom: -20px;
+                        .wpwax-lsu-item-content {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
+                .wpwax-lsu-item-inner {
+                    padding: 20px 20px 0 20px;
+                    text-align: center;
+                    background-color: #fff;
+                    transition: .3s;
+                    a {
+                        min-height: 70px
+                    }
+                    .wpwax-lsu-item-content {
+                        display: inline-block;
+                        width: 100%;
+                        font-size: 16px;
+                        color: #202428;
+                        opacity: 0;
+                        visibility: hidden;
+                    }
                 }
             }
         }

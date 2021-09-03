@@ -1,5 +1,4 @@
-
-<div class="wpwax-lsu-item wpwax-lsu-item__bordered swiper-slide">
+<div class="wpwax-lsu-item swiper-slide">
 
     <div class="wpwax-lsu-item-inner" data-bs-toggle="<?php echo ( 'yes' == $tooltip_show ) ? 'tooltip' : ''; ?>" data-bs-placement="top"
         title="<?php echo ! empty( $tooltip ) ? $tooltip : ''; ?>">
@@ -13,5 +12,3 @@
     </div>
 
 </div>
-
-      

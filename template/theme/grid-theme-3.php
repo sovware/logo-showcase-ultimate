@@ -1,16 +1,14 @@
 
-        <div class="wpwax-lsu-item wpwax-lsu-item__bordered">
+<div class="wpwax-lsu-item">
 
-            <div class="wpwax-lsu-item-inner">
+    <div class="wpwax-lsu-item-inner">
 
-                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Conpany Name Sovware">
+        <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Conpany Name Sovware">
 
-                    <img src="<?php echo !empty($lcg_img) ? $lcg_img : ''; ?>" alt="<?php the_title(); ?>">
-                    
-                </a>
+            <img src="<?php echo !empty($lcg_img) ? $lcg_img : ''; ?>" alt="<?php the_title(); ?>">
+            
+        </a>
 
-            </div>
+    </div>
 
-        </div>
-        
-       
+</div>

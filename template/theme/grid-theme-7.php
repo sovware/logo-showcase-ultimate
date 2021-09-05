@@ -1,21 +1,14 @@
 
-<div class="wpwax-lsu-item wpwax-lsu-item__bordered wpwax-lsu-item-flip-card">
+<div class="wpwax-lsu-item">
 
-    <div class="wpwax-lsu-item-inner" data-bs-toggle="<?php echo ( 'yes' == $tooltip_show ) ? 'tooltip' : ''; ?>" data-bs-placement="top"
-        title="<?php echo ! empty( $tooltip ) ? $tooltip : ''; ?>">
+<div class="wpwax-lsu-item-inner">
+
+    <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Conpany Name Sovware">
+
+        <img src="<?php echo !empty($lcg_img) ? $lcg_img : ''; ?>" alt="<?php the_title(); ?>">
         
-        <a href="" class="wpwax-lsu-item-flip-card__front">
+    </a>
 
-            <img src="<?php echo !empty($lcg_img) ? $lcg_img : ''; ?>" alt="<?php the_title(); ?>">
-            
-        </a>
-
-        <div class="wpwax-lsu-item-flip-card__back">
-
-            <h4 class="wpwax-lsu-item-flip-card__back--content"><?php the_title(); ?></h4>
-            
-        </div>
-
-    </div>
+</div>
 
 </div>

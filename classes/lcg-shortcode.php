@@ -62,10 +62,7 @@ class Lcg_shortcode
         } else {
             $theme = $g_theme;
         }
-        $box_shadow_class = '';
-        if( 'carousel' == $layout && 'carousel-theme-3' == $theme ) {
-            $box_shadow_class = 'wpwax-lsu-grid-theme-raised';
-        }
+        
         $args = array();
         $common_args = [
             'post_type' => 'lcg_mainpost',
@@ -90,7 +87,7 @@ class Lcg_shortcode
 
         <h4 class="wpwax-lsu-title"><?php echo ! empty( $cg_title ) ? $cg_title : ''; ?></span> </h4>
 
-            <div class="wpwax-lsu-ultimate wpwax-lsu-grid wpwax-lsu-<?php echo $theme; ?> <?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-logo-col-lg-' . $g_columns . ' wpwax-lsu-logo-col-md-' . $g_columns_tablet . ' wpwax-lsu-logo-col-sm-' . $g_columns_mobile . '' : 'wpwax-lsu-carousel wpwax-lsu-' . $theme . ' wpwax-lsu-carousel-nav-top'; ?> <?php echo $box_shadow_class; ?>"
+            <div class="wpwax-lsu-ultimate wpwax-lsu-grid wpwax-lsu-<?php echo $theme; ?> <?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-logo-col-lg-' . $g_columns . ' wpwax-lsu-logo-col-md-' . $g_columns_tablet . ' wpwax-lsu-logo-col-sm-' . $g_columns_mobile . '' : 'wpwax-lsu-carousel wpwax-lsu-' . $theme . ' wpwax-lsu-carousel-nav-top'; ?>"
             <?php if( 'carousel' == $layout ) { ?>
                 data-lsu-items="5"
                 data-lsu-margin="20" 

@@ -36,7 +36,7 @@ $carousel_pagination      = !empty($carousel_pagination) ? $carousel_pagination 
                         <option value="carousel-theme-13" <?php selected( $c_theme, 'carousel-theme-13'); ?> >Theme-13</option>
                         <option value="carousel-theme-14" <?php selected( $c_theme, 'carousel-theme-14'); ?> >Theme-14</option>
                         <option value="carousel-theme-15" <?php selected( $c_theme, 'carousel-theme-15'); ?> >Theme-15</option>
-                        <option value="carousel-theme-14" <?php selected( $c_theme, 'carousel-theme-16'); ?> >Theme-16</option>
+                        <option value="carousel-theme-16" <?php selected( $c_theme, 'carousel-theme-16'); ?> >Theme-16</option>
                     </select>
                 </div>
             </div>

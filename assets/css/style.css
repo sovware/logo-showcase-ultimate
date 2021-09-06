@@ -183,6 +183,12 @@
   display: block;
   line-height: 0;
 }
+.wpwax-lsu-ultimate.wpwax-lsu-grid .wpwax-lsu-item .wpwax-lsu-item-inner a:focus {
+  background-color: transparent;
+  outline: none;
+  -webkit-box-shadow: 0 0;
+          box-shadow: 0 0;
+}
 
 /* wpWax logo Showcase Grid 1 */
 .wpwax-lsu-ultimate.wpwax-lsu-grid.wpwax-lsu-grid-theme-1 .wpwax-lsu-content {

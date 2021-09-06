@@ -222,6 +222,11 @@ $primary: #ff5500;
                 a {
                     display: block;
                     line-height: 0;
+                    &:focus {
+                        background-color: transparent;
+                        outline: none;
+                        box-shadow: 0 0;
+                    }
                 }
             }
         }

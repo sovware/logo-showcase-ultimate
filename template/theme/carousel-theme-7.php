@@ -1,4 +1,4 @@
-<div class="wpwax-lsu-item">
+<div class="wpwax-lsu-item wpwax-lsu-item__bordered swiper-slide">
 
     <div class="wpwax-lsu-item-inner">
 
@@ -7,6 +7,12 @@
             <img src="<?php echo !empty($lcg_img) ? $lcg_img : ''; ?>" alt="<?php the_title(); ?>">
             
         </a>
+
+        <div class="wpwax-lsu-item-content">
+
+            <p>Company Name</p>
+            
+        </div>
 
     </div>
 

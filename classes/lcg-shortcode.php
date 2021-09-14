@@ -50,6 +50,12 @@ class Lcg_shortcode
         $g_columns          = !empty($g_columns) ? intval($g_columns) : 6;
         $g_columns_tablet   = !empty($g_columns_tablet) ? intval($g_columns_tablet) : 4;
         $g_columns_mobile   = !empty($g_columns_mobile) ? intval($g_columns_mobile) : 2;
+
+        $c_desktop          = !empty($c_desktop) ? intval($c_desktop) : 5;
+        $c_desktop_small    = !empty($c_desktop_small) ? intval($c_desktop_small) : 4;
+        $c_tablet           = !empty($c_tablet) ? intval($c_tablet) : 3;
+        $c_mobile           = !empty($c_mobile) ? intval($c_mobile) : 2;
+
         $tooltip_posi       = !empty($tooltip_posi) ? $tooltip_posi : "top";
         $total_logos        = !empty($total_logos) ? intval($total_logos) : 12;
         $navigation         = !empty($navigation) ? $navigation : 'yes';
@@ -98,8 +104,13 @@ class Lcg_shortcode
                 data-lsu-perslide="1" 
                 data-lsu-speed="2000"
                 data-lsu-autoplay='{"delay": "3000", "pauseOnMouseEnter": "true", "disableOnInteraction": "false", "reverseDirection": "true"}'
-                data-lsu-responsive='{"0": {"slidesPerView": "2", "spaceBetween": "15"}, "768": {"slidesPerView": "2", "spaceBetween": "15"}, "979": {"slidesPerView": "4", "spaceBetween": "20"}, "1199": {"slidesPerView": "5", "spaceBetween": "30"}}'
-            <?php } ?>    
+                data-lsu-responsive='{
+                    "0": {"slidesPerView": "<?php echo $c_mobile; ?>", "spaceBetween": "15"}, 
+                    "768": {"slidesPerView": "<?php echo $c_tablet; ?>", "spaceBetween": "15"}, 
+                    "979": {"slidesPerView": "<?php echo $c_desktop_small; ?>", "spaceBetween": "20"}, 
+                    "1199": {"slidesPerView": "<?php echo $c_desktop; ?>", "spaceBetween": "30"}
+                }'
+            <?php } ?>
             >
 
                 <div class="<?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-content' : 'swiper-wrapper'; ?>">

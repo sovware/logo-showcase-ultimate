@@ -169,38 +169,6 @@ $target          = !empty($target) ? $target : '_blank';
                     <p class="cmb2-metabox-description"><?php esc_html_e('If logos are not in the same size, this feature is helpful. It automatically resizes and crops. Note: your image must be higher than/equal to the cropping size set below.', LCG_TEXTDOMAIN); ?></p>
                 </div>
             </div>
-            <!--<div class="cmb-row cmb-type-radio">
-                <div class="cmb-th">
-                    <label for="lcsp_upscale">
-                        <?php /*esc_html_e('Enable Image Upscaling', LCG_TEXTDOMAIN); */?>
-                    </label>
-                </div>
-                <div class="cmb-td">
-                    <ul class="cmb2-radio-list cmb2-list">
-                        <li>
-                            <input type="radio" class="cmb2-option" 
-                            name="lcg_scode[upscale]" 
-                            id="lcsp_upscale1" 
-                            value="yes" <?php /*checked('yes', $upscale, true);  */?>>
-                            <label for="lcsp_upscale1">
-                                <?php /*esc_html_e('Yes', LCG_TEXTDOMAIN); */?>
-                            </label>
-                        </li>
-                        <li>
-                            <input type="radio" 
-                            class="cmb2-option" 
-                            name="lcg_scode[upscale]" 
-                            id="lcsp_upscale2" 
-                            value="no" <?php /*checked('no', $upscale, true);  */?>>
-                            <label for="lcsp_upscale2">
-                                <?php /*esc_html_e('No', LCG_TEXTDOMAIN); */?>
-                            </label>
-                        </li>
-                    </ul>
-                    <p class="cmb2-metabox-description"><?php /*esc_html_e('If the logo size is less than the cropping size set below then by default, image will break. However, you can solve this problem by enabling upscaling.', LCG_TEXTDOMAIN); */?></p>
-                </div>
-            </div>-->
-
 
             <div class="cmb-row cmb-type-text-medium">
                 <div class="cmb-th">

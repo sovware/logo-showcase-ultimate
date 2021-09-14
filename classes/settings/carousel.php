@@ -241,7 +241,7 @@ $carousel_pagination      = !empty($carousel_pagination) ? $carousel_pagination 
             <!--scrolling direction-->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
-                    <label for="lcsp_scrol_dir"><?php esc_html_e('Carousel Scrolling Direction', LCG_TEXTDOMAIN); ?></label>
+                    <label for="lcsp_scrol_dir"><?php esc_html_e('Scrolling Direction', LCG_TEXTDOMAIN); ?></label>
                 </div>
                 <div class="cmb-td">
                     <ul class="cmb2-radio-list cmb2-list">
@@ -278,7 +278,7 @@ $carousel_pagination      = !empty($carousel_pagination) ? $carousel_pagination 
             <!-- display carousel_pagination -->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
-                    <label for="lcsp_soh"><?php esc_html_e('carousel_pagination', LCG_TEXTDOMAIN); ?></label>
+                    <label for="lcsp_soh"><?php esc_html_e('Pagination', LCG_TEXTDOMAIN); ?></label>
                 </div>
                 <div class="cmb-td">
                     <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">

@@ -1,3 +1,12 @@
+:root {
+  /* Default Variable */
+  --lsu-primaryColor: #ff5500;
+  --lsu-darkColor: #202428;
+  /* Marquee Animation */
+  --lsu-marqueeItemsWidth: -2930px;
+  --lsu-marqueeSpeed: 10000ms;
+}
+
 /* Logo Showcase Grid */
 .wpwax-lsu-ultimate {
   position: relative;

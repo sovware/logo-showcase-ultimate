@@ -105,10 +105,10 @@ class Lcg_shortcode
                 data-lsu-speed="2000"
                 data-lsu-autoplay='{"delay": "3000", "pauseOnMouseEnter": "true", "disableOnInteraction": "false", "reverseDirection": "true"}'
                 data-lsu-responsive='{
-                    "0": {"slidesPerView": "<?php echo $c_mobile; ?>", data-lsu-perslide="1", "spaceBetween": "15"}, 
-                    "768": {"slidesPerView": "<?php echo $c_tablet; ?>", data-lsu-perslide="1", "spaceBetween": "15"}, 
-                    "979": {"slidesPerView": "<?php echo $c_desktop_small; ?>", data-lsu-perslide="1", "spaceBetween": "20"}, 
-                    "1199": {"slidesPerView": "<?php echo $c_desktop; ?>", data-lsu-perslide="1", "spaceBetween": "30"}
+                    "0": {"slidesPerView": "<?php echo $c_mobile; ?>",  "slidesPerGroup": "1", "spaceBetween": "15"}, 
+                    "768": {"slidesPerView": "<?php echo $c_tablet; ?>",  "slidesPerGroup": "1", "spaceBetween": "15"}, 
+                    "979": {"slidesPerView": "<?php echo $c_desktop_small; ?>",  "slidesPerGroup": "1", "spaceBetween": "20"}, 
+                    "1199": {"slidesPerView": "<?php echo $c_desktop; ?>",  "slidesPerGroup": "1", "spaceBetween": "30"}
                 }'
             <?php } ?>
             >

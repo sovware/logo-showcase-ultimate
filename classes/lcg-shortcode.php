@@ -98,13 +98,19 @@ class Lcg_shortcode
 
             <div class="wpwax-lsu-ultimate wpwax-lsu-grid wpwax-lsu-<?php echo $theme; ?> <?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-logo-col-lg-' . $g_columns . ' wpwax-lsu-logo-col-md-' . $g_columns_tablet . ' wpwax-lsu-logo-col-sm-' . $g_columns_mobile . '' : 'wpwax-lsu-carousel wpwax-lsu-' . $theme . ' wpwax-lsu-carousel-nav-top'; ?> <?php echo $box_shadow_class; ?>"
             <?php if( 'carousel' == $layout ) { ?>
-                data-lsu-items="5"
-                data-lsu-margin="20" 
-                data-lsu-loop="true" 
-                data-lsu-perslide="1"
-                data-lsu-speed="2000"
-                data-lsu-autoplay='{"delay": "3000", "pauseOnMouseEnter": "true", "disableOnInteraction": "false", "reverseDirection": "true"}'
-                data-lsu-responsive='{
+                data-lsu-items      = "5"
+                data-lsu-margin     = "20" 
+                data-lsu-loop       = "true" 
+                data-lsu-perslide   = "1"
+                data-lsu-speed      = "1000"
+                data-lsu-autoplay   = '
+                {
+                    "delay": "1000", 
+                    "pauseOnMouseEnter": "true", 
+                    "disableOnInteraction": "false", 
+                    "reverseDirection": "false"
+                }'
+                data-lsu-responsive ='{
                     "0": {"slidesPerView": "<?php echo $c_mobile; ?>",  "slidesPerGroup": "1", "spaceBetween": "15"}, 
                     "768": {"slidesPerView": "<?php echo $c_tablet; ?>",  "slidesPerGroup": "1", "spaceBetween": "15"}, 
                     "979": {"slidesPerView": "<?php echo $c_desktop_small; ?>",  "slidesPerGroup": "1", "spaceBetween": "20"}, 

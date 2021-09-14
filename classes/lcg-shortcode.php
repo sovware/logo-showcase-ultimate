@@ -94,8 +94,8 @@ class Lcg_shortcode
                 data-lsu-loop="false" 
                 data-lsu-perslide="1"
                 data-lsu-speed="10000"
-                data-lsu-autoplay='{"delay": "3000", "pauseOnMouseEnter": "true", "disableOnInteraction": "false","reverseDirection": "true"}'
-                data-lsu-responsive='{"0": {"slidesPerView": "2", "spaceBetween": "15"}, "768": {"slidesPerView": "3", "spaceBetween": "15"}, "979": {"slidesPerView": "4", "spaceBetween": "20"}, "1199": {"slidesPerView": "5", "spaceBetween": "30"}}'
+                data-lsu-autoplay='{"delay": "3000", "pauseOnMouseEnter": "true", "disableOnInteraction": "false", "reverseDirection": "true"}'
+                data-lsu-responsive='{"0": {"slidesPerView": "2", "slidesPerGroup": "1", "spaceBetween": "15"}, "768": {"slidesPerView": "3", "slidesPerGroup": "1", "spaceBetween": "15"}, "979": {"slidesPerView": "4", "slidesPerGroup": "1", "spaceBetween": "20"}, "1199": {"slidesPerView": "5", "slidesPerGroup": "1", "spaceBetween": "30"}}'
             <?php } ?>   
             >
 

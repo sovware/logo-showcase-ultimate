@@ -108,7 +108,7 @@ class Lcg_shortcode
             <?php if( 'carousel' == $layout ) { ?>
                 data-lsu-items      = "5"
                 data-lsu-margin     = "20" 
-                data-lsu-loop       = true 
+                data-lsu-loop       = "false" 
                 data-lsu-perslide   = "1"
                 data-lsu-speed      = "<?php echo $slide_speed; ?>"
                 data-lsu-autoplay   = '

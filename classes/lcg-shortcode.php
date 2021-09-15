@@ -114,10 +114,10 @@ class Lcg_shortcode
                 data-lsu-autoplay   = '
                 <?php if( 'yes' == $A_play ) { ?>
                 {
-                    "delay": "1000", 
+                    "delay": "10", 
                     "pauseOnMouseEnter": "true", 
                     "disableOnInteraction": "false", 
-                    "reverseDirection": "false"
+                    "reverseDirection": "true"
                 }
                 <?php } else { ?>
                     false

@@ -50,7 +50,6 @@
         navBtnPrev.forEach((el, i) => { el.classList.add(`wpwax-lsu-carousel-nav__btn-prev-${i}`); });
         navBtnNext.forEach((el, i) => { el.classList.add(`wpwax-lsu-carousel-nav__btn-next-${i}`); });
         hasPagination && paginationElement.forEach((el) => el.classList.add(`wpwax-lsu-carousel-pagination-${i}`));
-        console.log(el.dataset.lsuAutoplay, el.dataset.lsuResponsive);
         let swiper = new Swiper(`.wpwax-lsu-carousel-${i}`, {
             slidesPerView: checkData(parseInt(el.dataset.lsuItems), 4),
             spaceBetween: checkData(parseInt(el.dataset.lsuMargin), 30),

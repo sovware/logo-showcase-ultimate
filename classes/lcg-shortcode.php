@@ -57,6 +57,7 @@ class Lcg_shortcode
         $carousel_pagination         = !empty($carousel_pagination) ? $carousel_pagination : 'no';
         $A_play                      = !empty($A_play) ? $A_play : 'yes';
         $navigation                  = !empty($navigation) ? $navigation : 'yes';
+        $scrool                      = ! empty( $scrool ) ? $scrool : 'per_item';
 
         $paged 			    = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
         
@@ -185,7 +186,7 @@ class Lcg_shortcode
 
         <h4 class="wpwax-lsu-title"><?php echo ! empty( $cg_title ) ? $cg_title : ''; ?></span> </h4>
 
-            <div class="wpwax-lsu-ultimate wpwax-lsu-grid wpwax-lsu-carousel-marquee wpwax-lsu-<?php echo $theme; ?> <?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-logo-col-lg-' . $g_columns . ' wpwax-lsu-logo-col-md-' . $g_columns_tablet . ' wpwax-lsu-logo-col-sm-' . $g_columns_mobile . '' : 'wpwax-lsu-carousel wpwax-lsu-' . $theme . ' wpwax-lsu-carousel-nav-top'; ?>"
+            <div class="wpwax-lsu-ultimate wpwax-lsu-grid wpwax-lsu-<?php echo $theme; ?> <?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-logo-col-lg-' . $g_columns . ' wpwax-lsu-logo-col-md-' . $g_columns_tablet . ' wpwax-lsu-logo-col-sm-' . $g_columns_mobile . '' : 'wpwax-lsu-carousel wpwax-lsu-' . $theme . ' wpwax-lsu-carousel-nav-top'; ?>"
             <?php if( 'carousel' == $layout ) { ?>
                 data-lsu-items="5"
                 data-lsu-margin="20" 
@@ -205,7 +206,12 @@ class Lcg_shortcode
                     false
                 <?php } ?>
                 '
-                data-lsu-responsive='{"0": {"slidesPerView": "2", "slidesPerGroup": "1", "spaceBetween": "15"}, "768": {"slidesPerView": "3", "slidesPerGroup": "1", "spaceBetween": "15"}, "979": {"slidesPerView": "4", "slidesPerGroup": "1", "spaceBetween": "20"}, "1199": {"slidesPerView": "5", "slidesPerGroup": "1", "spaceBetween": "30"}}'
+                data-lsu-responsive ='{
+                    "0": {"slidesPerView": "<?php echo $c_mobile; ?>",  "slidesPerGroup": "<?php echo 'per_item' == $scrool ? '1' : $c_mobile; ?>", "spaceBetween": "15"}, 
+                    "768": {"slidesPerView": "<?php echo $c_tablet; ?>",  "slidesPerGroup": "<?php echo 'per_item' == $scrool ? '1' : $c_tablet; ?>", "spaceBetween": "15"}, 
+                    "979": {"slidesPerView": "<?php echo $c_desktop_small; ?>",  "slidesPerGroup": "<?php echo 'per_item' == $scrool ? '1' : $c_desktop_small; ?>", "spaceBetween": "20"}, 
+                    "1199": {"slidesPerView": "<?php echo $c_desktop; ?>",  "slidesPerGroup": "<?php echo 'per_item' == $scrool ? '1' : $c_desktop; ?>", "spaceBetween": "30"}
+                }'
             <?php } ?>   
             >
 

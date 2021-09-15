@@ -92,7 +92,6 @@
         let lsuMarqueeCarouselItem = el.querySelectorAll('.wpwax-lsu-item:not(.swiper-slide-duplicate)');
         lsuMarqueeCarouselItem.forEach(childEl => {
             let lsuMarqueeWrapperWidth = lsuMarqueeCarouselItem.length * (childEl.offsetWidth + checkData(parseInt(el.dataset.lsuMargin)));
-            console.log(el.dataset);
             el.style.setProperty('--lsu-marqueeItemsWidth', `-${lsuMarqueeWrapperWidth}px`);
             el.style.setProperty('--lsu-marqueeSpeed', `${checkData(parseInt(el.dataset.lsuSpeed))}ms`);
         })

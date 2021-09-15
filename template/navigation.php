@@ -1,3 +1,15 @@
+<!--
+
+    Classes:
+    -wpwax-lsu-carousel-nav--top-right
+    -wpwax-lsu-carousel-nav--top-left
+    -wpwax-lsu-carousel-nav--top-middle
+    -wpwax-lsu-carousel-nav--bottom-right
+    -wpwax-lsu-carousel-nav--bottom-left
+    -wpwax-lsu-carousel-nav--bottom-middle
+
+ -->
+
 <div class="wpwax-lsu-carousel-nav wpwax-lsu-carousel-nav--top-right" style="
   --lsu-navArrowColor: <?php echo $navarro_color; ?>;
   --lsu-navArrowColorHover: <?php echo $nav_hov_arrow_color; ?>;

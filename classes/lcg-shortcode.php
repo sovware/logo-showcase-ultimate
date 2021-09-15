@@ -60,6 +60,13 @@ class Lcg_shortcode
         $scrool                      = ! empty( $scrool ) ? $scrool : 'per_item';
         $stop_hover                  = ! empty( $stop_hover ) ? $stop_hover : 'yes';
         $marquee                     = ! empty( $marquee ) ? $marquee : 'yes';
+        $slide_speed                 = ! empty( $slide_speed ) ? $slide_speed : '2000';
+        $slide_time                  = ! empty( $slide_time )  ? $slide_time : '2000' ;
+
+        $c_desktop          = !empty($c_desktop) ? intval($c_desktop) : 5;
+        $c_desktop_small    = !empty($c_desktop_small) ? intval($c_desktop_small) : 4;
+        $c_tablet           = !empty($c_tablet) ? intval($c_tablet) : 3;
+        $c_mobile           = !empty($c_mobile) ? intval($c_mobile) : 2;
 
         $paged 			    = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
         
@@ -200,11 +207,11 @@ class Lcg_shortcode
                 data-lsu-margin="20" 
                 data-lsu-loop="false" 
                 data-lsu-perslide="1"
-                data-lsu-speed="10000"
+                data-lsu-speed="<?php echo $slide_speed; ?>"
                 data-lsu-autoplay='
                 <?php if( 'yes' == $A_play ) { ?>
                 {
-                    "delay": "0",
+                    "delay": "<?php echo $slide_time; ?>",
                     "pauseOnMouseEnter": true,
                     "disableOnInteraction": false,
                     "stopOnLastSlide": true,

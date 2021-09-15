@@ -87,7 +87,7 @@ $image_hover     = !empty($image_hover) ? $image_hover : 'yes';
                             id="lcgp_scode[tooltip_posi]1"
                             value="top" <?php checked('top', $tooltip_posi, true);  ?>>
                             <label for="lcgp_scode[tooltip_posi]1">
-                                <?php esc_html_e('top', LCG_TEXTDOMAIN); ?>
+                                <?php esc_html_e('Top', LCG_TEXTDOMAIN); ?>
                             </label>
                         </li>
                         <li>
@@ -95,7 +95,7 @@ $image_hover     = !empty($image_hover) ? $image_hover : 'yes';
                             class="cmb2-option" 
                             name="lcgp_scode[tooltip_posi]"
                             id="lcgp_scode[tooltip_posi]2"
-                            value="bottom" <?php checked('bottom', $tooltip_posi, true);  ?>>
+                            value="bottom" <?php checked('Bottom', $tooltip_posi, true);  ?>>
                             <label for="lcgp_scode[tooltip_posi]2">
                                 <?php esc_html_e('bottom', LCG_TEXTDOMAIN); ?>
                             </label>

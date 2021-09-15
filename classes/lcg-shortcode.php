@@ -52,9 +52,13 @@ class Lcg_shortcode
         $g_columns_mobile   = !empty($g_columns_mobile) ? intval($g_columns_mobile) : 2;
         $tooltip_posi       = !empty($tooltip_posi) ? $tooltip_posi : "top";
         $total_logos        = !empty($total_logos) ? intval($total_logos) : 12;
-        $navigation         = !empty($navigation) ? $navigation : 'yes';
+        
+        //carousel settings
         $carousel_pagination         = !empty($carousel_pagination) ? $carousel_pagination : 'no';
+        $A_play                      = !empty($A_play) ? $A_play : 'yes';
+        $navigation                  = !empty($navigation) ? $navigation : 'yes';
 
+        $paged 			    = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
         
         
         if( 'carousel' == $layout ) {
@@ -64,24 +68,118 @@ class Lcg_shortcode
         }
         
         $args = array();
-        $common_args = [
-            'post_type' => 'lcg_mainpost',
-            'posts_per_page'=> $total_logos,
-            'status' => 'published',
-        ];
-        if ( 'latest' == $lcg_type ) { $args = $common_args; }
-        elseif ('older' == $lcg_type) {
-            $older_args = [
-                'orderby'   => 'date',
-                'order'     => 'ASC',
-            ];
-            $args = array_merge($common_args, $older_args);
-        }else {
+        $common_args = array(
+            'post_type'      => 'lcg_mainpost',
+            'posts_per_page' => $total_logos,
+            'paged'          => $paged
+        );
+
+        if ($lcg_type == "latest") {
             $args = $common_args;
         }
 
+        elseif ($lcg_type == "category") {
+            $category_args = array(
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'lcg_category',
+                        'field' => 'term_id',
+                        'terms' => ( !empty($custom_terms) ) ?  (array) $custom_terms : null,
+                    )
+                )
+            );
+            $args = array_merge($common_args, $category_args);
+        }
 
-        $adl_logo = new WP_Query( $args );
+        elseif ($lcg_type == "older") {
+            $older_args = array(
+                'orderby'     => 'date',
+                'order'       => 'ASC'
+            );
+            $args = array_merge($common_args, $older_args);
+        }
+
+        elseif ($lcg_type == "rand") {
+            $rand_args = array(
+                'orderby'     => 'rand',);
+            $args = array_merge($common_args, $rand_args);
+        }
+
+        elseif ($lcg_type == "title_desc") {
+            $title_desc = !empty($title_desc)  ?  (array) $title_desc : null;
+            if( null == $title_desc) {
+                $title_desc_args = array(
+                    'orderby' => 'title',
+                    'order' => 'DESC'
+                );
+                $args = array_merge($common_args, $title_desc_args);
+            } else {
+                $title_desc_args = array(
+                    'orderby' => 'title',
+                    'order' => 'DESC',
+                    'tax_query' => array(
+                    array(
+                        'taxonomy' => 'lcg_category',
+                        'field' => 'term_id',
+                        'terms' => ( !empty($title_desc) ) ?  (array) $title_desc : null,
+                    )
+                )
+                );
+                $args = array_merge($common_args, $title_desc_args);
+            }
+        }
+
+        elseif ($lcg_type == "title_asc") {
+            $title_asc = !empty($title_asc)  ?  (array) $title_asc : null;
+            if(null == $title_asc) {
+                $title_asc_args = array(
+                    'orderby' => 'title',
+                    'order' => 'ASC'
+                );
+                $args = array_merge($common_args, $title_asc_args);
+            } else {
+                $title_asc_args = array(
+                    'orderby' => 'title',
+                    'order' => 'ASC',
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'lcg_category',
+                            'field' => 'term_id',
+                            'terms' => ( !empty($title_asc) ) ?  (array) $title_asc : null,
+                        )
+                )
+                );
+                $args = array_merge($common_args, $title_asc_args);
+            }
+        }
+
+        elseif ($lcg_type == "logosbyid") {
+            $logosbyid_args = array(
+                'post__in' => (!empty($logos_byid) ? explode(',', $logos_byid) : 0)
+            );
+            $args = array_merge($common_args, $logosbyid_args);
+        }
+
+        elseif ($lcg_type == "logosbyyear") {
+            $logosbyyear_args = array(
+                'year' => !empty($logos_from_year) ? intval($logos_from_year) : 0
+            );
+            $args = array_merge($common_args, $logosbyyear_args);
+        }
+
+        elseif ($lcg_type == "logosbymonth") {
+            $logosbymonth_args = array(
+                'monthnum' => !empty($logos_from_month) ? intval($logos_from_month) : 0,
+                'year' 	   => !empty($logos_from_month_year) ? intval($logos_from_month_year) : 0
+            );
+            $args = array_merge($common_args, $logosbymonth_args);
+        }
+
+        else {
+            $args = $common_args;
+        }
+
+	    $adl_logo = new WP_Query( $args );
 
         if ( $adl_logo->have_posts() ) { ?>
 
@@ -94,7 +192,19 @@ class Lcg_shortcode
                 data-lsu-loop="false" 
                 data-lsu-perslide="1"
                 data-lsu-speed="10000"
-                data-lsu-autoplay='{"delay": "3000", "pauseOnMouseEnter": "true", "disableOnInteraction": "false", "reverseDirection": "true"}'
+                data-lsu-autoplay='
+                <?php if( 'yes' == $A_play ) { ?>
+                {
+                    "delay": "0",
+                    "pauseOnMouseEnter": true,
+                    "disableOnInteraction": false,
+                    "stopOnLastSlide": true,
+                    "reverseDirection": false
+                }
+                <?php } else { ?>
+                    false
+                <?php } ?>
+                '
                 data-lsu-responsive='{"0": {"slidesPerView": "2", "slidesPerGroup": "1", "spaceBetween": "15"}, "768": {"slidesPerView": "3", "slidesPerGroup": "1", "spaceBetween": "15"}, "979": {"slidesPerView": "4", "slidesPerGroup": "1", "spaceBetween": "20"}, "1199": {"slidesPerView": "5", "slidesPerGroup": "1", "spaceBetween": "30"}}'
             <?php } ?>   
             >

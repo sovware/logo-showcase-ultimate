@@ -153,6 +153,80 @@ class Lcg_Metabox
         $value = is_array( $s_value ) ? $s_value : array();
         extract( $value );
 
+        //all category custom
+        function list_term_items($term_name = '', $var_name=array(), $old_terms = array() ){
+            global $post;
+            $old_terms = (!is_array($old_terms)) ? (array) $old_terms : $old_terms;
+
+            $terms = get_terms($term_name);
+
+            echo '<div class="lcsp-checkbox-wrapper">';
+
+            if(!empty($terms)) {
+                echo '<ul class="cmb2-list">';
+                foreach ( $terms as $term ) {
+                    if ( in_array( $term->term_id, $old_terms ) ) {
+                        echo "<li class='{$term->term_id}'> <input class='lcsp_taxonomy_terms' id='lcsp_taxonomy_terms_{$term->name}' type='checkbox' checked name={$var_name}[{$term->term_id}] value ='{$term->term_id}' /><label for='lcsp_taxonomy_terms_{$term->name}' > {$term->name} </label ></li>";
+                    }
+                    else {
+                        echo "<li class='{$term->term_id}'> <input class='custom_terms' id='custom_terms_{$term->name}' type='checkbox' name={$var_name}[{$term->term_id}] value ='{$term->term_id}' /><label for='lcsp_taxonomy_terms_{$term->name}' > {$term->name} </label ></li>";
+                    }
+                }
+            }else{
+                echo '<ul>';
+            }
+
+            echo '</ul></div>';
+        }
+        function list_term_items_title_asc($term_name = '', $var_name=array(), $old_terms = array() ){
+            global $post;
+            $old_terms = (!is_array($old_terms)) ? (array) $old_terms : $old_terms;
+
+            $terms = get_terms($term_name);
+
+            echo '<div class="title-asc">';
+
+            if(!empty($terms)) {
+                echo '<ul class="cmb2-list">';
+                foreach ( $terms as $term ) {
+                    if ( in_array( $term->term_id, $old_terms ) ) {
+                        echo "<li class='{$term->term_id}'> <input class='lcsp_taxonomy_terms' id='lcsp_taxonomy_terms_{$term->name}' type='checkbox' checked name={$var_name}[{$term->term_id}] value ='{$term->term_id}' /><label for='lcsp_taxonomy_terms_{$term->name}' > {$term->name} </label ></li>";
+                    }
+                    else {
+                        echo "<li class='{$term->term_id}'> <input class='custom_terms' id='custom_terms_{$term->name}' type='checkbox' name={$var_name}[{$term->term_id}] value ='{$term->term_id}' /><label for='lcsp_taxonomy_terms_{$term->name}' > {$term->name} </label ></li>";
+                    }
+                }
+            }else{
+                echo '<ul>';
+            }
+
+            echo '</ul></div>';
+        }
+        function list_term_items_title_desc($term_name = '', $var_name=array(), $old_terms = array() ){
+            global $post;
+            $old_terms = (!is_array($old_terms)) ? (array) $old_terms : $old_terms;
+
+            $terms = get_terms($term_name);
+
+            echo '<div class="title-desc">';
+
+            if(!empty($terms)) {
+                echo '<ul class="cmb2-list">';
+                foreach ( $terms as $term ) {
+                    if ( in_array( $term->term_id, $old_terms ) ) {
+                        echo "<li class='{$term->term_id}'> <input class='lcsp_taxonomy_terms' id='lcsp_taxonomy_terms_{$term->name}' type='checkbox' checked name={$var_name}[{$term->term_id}] value ='{$term->term_id}' /><label for='lcsp_taxonomy_terms_{$term->name}' > {$term->name} </label ></li>";
+                    }
+                    else {
+                        echo "<li class='{$term->term_id}'> <input class='custom_terms' id='custom_terms_{$term->name}' type='checkbox' name={$var_name}[{$term->term_id}] value ='{$term->term_id}' /><label for='lcsp_taxonomy_terms_{$term->name}' > {$term->name} </label ></li>";
+                    }
+                }
+            }else{
+                echo '<ul>';
+            }
+
+            echo '</ul></div>';
+        }
+
         require_once LCG_PLUGIN_DIR . 'classes/settings/settings.php';
     }
 

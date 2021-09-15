@@ -4,7 +4,9 @@ $cg_title_show   = !empty($cg_title_show) ? $cg_title_show : 'no';
 $lcg_type        = !empty($lcg_type) ? $lcg_type : 'latest';
 $image_crop      = !empty($image_crop) ? $image_crop : 'yes';
 $upscale         = !empty($upscale) ? $upscale : 'yes';
-$target          = !empty($target) ? $target : '_blank';
+$title_asc       = !empty($title_asc) ? $title_asc : '';       
+$title_desc       = !empty($title_desc) ? $title_desc : '';
+$custom_terms       = !empty($custom_terms) ? $custom_terms : '';
 ?>
 <!--TAB 1 General setting -->
 <div id="lcsp-tab-5" class="lcsp-tab-content" style="display:block">
@@ -86,28 +88,27 @@ $target          = !empty($target) ? $target : '_blank';
                         <li>
                             <input type="radio" class="cmb2-option" 
                             name="lcg_scode[lcg_type]"
-                            id="lcsp_logo_type1"
+                            id="lcsp_logo_type1" 
                             value="latest" <?php checked( 'latest', $lcg_type, true ); ?>>
                             <label for="lcsp_logo_type1">
                                 <?php esc_html_e('Display Logos from Latest Published', LCG_TEXTDOMAIN); ?>
                             </label>
                         </li>
                         <li>
-                            <input type="radio" class="cmb2-option"
+                            <input type="radio" class="cmb2-option" 
                             name="lcg_scode[lcg_type]"
-                            id="lcsp_logo_type2"
+                            id="lcsp_logo_type2" 
                             value="older" <?php checked( 'older', $lcg_type, true ); ?>>
                             <label for="lcsp_logo_type2">
                                 <?php esc_html_e('Display Logos from Older Published', LCG_TEXTDOMAIN); ?>
                             </label>
                         </li>
-                    </ul>
-                    <p class="cmb2-metabox-description"><?php esc_html_e('What type of products to display in the logo showcase ultimate', LCG_TEXTDOMAIN); ?></p>
-                    <ul class="cmb2-radio-list-pro">
-                        <p style="font-size: 14px; margin: 13px 0 5px 0; font-style: italic;">Following options available in <a href="https://aazztech.com/product/logo-showcase-ultimate-pro/" target="_blank">Pro Version</a>:</p>
+
                         <li>
                             <input type="radio" class="cmb2-option"
-                                   disabled>
+                                   name="lcg_scode[lcg_type]"
+                                   id="lcsp_logo_type7"
+                                   value="rand" <?php checked( 'rand', $lcg_type, true ); ?>>
                             <label for="lcsp_logo_type7">
                                 <?php esc_html_e('Display Logos Randomly', LCG_TEXTDOMAIN); ?>
                             </label>
@@ -115,27 +116,85 @@ $target          = !empty($target) ? $target : '_blank';
 
                         <li>
                             <input type="radio" class="cmb2-option"
-                                   disabled>
+                                   name="lcg_scode[lcg_type]"
+                                   id="title_asc"
+                                   value="title_asc" <?php checked( 'title_asc', $lcg_type, true ); ?>>
+                            <label for="title_asc">
+                                <?php esc_html_e('A to Z (title)', LCG_TEXTDOMAIN); ?>
+                            </label>
+                        </li>
+                        <?php
+                        list_term_items_title_asc('lcg_category','lcg_scode[title_asc]',@$title_asc);
+                        ?>
+                        <li>
+                            <input type="radio" class="cmb2-option"
+                                   name="lcg_scode[lcg_type]"
+                                   id="title_desc"
+                                   value="title_desc" <?php checked( 'title_desc', $lcg_type, true ); ?>>
+                            <label for="title_desc">
+                                <?php esc_html_e('Z to A (title)', LCG_TEXTDOMAIN); ?>
+                            </label>
+                        </li>
+                        <?php
+                        list_term_items_title_desc('lcg_category','lcg_scode[title_desc]',@$title_desc);
+                        ?>
+                        <li>
+                            <input type="radio" class="cmb2-option"
+                                   name="lcg_scode[lcg_type]"
+                                   id="lcsp_logo_type3"
+                                   value="category" <?php checked('category', $lcg_type, true); ?>>
                             <label for="lcsp_logo_type3"><?php esc_html_e('Display Logos from Category', LCG_TEXTDOMAIN); ?></label>
                         </li>
-
+                        <?php
+                        list_term_items('lcg_category','lcg_scode[custom_terms]',@$custom_terms);
+                        ?>
                         <li>
                             <input type="radio" class="cmb2-option"
-                                   disabled>
+                                   name="lcg_scode[lcg_type]"
+                                   id="lcsp_logo_type4"
+                                   value="logosbyid" <?php checked('logosbyid', $lcg_type, true); ?>>
                             <label for="lcsp_logo_type4"><?php esc_html_e('Display Logos by ID ', LCG_TEXTDOMAIN); ?></label>
                         </li>
-
+                        <input type="text" class="cmb2-text-medium"
+                               name="lcg_scode[logos_byid]"
+                               id="lcsp_logos_byid"
+                               value="<?php echo !empty($logos_byid) ? esc_attr($logos_byid): ''; ?>"
+                               placeholder="e.g. 10, 11, 18">
+                        
                         <li>
                             <input type="radio" class="cmb2-option"
-                                   disabled>
+                                   name="lcg_scode[lcg_type]"
+                                   id="lcsp_logo_type5"
+                                   value="logosbyyear" <?php checked('logosbyyear', $lcg_type, true); ?>>
                             <label for="lcsp_logo_type5"><?php esc_html_e('Display Logos by Year', LCG_TEXTDOMAIN); ?></label>
                         </li>
 
+                        <input type="text" class="cmb2-text-small"
+                               name="lcg_scode[logos_from_year]"
+                               id="lcsp_logos_from_year"
+                               value="<?php echo !empty($logos_from_year) ? intval($logos_from_year): ''; ?>"
+                               placeholder="e.g. 2016">
+
+
+
                         <li>
                             <input type="radio" class="cmb2-option"
-                                   disabled>
+                                   name="lcg_scode[lcg_type]"
+                                   id="lcsp_logo_type6"
+                                   value="logosbymonth" <?php checked('logosbymonth', $lcg_type, true); ?>>
                             <label for="lcsp_logo_type6"><?php esc_html_e('Display Logos by Month', LCG_TEXTDOMAIN); ?></label>
                         </li>
+
+                        <input type="text" class="cmb2-text-small lfm"
+                               name="lcg_scode[logos_from_month]"
+                               id="lcsp_logos_from_month"
+                               value="<?php echo !empty($logos_from_month)? intval($logos_from_month) : ''; ?>"
+                               placeholder="e.g. 11">
+                        <input type="text" class="cmb2-text-small lfm"
+                               name="lcg_scode[logos_from_month_year]"
+                               id="lcsp_logos_from_month_year"
+                               value="<?php echo !empty($logos_from_month_year)? intval($logos_from_month_year) : ''; ?>"
+                               placeholder="eg 2017">
                 </div>
             </div>
 

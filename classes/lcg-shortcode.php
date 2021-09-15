@@ -82,6 +82,15 @@ class Lcg_shortcode
         $c_tablet           = !empty($c_tablet) ? intval($c_tablet) : 3;
         $c_mobile           = !empty($c_mobile) ? intval($c_mobile) : 2;
 
+        // tooltip 
+        $tooltip_posi           = ! empty($tooltip_posi) ? $tooltip_posi : 'bottom';
+        $tooltip_text_color     = ! empty( $tooltip_text_color ) ? $tooltip_text_color : '#f4f4f4';
+        $tooltip_back           = ! empty( $tooltip_back ) ? $tooltip_back : '#202428';
+        $tooltip_size           = ! empty( $tooltip_size ) ? $tooltip_size : '16px';
+
+
+        $image_hover     = !empty($image_hover) ? $image_hover : 'yes';
+
         $paged 			    = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
         
         

@@ -5,7 +5,7 @@ $A_play          = !empty($A_play) ? $A_play : 'yes';
 $repeat_product  = !empty($repeat_product) ? $repeat_product : 'yes';
 $pagination      = !empty($pagination) ? $pagination : 'yes';
 $scrol_direction = !empty($scrol_direction) ? $scrol_direction : 'left';
-$scrool          = !empty($scrool) ? $scrool : 'false';
+$scrool          = !empty($scrool) ? $scrool : 'per_item';
 $c_theme         = ! empty( $c_theme ) ? $c_theme : 'carousel-theme-1';
 $navigation      = !empty($navigation) ? $navigation : 'yes';
 $carousel_pagination      = !empty($carousel_pagination) ? $carousel_pagination : 'no';
@@ -221,7 +221,7 @@ $carousel_pagination      = !empty($carousel_pagination) ? $carousel_pagination 
                             <input type="radio" class="cmb2-option" 
                             name="lcg_scode[scrool]" 
                             id="lcsp_spp1" 
-                            value="false" <?php checked('false', $scrool, true); ?>> 
+                            value="per_item" <?php checked('per_item', $scrool, true); ?>> 
                             <label for="lcsp_spp1">
                                 <?php esc_html_e('Per Item', LCG_TEXTDOMAIN); ?>
                             </label>
@@ -229,7 +229,7 @@ $carousel_pagination      = !empty($carousel_pagination) ? $carousel_pagination 
                         <li><input type="radio" class="cmb2-option" 
                             name="lcg_scode[scrool]" 
                             id="lcsp_spp2" 
-                            value="true" <?php checked('true', $scrool, true); ?>> 
+                            value="per_page" <?php checked('per_page', $scrool, true); ?>> 
                             <label for="lcsp_spp2">
                                 <?php esc_html_e('Per Page', LCG_TEXTDOMAIN); ?>
                             </label>

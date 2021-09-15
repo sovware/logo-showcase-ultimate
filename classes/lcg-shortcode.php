@@ -58,8 +58,13 @@ class Lcg_shortcode
 
         $tooltip_posi       = !empty($tooltip_posi) ? $tooltip_posi : "top";
         $total_logos        = !empty($total_logos) ? intval($total_logos) : 12;
-        $navigation         = !empty($navigation) ? $navigation : 'yes';
+
+        //carousel settings
+        $navigation                  = !empty($navigation) ? $navigation : 'yes';
         $carousel_pagination         = !empty($carousel_pagination) ? $carousel_pagination : 'no';
+        $A_play                      = ! empty( $A_play ) ? $A_play : 'yes';
+        $slide_speed                 = ! empty( $slide_speed ) ? $slide_speed : '2000';
+        $scrool                      = !empty($scrool) ? $scrool : 'per_item';
 
         
         
@@ -100,21 +105,26 @@ class Lcg_shortcode
             <?php if( 'carousel' == $layout ) { ?>
                 data-lsu-items      = "5"
                 data-lsu-margin     = "20" 
-                data-lsu-loop       = "true" 
+                data-lsu-loop       = true 
                 data-lsu-perslide   = "1"
-                data-lsu-speed      = "1000"
+                data-lsu-speed      = "<?php echo $slide_speed; ?>"
                 data-lsu-autoplay   = '
+                <?php if( 'yes' == $A_play ) { ?>
                 {
                     "delay": "1000", 
                     "pauseOnMouseEnter": "true", 
                     "disableOnInteraction": "false", 
                     "reverseDirection": "false"
-                }'
+                }
+                <?php } else { ?>
+                    false
+                <?php } ?>
+                '
                 data-lsu-responsive ='{
-                    "0": {"slidesPerView": "<?php echo $c_mobile; ?>",  "slidesPerGroup": "1", "spaceBetween": "15"}, 
-                    "768": {"slidesPerView": "<?php echo $c_tablet; ?>",  "slidesPerGroup": "1", "spaceBetween": "15"}, 
-                    "979": {"slidesPerView": "<?php echo $c_desktop_small; ?>",  "slidesPerGroup": "1", "spaceBetween": "20"}, 
-                    "1199": {"slidesPerView": "<?php echo $c_desktop; ?>",  "slidesPerGroup": "1", "spaceBetween": "30"}
+                    "0": {"slidesPerView": "<?php echo $c_mobile; ?>",  "slidesPerGroup": "<?php echo 'per_item' == $scrool ? '1' : $c_mobile; ?>", "spaceBetween": "15"}, 
+                    "768": {"slidesPerView": "<?php echo $c_tablet; ?>",  "slidesPerGroup": "<?php echo 'per_item' == $scrool ? '1' : $c_tablet; ?>", "spaceBetween": "15"}, 
+                    "979": {"slidesPerView": "<?php echo $c_desktop_small; ?>",  "slidesPerGroup": "<?php echo 'per_item' == $scrool ? '1' : $c_desktop_small; ?>", "spaceBetween": "20"}, 
+                    "1199": {"slidesPerView": "<?php echo $c_desktop; ?>",  "slidesPerGroup": "<?php echo 'per_item' == $scrool ? '1' : $c_desktop; ?>", "spaceBetween": "30"}
                 }'
             <?php } ?>
             >

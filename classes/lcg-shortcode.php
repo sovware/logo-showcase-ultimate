@@ -33,6 +33,7 @@ class Lcg_shortcode
         $data_encoded   = ( !empty($lcg_value) ) ? lcg()::adl_enc_unserialize( $lcg_value ) : array();
         extract($data_encoded);
         $rand_id            = rand();
+        $cg_title_show      = !empty($cg_title_show) ? $cg_title_show : 'no';
         $cg_title 			= !empty($cg_title) ? $cg_title : '';
         $lcg_type 			= !empty($lcg_type) ? $lcg_type : 'latest';
         $layout   			= !empty($layout) ? $layout : 'carousel';
@@ -52,9 +53,45 @@ class Lcg_shortcode
         $g_columns_mobile   = !empty($g_columns_mobile) ? intval($g_columns_mobile) : 2;
         $tooltip_posi       = !empty($tooltip_posi) ? $tooltip_posi : "top";
         $total_logos        = !empty($total_logos) ? intval($total_logos) : 12;
-        $navigation         = !empty($navigation) ? $navigation : 'yes';
-        $carousel_pagination         = !empty($carousel_pagination) ? $carousel_pagination : 'no';
 
+        $grid_pagination         = ! empty( $grid_pagination ) ? $grid_pagination : 'no';
+        
+        //carousel settings
+        $carousel_pagination         = ! empty( $carousel_pagination ) ? $carousel_pagination : 'no';
+        $A_play                      = ! empty( $A_play ) ? $A_play : 'yes';
+        $navigation                  = ! empty( $navigation ) ? $navigation : 'yes';
+        $scrool                      = ! empty( $scrool ) ? $scrool : 'per_item';
+        $stop_hover                  = ! empty( $stop_hover ) ? $stop_hover : 'yes';
+        $marquee                     = ! empty( $marquee ) ? $marquee : 'yes';
+        $slide_speed                 = ! empty( $slide_speed ) ? $slide_speed : '2000';
+        $slide_time                  = ! empty( $slide_time )  ? $slide_time : '2000' ;
+        $nav_position                = ! empty( $nav_position ) ? $nav_position : 'top-right';
+
+        $navarro_color               = ! empty( $navarro_color ) ? $navarro_color : '#9192a3';
+        $nav_background              = ! empty( $nav_background ) ? $nav_background : '#fff';
+        $nav_border                  = ! empty( $nav_border ) ? $nav_border : '#EAEAF1';
+        $nav_hov_arrow_color         = ! empty( $nav_hov_arrow_color ) ? $nav_hov_arrow_color : '#fff';
+        $nav_hov_back_color          = ! empty( $nav_hov_back_color ) ? $nav_hov_back_color : '#ff5500';
+        $nav_hov_border_color        = ! empty( $nav_hov_border_color ) ? $nav_hov_border_color : '#ff5500';
+
+        $pagination_dots_color       = ! empty( $pagination_dots_color ) ? $pagination_dots_color : '#333';
+        $pagination_dots_active_color = ! empty( $pagination_dots_active_color ) ? $pagination_dots_active_color : '#fff';
+
+        $c_desktop          = !empty($c_desktop) ? intval($c_desktop) : 5;
+        $c_desktop_small    = !empty($c_desktop_small) ? intval($c_desktop_small) : 4;
+        $c_tablet           = !empty($c_tablet) ? intval($c_tablet) : 3;
+        $c_mobile           = !empty($c_mobile) ? intval($c_mobile) : 2;
+
+        // tooltip 
+        $tooltip_posi           = ! empty($tooltip_posi) ? $tooltip_posi : 'bottom';
+        $tooltip_text_color     = ! empty( $tooltip_text_color ) ? $tooltip_text_color : '#f4f4f4';
+        $tooltip_back           = ! empty( $tooltip_back ) ? $tooltip_back : '#202428';
+        $tooltip_size           = ! empty( $tooltip_size ) ? $tooltip_size : '16px';
+
+
+        $image_hover     = !empty($image_hover) ? $image_hover : 'yes';
+
+        $paged 			    = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
         
         
         if( 'carousel' == $layout ) {
@@ -62,44 +99,165 @@ class Lcg_shortcode
         } else {
             $theme = $g_theme;
         }
+
+        $marquee_class = '';
+        if( 'yes' == $marquee ) {
+            $marquee_class = 'wpwax-lsu-carousel-marquee';
+        }
         
         $args = array();
-        $common_args = [
-            'post_type' => 'lcg_mainpost',
-            'posts_per_page'=> $total_logos,
-            'status' => 'published',
-        ];
-        if ( 'latest' == $lcg_type ) { $args = $common_args; }
-        elseif ('older' == $lcg_type) {
-            $older_args = [
-                'orderby'   => 'date',
-                'order'     => 'ASC',
-            ];
-            $args = array_merge($common_args, $older_args);
-        }else {
+        $common_args = array(
+            'post_type'      => 'lcg_mainpost',
+            'posts_per_page' => $total_logos,
+            'paged'          => $paged
+        );
+
+        if ($lcg_type == "latest") {
             $args = $common_args;
         }
 
+        elseif ($lcg_type == "category") {
+            $category_args = array(
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'lcg_category',
+                        'field' => 'term_id',
+                        'terms' => ( !empty($custom_terms) ) ?  (array) $custom_terms : null,
+                    )
+                )
+            );
+            $args = array_merge($common_args, $category_args);
+        }
 
-        $adl_logo = new WP_Query( $args );
+        elseif ($lcg_type == "older") {
+            $older_args = array(
+                'orderby'     => 'date',
+                'order'       => 'ASC'
+            );
+            $args = array_merge($common_args, $older_args);
+        }
+
+        elseif ($lcg_type == "rand") {
+            $rand_args = array(
+                'orderby'     => 'rand',);
+            $args = array_merge($common_args, $rand_args);
+        }
+
+        elseif ($lcg_type == "title_desc") {
+            $title_desc = !empty($title_desc)  ?  (array) $title_desc : null;
+            if( null == $title_desc) {
+                $title_desc_args = array(
+                    'orderby' => 'title',
+                    'order' => 'DESC'
+                );
+                $args = array_merge($common_args, $title_desc_args);
+            } else {
+                $title_desc_args = array(
+                    'orderby' => 'title',
+                    'order' => 'DESC',
+                    'tax_query' => array(
+                    array(
+                        'taxonomy' => 'lcg_category',
+                        'field' => 'term_id',
+                        'terms' => ( !empty($title_desc) ) ?  (array) $title_desc : null,
+                    )
+                )
+                );
+                $args = array_merge($common_args, $title_desc_args);
+            }
+        }
+
+        elseif ($lcg_type == "title_asc") {
+            $title_asc = !empty($title_asc)  ?  (array) $title_asc : null;
+            if(null == $title_asc) {
+                $title_asc_args = array(
+                    'orderby' => 'title',
+                    'order' => 'ASC'
+                );
+                $args = array_merge($common_args, $title_asc_args);
+            } else {
+                $title_asc_args = array(
+                    'orderby' => 'title',
+                    'order' => 'ASC',
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'lcg_category',
+                            'field' => 'term_id',
+                            'terms' => ( !empty($title_asc) ) ?  (array) $title_asc : null,
+                        )
+                )
+                );
+                $args = array_merge($common_args, $title_asc_args);
+            }
+        }
+
+        elseif ($lcg_type == "logosbyid") {
+            $logosbyid_args = array(
+                'post__in' => (!empty($logos_byid) ? explode(',', $logos_byid) : 0)
+            );
+            $args = array_merge($common_args, $logosbyid_args);
+        }
+
+        elseif ($lcg_type == "logosbyyear") {
+            $logosbyyear_args = array(
+                'year' => !empty($logos_from_year) ? intval($logos_from_year) : 0
+            );
+            $args = array_merge($common_args, $logosbyyear_args);
+        }
+
+        elseif ($lcg_type == "logosbymonth") {
+            $logosbymonth_args = array(
+                'monthnum' => !empty($logos_from_month) ? intval($logos_from_month) : 0,
+                'year' 	   => !empty($logos_from_month_year) ? intval($logos_from_month_year) : 0
+            );
+            $args = array_merge($common_args, $logosbymonth_args);
+        }
+
+        else {
+            $args = $common_args;
+        }
+
+	    $adl_logo = new WP_Query( $args );
+        
 
         if ( $adl_logo->have_posts() ) { ?>
-
+        <?php if( 'yes' == $cg_title_show ) { ?>
         <h4 class="wpwax-lsu-title"><?php echo ! empty( $cg_title ) ? $cg_title : ''; ?></span> </h4>
-
-            <div class="wpwax-lsu-ultimate wpwax-lsu-grid wpwax-lsu-carousel-marquee wpwax-lsu-<?php echo $theme; ?> <?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-logo-col-lg-' . $g_columns . ' wpwax-lsu-logo-col-md-' . $g_columns_tablet . ' wpwax-lsu-logo-col-sm-' . $g_columns_mobile . '' : 'wpwax-lsu-carousel wpwax-lsu-' . $theme . ' wpwax-lsu-carousel-nav-top'; ?>"
+        <?php } ?>
+            <div class="wpwax-lsu-ultimate wpwax-lsu-grid <?php echo $marquee_class; ?> wpwax-lsu-<?php echo $theme; ?> <?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-logo-col-lg-' . $g_columns . ' wpwax-lsu-logo-col-md-' . $g_columns_tablet . ' wpwax-lsu-logo-col-sm-' . $g_columns_mobile . '' : 'wpwax-lsu-carousel wpwax-lsu-' . $theme . ' wpwax-lsu-carousel-nav-top'; ?>"
             <?php if( 'carousel' == $layout ) { ?>
                 data-lsu-items="5"
                 data-lsu-margin="20" 
                 data-lsu-loop="false" 
                 data-lsu-perslide="1"
-                data-lsu-speed="10000"
-                data-lsu-autoplay='{"delay": "3000", "pauseOnMouseEnter": "true", "disableOnInteraction": "false", "reverseDirection": "true"}'
-                data-lsu-responsive='{"0": {"slidesPerView": "2", "slidesPerGroup": "1", "spaceBetween": "15"}, "768": {"slidesPerView": "3", "slidesPerGroup": "1", "spaceBetween": "15"}, "979": {"slidesPerView": "4", "slidesPerGroup": "1", "spaceBetween": "20"}, "1199": {"slidesPerView": "5", "slidesPerGroup": "1", "spaceBetween": "30"}}'
+                data-lsu-speed="<?php echo $slide_speed; ?>"
+                data-lsu-autoplay='
+                <?php if( 'yes' == $A_play ) { ?>
+                {
+                    "delay": "<?php echo $slide_time; ?>",
+                    "pauseOnMouseEnter": true,
+                    "disableOnInteraction": false,
+                    "stopOnLastSlide": true,
+                    "reverseDirection": false
+                }
+                <?php } else { ?>
+                    false
+                <?php } ?>
+                '
+                data-lsu-responsive ='{
+                    "0": {"slidesPerView": "<?php echo $c_mobile; ?>",  "slidesPerGroup": "<?php echo 'per_item' == $scrool ? '1' : $c_mobile; ?>", "spaceBetween": "15"}, 
+                    "768": {"slidesPerView": "<?php echo $c_tablet; ?>",  "slidesPerGroup": "<?php echo 'per_item' == $scrool ? '1' : $c_tablet; ?>", "spaceBetween": "15"}, 
+                    "979": {"slidesPerView": "<?php echo $c_desktop_small; ?>",  "slidesPerGroup": "<?php echo 'per_item' == $scrool ? '1' : $c_desktop_small; ?>", "spaceBetween": "20"}, 
+                    "1199": {"slidesPerView": "<?php echo $c_desktop; ?>",  "slidesPerGroup": "<?php echo 'per_item' == $scrool ? '1' : $c_desktop; ?>", "spaceBetween": "30"}
+                }'
             <?php } ?>   
             >
 
-                <div class="<?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-content' : 'swiper-wrapper'; ?>">
+                <div class="<?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-content' : 'swiper-wrapper'; ?>" style="
+                --lsu-tooltipFontSize: <?php echo $tooltip_size; ?>;
+                --lsu-tooltipColor: <?php echo $tooltip_text_color; ?>;
+                --lsu-tooltipBackColor: <?php echo $tooltip_back; ?>;
+                ">
 
                     <?php
                     while ($adl_logo->have_posts()) : $adl_logo->the_post();
@@ -131,7 +289,7 @@ class Lcg_shortcode
                 if( 'carousel' == $layout && 'yes' == $navigation ) {
                     include LCG_PLUGIN_DIR . 'template/navigation.php'; 
                 }
-                if( 'carousel' == $layout && 'yes' == $carousel_pagination ) {
+                if( ( 'carousel' == $layout && 'yes' == $carousel_pagination ) || ( 'grid' == $layout && 'yes' == $grid_pagination ) ) {
                     include LCG_PLUGIN_DIR . 'template/carousel-pagination.php'; 
                 }
                 

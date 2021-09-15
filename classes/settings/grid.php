@@ -1,5 +1,6 @@
 <?php 
 $g_theme         = ! empty( $g_theme ) ? $g_theme : 'grid-theme-1';
+$grid_pagination         = ! empty( $grid_pagination ) ? $grid_pagination : 'no';
 ?>
 <!--TAB 3  Grid setting -->
 <div id="lcsp-tab-3" class="lcsp-tab-content">
@@ -70,59 +71,35 @@ $g_theme         = ! empty( $g_theme ) ? $g_theme : 'grid-theme-1';
                 </div>
             </div>
 
-
+            <div class="cmb-row cmb-type-radio">
+                <div class="cmb-th">
+                    <label for="lcsp_gr"><?php esc_html_e('Pagination', LCG_TEXTDOMAIN); ?></label>
+                </div>
+                <div class="cmb-td">
+                    <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
+                        <li><input type="radio" class="cmb2-option cmb2-radio-switch1" 
+                            name="lcg_scode[grid_pagination]" 
+                            id="lcsp_gr1" 
+                            value="yes" <?php checked('yes', $grid_pagination, true); ?>> 
+                            <label for="lcsp_gr1">
+                                <?php esc_html_e('Yes', LCG_TEXTDOMAIN); ?>
+                            </label>
+                        </li>
+                        <li><input type="radio" class="cmb2-option cmb2-radio-switch2" 
+                            name="lcg_scode[grid_pagination]" 
+                            id="lcsp_gr2" 
+                            value="no" <?php checked('no', $grid_pagination, true);  ?>> 
+                            <label for="lcsp_gr2">
+                                <?php esc_html_e('No', LCG_TEXTDOMAIN); ?>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
             <?php
 
             require_once( LCG_PLUGIN_DIR . '/classes/settings/style/g_style1.php' );
             require_once( LCG_PLUGIN_DIR . '/classes/settings/style/g_style2.php' );
             ?>
-            <div class="lcs_pro_ver_notice">  <?php  esc_html_e('Following options available in ',LCG_TEXTDOMAIN); ?> <a href="https://aazztech.com/product/logo-showcase-ultimate-pro/" target="_blank"><?php esc_html_e('Pro version',LCG_TEXTDOMAIN); ?></a></div>
-            <div style="opacity: 0.3">
-                <!-- Pagination Display -->
-                <div class="cmb-row cmb-type-text-medium">
-                    <div class="cmb-th">
-                        <label for="lcgp_scode[pagi_display]"><?php esc_html_e('Display Pagination', LCG_TEXTDOMAIN); ?></label>
-                    </div>
-
-                    <div class="cmb-td">
-                        <input type="checkbox" id="display_pagi" value="true">
-                    </div>
-
-                </div>
-
-                <!-- Pagination Type -->
-                <div class="cmb-row cmb-type-radio">
-                    <div class="cmb-th">
-                        <label for="lcgp_scode[pagination_type]">
-                            <?php esc_html_e('Pagination Type', LCG_TEXTDOMAIN); ?>
-                        </label>
-                    </div>
-                    <div class="cmb-td">
-                        <ul class="cmb2-radio-list cmb2-list">
-                            <li>
-                                <input type="radio" class="cmb2-option"
-                                       name="lcgp_scode[pagination_type]"
-                                       id="number_pagi">
-                                <label for="number_pagi">
-                                    <?php esc_html_e('Number Pagination', LCG_TEXTDOMAIN); ?>
-                                </label>
-                            </li>
-                            <li>
-                                <input type="radio"
-                                       class="cmb2-option"
-                                       name="lcgp_scode[pagination_type]"
-                                       id="ajax_pagi">
-
-                                <label for="ajax_pagi">
-                                    <?php esc_html_e('Ajax Load More Button', LCG_TEXTDOMAIN); ?>
-                                </label>
-
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
 
         </div> <!-- end cmb2-metabox -->
     </div> <!-- end cmb2-wrap -->

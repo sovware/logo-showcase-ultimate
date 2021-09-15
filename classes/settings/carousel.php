@@ -5,11 +5,12 @@ $A_play          = !empty($A_play) ? $A_play : 'yes';
 $repeat_product  = !empty($repeat_product) ? $repeat_product : 'yes';
 $pagination      = !empty($pagination) ? $pagination : 'yes';
 $scrol_direction = !empty($scrol_direction) ? $scrol_direction : 'left';
-$scrool          = !empty($scrool) ? $scrool : 'false';
+$scrool          = !empty($scrool) ? $scrool : 'per_item';
 $c_theme         = ! empty( $c_theme ) ? $c_theme : 'carousel-theme-1';
 $navigation      = !empty($navigation) ? $navigation : 'yes';
 $carousel_pagination      = !empty($carousel_pagination) ? $carousel_pagination : 'no';
 $marquee         = !empty($marquee) ? $marquee : 'no';
+$nav_position = !empty($nav_position) ? $nav_position : 'top-right';
 ?>
 <!--TAB 2  Carousel setting -->
 <div id="lcsp-tab-2" class="lcsp-tab-content">
@@ -250,7 +251,7 @@ $marquee         = !empty($marquee) ? $marquee : 'no';
                             <input type="radio" class="cmb2-option" 
                             name="lcg_scode[scrool]" 
                             id="lcsp_spp1" 
-                            value="false" <?php checked('false', $scrool, true); ?>> 
+                            value="per_item" <?php checked('per_item', $scrool, true); ?>> 
                             <label for="lcsp_spp1">
                                 <?php esc_html_e('Per Item', LCG_TEXTDOMAIN); ?>
                             </label>
@@ -258,7 +259,7 @@ $marquee         = !empty($marquee) ? $marquee : 'no';
                         <li><input type="radio" class="cmb2-option" 
                             name="lcg_scode[scrool]" 
                             id="lcsp_spp2" 
-                            value="true" <?php checked('true', $scrool, true); ?>> 
+                            value="per_page" <?php checked('per_page', $scrool, true); ?>> 
                             <label for="lcsp_spp2">
                                 <?php esc_html_e('Per Page', LCG_TEXTDOMAIN); ?>
                             </label>
@@ -304,10 +305,158 @@ $marquee         = !empty($marquee) ? $marquee : 'no';
                     </ul>
                 </div>
             </div>
+
+            <!-- Navigation Position -->
+            <div class="cmb-row cmb-type-radio">
+                <div class="cmb-th">
+                    <label for="lcg_scode[nav_position]">
+                        <?php esc_html_e('Navigation Position', LCG_TEXTDOMAIN); ?>
+                    </label>
+                </div>    
+
+                <div class="cmb-td">
+                    <ul class="cmb2-radio-list cmb2-list">
+                        <li>
+                            <input type="radio" class="cmb2-option" 
+                            name="lcg_scode[nav_position]" 
+                            id="lcg_scode[nav_position]1" 
+                            value="top-right" <?php checked('top-right', $nav_position, true);  ?>>
+                            <label for="lcg_scode[nav_position]1">
+                                <?php esc_html_e('Top Right', LCG_TEXTDOMAIN); ?>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" 
+                            class="cmb2-option" 
+                            name="lcg_scode[nav_position]" 
+                            id="lcg_scode[nav_position]2" 
+                            value="top-left" <?php checked('top-left', $nav_position, true);  ?>>
+                            <label for="lcg_scode[nav_position]2">
+                                <?php esc_html_e('Top Left', LCG_TEXTDOMAIN); ?>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" class="cmb2-option" 
+                            name="lcg_scode[nav_position]" 
+                            id="lcg_scode[nav_position]3" 
+                            value="middle" <?php checked('middle', $nav_position, true);  ?>>
+                            <label for="lcg_scode[nav_position]3">
+                                <?php esc_html_e('Middle', LCG_TEXTDOMAIN); ?>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" 
+                            class="cmb2-option" 
+                            name="lcg_scode[nav_position]" 
+                            id="lcg_scode[nav_position]4" 
+                            value="bottom-right" <?php checked('bottom-right', $nav_position, true);  ?>>
+                            <label for="lcg_scode[nav_position]4">
+                                <?php esc_html_e('Bottom Right', LCG_TEXTDOMAIN); ?>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" 
+                            class="cmb2-option" 
+                            name="lcg_scode[nav_position]" 
+                            id="lcg_scode[nav_position]5" 
+                            value="bottom-left" <?php checked('bottom-left', $nav_position, true);  ?>>
+                            <label for="lcg_scode[nav_position]5">
+                                <?php esc_html_e('Bottom Left', LCG_TEXTDOMAIN); ?>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+
+            <!-- Navigation arrow color -->
+            <div class="cmb-row cmb-type-radio">
+                <div class="cmb-th">
+                    <label for="lcg_scode[navarro_color]">
+                        <?php esc_html_e('Navigation Arrow Color', LCG_TEXTDOMAIN); ?>
+                    </label>
+                </div>
+                <div class="cmb-td">
+                    <input type="text" name="lcg_scode[navarro_color]"
+                    class="cpa-color-picker" 
+                    value="<?php echo ! empty( $navarro_color ) ? $navarro_color : '#9192a3'; ?>" />
+                </div>
+            </div>
+
+            <!-- Navigation Backgroudn color -->
+            <div class="cmb-row cmb-type-radio">
+                <div class="cmb-th">
+                    <label for="lcg_scode[nav_background]">
+                        <?php esc_html_e('Navigation Background Color', LCG_TEXTDOMAIN); ?>
+                    </label>
+                </div>
+                <div class="cmb-td">
+                    <input type="text" name="lcg_scode[nav_background]"
+                    class="cpa-color-picker" 
+                    value="<?php echo ! empty( $nav_background ) ? $nav_background : '#fff'; ?>" />
+                </div>
+            </div>
+
+            <!-- Navigation Border color -->
+            <div class="cmb-row cmb-type-radio">
+                <div class="cmb-th">
+                    <label for="lcg_scode[nav_border]">
+                        <?php esc_html_e('Navigation Border Color', LCG_TEXTDOMAIN); ?>
+                    </label>
+                </div>
+                <div class="cmb-td">
+                    <input type="text" name="lcg_scode[nav_border]"
+                        class="cpa-color-picker"
+                        value="<?php echo ! empty( $nav_border ) ? $nav_border : '#EAEAF1'; ?>" />
+                </div>
+            </div>
+
+            <!-- Navigation Hover arrow color -->
+            <div class="cmb-row cmb-type-radio">
+                <div class="cmb-th">
+                    <label for="lcg_scode[nav_hov_arrow_color]">
+                        <?php esc_html_e('Navigation Hover Arrow Color', LCG_TEXTDOMAIN); ?>
+                    </label>
+                </div>
+                <div class="cmb-td">
+                    <input type="text" name="lcg_scode[nav_hov_arrow_color]"
+                    class="cpa-color-picker" 
+                    value="<?php echo ! empty( $nav_hov_arrow_color ) ? $nav_hov_arrow_color : '#fff'; ?>" />
+                </div>
+            </div>
+
+            <!-- Navigation Hover arrow color -->
+            <div class="cmb-row cmb-type-radio">
+                <div class="cmb-th">
+                    <label for="lcg_scode[nav_hov_back_color]">
+                        <?php esc_html_e('Navigaiton Hover Background Color', LCG_TEXTDOMAIN); ?>
+                    </label>
+                </div>
+                <div class="cmb-td">
+                    <input type="text" name="lcg_scode[nav_hov_back_color]"
+                    class="cpa-color-picker" 
+                    value="<?php echo ! empty( $nav_hov_back_color ) ? $nav_hov_back_color : '#ff5500'; ?>" />
+                </div>
+            </div>
+
+            <!-- Navigation Hover border color -->
+            <div class="cmb-row cmb-type-radio">
+                <div class="cmb-th">
+                    <label for="lcg_scode[nav_hov_border_color]">
+                        <?php esc_html_e('Navigaiton Hover Border Color', LCG_TEXTDOMAIN); ?>
+                    </label>
+                </div>
+                <div class="cmb-td">
+                    <input type="text" name="lcg_scode[nav_hov_border_color]"
+                        class="cpa-color-picker"
+                        value="<?php echo ! empty( $nav_hov_border_color ) ? $nav_hov_border_color : '#ff5500'; ?>" />
+                </div>
+            </div>
+
             <!-- display carousel_pagination -->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
-                    <label for="lcsp_soh"><?php esc_html_e('carousel_pagination', LCG_TEXTDOMAIN); ?></label>
+                    <label for="lcsp_soh"><?php esc_html_e('Pagination', LCG_TEXTDOMAIN); ?></label>
                 </div>
                 <div class="cmb-td">
                     <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
@@ -328,6 +477,34 @@ $marquee         = !empty($marquee) ? $marquee : 'no';
                             </label>
                         </li>
                     </ul>
+                </div>
+            </div>
+
+            <!-- dot pagination color -->
+            <div class="cmb-row cmb-type-radio">
+                <div class="cmb-th">
+                    <label for="lcg_scode[pagination_dots_color]">
+                        <?php esc_html_e('Pagination Dots Color', LCG_TEXTDOMAIN); ?>
+                    </label>
+                </div>
+                <div class="cmb-td">
+                    <input type="text" name="lcg_scode[pagination_dots_color]"
+                        class="cpa-color-picker"
+                        value="<?php echo ! empty( $pagination_dots_color ) ? $pagination_dots_color : '#333'; ?>" />
+                </div>
+            </div>
+
+            <!-- dot pagination color -->
+            <div class="cmb-row cmb-type-radio">
+                <div class="cmb-th">
+                    <label for="lcg_scode[pagination_dots_active_color]">
+                        <?php esc_html_e('Pagination Dots Active Color', LCG_TEXTDOMAIN); ?>
+                    </label>
+                </div>
+                <div class="cmb-td">
+                    <input type="text" name="lcg_scode[pagination_dots_active_color]"
+                        class="cpa-color-picker"
+                        value="<?php echo ! empty( $pagination_dots_active_color ) ? $pagination_dots_active_color : '#fff'; ?>" />
                 </div>
             </div>
             <?php

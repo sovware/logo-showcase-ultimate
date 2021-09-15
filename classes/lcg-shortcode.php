@@ -33,6 +33,7 @@ class Lcg_shortcode
         $data_encoded   = ( !empty($lcg_value) ) ? lcg()::adl_enc_unserialize( $lcg_value ) : array();
         extract($data_encoded);
         $rand_id            = rand();
+        $cg_title_show      = !empty($cg_title_show) ? $cg_title_show : 'no';
         $cg_title 			= !empty($cg_title) ? $cg_title : '';
         $lcg_type 			= !empty($lcg_type) ? $lcg_type : 'latest';
         $layout   			= !empty($layout) ? $layout : 'carousel';
@@ -52,16 +53,29 @@ class Lcg_shortcode
         $g_columns_mobile   = !empty($g_columns_mobile) ? intval($g_columns_mobile) : 2;
         $tooltip_posi       = !empty($tooltip_posi) ? $tooltip_posi : "top";
         $total_logos        = !empty($total_logos) ? intval($total_logos) : 12;
+
+        $grid_pagination         = ! empty( $grid_pagination ) ? $grid_pagination : 'no';
         
         //carousel settings
-        $carousel_pagination         = !empty($carousel_pagination) ? $carousel_pagination : 'no';
-        $A_play                      = !empty($A_play) ? $A_play : 'yes';
-        $navigation                  = !empty($navigation) ? $navigation : 'yes';
+        $carousel_pagination         = ! empty( $carousel_pagination ) ? $carousel_pagination : 'no';
+        $A_play                      = ! empty( $A_play ) ? $A_play : 'yes';
+        $navigation                  = ! empty( $navigation ) ? $navigation : 'yes';
         $scrool                      = ! empty( $scrool ) ? $scrool : 'per_item';
         $stop_hover                  = ! empty( $stop_hover ) ? $stop_hover : 'yes';
         $marquee                     = ! empty( $marquee ) ? $marquee : 'yes';
         $slide_speed                 = ! empty( $slide_speed ) ? $slide_speed : '2000';
         $slide_time                  = ! empty( $slide_time )  ? $slide_time : '2000' ;
+        $nav_position                = ! empty( $nav_position ) ? $nav_position : 'top-right';
+
+        $navarro_color               = ! empty( $navarro_color ) ? $navarro_color : '#9192a3';
+        $nav_background              = ! empty( $nav_background ) ? $nav_background : '#fff';
+        $nav_border                  = ! empty( $nav_border ) ? $nav_border : '#EAEAF1';
+        $nav_hov_arrow_color         = ! empty( $nav_hov_arrow_color ) ? $nav_hov_arrow_color : '#fff';
+        $nav_hov_back_color          = ! empty( $nav_hov_back_color ) ? $nav_hov_back_color : '#ff5500';
+        $nav_hov_border_color        = ! empty( $nav_hov_border_color ) ? $nav_hov_border_color : '#ff5500';
+
+        $pagination_dots_color       = ! empty( $pagination_dots_color ) ? $pagination_dots_color : '#333';
+        $pagination_dots_active_color = ! empty( $pagination_dots_active_color ) ? $pagination_dots_active_color : '#fff';
 
         $c_desktop          = !empty($c_desktop) ? intval($c_desktop) : 5;
         $c_desktop_small    = !empty($c_desktop_small) ? intval($c_desktop_small) : 4;
@@ -198,9 +212,9 @@ class Lcg_shortcode
         
 
         if ( $adl_logo->have_posts() ) { ?>
-
+        <?php if( 'yes' == $cg_title_show ) { ?>
         <h4 class="wpwax-lsu-title"><?php echo ! empty( $cg_title ) ? $cg_title : ''; ?></span> </h4>
-
+        <?php } ?>
             <div class="wpwax-lsu-ultimate wpwax-lsu-grid <?php echo $marquee_class; ?> wpwax-lsu-<?php echo $theme; ?> <?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-logo-col-lg-' . $g_columns . ' wpwax-lsu-logo-col-md-' . $g_columns_tablet . ' wpwax-lsu-logo-col-sm-' . $g_columns_mobile . '' : 'wpwax-lsu-carousel wpwax-lsu-' . $theme . ' wpwax-lsu-carousel-nav-top'; ?>"
             <?php if( 'carousel' == $layout ) { ?>
                 data-lsu-items="5"
@@ -262,7 +276,7 @@ class Lcg_shortcode
                 if( 'carousel' == $layout && 'yes' == $navigation ) {
                     include LCG_PLUGIN_DIR . 'template/navigation.php'; 
                 }
-                if( 'carousel' == $layout && 'yes' == $carousel_pagination ) {
+                if( ( 'carousel' == $layout && 'yes' == $carousel_pagination ) || ( 'grid' == $layout && 'yes' == $grid_pagination ) ) {
                     include LCG_PLUGIN_DIR . 'template/carousel-pagination.php'; 
                 }
                 

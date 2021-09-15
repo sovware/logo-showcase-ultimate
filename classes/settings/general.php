@@ -35,22 +35,10 @@ $target          = !empty($target) ? $target : '_blank';
                 </div>
             </div>
 
-            <div class="cmb-row cmb-type-text-medium">
-                <div class="cmb-th">
-                    <label for="lcsp_slider_title"><?php esc_html_e('Carousel / Grid Title', LCG_TEXTDOMAIN); ?></label>
-                </div>
-                <div class="cmb-td">
-                    <input type="text" class="cmb2-text-medium" 
-                    name="lcg_scode[cg_title]"
-                    id="lcsp_slider_title" 
-                    value="<?php echo !empty($cg_title) ? esc_attr($cg_title) : ''; ?>">
-                </div>
-            </div>
-
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
                     <label for="lcsp_ic">
-                        <?php esc_html_e('Carousel / Grid Title Show', LCG_TEXTDOMAIN); ?>
+                        <?php esc_html_e('Header Title Show', LCG_TEXTDOMAIN); ?>
                     </label>
                 </div>
                 <div class="cmb-td">
@@ -74,6 +62,18 @@ $target          = !empty($target) ? $target : '_blank';
                             </label>
                         </li>
                     </ul>
+                </div>
+            </div>
+
+            <div class="cmb-row cmb-type-text-medium">
+                <div class="cmb-th">
+                    <label for="lcsp_slider_title"><?php esc_html_e('Header Title', LCG_TEXTDOMAIN); ?></label>
+                </div>
+                <div class="cmb-td">
+                    <input type="text" class="cmb2-text-medium" 
+                    name="lcg_scode[cg_title]"
+                    id="lcsp_slider_title" 
+                    value="<?php echo !empty($cg_title) ? esc_attr($cg_title) : ''; ?>">
                 </div>
             </div>
 
@@ -136,6 +136,7 @@ $target          = !empty($target) ? $target : '_blank';
                                    disabled>
                             <label for="lcsp_logo_type6"><?php esc_html_e('Display Logos by Month', LCG_TEXTDOMAIN); ?></label>
                         </li>
+                    </ul>
                 </div>
             </div>
 

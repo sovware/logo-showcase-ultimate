@@ -76,22 +76,6 @@ $g_theme         = ! empty( $g_theme ) ? $g_theme : 'grid-theme-1';
             require_once( LCG_PLUGIN_DIR . '/classes/settings/style/g_style1.php' );
             require_once( LCG_PLUGIN_DIR . '/classes/settings/style/g_style2.php' );
             ?>
-            <div class="lcs_pro_ver_notice">  <?php  esc_html_e('Following options available in ',LCG_TEXTDOMAIN); ?> <a href="https://aazztech.com/product/logo-showcase-ultimate-pro/" target="_blank"><?php esc_html_e('Pro version',LCG_TEXTDOMAIN); ?></a></div>
-            <div style="opacity: 0.3">
-                <!-- Pagination Display -->
-                <div class="cmb-row cmb-type-text-medium">
-                    <div class="cmb-th">
-                        <label for="lcgp_scode[pagi_display]"><?php esc_html_e('Display Pagination', LCG_TEXTDOMAIN); ?></label>
-                    </div>
-
-                    <div class="cmb-td">
-                        <input type="checkbox" id="display_pagi" value="true">
-                    </div>
-
-                </div>
-
-                
-            </div>
 
         </div> <!-- end cmb2-metabox -->
     </div> <!-- end cmb2-wrap -->

@@ -34,6 +34,7 @@ class Lcg_shortcode
         extract($data_encoded);
         $rand_id            = rand();
         $cg_title 			= !empty($cg_title) ? $cg_title : '';
+        $cg_title_show   = !empty($cg_title_show) ? $cg_title_show : 'no';
         $lcg_type 			= !empty($lcg_type) ? $lcg_type : 'latest';
         $layout   			= !empty($layout) ? $layout : 'carousel';
         $c_theme  			= !empty($c_theme) ? $c_theme : 'carousel-theme-1';
@@ -99,7 +100,9 @@ class Lcg_shortcode
 
         if ( $adl_logo->have_posts() ) { ?>
 
-        <h4 class="wpwax-lsu-title"><?php echo ! empty( $cg_title ) ? $cg_title : ''; ?></span> </h4>
+        <?php if( 'yes' == $cg_title_show ) { ?>
+        <h4 class="wpwax-lsu-title"><?php echo ! empty( $cg_title ) ? $cg_title : ''; ?></h4>
+        <?php } ?>
 
             <div class="wpwax-lsu-ultimate wpwax-lsu-grid wpwax-lsu-<?php echo $theme; ?> <?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-logo-col-lg-' . $g_columns . ' wpwax-lsu-logo-col-md-' . $g_columns_tablet . ' wpwax-lsu-logo-col-sm-' . $g_columns_mobile . '' : 'wpwax-lsu-carousel wpwax-lsu-' . $theme . ' wpwax-lsu-carousel-nav-top'; ?> <?php echo $box_shadow_class; ?>"
             <?php if( 'carousel' == $layout ) { ?>

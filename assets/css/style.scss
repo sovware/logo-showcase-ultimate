@@ -1104,3 +1104,24 @@ $primary: #ff5500;
         }
     }
 }
+
+
+/* Carousel default */
+
+.wpwax-lsu-carousel {
+    overflow: hidden;
+    /* Carousel marquee effect */
+    &.wpwax-lsu-carousel-marquee {
+        .swiper-wrapper {
+            transition: none !important;
+        }
+        &:hover {
+            .swiper-wrapper {
+                animation-play-state: paused;
+            }
+        }
+        .wpwax-lsu-carousel-nav {
+            display: none;
+        }
+    }
+}

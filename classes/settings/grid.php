@@ -95,6 +95,7 @@ $grid_pagination         = ! empty( $grid_pagination ) ? $grid_pagination : 'no'
                         </li>
                     </ul>
                 </div>
+</div>
             <?php
 
             require_once( LCG_PLUGIN_DIR . '/classes/settings/style/g_style1.php' );

@@ -253,7 +253,11 @@ class Lcg_shortcode
             <?php } ?>   
             >
 
-                <div class="<?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-content' : 'swiper-wrapper'; ?>">
+                <div class="<?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-content' : 'swiper-wrapper'; ?>" style="
+                --lsu-tooltipFontSize: <?php echo $tooltip_size; ?>;
+                --lsu-tooltipColor: <?php echo $tooltip_text_color; ?>;
+                --lsu-tooltipBackColor: <?php echo $tooltip_back; ?>;
+                ">
 
                     <?php
                     while ($adl_logo->have_posts()) : $adl_logo->the_post();

@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) die( 'Are you cheating??? Accessing this file directly is forbidden.' );
-$stop_hover      = !empty($stop_hover) ? $stop_hover : 'true';
+$stop_hover      = !empty($stop_hover) ? $stop_hover : 'yes';
 $A_play          = !empty($A_play) ? $A_play : 'yes';
 $repeat_product  = !empty($repeat_product) ? $repeat_product : 'yes';
 $pagination      = !empty($pagination) ? $pagination : 'yes';
@@ -9,6 +9,7 @@ $scrool          = !empty($scrool) ? $scrool : 'false';
 $c_theme         = ! empty( $c_theme ) ? $c_theme : 'carousel-theme-1';
 $navigation      = !empty($navigation) ? $navigation : 'yes';
 $carousel_pagination      = !empty($carousel_pagination) ? $carousel_pagination : 'no';
+$marquee         = !empty($marquee) ? $marquee : 'no';
 ?>
 <!--TAB 2  Carousel setting -->
 <div id="lcsp-tab-2" class="lcsp-tab-content">
@@ -101,7 +102,7 @@ $carousel_pagination      = !empty($carousel_pagination) ? $carousel_pagination 
                         <li><input type="radio" class="cmb2-option cmb2-radio-switch1" 
                             name="lcg_scode[stop_hover]" 
                             id="lcsp_soh1" 
-                            value="true" <?php checked('true', $stop_hover, true); ?>> 
+                            value="yes" <?php checked('yes', $stop_hover, true); ?>> 
                             <label for="lcsp_soh1">
                                 <?php esc_html_e('Yes', LCG_TEXTDOMAIN); ?>
                             </label>
@@ -109,7 +110,7 @@ $carousel_pagination      = !empty($carousel_pagination) ? $carousel_pagination 
                         <li><input type="radio" class="cmb2-option cmb2-radio-switch2" 
                             name="lcg_scode[stop_hover]" 
                             id="lcsp_soh2" 
-                            value="false" <?php checked('false', $stop_hover, true);  ?>> 
+                            value="no" <?php checked('no', $stop_hover, true);  ?>> 
                             <label for="lcsp_soh2">
                                 <?php esc_html_e('No', LCG_TEXTDOMAIN); ?>
                             </label>
@@ -117,6 +118,34 @@ $carousel_pagination      = !empty($carousel_pagination) ? $carousel_pagination 
                     </ul>
                 </div>
             </div>
+
+            <!--Marquee-->
+            <div class="cmb-row cmb-type-radio">
+                <div class="cmb-th">
+                    <label for="lcsp_mar"><?php esc_html_e('Marquee', LCG_TEXTDOMAIN); ?></label>
+                </div>
+                <div class="cmb-td">
+                    <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
+                        <li><input type="radio" class="cmb2-option cmb2-radio-switch1" 
+                            name="lcg_scode[marquee]" 
+                            id="lcsp_mar1" 
+                            value="yes" <?php checked('yes', $marquee, true); ?>> 
+                            <label for="lcsp_mar1">
+                                <?php esc_html_e('Yes', LCG_TEXTDOMAIN); ?>
+                            </label>
+                        </li>
+                        <li><input type="radio" class="cmb2-option cmb2-radio-switch2" 
+                            name="lcg_scode[marquee]" 
+                            id="lcsp_mar2" 
+                            value="no" <?php checked('no', $marquee, true);  ?>> 
+                            <label for="lcsp_mar2">
+                                <?php esc_html_e('No', LCG_TEXTDOMAIN); ?>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
             <!--Items on desktop-->
             <div class="cmb-row cmb-type-text-medium">
                 <div class="cmb-th">

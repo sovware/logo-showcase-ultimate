@@ -58,6 +58,8 @@ class Lcg_shortcode
         $A_play                      = !empty($A_play) ? $A_play : 'yes';
         $navigation                  = !empty($navigation) ? $navigation : 'yes';
         $scrool                      = ! empty( $scrool ) ? $scrool : 'per_item';
+        $stop_hover                  = ! empty( $stop_hover ) ? $stop_hover : 'yes';
+        $marquee                     = ! empty( $marquee ) ? $marquee : 'yes';
 
         $paged 			    = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
         
@@ -66,6 +68,11 @@ class Lcg_shortcode
             $theme = $c_theme;
         } else {
             $theme = $g_theme;
+        }
+
+        $marquee_class = '';
+        if( 'yes' == $marquee ) {
+            $marquee_class = 'wpwax-lsu-carousel-marquee';
         }
         
         $args = array();
@@ -181,12 +188,13 @@ class Lcg_shortcode
         }
 
 	    $adl_logo = new WP_Query( $args );
+        
 
         if ( $adl_logo->have_posts() ) { ?>
 
         <h4 class="wpwax-lsu-title"><?php echo ! empty( $cg_title ) ? $cg_title : ''; ?></span> </h4>
 
-            <div class="wpwax-lsu-ultimate wpwax-lsu-grid wpwax-lsu-<?php echo $theme; ?> <?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-logo-col-lg-' . $g_columns . ' wpwax-lsu-logo-col-md-' . $g_columns_tablet . ' wpwax-lsu-logo-col-sm-' . $g_columns_mobile . '' : 'wpwax-lsu-carousel wpwax-lsu-' . $theme . ' wpwax-lsu-carousel-nav-top'; ?>"
+            <div class="wpwax-lsu-ultimate wpwax-lsu-grid <?php echo $marquee_class; ?> wpwax-lsu-<?php echo $theme; ?> <?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-logo-col-lg-' . $g_columns . ' wpwax-lsu-logo-col-md-' . $g_columns_tablet . ' wpwax-lsu-logo-col-sm-' . $g_columns_mobile . '' : 'wpwax-lsu-carousel wpwax-lsu-' . $theme . ' wpwax-lsu-carousel-nav-top'; ?>"
             <?php if( 'carousel' == $layout ) { ?>
                 data-lsu-items="5"
                 data-lsu-margin="20" 

@@ -903,3 +903,21 @@
 .wpwax-lsu-carousel-pagination.swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: #000000;
 }
+
+/* Carousel default */
+.wpwax-lsu-carousel {
+  overflow: hidden;
+  /* Carousel marquee effect */
+}
+.wpwax-lsu-carousel.wpwax-lsu-carousel-marquee .swiper-wrapper {
+  -webkit-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+.wpwax-lsu-carousel.wpwax-lsu-carousel-marquee:hover .swiper-wrapper {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+.wpwax-lsu-carousel.wpwax-lsu-carousel-marquee .wpwax-lsu-carousel-nav {
+  display: none;
+}

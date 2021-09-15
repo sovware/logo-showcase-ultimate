@@ -1425,6 +1425,38 @@ h1.wpcs-admin-header {
   margin: 0;
 }
 
+/* Button Style */
+.wp-core-ui .button{
+  padding: 8px 20px;
+  border-radius: 4px;
+  margin: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 25px;
+  text-decoration: none;
+  color: white;
+}
+
+.wp-core-ui .button-primary{
+  background: #834EFF;
+  border: 1px solid #834EFF;
+}
+
+.wp-core-ui .button-primary:hover{
+  background: #834EFF;
+  border: 1px solid #834EFF;
+}
+
+.wp-core-ui .button-secondary{
+  background: #FF408C;
+  border: 1px solid #FF408C;
+}
+
+.wp-core-ui .button-secondary:hover{
+  background: #FF408C;
+  border: 1px solid #FF408C;
+}
+
 /* Responsive style */
 
 @media (max-width: 1600.98px) {

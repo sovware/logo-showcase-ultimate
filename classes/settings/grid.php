@@ -90,38 +90,7 @@ $g_theme         = ! empty( $g_theme ) ? $g_theme : 'grid-theme-1';
 
                 </div>
 
-                <!-- Pagination Type -->
-                <div class="cmb-row cmb-type-radio">
-                    <div class="cmb-th">
-                        <label for="lcgp_scode[pagination_type]">
-                            <?php esc_html_e('Pagination Type', LCG_TEXTDOMAIN); ?>
-                        </label>
-                    </div>
-                    <div class="cmb-td">
-                        <ul class="cmb2-radio-list cmb2-list">
-                            <li>
-                                <input type="radio" class="cmb2-option"
-                                       name="lcgp_scode[pagination_type]"
-                                       id="number_pagi">
-                                <label for="number_pagi">
-                                    <?php esc_html_e('Number Pagination', LCG_TEXTDOMAIN); ?>
-                                </label>
-                            </li>
-                            <li>
-                                <input type="radio"
-                                       class="cmb2-option"
-                                       name="lcgp_scode[pagination_type]"
-                                       id="ajax_pagi">
-
-                                <label for="ajax_pagi">
-                                    <?php esc_html_e('Ajax Load More Button', LCG_TEXTDOMAIN); ?>
-                                </label>
-
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
+                
             </div>
 
         </div> <!-- end cmb2-metabox -->

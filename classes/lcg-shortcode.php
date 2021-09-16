@@ -122,7 +122,7 @@ class Lcg_shortcode
                     "pauseOnMouseEnter": <?php echo ( 'yes' == $stop_hover ) ? 'true' : 'false'; ?>,
                     "disableOnInteraction": false,
                     "stopOnLastSlide": true,
-                    "reverseDirection": <?php echo ( 'left' == $scrol_direction ) ? 'true' : 'false'; ?>
+                    "reverseDirection": <?php echo ( 'left' == $scrol_direction ) ? 'false' : 'true'; ?>
                 }
                 <?php } else { ?>
                     false

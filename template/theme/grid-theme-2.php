@@ -1,4 +1,4 @@
-<div class="wpwax-lsu-item">
+<div class="wpwax-lsu-item wpwax-lsu-item-bordered">
 
     <div class="wpwax-lsu-item-inner" data-bs-placement="top" title="Conpany Name Sovware">
 

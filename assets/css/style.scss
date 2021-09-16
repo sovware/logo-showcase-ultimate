@@ -284,7 +284,7 @@ $primary: #ff5500;
         &.wpwax-lsu-grid-theme-3 {
             .wpwax-lsu-item {
                 .wpwax-lsu-item-inner {
-                    padding: 0;
+                    padding: 15px;
                 }
             }
         }
@@ -296,7 +296,7 @@ $primary: #ff5500;
 
 .wpwax-lsu-ultimate {
     .wpwax-lsu-item {
-        &.wpwax-lsu-item__bordered {
+        &.wpwax-lsu-item-bordered {
             .wpwax-lsu-item-inner {
                 border: 1px solid #eaeaf1;
                 a {

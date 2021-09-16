@@ -223,14 +223,14 @@
 
 /* wpWax logo Showcase Grid Theme 3 */
 .wpwax-lsu-ultimate.wpwax-lsu-grid.wpwax-lsu-grid-theme-3 .wpwax-lsu-item .wpwax-lsu-item-inner {
-  padding: 0;
+  padding: 15px;
 }
 
 /* wpWax logo Showcase Grid Bordered */
-.wpwax-lsu-ultimate .wpwax-lsu-item.wpwax-lsu-item__bordered .wpwax-lsu-item-inner {
+.wpwax-lsu-ultimate .wpwax-lsu-item.wpwax-lsu-item-bordered .wpwax-lsu-item-inner {
   border: 1px solid #eaeaf1;
 }
-.wpwax-lsu-ultimate .wpwax-lsu-item.wpwax-lsu-item__bordered .wpwax-lsu-item-inner a {
+.wpwax-lsu-ultimate .wpwax-lsu-item.wpwax-lsu-item-bordered .wpwax-lsu-item-inner a {
   padding: 0;
 }
 

@@ -220,16 +220,18 @@ $primary: #ff5500;
 /* Logo Showcase Item hover */
 
 .wpwax-lsu-ultimate {
-    .wpwax-lsu-item {
-        img {
-            width: 100%;
-            max-width: 150px;
-            transition: 0.35s;
-            transform: scale(1);
-        }
-        &:hover {
+    &.wpwax-lsu-hover-active {
+        .wpwax-lsu-item {
             img {
-                transform: scale(1.1);
+                width: 100%;
+                max-width: 150px;
+                transition: 0.35s;
+                transform: scale(1);
+            }
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
             }
         }
     }
@@ -329,7 +331,7 @@ $primary: #ff5500;
     &.wpwax-lsu-grid-theme-4 {
         overflow: hidden;
         .wpwax-lsu-item {
-            &.wpwax-lsu-item__bordered {
+            &.wpwax-lsu-item-bordered {
                 .wpwax-lsu-item-inner {
                     border-top: 0 none;
                     margin: -1px 0 0 -1px;
@@ -465,7 +467,7 @@ $primary: #ff5500;
 
 .wpwax-lsu-ultimate {
     .wpwax-lsu-item {
-        &.wpwax-lsu-item__bordered {
+        &.wpwax-lsu-item-bordered {
             .wpwax-lsu-item-inner {
                 border: 1px solid #eaeaf1;
                 a {

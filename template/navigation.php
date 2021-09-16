@@ -7,6 +7,7 @@
     -wpwax-lsu-carousel-nav--bottom-right
     -wpwax-lsu-carousel-nav--bottom-left
     -wpwax-lsu-carousel-nav--bottom-middle
+    -wpwax-lsu-carousel-nav-around
 
  -->
 

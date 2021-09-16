@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) die( 'Are you cheating??? Accessing this file directly is forbidden.' );
-$stop_hover      = !empty($stop_hover) ? $stop_hover : 'true';
+$stop_hover      = !empty($stop_hover) ? $stop_hover : 'yes';
 $A_play          = !empty($A_play) ? $A_play : 'yes';
 $repeat_product  = !empty($repeat_product) ? $repeat_product : 'yes';
 $pagination      = !empty($pagination) ? $pagination : 'yes';
@@ -101,7 +101,7 @@ $carousel_pagination      = !empty($carousel_pagination) ? $carousel_pagination 
                         <li><input type="radio" class="cmb2-option cmb2-radio-switch1" 
                             name="lcg_scode[stop_hover]" 
                             id="lcsp_soh1" 
-                            value="true" <?php checked('true', $stop_hover, true); ?>> 
+                            value="yes" <?php checked('yes', $stop_hover, true); ?>> 
                             <label for="lcsp_soh1">
                                 <?php esc_html_e('Yes', LCG_TEXTDOMAIN); ?>
                             </label>
@@ -109,7 +109,7 @@ $carousel_pagination      = !empty($carousel_pagination) ? $carousel_pagination 
                         <li><input type="radio" class="cmb2-option cmb2-radio-switch2" 
                             name="lcg_scode[stop_hover]" 
                             id="lcsp_soh2" 
-                            value="false" <?php checked('false', $stop_hover, true);  ?>> 
+                            value="no" <?php checked('no', $stop_hover, true);  ?>> 
                             <label for="lcsp_soh2">
                                 <?php esc_html_e('No', LCG_TEXTDOMAIN); ?>
                             </label>

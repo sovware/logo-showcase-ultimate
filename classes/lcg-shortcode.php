@@ -61,11 +61,15 @@ class Lcg_shortcode
         $total_logos        = !empty($total_logos) ? intval($total_logos) : 12;
 
         //carousel settings
-        $navigation                  = !empty($navigation) ? $navigation : 'yes';
-        $carousel_pagination         = !empty($carousel_pagination) ? $carousel_pagination : 'no';
+        $navigation                  = ! empty( $navigation ) ? $navigation : 'yes';
+        $carousel_pagination         = ! empty( $carousel_pagination ) ? $carousel_pagination : 'no';
         $A_play                      = ! empty( $A_play ) ? $A_play : 'yes';
         $slide_speed                 = ! empty( $slide_speed ) ? $slide_speed : '2000';
-        $scrool                      = !empty($scrool) ? $scrool : 'per_item';
+        $slide_time                  = ! empty( $slide_time ) ? intval( $slide_time ) : '2000';
+        $scrool                      = ! empty( $scrool ) ? $scrool : 'per_item';
+        $repeat_product              = ! empty( $repeat_product ) ? $repeat_product : 'yes';
+        $stop_hover                  = ! empty( $stop_hover ) ? $stop_hover : 'yes';
+        $scrol_direction             = ! empty( $scrol_direction ) ? $scrol_direction : 'left';
 
         
         
@@ -108,17 +112,17 @@ class Lcg_shortcode
             <?php if( 'carousel' == $layout ) { ?>
                 data-lsu-items      = "5"
                 data-lsu-margin     = "20" 
-                data-lsu-loop       = "false" 
+                data-lsu-loop       = "<?php echo ( 'yes' == $repeat_product ) ? 'true' : 'false'; ?>" 
                 data-lsu-perslide   = "1"
                 data-lsu-speed      = "<?php echo $slide_speed; ?>"
                 data-lsu-autoplay   = '
                 <?php if( 'yes' == $A_play ) { ?>
                 {
-                    "delay": "200",
-                    "pauseOnMouseEnter": true,
+                    "delay": "<?php echo $slide_time; ?>",
+                    "pauseOnMouseEnter": <?php echo ( 'yes' == $stop_hover ) ? 'true' : 'false'; ?>,
                     "disableOnInteraction": false,
                     "stopOnLastSlide": true,
-                    "reverseDirection": true
+                    "reverseDirection": <?php echo ( 'left' == $scrol_direction ) ? 'true' : 'false'; ?>
                 }
                 <?php } else { ?>
                     false

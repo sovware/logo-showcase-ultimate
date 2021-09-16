@@ -1,4 +1,4 @@
-<div class="wpwax-lsu-item wpwax-lsu-item__bordered swiper-slide">
+<div class="wpwax-lsu-item wpwax-lsu-item-bordered swiper-slide">
 
     <div class="wpwax-lsu-item-inner">
 

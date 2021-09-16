@@ -331,7 +331,7 @@ $primary: #ff5500;
     &.wpwax-lsu-grid-theme-4 {
         overflow: hidden;
         .wpwax-lsu-item {
-            &.wpwax-lsu-item__bordered {
+            &.wpwax-lsu-item-bordered {
                 .wpwax-lsu-item-inner {
                     border-top: 0 none;
                     margin: -1px 0 0 -1px;
@@ -467,7 +467,7 @@ $primary: #ff5500;
 
 .wpwax-lsu-ultimate {
     .wpwax-lsu-item {
-        &.wpwax-lsu-item__bordered {
+        &.wpwax-lsu-item-bordered {
             .wpwax-lsu-item-inner {
                 border: 1px solid #eaeaf1;
                 a {

@@ -1,5 +1,5 @@
 
-        <div class="wpwax-lsu-item wpwax-lsu-item__borderless">
+        <div class="wpwax-lsu-item wpwax-lsu-item-borderless">
 
             <div class="wpwax-lsu-item-inner">
 

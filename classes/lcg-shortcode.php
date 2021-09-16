@@ -66,6 +66,9 @@ class Lcg_shortcode
         $slide_speed                 = ! empty( $slide_speed ) ? $slide_speed : '2000';
         $slide_time                  = ! empty( $slide_time )  ? $slide_time : '2000' ;
         $nav_position                = ! empty( $nav_position ) ? $nav_position : 'top-right';
+        $slide_time                  = ! empty( $slide_time ) ? intval( $slide_time ) : '2000';
+        $repeat_product              = ! empty( $repeat_product ) ? $repeat_product : 'yes';
+        $scrol_direction             = ! empty( $scrol_direction ) ? $scrol_direction : 'left';
 
         $navarro_color               = ! empty( $navarro_color ) ? $navarro_color : '#9192a3';
         $nav_background              = ! empty( $nav_background ) ? $nav_background : '#fff';
@@ -235,10 +238,10 @@ class Lcg_shortcode
                 <?php if( 'yes' == $A_play ) { ?>
                 {
                     "delay": "<?php echo $slide_time; ?>",
-                    "pauseOnMouseEnter": true,
+                    "pauseOnMouseEnter": <?php 'yes' == $stop_hover ? 'true' : 'false'; ?>,
                     "disableOnInteraction": false,
                     "stopOnLastSlide": true,
-                    "reverseDirection": false
+                    "reverseDirection": <?php 'left' == $scrol_direction ? 'false' : 'true';?>
                 }
                 <?php } else { ?>
                     false

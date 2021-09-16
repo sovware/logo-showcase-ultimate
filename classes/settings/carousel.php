@@ -151,61 +151,57 @@ $nav_position = !empty($nav_position) ? $nav_position : 'top-right';
             <div class="cmb-row cmb-type-text-medium">
                 <div class="cmb-th">
                     <label for="lcsp_li_desktop">
-                        <?php esc_html_e('Logo items (on Desktop, screen larger than 1198px)', LCG_TEXTDOMAIN); ?>
+                        <?php esc_html_e('Products Column', LCG_TEXTDOMAIN); ?>
                     </label>
                 </div>
                 <div class="cmb-td">
-                    <input type="text" class="cmb2-text-small" 
-                    name="lcg_scode[c_desktop]" 
-                    id="lcsp_li_desktop" 
-                    value="<?php echo !empty($c_desktop) ? intval($c_desktop) : 5; ?>">
-                    <p class="cmb2-metabox-description"><?php esc_html_e('Maximum amount of items to display at a time on Desktop that screen size larger than 1198px', LCG_TEXTDOMAIN); ?></p>
+                    <div class="cmb-product-columns">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text" id="btnGroupAddon"><span class="fas fa-desktop"></span>
+                                </div>
+                            </div>
+                            <input type="text" class="cmb2-text-small" 
+                            name="lcg_scode[c_desktop]" 
+                            id="lcsp_li_desktop" 
+                            value="<?php echo !empty($c_desktop) ? intval($c_desktop) : 5; ?>">
+                        </div>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text" id="btnGroupAddon"><span class="fas fa-laptop"></span>
+                                </div>
+                            </div>
+                            <input type="text" class="cmb2-text-small" 
+                            name="lcg_scode[c_desktop_small]" 
+                            id="lcsp_li_desktop_small" 
+                            value="<?php echo !empty($c_desktop_small) ? intval($c_desktop_small) : 4; ?>">
+                        </div>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text" id="btnGroupAddon"><span class="fas fa-tablet-alt"></span>
+                                </div>
+                            </div>
+                            <input type="text" class="cmb2-text-small" 
+                            name="lcg_scode[c_tablet]" 
+                            id="lcsp_li_tablet" 
+                            value="<?php echo !empty($c_tablet) ? intval($c_tablet) : 3; ?>">
+                        </div>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text" id="btnGroupAddon"><span class="fas fa-mobile-alt"></span>
+                                </div>
+                            </div>
+                            <input type="text" class="cmb2-text-small" 
+                            name="lcg_scode[c_mobile]" 
+                            id="lcsp_li_mobile" 
+                            value="<?php echo !empty($c_mobile) ? intval($c_mobile) : 2; ?>">
+                        </div>
+                    </div>
 
-                </div>
-            </div>
-            <!--Item on smaller desktop or laptop-->
-            <div class="cmb-row cmb-type-text-medium">
-                <div class="cmb-th">
-                    <label for="lcsp_li_desktop_small">
-                        <?php esc_html_e('Logo items (on Desktop, screen larger than 978px)', LCG_TEXTDOMAIN); ?>
-                    </label>
-                </div>
-                <div class="cmb-td">
-                    <input type="text" class="cmb2-text-small" 
-                    name="lcg_scode[c_desktop_small]" 
-                    id="lcsp_li_desktop_small" 
-                    value="<?php echo !empty($c_desktop_small) ? intval($c_desktop_small) : 4; ?>">
-                    <p class="cmb2-metabox-description"><?php esc_html_e('Maximum amount of items to display at a time on Desktop that screen size larger than 978px', LCG_TEXTDOMAIN); ?></p>
-                </div>
-            </div>
-            <!--items on tablet-->
-            <div class="cmb-row cmb-type-text-medium">
-                <div class="cmb-th">
-                    <label for="lcsp_li_tablet">
-                        <?php esc_html_e('Logo items (on Tablet)', LCG_TEXTDOMAIN); ?>
-                    </label>
-                </div>
-                <div class="cmb-td">
-                    <input type="text" class="cmb2-text-small" 
-                    name="lcg_scode[c_tablet]" 
-                    id="lcsp_li_tablet" 
-                    value="<?php echo !empty($c_tablet) ? intval($c_tablet) : 3; ?>">
-                    <p class="cmb2-metabox-description"><?php esc_html_e('Maximum amount of items to display at a time on Tablet', LCG_TEXTDOMAIN); ?></p>
-                </div>
-            </div>
-            <!--items on mobile-->
-            <div class="cmb-row cmb-type-text-medium">
-                <div class="cmb-th">
-                    <label for="lcsp_li_mobile">
-                        <?php esc_html_e('Logo items (on Mobile)', LCG_TEXTDOMAIN); ?>
-                    </label>
-                </div>
-                <div class="cmb-td">
-                    <input type="text" class="cmb2-text-small" 
-                    name="lcg_scode[c_mobile]" 
-                    id="lcsp_li_mobile" 
-                    value="<?php echo !empty($c_mobile) ? intval($c_mobile) : 2; ?>">
-                    <p class="cmb2-metabox-description"><?php esc_html_e('Maximum amount of items to display at a time on Mobile', LCG_TEXTDOMAIN); ?></p>
+                    <p class="cmb2-metabox-description">
+                        <?php esc_html_e('Set products column(s) in different devices.', LCG_TEXTDOMAIN); ?>
+                    </p>
+
                 </div>
             </div>
             <!--slide speed-->
@@ -368,91 +364,66 @@ $nav_position = !empty($nav_position) ? $nav_position : 'top-right';
                 </div>
                 
             </div>
-
-            <!-- Navigation arrow color -->
-            <div class="cmb-row cmb-type-radio">
+            <!-- Navigation color -->
+            <div class="cmb-row cmb-type-radio wpcu_navigation_depend">
                 <div class="cmb-th">
-                    <label for="lcg_scode[navarro_color]">
-                        <?php esc_html_e('Navigation Arrow Color', LCG_TEXTDOMAIN); ?>
+                    <label for="wcpscu[nav_arrow_color]">
+                        Navigation Style
                     </label>
                 </div>
                 <div class="cmb-td">
-                    <input type="text" name="lcg_scode[navarro_color]"
-                    class="cpa-color-picker" 
-                    value="<?php echo ! empty( $navarro_color ) ? $navarro_color : '#9192a3'; ?>" />
+                    <div class="cmb-navigation">
+                        <div class="cmb-navigation-item">
+                            <label for="wcpscu[nav_arrow_color]">
+                                <?php esc_html_e('Navigation Arrow Color', LCG_TEXTDOMAIN); ?>
+                            </label>
+                            <input type="text" name="lcg_scode[navarro_color]"
+                            class="cpa-color-picker" 
+                            value="<?php echo ! empty( $navarro_color ) ? $navarro_color : '#9192a3'; ?>" />
+                        </div>
+                        <div class="cmb-navigation-item">
+                            <label for="wcpscu[nav_back_color]">
+                                <?php esc_html_e('Navigation Background Color', LCG_TEXTDOMAIN); ?>
+                            </label>
+                            <input type="text" name="lcg_scode[nav_background]"
+                            class="cpa-color-picker" 
+                            value="<?php echo ! empty( $nav_background ) ? $nav_background : '#fff'; ?>" />
+                        </div>
+                        <div class="cmb-navigation-item">
+                            <label for="wcpscu[nav_border_color]">
+                                <?php esc_html_e('Navigation Border Color', LCG_TEXTDOMAIN); ?>
+                            </label>
+                            <input type="text" name="lcg_scode[nav_border]"
+                            class="cpa-color-picker"
+                            value="<?php echo ! empty( $nav_border ) ? $nav_border : '#EAEAF1'; ?>" />
+                        </div>
+                        <div class="cmb-navigation-item">
+                            <label for="wcpscu[nav_arrow_hover_color]">
+                                <?php esc_html_e('Navigation Hover Arrow Color', LCG_TEXTDOMAIN); ?>
+                            </label>
+                            <input type="text" name="lcg_scode[nav_hov_arrow_color]"
+                            class="cpa-color-picker" 
+                            value="<?php echo ! empty( $nav_hov_arrow_color ) ? $nav_hov_arrow_color : '#fff'; ?>" />
+                        </div>
+                        <div class="cmb-navigation-item">
+                            <label for="wcpscu[nav_back_hover_color]">
+                                <?php esc_html_e('Navigaiton Hover Background Color', LCG_TEXTDOMAIN); ?>
+                            </label>
+                            <input type="text" name="lcg_scode[nav_hov_back_color]"
+                            class="cpa-color-picker" 
+                            value="<?php echo ! empty( $nav_hov_back_color ) ? $nav_hov_back_color : '#ff5500'; ?>" />
+                        </div>
+                        <div class="cmb-navigation-item">
+                            <label for="wcpscu[nav_border_hover]">
+                                <?php esc_html_e('Navigaiton Hover Border Color', LCG_TEXTDOMAIN); ?>
+                            </label>
+                            <input type="text" name="lcg_scode[nav_hov_border_color]"
+                            class="cpa-color-picker"
+                            value="<?php echo ! empty( $nav_hov_border_color ) ? $nav_hov_border_color : '#ff5500'; ?>" />
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <!-- Navigation Backgroudn color -->
-            <div class="cmb-row cmb-type-radio">
-                <div class="cmb-th">
-                    <label for="lcg_scode[nav_background]">
-                        <?php esc_html_e('Navigation Background Color', LCG_TEXTDOMAIN); ?>
-                    </label>
-                </div>
-                <div class="cmb-td">
-                    <input type="text" name="lcg_scode[nav_background]"
-                    class="cpa-color-picker" 
-                    value="<?php echo ! empty( $nav_background ) ? $nav_background : '#fff'; ?>" />
-                </div>
-            </div>
-
-            <!-- Navigation Border color -->
-            <div class="cmb-row cmb-type-radio">
-                <div class="cmb-th">
-                    <label for="lcg_scode[nav_border]">
-                        <?php esc_html_e('Navigation Border Color', LCG_TEXTDOMAIN); ?>
-                    </label>
-                </div>
-                <div class="cmb-td">
-                    <input type="text" name="lcg_scode[nav_border]"
-                        class="cpa-color-picker"
-                        value="<?php echo ! empty( $nav_border ) ? $nav_border : '#EAEAF1'; ?>" />
-                </div>
-            </div>
-
-            <!-- Navigation Hover arrow color -->
-            <div class="cmb-row cmb-type-radio">
-                <div class="cmb-th">
-                    <label for="lcg_scode[nav_hov_arrow_color]">
-                        <?php esc_html_e('Navigation Hover Arrow Color', LCG_TEXTDOMAIN); ?>
-                    </label>
-                </div>
-                <div class="cmb-td">
-                    <input type="text" name="lcg_scode[nav_hov_arrow_color]"
-                    class="cpa-color-picker" 
-                    value="<?php echo ! empty( $nav_hov_arrow_color ) ? $nav_hov_arrow_color : '#fff'; ?>" />
-                </div>
-            </div>
-
-            <!-- Navigation Hover arrow color -->
-            <div class="cmb-row cmb-type-radio">
-                <div class="cmb-th">
-                    <label for="lcg_scode[nav_hov_back_color]">
-                        <?php esc_html_e('Navigaiton Hover Background Color', LCG_TEXTDOMAIN); ?>
-                    </label>
-                </div>
-                <div class="cmb-td">
-                    <input type="text" name="lcg_scode[nav_hov_back_color]"
-                    class="cpa-color-picker" 
-                    value="<?php echo ! empty( $nav_hov_back_color ) ? $nav_hov_back_color : '#ff5500'; ?>" />
-                </div>
-            </div>
-
-            <!-- Navigation Hover border color -->
-            <div class="cmb-row cmb-type-radio">
-                <div class="cmb-th">
-                    <label for="lcg_scode[nav_hov_border_color]">
-                        <?php esc_html_e('Navigaiton Hover Border Color', LCG_TEXTDOMAIN); ?>
-                    </label>
-                </div>
-                <div class="cmb-td">
-                    <input type="text" name="lcg_scode[nav_hov_border_color]"
-                        class="cpa-color-picker"
-                        value="<?php echo ! empty( $nav_hov_border_color ) ? $nav_hov_border_color : '#ff5500'; ?>" />
-                </div>
-            </div>
-
             <!-- display carousel_pagination -->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">

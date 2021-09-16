@@ -54,7 +54,7 @@
         let swiper = new Swiper(`.wpwax-lsu-carousel-${i}`, {
             slidesPerView: checkData(parseInt(el.dataset.lsuItems), 4),
             spaceBetween: checkData(parseInt(el.dataset.lsuMargin), 30),
-            loop: checkData(el.dataset.lsuLoop, true),
+            loop: checkData(JSON.parse(el.dataset.lsuLoop), true),
             slidesPerGroup: checkData(parseInt(el.dataset.lsuPerslide), 4),
             speed: checkData(parseInt(el.dataset.lsuSpeed), 3000),
             autoplay: checkData(JSON.parse(el.dataset.lsuAutoplay), {}),
@@ -92,7 +92,6 @@
         let lsuMarqueeCarouselItem = el.querySelectorAll('.wpwax-lsu-item:not(.swiper-slide-duplicate)');
         lsuMarqueeCarouselItem.forEach(childEl => {
             let lsuMarqueeWrapperWidth = lsuMarqueeCarouselItem.length * (childEl.offsetWidth + checkData(parseInt(el.dataset.lsuMargin)));
-            console.log(el.dataset);
             el.style.setProperty('--lsu-marqueeItemsWidth', `-${lsuMarqueeWrapperWidth}px`);
             el.style.setProperty('--lsu-marqueeSpeed', `${checkData(parseInt(el.dataset.lsuSpeed))}ms`);
         })

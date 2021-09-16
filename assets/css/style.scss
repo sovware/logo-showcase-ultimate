@@ -10,6 +10,30 @@ $primary: #ff5500;
     /* Marquee Animation */
     --lsu-marqueeItemsWidth: -2930px;
     --lsu-marqueeSpeed: 10000ms;
+    /* Navigaiton */
+    --lsu-navArrowColor: #333;
+    --lsu-navArrowColorHover: #fff;
+    --lsu-navBgColor: #fff;
+    --lsu-navBgColorHover: #ff5500;
+    --lsu-navBorderColor: #eaeaf1;
+    --lsu-navBorderColorHover: #ff5500;
+    /* Tooltip */
+    --lsu-tooltipFontSize: 14px;
+    --lsu-tooltipColor: #fff;
+    --lsu-tooltipBackColor: #202428;
+    /* Pagination */
+    --lsu-dotsColor: #00000020;
+    --dotsActiveColor: #ff5500;
+    /* Pagination */
+    --lsu-pagColor: #333;
+    --lsu-pagColorHover: #fff;
+    --lsu-pagBorderColor: #e4e4e4;
+    --lsu-pagBorderColorHover: #ff5500;
+    --lsu-pagBgColor: #fff;
+    --lsu-pagBgColorHover: #ff5500;
+    --lsu-pagActiveColor: #fff;
+    --lsu-pagActiveBorderColor: #ff5500;
+    --lsu-pagActiveBgColor: #ff5500;
 }
 
 
@@ -487,6 +511,9 @@ $primary: #ff5500;
     &.wpwax-lsu-carousel-nav-top {
         padding: 70px 0 0 0;
     }
+    &.wpwax-lsu-carousel-nav-bottom {
+        padding: 0 0 70px 0;
+    }
     &.wpwax-lsu-carousel-nav-around {
         padding: 0 30px;
     }
@@ -560,8 +587,20 @@ $primary: #ff5500;
             &.wpwax-lsu-carousel-nav-top {
                 padding-top: 70px;
             }
+            &.wpwax-lsu-carousel-nav-bottom {
+                padding: 0 0 70px 0;
+            }
             .wpwax-lsu-carousel-nav.wpwax-lsu-carousel-nav--top-right {
                 right: 10px;
+            }
+            .wpwax-lsu-carousel-nav.wpwax-lsu-carousel-nav--bottom-right {
+                right: 10px;
+            }
+            .wpwax-lsu-carousel-nav.wpwax-lsu-carousel-nav--top-left {
+                left: 10px;
+            }
+            .wpwax-lsu-carousel-nav.wpwax-lsu-carousel-nav--bottom-left {
+                left: 10px;
             }
             .wpwax-lsu-item {
                 &:hover {
@@ -593,8 +632,20 @@ $primary: #ff5500;
             &.wpwax-lsu-carousel-nav-top {
                 padding-top: 70px;
             }
+            &.wpwax-lsu-carousel-nav-bottom {
+                padding: 0 0 70px 0;
+            }
             .wpwax-lsu-carousel-nav.wpwax-lsu-carousel-nav--top-right {
                 right: 10px;
+            }
+            .wpwax-lsu-carousel-nav.wpwax-lsu-carousel-nav--bottom-right {
+                right: 10px;
+            }
+            .wpwax-lsu-carousel-nav.wpwax-lsu-carousel-nav--top-left {
+                left: 10px;
+            }
+            .wpwax-lsu-carousel-nav.wpwax-lsu-carousel-nav--bottom-left {
+                left: 10px;
             }
             .wpwax-lsu-item {
                 &:hover {
@@ -734,9 +785,21 @@ $primary: #ff5500;
             &.wpwax-lsu-carousel-nav-top {
                 padding-top: 70px;
             }
+            &.wpwax-lsu-carousel-nav-bottom {
+                padding: 0 0 70px 0;
+            }
             .wpwax-lsu-carousel-nav {
                 &.wpwax-lsu-carousel-nav--top-right {
                     right: 15px;
+                }
+                .wpwax-lsu-carousel-nav.wpwax-lsu-carousel-nav--bottom-right {
+                    right: 15px;
+                }
+                .wpwax-lsu-carousel-nav.wpwax-lsu-carousel-nav--top-left {
+                    left: 15px;
+                }
+                .wpwax-lsu-carousel-nav.wpwax-lsu-carousel-nav--bottom-left {
+                    left: 15px;
                 }
             }
             .wpwax-lsu-item {
@@ -785,6 +848,9 @@ $primary: #ff5500;
             padding: 0;
             &.wpwax-lsu-carousel-nav-top {
                 padding-top: 70px;
+            }
+            &.wpwax-lsu-carousel-nav-bottom {
+                padding: 0 0 70px 0;
             }
             .wpwax-lsu-item {
                 background-color: #fff;
@@ -884,9 +950,21 @@ $primary: #ff5500;
             &.wpwax-lsu-carousel-nav-top {
                 padding-top: 70px;
             }
+            &.wpwax-lsu-carousel-nav-bottom {
+                padding: 0 0 70px 0;
+            }
             .wpwax-lsu-carousel-nav {
                 &.wpwax-lsu-carousel-nav--top-right {
                     right: 15px;
+                }
+                .wpwax-lsu-carousel-nav.wpwax-lsu-carousel-nav--bottom-right {
+                    right: 15px;
+                }
+                .wpwax-lsu-carousel-nav.wpwax-lsu-carousel-nav--top-left {
+                    left: 15px;
+                }
+                .wpwax-lsu-carousel-nav.wpwax-lsu-carousel-nav--bottom-left {
+                    left: 15px;
                 }
             }
             .wpwax-lsu-item {
@@ -922,6 +1000,9 @@ $primary: #ff5500;
             padding: 0;
             &.wpwax-lsu-carousel-nav-top {
                 padding-top: 70px;
+            }
+            &.wpwax-lsu-carousel-nav-bottom {
+                padding: 0 0 70px 0;
             }
             .wpwax-lsu-item {
                 background-color: #ffffff;
@@ -962,6 +1043,9 @@ $primary: #ff5500;
             &.wpwax-lsu-carousel-nav-top {
                 padding-top: 70px;
             }
+            &.wpwax-lsu-carousel-nav-bottom {
+                padding: 0 0 70px 0;
+            }
             .wpwax-lsu-item {
                 background-color: #eff0f2;
                 border-radius: 3px;
@@ -987,9 +1071,21 @@ $primary: #ff5500;
             &.wpwax-lsu-carousel-nav-top {
                 padding-top: 70px;
             }
+            &.wpwax-lsu-carousel-nav-bottom {
+                padding: 0 0 70px 0;
+            }
             .wpwax-lsu-carousel-nav {
                 &.wpwax-lsu-carousel-nav--top-right {
                     right: 15px;
+                }
+                &.wpwax-lsu-carousel-nav--bottom-right {
+                    right: 15px;
+                }
+                &.wpwax-lsu-carousel-nav--top-left {
+                    left: 15px;
+                }
+                &.wpwax-lsu-carousel-nav--bottom-left {
+                    left: 15px;
                 }
             }
             .wpwax-lsu-item {
@@ -1037,18 +1133,18 @@ $primary: #ff5500;
         justify-content: center;
         width: 35px;
         height: 35px;
-        border: 1px solid #eaeaf1;
+        border: 1px solid var(--lsu-navBorderColor);
         color: #9192a3;
-        background-color: #fff;
+        background-color: var(--lsu-navBgColor);
         transition: 0.3s;
         cursor: pointer;
         &:hover {
-            background-color: $primary;
-            border-color: $primary;
+            background-color: var(--lsu-navBgColorHover);
+            border-color: var(--lsu-navBorderColorHover);
             svg,
             i {
-                color: #fff;
-                fill: #fff;
+                color: var(--lsu-navArrowColorHover);
+                fill: var(--lsu-navArrowColorHover);
             }
         }
         &.wpwax-lsu-carousel-nav__btn-round {
@@ -1068,6 +1164,32 @@ $primary: #ff5500;
     &.wpwax-lsu-carousel-nav--top-right {
         position: absolute;
         right: 0;
+        top: 0;
+        z-index: 22;
+    }
+    &.wpwax-lsu-carousel-nav--top-left {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 22;
+    }
+    &.wpwax-lsu-carousel-nav--bottom-left {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 22;
+    }
+    &.wpwax-lsu-carousel-nav--bottom-right {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 22;
+    }
+    &.wpwax-lsu-carousel-nav--top-middle,
+    &.wpwax-lsu-carousel-nav--bottom-middle {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
         top: 0;
         z-index: 22;
     }
@@ -1097,9 +1219,9 @@ $primary: #ff5500;
             width: 10px;
             height: 10px;
             opacity: 1;
-            background-color: #00000020;
+            background-color: var(--lsu-dotsColor);
             &.swiper-pagination-bullet-active {
-                background-color: #000000;
+                background-color: var(--dotsActiveColor);
             }
         }
     }
@@ -1122,6 +1244,92 @@ $primary: #ff5500;
         }
         .wpwax-lsu-carousel-nav {
             display: none;
+        }
+    }
+}
+
+
+/* Tooltip Style */
+
+.tooltip {
+    font-size: var(--lsu-tooltipFontSize);
+    .tooltip-inner {
+        color: var(--lsu-tooltipColor);
+        background-color: var(--lsu-tooltipBackColor);
+    }
+}
+
+
+/* Pagination */
+
+.lsu-pagination {
+    .pagination {
+        margin: 0;
+        padding: 0;
+        border: 0 none;
+        width: 100%;
+        max-width: 100%;
+        .nav-links {
+            margin: 25px -5px -5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .page-numbers {
+                color: var(--lsu-pagColor) !important;
+                margin: 5px;
+                font-size: 14px;
+                text-decoration: none !important;
+                border: 1px solid var(--lsu-pagBorderColor) !important;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                background: var(--lsu-pagBgColor) !important;
+                width: 34px;
+                min-width: 34px;
+                height: 34px;
+                min-height: 34px;
+                border-radius: 3px;
+                transition: 0.3s ease;
+                &.current {
+                    background: var(--lsu-pagActiveBgColor) !important;
+                    border-color: var(--lsu-pagActiveBorderColor) !important;
+                    color: var(--lsu-pagActiveColor) !important;
+                }
+                &:before,
+                &:after {
+                    content: none;
+                }
+                &.prev,
+                &.next {
+                    position: static;
+                }
+                svg {
+                    fill: var(--lsu-pagColor) !important;
+                }
+                &:hover {
+                    background: var(--lsu-pagBgColorHover) !important;
+                    border-color: var(--lsu-pagBorderColorHover) !important;
+                    color: var(--lsu-pagColorHover) !important;
+                    svg {
+                        fill: var(--lsu-pagColorHover) !important;
+                    }
+                }
+            }
+        }
+    }
+    &.lsu-pagination--left {
+        .pagination {
+            .nav-links {
+                justify-content: flex-start;
+            }
+        }
+    }
+    &.lsu-pagination--right {
+        .pagination {
+            .nav-links {
+                justify-content: flex-end;
+            }
         }
     }
 }

@@ -49,7 +49,6 @@ if (!class_exists('Lcg_Main_Class')) {
                 add_action('plugin_loaded', array(self::$instance, 'lcg_load_textdomain'));
                 add_action('admin_enqueue_scripts', array(self::$instance, 'lcg_admin_enqueue_scripts'));
                 add_action('template_redirect', array(self::$instance, 'lcg_enqueue_style_front'));
-                add_action('admin_menu', array(self::$instance, 'lcg_hook_usage_and_support_submenu'));
                 add_filter('plugin_action_links_' . plugin_basename(__FILE__), array(self::$instance, 'display_pro_version_logo_link'));
                 // support svg format
                 add_filter('upload_mimes', array(self::$instance, 'lcg_support_svg'));
@@ -126,17 +125,6 @@ if (!class_exists('Lcg_Main_Class')) {
         {
             $links[] = '<a href="' . esc_url('https://wpwax.com/product/logo-showcase-ultimate-pro/') . '" target="_blank">' . esc_html__('Pro Version', LCG_TEXTDOMAIN) . '</a>';
             return $links;
-        }
-
-        //add page for usage & support
-        public function lcg_hook_usage_and_support_submenu()
-        {
-            add_submenu_page('edit.php?post_type=lcg_mainpost', __('Usage & Support', LCG_TEXTDOMAIN), __('Usage & Support', LCG_TEXTDOMAIN), 'manage_options', 'lcg_usage_support', array($this, 'lcg_display_usage_and_support'));
-        }
-
-        public function lcg_display_usage_and_support()
-        {
-            require_once LCG_PLUGIN_DIR . 'classes/lcg-usages-support.php';
         }
 
         public function lcg_support_svg($mimes)

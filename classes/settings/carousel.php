@@ -335,7 +335,7 @@ $nav_position = !empty($nav_position) ? $nav_position : 'top-right';
                             <input type="radio" class="cmb2-option" 
                             name="lcg_scode[nav_position]" 
                             id="lcg_scode[nav_position]3" 
-                            value="middle" <?php checked('middle', $nav_position, true);  ?>>
+                            value="around" <?php checked('around', $nav_position, true);  ?>>
                             <label for="lcg_scode[nav_position]3">
                                 <?php esc_html_e('Middle', LCG_TEXTDOMAIN); ?>
                             </label>

@@ -1,6 +1,6 @@
 <div class="wpwax-lsu-item wpwax-lsu-item-bordered swiper-slide">
 
-    <div class="wpwax-lsu-item-inner" data-bs-toggle="<?php echo ( 'yes' == $tooltip_show ) ? 'tooltip' : ''; ?>" data-bs-placement="top"
+    <div class="wpwax-lsu-item-inner" data-bs-toggle="<?php echo ( 'yes' == $tooltip_show ) ? 'tooltip' : ''; ?>" data-bs-placement="<?php echo $tooltip_posi; ?>"
         title="<?php echo ! empty( $tooltip ) ? $tooltip : ''; ?>">
         
         <a href="<?php echo ! empty( $img_link ) ? $img_link : ''; ?>" target="<?php echo ! empty( $target ) ? $target : ''; ?>">

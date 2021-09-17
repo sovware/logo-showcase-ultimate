@@ -75,7 +75,7 @@ $image_hover     = !empty($image_hover) ? $image_hover : 'yes';
             <!-- Tooltip Position -->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
-                    <label for="lcgp_scode[tooltip_posi]">
+                    <label for="lcg_scode[tooltip_posi]">
                         <?php esc_html_e('Tooltip Position', LCG_TEXTDOMAIN); ?>
                     </label>
                 </div>
@@ -83,21 +83,21 @@ $image_hover     = !empty($image_hover) ? $image_hover : 'yes';
                     <ul class="cmb2-radio-list cmb2-list">
                         <li>
                             <input type="radio" class="cmb2-option" 
-                            name="lcgp_scode[tooltip_posi]"
-                            id="lcgp_scode[tooltip_posi]1"
+                            name="lcg_scode[tooltip_posi]"
+                            id="lcg_scode[tooltip_posi]1"
                             value="top" <?php checked('top', $tooltip_posi, true);  ?>>
-                            <label for="lcgp_scode[tooltip_posi]1">
+                            <label for="lcg_scode[tooltip_posi]1">
                                 <?php esc_html_e('Top', LCG_TEXTDOMAIN); ?>
                             </label>
                         </li>
                         <li>
                             <input type="radio" 
                             class="cmb2-option" 
-                            name="lcgp_scode[tooltip_posi]"
-                            id="lcgp_scode[tooltip_posi]2"
-                            value="bottom" <?php checked('Bottom', $tooltip_posi, true);  ?>>
-                            <label for="lcgp_scode[tooltip_posi]2">
-                                <?php esc_html_e('bottom', LCG_TEXTDOMAIN); ?>
+                            name="lcg_scode[tooltip_posi]"
+                            id="lcg_scode[tooltip_posi]2"
+                            value="bottom" <?php checked('bottom', $tooltip_posi, true);  ?>>
+                            <label for="lcg_scode[tooltip_posi]2">
+                                <?php esc_html_e('Bottom', LCG_TEXTDOMAIN); ?>
                             </label>
                         </li>
                     </ul>
@@ -107,12 +107,12 @@ $image_hover     = !empty($image_hover) ? $image_hover : 'yes';
             <!-- Tooltip text color -->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
-                    <label for="lcgp_scode[tooltip_textc]">
+                    <label for="lcg_scode[tooltip_textc]">
                         <?php esc_html_e('Tooltip Text color', LCG_TEXTDOMAIN); ?>
                     </label>
                 </div>
                 <div class="cmb-td">
-                    <input type="text" name="lcgp_scode[tooltip_text_color]"
+                    <input type="text" name="lcg_scode[tooltip_text_color]"
                     class="cpa-color-picker" 
                     value="<?php if(empty($tooltip_text_color)) { echo "#f4f4f4";}else{ echo $tooltip_text_color;}?>" />
                 </div>
@@ -121,12 +121,12 @@ $image_hover     = !empty($image_hover) ? $image_hover : 'yes';
             <!-- Tooltip text color -->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
-                    <label for="lcgp_scode[tooltip_back]">
+                    <label for="lcg_scode[tooltip_back]">
                         <?php esc_html_e('Tooltip Background color', LCG_TEXTDOMAIN); ?>
                     </label>
                 </div>
                 <div class="cmb-td">
-                    <input type="text" name="lcgp_scode[tooltip_back]"
+                    <input type="text" name="lcg_scode[tooltip_back]"
                     class="cpa-color-picker" 
                     value="<?php if(empty($tooltip_back)) { echo "#202428";}else{ echo $tooltip_back;}?>" />
                 </div>
@@ -139,7 +139,7 @@ $image_hover     = !empty($image_hover) ? $image_hover : 'yes';
                 </div>
                 <div class="cmb-td">
                     <input type="text" class="cmb2-text-small"
-                     name="lcgp_scode[tooltip_size]"
+                     name="lcg_scode[tooltip_size]"
                      id="lcsp_stfs" 
                      value="<?php if(empty($tooltip_size)) { echo "16px"; } else { echo $tooltip_size; } ?>">
                 </div>

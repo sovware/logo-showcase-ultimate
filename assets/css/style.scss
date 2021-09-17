@@ -1149,6 +1149,11 @@ $primary: #ff5500;
                 fill: var(--lsu-navArrowColorHover);
             }
         }
+        svg,
+        i {
+            color: var(--lsu-navArrowColor);
+            fill: var(--lsu-navArrowColor);
+        }
         &.wpwax-lsu-carousel-nav__btn-round {
             border-radius: 50%;
         }

@@ -950,6 +950,11 @@
   color: var(--lsu-navArrowColorHover);
   fill: var(--lsu-navArrowColorHover);
 }
+.wpwax-lsu-carousel-nav .wpwax-lsu-carousel-nav__btn svg,
+.wpwax-lsu-carousel-nav .wpwax-lsu-carousel-nav__btn i {
+  color: var(--lsu-navArrowColor);
+  fill: var(--lsu-navArrowColor);
+}
 .wpwax-lsu-carousel-nav .wpwax-lsu-carousel-nav__btn.wpwax-lsu-carousel-nav__btn-round {
   border-radius: 50%;
 }

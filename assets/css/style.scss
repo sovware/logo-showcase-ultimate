@@ -404,6 +404,21 @@ $primary: #ff5500;
     }
 }
 
+/* wpWax logo Showcase Grid Theme 8 */
+
+.wpwax-lsu-ultimate {
+    &.wpwax-lsu-grid {
+        &.wpwax-lsu-grid-theme-8 {
+            .wpwax-lsu-item {
+                .wpwax-lsu-item-inner {
+                    padding: 0 15px;
+                    min-height: 200px;
+                }
+            }
+        }
+    }
+}
+
 
 /* wpWax logo Showcase Grid Theme 9 */
 
@@ -500,7 +515,7 @@ $primary: #ff5500;
 }
 
 
-/* wpWax logo Showcase Grid Carousel */
+/* wpWax logo Showcase Carousel */
 
 .wpwax-lsu-carousel {
     margin-left: auto;
@@ -522,7 +537,7 @@ $primary: #ff5500;
 }
 
 
-/* wpWax logo Showcase Grid Carousel Theme 1 */
+/* wpWax logo Showcase Carousel Theme 1 */
 
 .wpwax-lsu-ultimate {
     &.wpwax-lsu-carousel {
@@ -538,7 +553,7 @@ $primary: #ff5500;
 }
 
 
-/* wpWax logo Showcase Grid Carousel Theme 2 */
+/* wpWax logo Showcase Carousel Theme 2 */
 
 .wpwax-lsu-ultimate {
     &.wpwax-lsu-carousel {
@@ -554,7 +569,7 @@ $primary: #ff5500;
 }
 
 
-/* wpWax logo Showcase Grid Carousel Theme 3 */
+/* wpWax logo Showcase Carousel Theme 3 */
 
 .wpwax-lsu-ultimate {
     &.wpwax-lsu-carousel {
@@ -577,7 +592,7 @@ $primary: #ff5500;
 }
 
 
-/* wpWax logo Showcase Grid Carousel Theme 4 */
+/* wpWax logo Showcase Carousel Theme 4 */
 
 .wpwax-lsu-ultimate {
     &.wpwax-lsu-carousel {
@@ -625,7 +640,7 @@ $primary: #ff5500;
 }
 
 
-/* wpWax logo Showcase Grid Carousel Theme 5 */
+/* wpWax logo Showcase Carousel Theme 5 */
 
 .wpwax-lsu-ultimate {
     &.wpwax-lsu-carousel {
@@ -669,7 +684,7 @@ $primary: #ff5500;
 }
 
 
-/* wpWax logo Showcase Grid Carousel Theme 6 */
+/* wpWax logo Showcase Carousel Theme 6 */
 
 .wpwax-lsu-ultimate {
     &.wpwax-lsu-carousel {
@@ -704,7 +719,7 @@ $primary: #ff5500;
 }
 
 
-/* wpWax logo Showcase Grid Carousel Theme 7 */
+/* wpWax logo Showcase Carousel Theme 7 */
 
 .wpwax-lsu-ultimate {
     &.wpwax-lsu-carousel {
@@ -753,7 +768,7 @@ $primary: #ff5500;
 }
 
 
-/* wpWax logo Showcase Grid Carousel Theme 8 */
+/* wpWax logo Showcase Carousel Theme 8 */
 
 .wpwax-lsu-ultimate {
     &.wpwax-lsu-carousel {
@@ -778,7 +793,7 @@ $primary: #ff5500;
 }
 
 
-/* wpWax logo Showcase Grid Carousel Theme 9 */
+/* wpWax logo Showcase Carousel Theme 9 */
 
 .wpwax-lsu-ultimate {
     &.wpwax-lsu-carousel {
@@ -842,7 +857,7 @@ $primary: #ff5500;
 }
 
 
-/* wpWax logo Showcase Grid Carousel Theme 10 */
+/* wpWax logo Showcase Carousel Theme 10 */
 
 .wpwax-lsu-ultimate {
     &.wpwax-lsu-carousel {
@@ -874,7 +889,7 @@ $primary: #ff5500;
 }
 
 
-/* wpWax logo Showcase Grid Theme 11 */
+/* wpWax logo Showcase Theme 11 */
 
 .wpwax-lsu-ultimate {
     &.wpwax-lsu-carousel-theme-11 {
@@ -943,7 +958,7 @@ $primary: #ff5500;
 }
 
 
-/* wpWax logo Showcase Grid Carousel Theme 12 */
+/* wpWax logo Showcase Carousel Theme 12 */
 
 .wpwax-lsu-ultimate {
     &.wpwax-lsu-carousel {
@@ -994,7 +1009,7 @@ $primary: #ff5500;
 }
 
 
-/* wpWax logo Showcase Grid Carousel Theme 13 */
+/* wpWax logo Showcase Carousel Theme 13 */
 
 .wpwax-lsu-ultimate {
     &.wpwax-lsu-carousel {
@@ -1036,7 +1051,7 @@ $primary: #ff5500;
 }
 
 
-/* wpWax logo Showcase Grid Carousel Theme 14 */
+/* wpWax logo Showcase Carousel Theme 14 */
 
 .wpwax-lsu-ultimate {
     &.wpwax-lsu-carousel {
@@ -1064,7 +1079,7 @@ $primary: #ff5500;
 }
 
 
-/* wpWax logo Showcase Grid Carousel Theme 15 */
+/* wpWax logo Showcase Carousel Theme 15 */
 
 .wpwax-lsu-ultimate {
     &.wpwax-lsu-carousel {
@@ -1108,7 +1123,7 @@ $primary: #ff5500;
 }
 
 
-/* wpWax logo Showcase Grid Carousel Theme 16 */
+/* wpWax logo Showcase Carousel Theme 16 */
 
 .wpwax-lsu-ultimate {
     &.wpwax-lsu-carousel {
@@ -1124,7 +1139,7 @@ $primary: #ff5500;
 }
 
 
-/* wpWax logo Showcase Grid Carousel navigation */
+/* wpWax logo Showcase Carousel navigation */
 
 .wpwax-lsu-carousel-nav {
     display: flex;
@@ -1216,7 +1231,7 @@ $primary: #ff5500;
 }
 
 
-/* wpWax logo Showcase Grid Carousel Pagination */
+/* wpWax logo Showcase Carousel Pagination */
 
 .wpwax-lsu-carousel-pagination {
     text-align: center;
@@ -1259,8 +1274,8 @@ $primary: #ff5500;
 /* Tooltip Style */
 
 .tooltip {
-    font-size: var(--lsu-tooltipFontSize);
     .tooltip-inner {
+        font-size: var(--lsu-tooltipFontSize);
         color: var(--lsu-tooltipColor);
         background-color: var(--lsu-tooltipBackColor);
     }

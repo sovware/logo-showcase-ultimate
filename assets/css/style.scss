@@ -3,6 +3,13 @@
 // Variable
 $dark: #202428;
 $primary: #ff5500;
+:root {
+    /* Tooltip */
+    --lsu-tooltipFontSize: 14px;
+    --lsu-tooltipColor: #fff;
+    --lsu-tooltipBackColor: #202428;
+}
+
 
 /* Logo Showcase Grid */
 
@@ -458,5 +465,16 @@ $primary: #ff5500;
                 background-color: #000000;
             }
         }
+    }
+}
+
+
+/* Tooltip Style */
+
+.tooltip {
+    .tooltip-inner {
+        font-size: var(--lsu-tooltipFontSize);
+        color: var(--lsu-tooltipColor);
+        background-color: var(--lsu-tooltipBackColor);
     }
 }

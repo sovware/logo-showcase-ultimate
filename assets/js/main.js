@@ -51,9 +51,11 @@
         navBtnNext.forEach((el, i) => { el.classList.add(`wpwax-lsu-carousel-nav__btn-next-${i}`); });
         hasPagination && paginationElement.forEach((el) => el.classList.add(`wpwax-lsu-carousel-pagination-${i}`));
 
+        // console.log(typeof checkData(parseInt(el.dataset.lsuMargin), 30));
+
         let swiper = new Swiper(`.wpwax-lsu-carousel-${i}`, {
             slidesPerView: checkData(parseInt(el.dataset.lsuItems), 4),
-            spaceBetween: checkData(parseInt(el.dataset.lsuMargin), 30),
+            spaceBetween: checkData(parseInt(el.dataset.lsuMargin), 20),
             loop: checkData(JSON.parse(el.dataset.lsuLoop), true),
             slidesPerGroup: checkData(parseInt(el.dataset.lsuPerslide), 4),
             speed: checkData(parseInt(el.dataset.lsuSpeed), 3000),
@@ -72,9 +74,9 @@
     });
 
     /* Marquee wrapper value */
-    let wpcuStyles = document.createElement('style');
-    document.head.append(wpcuStyles);
-    wpcuStyles.innerHTML = `
+    let lsuStyle = document.createElement('style');
+    document.head.append(lsuStyle);
+    lsuStyle.innerHTML = `
         .wpwax-lsu-carousel-marquee .swiper-wrapper{
             animation: wpwaxLsuMarquee var(--lsu-marqueeSpeed) linear infinite running;
         }

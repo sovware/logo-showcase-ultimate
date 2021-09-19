@@ -404,6 +404,7 @@ $primary: #ff5500;
     }
 }
 
+
 /* wpWax logo Showcase Grid Theme 8 */
 
 .wpwax-lsu-ultimate {
@@ -893,7 +894,7 @@ $primary: #ff5500;
 
 .wpwax-lsu-ultimate {
     &.wpwax-lsu-carousel-theme-11 {
-        padding: 70px 0 70px 0;
+        padding: 70px 10px 70px 10px;
         &.wpwax-lsu-grid {
             .wpwax-lsu-item {
                 .wpwax-lsu-item-inner {
@@ -917,7 +918,7 @@ $primary: #ff5500;
             }
             .wpwax-lsu-item-inner {
                 position: relative;
-                min-height: 125px;
+                min-height: 220px;
                 transition: .35s;
                 transform-style: preserve-3d;
             }
@@ -938,13 +939,17 @@ $primary: #ff5500;
                 color: #fff;
                 background-color: #fff;
                 text-align: center;
-                padding: 30px;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
                 box-shadow: 5px 5px 5px rgba(134, 152, 164, 0.10);
                 .wpwax-lsu-item-flip-card__back--title {
                     font-size: 20px;
                     font-weight: 500;
                     color: #202428;
-                    margin-bottom: 20px;
+                    margin-bottom: 15px;
                 }
                 .wpwax-lsu-item-flip-card__back--text {
                     font-size: 16px;

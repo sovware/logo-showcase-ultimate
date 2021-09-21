@@ -1,5 +1,5 @@
 
-<div class="wpwax-lsu-item wpwax-lsu-item-borderless">
+<div class="wpwax-lsu-item">
 
     <div class="wpwax-lsu-item-inner" data-bs-toggle="<?php echo ( 'yes' == $tooltip_show ) ? 'tooltip' : ''; ?>" data-bs-placement="<?php echo $tooltip_posi; ?>" title="<?php echo ! empty( $tooltip ) ? $tooltip : ''; ?>">
         

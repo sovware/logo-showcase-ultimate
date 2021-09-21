@@ -40,6 +40,12 @@ if (!class_exists('Lcg_Main_Class')) {
          */
         public $shortcode;
 
+        /**
+         * all ajax
+         * @since 2.0.0
+         */
+        public $ajax;
+
         public static function instance()
         {
             if (!isset(self::$instance) && !(self::$instance instanceof Lcg_Main_Class)) {
@@ -62,6 +68,7 @@ if (!class_exists('Lcg_Main_Class')) {
                 ));
                 self::$instance->metabox                    = new Lcg_Metabox();
                 self::$instance->shortcode                  = new Lcg_shortcode();
+                self::$instance->ajax                       = new Lcg_Ajax();
             }
 
             return self::$instance;
@@ -88,6 +95,7 @@ if (!class_exists('Lcg_Main_Class')) {
             require_once LCG_PLUGIN_DIR . 'classes/lcg-adl-metabox.php';
             require_once LCG_PLUGIN_DIR . 'classes/lcg-resize.php';
             require_once LCG_PLUGIN_DIR . 'classes/lcg-shortcode.php';
+            require_once LCG_PLUGIN_DIR . 'classes/lcg-ajax.php';
         }
 
         //enqueues all the styles and scripts
@@ -102,6 +110,7 @@ if (!class_exists('Lcg_Main_Class')) {
             wp_register_script('lcg-tooltip-js', LCG_PLUGIN_URI . '/assets/js/vendor/tooltip.js', array('jquery', 'lcg-popper-js'));
             wp_register_script('lcg-swiper-min-js', LCG_PLUGIN_URI . '/assets/js/vendor/swiper-bundle.min.js', array('jquery', 'lcg-tooltip-js'));
             wp_register_script('main-js', LCG_PLUGIN_URI . '/assets/js/main.js', array('jquery', 'lcg-swiper-min-js'));
+            wp_register_script('ajax-js', LCG_PLUGIN_URI . '/assets/js/ajax.js', array('jquery'));
         }
 
         public function lcg_load_textdomain()

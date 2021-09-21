@@ -226,6 +226,15 @@ class Lcg_shortcode
         }
 
 	    $adl_logo = new WP_Query( $args );
+
+        wp_enqueue_script( 'ajax-js' );
+
+        wp_localize_script( 'ajax-js', 'lsu_ajax', array(
+            'ajaxurl' => admin_url( 'admin-ajax.php' ), // WordPress AJAX
+            'posts' => json_encode( $adl_logo->query_vars ), // everything about your loop is here
+            'current_page' => get_query_var( 'paged' ) ? get_query_var('paged') : 1,
+            'max_page' => $adl_logo->max_num_pages
+        ) );
         
 
         if ( $adl_logo->have_posts() ) { ?>
@@ -293,6 +302,11 @@ class Lcg_shortcode
                     ?>
         
                 </div>
+
+                <?php if (  $adl_logo->max_num_pages > 1 ) { ?>
+                <div class='lsu_load_more' data-id='<?php echo $id; ?>'>Load More</div>
+                <?php } ?>
+
                 <?php 
                 if( 'carousel' == $layout && 'yes' == $navigation ) {
                     include LCG_PLUGIN_DIR . 'template/navigation.php'; 

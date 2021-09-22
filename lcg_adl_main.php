@@ -13,8 +13,8 @@ Domain Path: /languages/
 */
 if (!defined('ABSPATH')) die('Direct access is not allow');
 
-if (!class_exists('Lcg_Main_Class')) {
-    class Lcg_Main_Class
+if (!class_exists('Lcg_Main_Class_Pro')) {
+    class Lcg_Main_Class_Pro
     {
         /**
          *
@@ -48,8 +48,8 @@ if (!class_exists('Lcg_Main_Class')) {
 
         public static function instance()
         {
-            if (!isset(self::$instance) && !(self::$instance instanceof Lcg_Main_Class)) {
-                self::$instance = new Lcg_Main_Class;
+            if (!isset(self::$instance) && !(self::$instance instanceof Lcg_Main_Class_Pro)) {
+                self::$instance = new Lcg_Main_Class_Pro;
                 //if woocmmerce plugin not activate
                 self::$instance->define_lcg_adl_constants();
                 add_action('plugin_loaded', array(self::$instance, 'lcg_load_textdomain'));
@@ -173,7 +173,7 @@ if (!class_exists('Lcg_Main_Class')) {
 
 function lcg()
 {
-    return Lcg_Main_Class::instance();
+    return Lcg_Main_Class_Pro::instance();
 }
 
 lcg();

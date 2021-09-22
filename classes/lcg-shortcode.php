@@ -55,6 +55,7 @@ class Lcg_shortcode
         $total_logos        = !empty($total_logos) ? intval($total_logos) : 12;
 
         $grid_pagination         = ! empty( $grid_pagination ) ? $grid_pagination : 'no';
+        $pagination_type         = ! empty( $pagination_type ) ? $pagination_type : 'number_pagi';
         
         //carousel settings
         $carousel_pagination         = ! empty( $carousel_pagination ) ? $carousel_pagination : 'no';
@@ -302,12 +303,6 @@ class Lcg_shortcode
                     ?>
         
                 </div>
-
-                <?php if (  $adl_logo->max_num_pages > 1 ) { ?>
-                    <div class="wpwax-loadmore-btn">
-                        <div class='lsu_load_more' data-id='<?php echo $id; ?>'>Load More</div>
-                    </div>
-                <?php } ?>
 
                 <?php 
                 if( 'carousel' == $layout && 'yes' == $navigation ) {

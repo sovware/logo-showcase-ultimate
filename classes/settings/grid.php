@@ -1,6 +1,7 @@
 <?php 
 $g_theme         = ! empty( $g_theme ) ? $g_theme : 'grid-theme-1';
 $grid_pagination         = ! empty( $grid_pagination ) ? $grid_pagination : 'no';
+$pagination_type         = ! empty( $pagination_type ) ? $pagination_type : 'number_pagi';
 ?>
 <!--TAB 3  Grid setting -->
 <div id="lcsp-tab-3" class="lcsp-tab-content">
@@ -95,7 +96,39 @@ $grid_pagination         = ! empty( $grid_pagination ) ? $grid_pagination : 'no'
                         </li>
                     </ul>
                 </div>
-</div>
+            </div>
+
+            <!-- Pagination Type -->
+            <div class="cmb-row cmb-type-radio">
+                <div class="cmb-th">
+                    <label for="lcgp_scode[pagination_type]">
+                        <?php esc_html_e('Pagination Type', LCG_TEXTDOMAIN); ?>
+                    </label>
+                </div>
+                <div class="cmb-td">
+                    <ul class="cmb2-radio-list cmb2-list">
+                        <li>
+                            <input type="radio" class="cmb2-option"
+                                   name="lcg_scode[pagination_type]"
+                                   id="lcgp_scode[number_pagi]"
+                                   value="number_pagi" <?php checked('number_pagi', $pagination_type, true);  ?>>
+                            <label for="lcgp_scode[number_pagi]">
+                                <?php esc_html_e('Number Pagination', LCG_TEXTDOMAIN); ?>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio"
+                                   class="cmb2-option"
+                                   name="lcg_scode[pagination_type]"
+                                   id="lcgp_scode[ajax_pagi]"
+                                   value="ajax_pagi" <?php checked('ajax_pagi', $pagination_type, true);  ?>>
+                            <label for="lcgp_scode[ajax_pagi]">
+                                <?php esc_html_e('Ajax Load More Button', LCG_TEXTDOMAIN); ?>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <?php
 
             require_once( LCG_PLUGIN_DIR . '/classes/settings/style/g_style1.php' );

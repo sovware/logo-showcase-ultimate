@@ -2,11 +2,12 @@
 if ( ! defined( 'ABSPATH' ) ) die( 'Are you cheating??? Accessing this file directly is forbidden.' );
 $cg_title_show   = !empty($cg_title_show) ? $cg_title_show : 'no';
 $lcg_type        = !empty($lcg_type) ? $lcg_type : 'latest';
-$image_crop      = !empty($image_crop) ? $image_crop : 'yes';
+$image_crop      = !empty($image_crop) ? $image_crop : 'no';
 $upscale         = !empty($upscale) ? $upscale : 'yes';
 $title_asc       = !empty($title_asc) ? $title_asc : '';       
-$title_desc       = !empty($title_desc) ? $title_desc : '';
-$custom_terms       = !empty($custom_terms) ? $custom_terms : '';
+$title_desc      = !empty($title_desc) ? $title_desc : '';
+$custom_terms    = !empty($custom_terms) ? $custom_terms : '';
+$target		     = !empty($target) ? $target : '_blank';
 ?>
 <!--TAB 1 General setting -->
 <div id="lcsp-tab-5" class="lcsp-tab-content" style="display:block">

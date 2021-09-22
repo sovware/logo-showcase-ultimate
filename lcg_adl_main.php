@@ -179,7 +179,10 @@ function lcg()
     return Lcg_Main_Class::instance();
 }
 
-lcg();
+if( ! class_exists('Lcg_Main_Class_Pro') ) {
+    lcg();
+}
+
 
 function lcg_image_cropping($attachmentId, $width, $height, $crop = true, $quality = 100)
 {

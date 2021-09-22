@@ -2,7 +2,7 @@
 if ( ! defined( 'ABSPATH' ) ) die( 'Are you cheating??? Accessing this file directly is forbidden.' );
 $cg_title_show   = !empty($cg_title_show) ? $cg_title_show : 'no';
 $lcg_type        = !empty($lcg_type) ? $lcg_type : 'latest';
-$image_crop      = !empty($image_crop) ? $image_crop : 'yes';
+$image_crop      = !empty($image_crop) ? $image_crop : 'no';
 $upscale         = !empty($upscale) ? $upscale : 'yes';
 $target          = !empty($target) ? $target : '_blank';
 ?>

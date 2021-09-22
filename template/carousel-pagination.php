@@ -5,7 +5,7 @@
     --lsu-dotsActiveColor: <?php echo $pagination_dots_active_color; ?>;
 "></div>
 
-<?php } else { ?>
+<?php } elseif( 'grid' == $layout && 'number_pagi' == $pagination_type) { ?>
 
 <div class="lsu-pagination">
 
@@ -32,4 +32,13 @@
 
 
 
-<?php } ?>    
+<?php } else { ?>    
+
+
+    <?php if (  $adl_logo->max_num_pages > 1 ) { ?>
+                    <div class="wpwax-loadmore-btn">
+                        <div class='lsu_load_more' data-id='<?php echo $id; ?>'>Load More</div>
+                    </div>
+    <?php } ?>
+
+<?php } ?>

@@ -1271,11 +1271,31 @@ $primary: #ff5500;
 /* Tooltip Style */
 
 .tooltip {
+    .tooltip-arrow {
+        &:before {
+            border-bottom-color: var(--lsu-tooltipBackColor) !important;
+        }
+    }
     .tooltip-inner {
         font-size: var(--lsu-tooltipFontSize);
         color: var(--lsu-tooltipColor);
         background-color: var(--lsu-tooltipBackColor);
     }
+}
+
+.bs-tooltip-top .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before {
+    border-top-color: var(--lsu-tooltipBackColor) !important;
+}
+
+.bs-tooltip-left .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before {
+    border-left-color: var(--lsu-tooltipBackColor) !important;
+}
+
+.bs-tooltip-right .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before {
+    border-right-color: var(--lsu-tooltipBackColor) !important;
 }
 
 

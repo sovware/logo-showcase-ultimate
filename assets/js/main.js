@@ -111,11 +111,11 @@
 
     tooltips.forEach(tooltip => tooltip.addEventListener('mouseover', function() {
         let tooltipId = tooltip.getAttribute('aria-describedby');
-        let tooltipStyle = tooltip.closest('.wpwax-lsu-content').getAttribute('style');
+        let tooltipStyle = tooltip.closest('.wpwax-lsu-ultimate').getAttribute('style');
         let tooltipDomElm = document.querySelector(`#${tooltipId}`);
         let tooltipArrow = tooltipDomElm.querySelector(`#${tooltipId} .tooltip-arrow`).getAttribute('style');
         let tooltipBackColor = tooltipStyle.split(';')[2];
-
+        console.log(tooltipStyle);
         tooltipDomElm.querySelector(`#${tooltipId} .tooltip-inner`).setAttribute('style', tooltipStyle);
         tooltipDomElm.querySelector(`#${tooltipId} .tooltip-arrow`).style = `${tooltipArrow}${tooltipBackColor};`;
     }));

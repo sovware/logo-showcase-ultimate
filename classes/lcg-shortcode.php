@@ -242,7 +242,7 @@ class Lcg_shortcode
         <?php if( 'yes' == $cg_title_show ) { ?>
         <h4 class="wpwax-lsu-title"><?php echo ! empty( $cg_title ) ? $cg_title : ''; ?></span> </h4>
         <?php } ?>
-            <div class="wpwax-lsu-ultimate <?php echo $zoom_effect_class; ?> wpwax-lsu-grid <?php echo $marquee_class; ?> wpwax-lsu-<?php echo $theme; ?> <?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-logo-col-lg-' . $g_columns . ' wpwax-lsu-logo-col-md-' . $g_columns_tablet . ' wpwax-lsu-logo-col-sm-' . $g_columns_mobile . '' : 'wpwax-lsu-carousel wpwax-lsu-' . $theme . ' wpwax-lsu-carousel-nav-top'; ?>"
+            <div class="wpwax-lsu-ultimate <?php echo $zoom_effect_class; ?> wpwax-lsu-grid <?php echo $marquee_class; ?> wpwax-lsu-<?php echo $theme; ?> <?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-logo-col-lg-' . $g_columns . ' wpwax-lsu-logo-col-md-' . $g_columns_tablet . ' wpwax-lsu-logo-col-sm-' . $g_columns_mobile . '' : 'wpwax-lsu-carousel wpwax-lsu-' . $theme . ' wpwax-lsu-carousel-nav-top'; ?> "
             <?php if( 'carousel' == $layout ) { ?>
                 data-lsu-items="5"
                 data-lsu-margin="20" 
@@ -268,14 +268,16 @@ class Lcg_shortcode
                     "979": {"slidesPerView": "<?php echo $c_desktop_small; ?>",  "slidesPerGroup": "<?php echo 'per_item' == $scrool ? '1' : $c_desktop_small; ?>", "spaceBetween": "20"}, 
                     "1199": {"slidesPerView": "<?php echo $c_desktop; ?>",  "slidesPerGroup": "<?php echo 'per_item' == $scrool ? '1' : $c_desktop; ?>", "spaceBetween": "20"}
                 }'
-            <?php } ?>   
-            >
-
-                <div class="<?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-content' : 'swiper-wrapper'; ?>" style="
+                
+            <?php } ?> 
+            style="
                 --lsu-tooltipFontSize: <?php echo $tooltip_size; ?>;
                 --lsu-tooltipColor: <?php echo $tooltip_text_color; ?>;
                 --lsu-tooltipBackColor: <?php echo $tooltip_back; ?>;
-                ">
+                "  
+            >
+
+                <div class="<?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-box wpwax-lsu-content' : 'wpwax-lsu-box swiper-wrapper'; ?>">
 
                     <?php
                     while ($adl_logo->have_posts()) : $adl_logo->the_post();

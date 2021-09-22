@@ -1,5 +1,8 @@
 <?php 
-$g_theme         = ! empty( $g_theme ) ? $g_theme : 'grid-theme-1';
+$g_theme                = ! empty( $g_theme ) ? $g_theme : 'grid-theme-1';
+$g_columns              = ! empty( $g_columns ) ? $g_columns : '4';
+$g_columns_tablet       = ! empty( $g_columns_tablet ) ? $g_columns_tablet : '2';
+$g_columns_mobile       = ! empty( $g_columns_mobile ) ? $g_columns_mobile : '2';
 ?>
 <!--TAB 3  Grid setting -->
 <div id="lcsp-tab-3" class="lcsp-tab-content">
@@ -31,11 +34,12 @@ $g_theme         = ! empty( $g_theme ) ? $g_theme : 'grid-theme-1';
                 </div>
                 <div class="cmb-td">
                     <select id="g_theme" name="lcg_scode[g_columns]">
-                        <option value="6">Column-6</option>
-                        <option value="5" <?php if(!empty($g_columns) && $g_columns == "5"){ echo "selected";}?>>Column-5</option>
-                        <option value="4" <?php if(!empty($g_columns) && $g_columns == "4"){ echo "selected";}?>>Column-4</option>
-                        <option value="3" <?php if(!empty($g_columns) && $g_columns == "3"){ echo "selected";}?>>Column-3</option>
-                        <option value="2" <?php if(!empty($g_columns) && $g_columns == "2"){ echo "selected";}?>>Column-2</option>
+                        <option value="1" <?php selected('1', $g_columns, true) ?>>Column-1</option>
+                        <option value="2" <?php selected('2', $g_columns, true) ?>>Column-2</option>
+                        <option value="3" <?php selected('3', $g_columns, true) ?>>Column-3</option>
+                        <option value="4" <?php selected('4', $g_columns, true) ?>>Column-4</option>
+                        <option value="5" <?php selected('5', $g_columns, true) ?>>Column-5</option>     
+                        <option value="6" <?php selected('6', $g_columns, true) ?>>Column-6</option>     
                     </select>
                 </div>
             </div>
@@ -47,10 +51,10 @@ $g_theme         = ! empty( $g_theme ) ? $g_theme : 'grid-theme-1';
                 </div>
                 <div class="cmb-td">
                     <select id="g_theme" name="lcg_scode[g_columns_tablet]">
-                        <option value="4">Column-4</option>
-                        <option value="3" <?php if(!empty($g_columns_tablet) && $g_columns_tablet == "3"){ echo "selected";}?>>Column-3</option>
-                        <option value="2"  <?php if(!empty($g_columns_tablet) && $g_columns_tablet == "2"){ echo "selected";}?>>Column-2</option>
-                        <option value="1"  <?php if(!empty($g_columns_tablet) && $g_columns_tablet == "1"){ echo "selected";}?>>Column-1</option>
+                        <option value="1" <?php selected('1', $g_columns_tablet, true) ?>>Column-1</option>
+                        <option value="2" <?php selected('2', $g_columns_tablet, true) ?>>Column-2</option>
+                        <option value="3" <?php selected('3', $g_columns_tablet, true) ?>>Column-3</option>
+                        <option value="4" <?php selected('4', $g_columns_tablet, true) ?>>Column-4</option>
                     </select>
                 </div>
             </div>
@@ -62,10 +66,10 @@ $g_theme         = ! empty( $g_theme ) ? $g_theme : 'grid-theme-1';
                 </div>
                 <div class="cmb-td">
                     <select id="g_theme" name="lcg_scode[g_columns_mobile]">
-                        <option value="2">Column-2</option>
-                        <option value="4"  <?php if(!empty($g_columns_mobile) && $g_columns_mobile == "4"){ echo "selected";}?>>Column-4</option>
-                        <option value="3" <?php if(!empty($g_columns_mobile) && $g_columns_mobile == "3"){ echo "selected";}?>>Column-3</option>
-                        <option value="1" <?php if(!empty($g_columns_mobile) && $g_columns_mobile == "1"){ echo "selected";}?>>Column-1</option>
+                        <option value="1" <?php selected('1', $g_columns_mobile, true) ?>>Column-1</option>
+                        <option value="2" <?php selected('2', $g_columns_mobile, true) ?>>Column-2</option>
+                        <option value="3" <?php selected('3', $g_columns_mobile, true) ?>>Column-3</option>
+                        <option value="4" <?php selected('4', $g_columns_mobile, true) ?>>Column-4</option>
                     </select>
                 </div>
             </div>

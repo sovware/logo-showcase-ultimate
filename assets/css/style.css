@@ -1,3 +1,10 @@
+:root {
+  /* Tooltip */
+  --lsu-tooltipFontSize: 14px;
+  --lsu-tooltipColor: #fff;
+  --lsu-tooltipBackColor: #202428;
+}
+
 /* Logo Showcase Grid */
 .wpwax-lsu-ultimate {
   position: relative;
@@ -223,7 +230,7 @@
 
 /* wpWax logo Showcase Grid Theme 3 */
 .wpwax-lsu-ultimate.wpwax-lsu-grid.wpwax-lsu-grid-theme-3 .wpwax-lsu-item .wpwax-lsu-item-inner {
-  padding: 15px;
+  padding: 0 15px;
 }
 
 /* wpWax logo Showcase Grid Bordered */
@@ -368,4 +375,11 @@
 }
 .wpwax-lsu-carousel-pagination.swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: #000000;
+}
+
+/* Tooltip Style */
+.tooltip .tooltip-inner {
+  font-size: var(--lsu-tooltipFontSize);
+  color: var(--lsu-tooltipColor);
+  background-color: var(--lsu-tooltipBackColor);
 }

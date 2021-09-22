@@ -304,7 +304,9 @@ class Lcg_shortcode
                 </div>
 
                 <?php if (  $adl_logo->max_num_pages > 1 ) { ?>
-                <div class='lsu_load_more' data-id='<?php echo $id; ?>'>Load More</div>
+                    <div class="wpwax-loadmore-btn">
+                        <div class='lsu_load_more' data-id='<?php echo $id; ?>'>Load More</div>
+                    </div>
                 <?php } ?>
 
                 <?php 

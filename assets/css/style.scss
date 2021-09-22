@@ -291,6 +291,7 @@ $primary: #ff5500;
 
 .wpwax-lsu-ultimate {
     &.wpwax-lsu-grid-theme-2 {
+        margin: -10px;
         .wpwax-lsu-item {
             padding: 10px;
             .wpwax-lsu-item-inner {
@@ -1352,15 +1353,18 @@ $primary: #ff5500;
     }
 }
 
+
 /* Load More Button Style */
-.lsu_load_more{
-    display: inline-block;
+
+.lsu_load_more {
+    display: inline-flex;
+    align-items: center;
     padding: 6px 12px;
+    min-height: 34px;
     font-family: dashicons;
     margin-bottom: 0;
     font-size: 14px;
     font-weight: 400;
-    line-height: 1.42857143;
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
@@ -1373,10 +1377,15 @@ $primary: #ff5500;
     background-color: #f42156;
     border-color: #f42156;
     color: #fff;
-    &:after{
+    &:after {
         content: '\f531';
         position: relative;
         top: 2px;
         margin-left: 4px;
     }
+}
+
+.wpwax-loadmore-btn {
+    text-align: center;
+    margin-top: 30px;
 }

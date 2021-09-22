@@ -74,7 +74,7 @@ class Lcg_shortcode
         $image_hover     = !empty($image_hover) ? $image_hover : 'yes';
 
         $image_hover_effect = '';
-        if( ! empty( $image_hover ) ) {
+        if( ! empty( 'yes' == $image_hover ) ) {
             $image_hover_effect = 'wpwax-lsu-hover-active';
         }
         
@@ -113,7 +113,7 @@ class Lcg_shortcode
         <h4 class="wpwax-lsu-title"><?php echo ! empty( $cg_title ) ? $cg_title : ''; ?></h4>
         <?php } ?>
 
-            <div class="wpwax-lsu-ultimate <?php echo $image_hover; ?> wpwax-lsu-grid wpwax-lsu-<?php echo $theme; ?> <?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-logo-col-lg-' . $g_columns . ' wpwax-lsu-logo-col-md-' . $g_columns_tablet . ' wpwax-lsu-logo-col-sm-' . $g_columns_mobile . '' : 'wpwax-lsu-carousel wpwax-lsu-' . $theme . ' wpwax-lsu-carousel-nav-top'; ?> <?php echo $box_shadow_class; ?>"
+            <div class="wpwax-lsu-ultimate <?php echo $image_hover_effect; ?> wpwax-lsu-grid wpwax-lsu-<?php echo $theme; ?> <?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-logo-col-lg-' . $g_columns . ' wpwax-lsu-logo-col-md-' . $g_columns_tablet . ' wpwax-lsu-logo-col-sm-' . $g_columns_mobile . '' : 'wpwax-lsu-carousel wpwax-lsu-' . $theme . ' wpwax-lsu-carousel-nav-top'; ?> <?php echo $box_shadow_class; ?>"
             <?php if( 'carousel' == $layout ) { ?>
                 data-lsu-items      = "5"
                 data-lsu-margin     = "20" 

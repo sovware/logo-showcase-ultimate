@@ -623,7 +623,7 @@ $primary: #ff5500;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    min-height: 60px;
+                    min-height: 120px;
                     transition: .35s;
                     box-shadow: 0 5px 10px rgb(84, 77, 124, .10);
                 }
@@ -727,7 +727,7 @@ $primary: #ff5500;
                     }
                 }
                 .wpwax-lsu-item-inner {
-                    min-height: auto;
+                    min-height: 140px;
                     padding: 0;
                     flex-direction: column;
                     border: 1px solid #eaeaf1;

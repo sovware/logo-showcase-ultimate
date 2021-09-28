@@ -41,6 +41,12 @@ if (!class_exists('Lcg_Main_Class_Pro')) {
         public $shortcode;
 
         /**
+         * license
+         *@since 2.0.0
+        */
+        public $license;
+
+        /**
          * all ajax
          * @since 2.0.0
          */
@@ -69,6 +75,7 @@ if (!class_exists('Lcg_Main_Class_Pro')) {
                 self::$instance->metabox                    = new Lcg_Metabox();
                 self::$instance->shortcode                  = new Lcg_shortcode();
                 self::$instance->ajax                       = new Lcg_Ajax();
+                self::$instance->license                    = new Lcg_License_Controller();
             }
 
             return self::$instance;
@@ -84,6 +91,19 @@ if (!class_exists('Lcg_Main_Class_Pro')) {
             if (!defined('LCG_PLUGIN_URI')) define('LCG_PLUGIN_URI', plugin_dir_url(__FILE__));
             if (!defined('LCG_PLUGIN_DIR')) define('LCG_PLUGIN_DIR', plugin_dir_path(__FILE__));
             if (!defined('LCG_TEXTDOMAIN')) define('LCG_TEXTDOMAIN', 'logo-showcase-ultimate');
+
+            //custom post type id
+            if ( ! defined( 'LCG_VERSION' ) ) {
+                define( 'LCG_VERSION', '3.2.0' );
+            }
+            // this is the URL our updater / license checker pings. This should be the URL of the site with EDD installed
+            if ( ! defined( 'LCG_REMOTE_URL' ) ) {
+                define( 'LCG_REMOTE_URL', 'https://aazztech.com' ); // IMPORTANT: change the name of this constant to something unique to prevent conflicts with other plugins using this system
+            }
+            // the download ID. This is the ID of your product in EDD and should match the download ID visible in your Downloads list (see example below)
+            if ( ! defined( 'LCG_REMOTE_POST_ID' ) ) {
+                define( 'LCG_REMOTE_POST_ID', 3304 ); // IMPORTANT: change the name of this constant to something unique to prevent conflicts with other plugins using this system
+            }
         }
 
         //include all file for plugin
@@ -96,6 +116,23 @@ if (!class_exists('Lcg_Main_Class_Pro')) {
             require_once LCG_PLUGIN_DIR . 'classes/lcg-resize.php';
             require_once LCG_PLUGIN_DIR . 'classes/lcg-shortcode.php';
             require_once LCG_PLUGIN_DIR . 'classes/lcg-ajax.php';
+
+            require_once LCG_PLUGIN_DIR . 'classes/license/class-license-controller.php';
+            if ( ! class_exists( 'EDD_SL_Plugin_Updater' ) ) {
+                // load our custom updater if it doesn't already exist 
+                include( dirname( __FILE__ ) . '/classes/license/EDD_SL_Plugin_Updater.php' );
+            }
+            // retrieve our license key from the DB
+            $license_key = trim( get_option( 'lcg_license_key' ) );
+            // setup the updater
+            new EDD_SL_Plugin_Updater( LCG_REMOTE_URL, __FILE__, array(
+                'version'     => LCG_VERSION,        // current version number
+                'license'     => $license_key,    // license key (used get_option above to retrieve from DB)
+                'item_id'     => LCG_REMOTE_POST_ID,    // id of this plugin
+                'author'      => 'AazzTech',    // author of this plugin
+                'url'         => home_url(),
+                'beta'        => false // set to true if you wish customers to receive update notifications of beta releases
+            ) );
         }
 
         //enqueues all the styles and scripts

@@ -106,4 +106,20 @@
         return new bootstrap.Tooltip(tooltipTriggerEl)
     });
 
+    /* Tooltip Dynamic Style */
+    const tooltips = document.querySelectorAll('.wpwax-lsu-item-inner');
+
+    tooltips.forEach(tooltip => tooltip.addEventListener('mouseover', function() {
+        let tooltipId = tooltip.getAttribute('aria-describedby');
+        let tooltipStyle = tooltip.closest('.wpwax-lsu-ultimate').getAttribute('style');
+        let tooltipDomElm = document.querySelector(`#${tooltipId}`);
+        if (tooltipDomElm) {
+            let tooltipArrow = tooltipDomElm.querySelector(`#${tooltipId} .tooltip-arrow`).getAttribute('style');
+            let tooltipBackColor = tooltipStyle.split(';')[2];
+            tooltipDomElm.querySelector(`#${tooltipId} .tooltip-inner`).setAttribute('style', tooltipStyle);
+            tooltipDomElm.querySelector(`#${tooltipId} .tooltip-arrow`).style = `${tooltipArrow}${tooltipBackColor};`;
+        }
+
+    }));
+
 })(jQuery);

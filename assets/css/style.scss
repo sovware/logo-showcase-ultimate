@@ -623,7 +623,7 @@ $primary: #ff5500;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    min-height: 60px;
+                    min-height: 120px;
                     transition: .35s;
                     box-shadow: 0 5px 10px rgb(84, 77, 124, .10);
                 }
@@ -727,7 +727,7 @@ $primary: #ff5500;
                     }
                 }
                 .wpwax-lsu-item-inner {
-                    min-height: auto;
+                    min-height: 140px;
                     padding: 0;
                     flex-direction: column;
                     border: 1px solid #eaeaf1;
@@ -1271,11 +1271,31 @@ $primary: #ff5500;
 /* Tooltip Style */
 
 .tooltip {
+    .tooltip-arrow {
+        &:before {
+            border-bottom-color: var(--lsu-tooltipBackColor) !important;
+        }
+    }
     .tooltip-inner {
         font-size: var(--lsu-tooltipFontSize);
         color: var(--lsu-tooltipColor);
         background-color: var(--lsu-tooltipBackColor);
     }
+}
+
+.bs-tooltip-top .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before {
+    border-top-color: var(--lsu-tooltipBackColor) !important;
+}
+
+.bs-tooltip-left .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before {
+    border-left-color: var(--lsu-tooltipBackColor) !important;
+}
+
+.bs-tooltip-right .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before {
+    border-right-color: var(--lsu-tooltipBackColor) !important;
 }
 
 

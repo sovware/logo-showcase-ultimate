@@ -469,7 +469,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 60px;
+  min-height: 120px;
   -webkit-transition: 0.35s;
   -o-transition: 0.35s;
   transition: 0.35s;
@@ -551,7 +551,7 @@
   border-top-color: #ff5500;
 }
 .wpwax-lsu-ultimate.wpwax-lsu-carousel.wpwax-lsu-carousel-theme-7 .wpwax-lsu-item .wpwax-lsu-item-inner {
-  min-height: auto;
+  min-height: 140px;
   padding: 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1063,10 +1063,28 @@
 }
 
 /* Tooltip Style */
+.tooltip .tooltip-arrow:before {
+  border-bottom-color: var(--lsu-tooltipBackColor) !important;
+}
 .tooltip .tooltip-inner {
   font-size: var(--lsu-tooltipFontSize);
   color: var(--lsu-tooltipColor);
   background-color: var(--lsu-tooltipBackColor);
+}
+
+.bs-tooltip-top .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before {
+  border-top-color: var(--lsu-tooltipBackColor) !important;
+}
+
+.bs-tooltip-left .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before {
+  border-left-color: var(--lsu-tooltipBackColor) !important;
+}
+
+.bs-tooltip-right .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before {
+  border-right-color: var(--lsu-tooltipBackColor) !important;
 }
 
 /* Pagination */

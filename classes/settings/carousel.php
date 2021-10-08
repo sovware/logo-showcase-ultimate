@@ -199,7 +199,7 @@ $nav_position = !empty($nav_position) ? $nav_position : 'top-right';
                     </div>
 
                     <p class="cmb2-metabox-description">
-                        <?php esc_html_e('Set products column(s) in different devices.', LCG_TEXTDOMAIN); ?>
+                        <?php esc_html_e('Set logos column(s) in different devices.', LCG_TEXTDOMAIN); ?>
                     </p>
 
                 </div>

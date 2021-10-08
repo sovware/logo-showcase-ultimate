@@ -185,7 +185,7 @@ $carousel_pagination      = !empty($carousel_pagination) ? $carousel_pagination 
                     <input type="text" class="cmb2-text-small" 
                     name="lcg_scode[slide_speed]" 
                     id="lcg_scode[slide_speed]" 
-                    value="<?php echo !empty($slide_speed) ? intval($slide_speed) : 4000; ?>">
+                    value="<?php echo !empty($slide_speed) ? intval($slide_speed) : 1000; ?>">
                     <p class="cmb2-metabox-description"><?php esc_html_e('Here 1000 is equal to 1 second. So provide a speed accordingly', LCG_TEXTDOMAIN); ?></p>
                 </div>
             </div>
@@ -200,7 +200,7 @@ $carousel_pagination      = !empty($carousel_pagination) ? $carousel_pagination 
                     <input type="text" class="cmb2-text-small"
                            name="lcg_scode[slide_time]"
                            id="lcg_scode[slide_time]"
-                           value="<?php echo !empty($slide_time) ? intval($slide_time) : 2000; ?>">
+                           value="<?php echo !empty($slide_time) ? intval($slide_time) : 1000; ?>">
                     <p class="cmb2-metabox-description"><?php esc_html_e('Here 1000 is equal to 1 second. So provide a timeout accordingly', LCG_TEXTDOMAIN); ?></p>
                 </div>
             </div>

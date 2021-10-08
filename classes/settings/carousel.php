@@ -78,16 +78,16 @@ $nav_position = !empty($nav_position) ? $nav_position : 'top-right';
                         <li>
                             <input type="radio" class="cmb2-option cmb2-radio-switch1"
                                    name="lcg_scode[repeat_product]"
-                                   id="repeat_product"
+                                   id="repeat_product1"
                                    value="yes" <?php checked('yes', $repeat_product, true); ?>>
-                            <label for="repeat_product"><?php esc_html_e('Yes', LCG_TEXTDOMAIN); ?></label>
+                            <label for="repeat_product1"><?php esc_html_e('Yes', LCG_TEXTDOMAIN); ?></label>
                         </li>
                         <li>
                             <input type="radio" class="cmb2-option cmb2-radio-switch2"
                                    name="lcg_scode[repeat_product]"
-                                   id="repeat_product"
+                                   id="repeat_product2"
                                    value="no" <?php checked('no', $repeat_product, true); ?>>
-                            <label for="repeat_product"><?php esc_html_e('No', LCG_TEXTDOMAIN); ?></label>
+                            <label for="repeat_product2"><?php esc_html_e('No', LCG_TEXTDOMAIN); ?></label>
                         </li>
                     </ul>
                 </div>
@@ -151,7 +151,7 @@ $nav_position = !empty($nav_position) ? $nav_position : 'top-right';
             <div class="cmb-row cmb-type-text-medium">
                 <div class="cmb-th">
                     <label for="lcsp_li_desktop">
-                        <?php esc_html_e('Products Column', LCG_TEXTDOMAIN); ?>
+                        <?php esc_html_e('Logos Column', LCG_TEXTDOMAIN); ?>
                     </label>
                 </div>
                 <div class="cmb-td">

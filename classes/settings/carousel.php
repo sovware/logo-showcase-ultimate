@@ -76,16 +76,16 @@ $carousel_pagination      = !empty($carousel_pagination) ? $carousel_pagination 
                         <li>
                             <input type="radio" class="cmb2-option cmb2-radio-switch1"
                                    name="lcg_scode[repeat_product]"
-                                   id="repeat_product"
+                                   id="repeat_product1"
                                    value="yes" <?php checked('yes', $repeat_product, true); ?>>
-                            <label for="repeat_product"><?php esc_html_e('Yes', LCG_TEXTDOMAIN); ?></label>
+                            <label for="repeat_product1"><?php esc_html_e('Yes', LCG_TEXTDOMAIN); ?></label>
                         </li>
                         <li>
                             <input type="radio" class="cmb2-option cmb2-radio-switch2"
                                    name="lcg_scode[repeat_product]"
-                                   id="repeat_product"
+                                   id="repeat_product2"
                                    value="no" <?php checked('no', $repeat_product, true); ?>>
-                            <label for="repeat_product"><?php esc_html_e('No', LCG_TEXTDOMAIN); ?></label>
+                            <label for="repeat_product2"><?php esc_html_e('No', LCG_TEXTDOMAIN); ?></label>
                         </li>
                     </ul>
                 </div>
@@ -121,7 +121,7 @@ $carousel_pagination      = !empty($carousel_pagination) ? $carousel_pagination 
             <div class="cmb-row cmb-type-text-medium">
                 <div class="cmb-th">
                     <label for="lcsp_li_desktop">
-                        <?php esc_html_e('Products Column', LCG_TEXTDOMAIN); ?>
+                        <?php esc_html_e('Logos Column', LCG_TEXTDOMAIN); ?>
                     </label>
                 </div>
                 <div class="cmb-td">
@@ -169,7 +169,7 @@ $carousel_pagination      = !empty($carousel_pagination) ? $carousel_pagination 
                     </div>
 
                     <p class="cmb2-metabox-description">
-                        <?php esc_html_e('Set products column(s) in different devices.', LCG_TEXTDOMAIN); ?>
+                        <?php esc_html_e('Set logos column(s) in different devices.', LCG_TEXTDOMAIN); ?>
                     </p>
 
                 </div>

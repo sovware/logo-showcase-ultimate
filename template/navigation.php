@@ -11,7 +11,7 @@
 
  -->
 
-<div class="wpwax-lsu-carousel-nav wpwax-lsu-carousel-nav--top-right" style="
+<div class="wpwax-lsu-carousel-nav wpwax-lsu-carousel-nav--<?php echo $nav_position; ?>" style="
   --lsu-navArrowColor: <?php echo $navarro_color; ?>;
   --lsu-navArrowColorHover: <?php echo $nav_hov_arrow_color; ?>;
   --lsu-navBgColor: <?php echo $nav_background; ?>;

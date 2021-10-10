@@ -293,6 +293,13 @@ body.post-type-wcpcsu-custom-post #wpfooter{
     margin-right: 10px;
 }
 
+.cmb-product-columns .input-group-prepend .input-group-text svg {
+    width: 16px;
+    height: 16px;
+    color: #5A5F7D;
+    fill: #5A5F7D;
+}
+
 .cmb-product-columns .input-group input {
     position: relative;
     flex: 1 1 auto;

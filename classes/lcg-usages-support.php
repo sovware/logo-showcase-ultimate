@@ -14,17 +14,17 @@
                     <br>
 
                     <h3>Support Forum</h3>
-                    <p> If you need any helps, please don't hesitate to post it on <a href="https://wordpress.org/support/plugin/logo-showcase-ultimate-carousel-slider-grid" target="_blank"> wordpress.org</a> or <a href="https://aazztech.com/support" target="_blank"> aazztech.com</a> support forum.</p>
+                    <p> If you need any helps, please don't hesitate to post it on <a href="https://wordpress.org/support/plugin/logo-showcase-ultimate-carousel-slider-grid" target="_blank"> wordpress.org</a> or <a href="https://wpwax.com/contact" target="_blank"> wpwax.com</a> support forum.</p>
                     <br>
 
                     <h3>More features</h3>
-                    <p>Upgrading to the <a href="https://aazztech.com/product/logo-showcase-ultimate-pro/" target="_blank">Premium Version</a> would unlock more amazing features of the plugin.</p>
+                    <p>Upgrading to the <a href="https://wpwax.com/product/logo-showcase-ultimate-pro/" target="_blank">Premium Version</a> would unlock more amazing features of the plugin.</p>
                     <p>
-                        <a class="button button-primary" href="https://aazztech.com/demos/plugins/logo-showcase-ultimate-pro-screenshots/" target="_blank">Backend Screenshots</a>
+                        <a class="button button-primary" href="https://wpwax.com/demos/plugins/logo-showcase-ultimate-pro-screenshots/" target="_blank">Backend Screenshots</a>
 
-                        <a class="button button-primary" href="https://aazztech.com/demos/plugins/logo-showcase-ultimate-carousel-slider-grid/" target="_blank">Live Preview</a>
+                        <a class="button button-primary" href="https://wpwax.com/demos/plugins/logo-showcase-ultimate-carousel-slider-grid/" target="_blank">Live Preview</a>
 
-                        <a class="button button-primary" href="https://aazztech.com/product/logo-showcase-ultimate-pro/" target="_blank">Upgrade to Pro</a>
+                        <a class="button button-primary" href="https://wpwax.com/product/logo-showcase-ultimate-pro/" target="_blank">Upgrade to Pro</a>
                     </p>
                 </div>
             </div>
@@ -47,9 +47,8 @@
                     <li>Pagination available in Grid <span class="lcg_new_feature">New</span></li>
                     <li>Ajax Load More Pagination <span class="lcg_new_feature">New</span></li>
                     <li>Display logo in your desired order with easy Drag & Drop functionality <span class="lcg_new_feature">New</span></li>
-                    <li>Short description text color change option</li>
                 </ul>
-                <p class="text-center"><a target="_blank" href="https://aazztech.com/product/logo-showcase-ultimate-pro/" class="button button-secondary">Get the Pro Version Now!</a></p>
+                <p class="text-center"><a target="_blank" href="https://wpwax.com/product/logo-showcase-ultimate-pro/" class="button button-secondary">Get the Pro Version Now!</a></p>
             </div>
         </div>
     </div>

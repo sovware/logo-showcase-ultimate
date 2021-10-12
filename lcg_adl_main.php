@@ -146,6 +146,25 @@ if (!class_exists('Lcg_Main_Class')) {
 
             return $mimes;
         }
+
+        /**
+         * Initialize appsero tracking.
+         *
+         * @see https://github.com/Appsero/client
+         *
+         * @return void
+         */
+        public function init_appsero() {
+            if ( ! class_exists( '\Appsero\Client' ) ) {
+                require_once LCG_PLUGIN_DIR . 'classes/appsero/src/Client.php';
+            }
+
+            $client = new \Appsero\Client( 'e5b9d7f8-87e0-48db-823e-f2b38a259095', 'Logo Showcase Ultimate', __FILE__ );
+
+            // Active insights
+            $client->insights()->init();
+        }
+
         //serialize and then encode the string and return the encoded data
 
         /**

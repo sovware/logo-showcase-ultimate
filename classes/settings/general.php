@@ -104,7 +104,7 @@ $target          = !empty($target) ? $target : '_blank';
                     </ul>
                     <p class="cmb2-metabox-description"><?php esc_html_e('What type of products to display in the logo showcase ultimate', LCG_TEXTDOMAIN); ?></p>
                     <ul class="cmb2-radio-list-pro">
-                        <p style="font-size: 14px; margin: 13px 0 5px 0; font-style: italic;">Following options available in <a href="https://aazztech.com/product/logo-showcase-ultimate-pro/" target="_blank">Pro Version</a>:</p>
+                        <p style="font-size: 14px; margin: 13px 0 5px 0; font-style: italic;">Following options available in <a href="https://wpwax.com/product/logo-showcase-ultimate-pro/" target="_blank">Pro Version</a>:</p>
                         <li>
                             <input type="radio" class="cmb2-option"
                                    disabled>

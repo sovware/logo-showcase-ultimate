@@ -247,4 +247,10 @@ if( ! in_array('logo-showcase-ultimate-pro/lcg_adl_main.php', apply_filters('act
         return $resizer->resize($width, $height, $crop, $quality);
     }
 
+} else {
+    function lcg_delete_old_version() {
+        deactivate_plugins('logo-showcase-ultimate-pro/lcg_adl_main.php');
+        delete_plugins( array('logo-showcase-ultimate-pro/lcg_adl_main.php') );
+    }
+    add_action( 'admin_init', 'lcg_delete_old_version' );
 }

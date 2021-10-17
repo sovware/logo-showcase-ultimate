@@ -17,12 +17,20 @@ class Lcg_Migration
 
             foreach( $old_logos as $old_logo ) {
 
-                wp_insert_post( array( 
+                $get_img_link  = get_post_meta( $old_logo->ID, 'uls_img_link', true );
+                $get_img_tool  = get_post_meta( $old_logo->ID, 'uls_img_tool', true );
+
+                $create_logo = wp_insert_post( array( 
                     'ID'         => $old_logo->ID,
                     'post_type'  => 'lcg_mainpost',
                     'post_title' => $old_logo->post_title,
                     'post_status' => 'publish',
                 ) );
+
+                if( $create_logo ) {
+                    update_post_meta( $old_logo->ID, 'img_link', $get_img_link );
+                    update_post_meta( $old_logo->ID, 'img_tool', $get_img_tool );
+                }
 
             }
 

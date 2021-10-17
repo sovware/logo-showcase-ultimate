@@ -109,11 +109,20 @@ class Lcg_Metabox
     	// Add a nonce field so we can check for it later.
         wp_nonce_field( 'lcg_action', 'lcg_nonce' );
 
-        $img_link = get_post_meta( $post->ID, 'img_link', true );
-        $img_tool = get_post_meta( $post->ID, 'img_tool', true );
-        
+        $img_link          = get_post_meta( $post->ID, 'img_link', true );
+        $img_tool          = get_post_meta( $post->ID, 'img_tool', true );
+        $short_description = get_post_meta( $post->ID, 'short_description', true );
 
         ?>
+        <!-- short description -->
+        <div class="lcsp-row">
+            <div class="lcsp-th">
+                <label for="img_link"><?php esc_html_e('Short Description', LCG_TEXTDOMAIN); ?></label>
+            </div>
+            <div class="lcsp-td">
+                <textarea name="short_description" rows="2" cols="50"><?php echo !empty($short_description) ? $short_description : ''; ?></textarea>
+            </div>
+        </div>
         <!-- logo link -->
         <div class="lcsp-row">
             <div class="lcsp-th">
@@ -242,13 +251,14 @@ class Lcg_Metabox
         if(!empty($_POST['post_type']) && ('lcg_mainpost' == $_POST['post_type']) ){
             
             // get the meta value
-                $img_link = !empty($_POST["img_link"]) ? esc_url_raw( $_POST["img_link"] ) : '';
-                $img_tool = !empty($_POST["img_tool"]) ? sanitize_text_field( $_POST["img_tool"] ) : '';
+                $img_link           = !empty($_POST["img_link"]) ? esc_url_raw( $_POST["img_link"] ) : '';
+                $img_tool           = !empty($_POST["img_tool"]) ? sanitize_text_field( $_POST["img_tool"] ) : '';
+                $short_description  = !empty($_POST["short_description"]) ? sanitize_text_field( $_POST["short_description"] ) : '';
             
             //save the meta value
             update_post_meta($post_id, "img_link", $img_link);
             update_post_meta($post_id, "img_tool", $img_tool);
-            
+            update_post_meta($post_id, "short_description", $short_description);
             
         }
 

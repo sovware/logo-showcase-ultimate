@@ -54,6 +54,12 @@ if( ! in_array('logo-showcase-ultimate-pro/lcg_adl_main.php', apply_filters('act
              */
             public $ajax;
 
+            /**
+             * all ajax
+             * @since 2.0.0
+             */
+            public $migration;
+
             public static function instance()
             {
                 if (!isset(self::$instance) && !(self::$instance instanceof Lcg_Main_Class_Pro)) {
@@ -77,6 +83,7 @@ if( ! in_array('logo-showcase-ultimate-pro/lcg_adl_main.php', apply_filters('act
                     self::$instance->shortcode                  = new Lcg_shortcode();
                     self::$instance->ajax                       = new Lcg_Ajax();
                     self::$instance->license                    = new Lcg_License_Controller();
+                    self::$instance->migration                  = new Lcg_Migration();
                     // Initialize appsero tracking
                     self::$instance->init_appsero();
                 }
@@ -119,6 +126,7 @@ if( ! in_array('logo-showcase-ultimate-pro/lcg_adl_main.php', apply_filters('act
                 require_once LCG_PLUGIN_DIR . 'classes/lcg-resize.php';
                 require_once LCG_PLUGIN_DIR . 'classes/lcg-shortcode.php';
                 require_once LCG_PLUGIN_DIR . 'classes/lcg-ajax.php';
+                require_once LCG_PLUGIN_DIR . 'classes/lcg-migration.php';
 
                 require_once LCG_PLUGIN_DIR . 'classes/license/class-license-controller.php';
                 if ( ! class_exists( 'EDD_SL_Plugin_Updater' ) ) {

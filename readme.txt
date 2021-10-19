@@ -2,8 +2,8 @@
 Contributors: wpwax
 Tags: Logo, logo showcase, logo carousel, logo grid, logo slider
 Requires at least: 4.0
-Tested up to: 5.7
-Stable tag: 1.1.4
+Tested up to: 5.8
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,7 +27,6 @@ Logo Showcase Ultimate is an excellent and best plugin to display the logos of y
 *   Control number of logos to be displayed.
 *   Unlimited logos display.
 *   Auto logos resize and crop.
-*   Image upscaling enable/disable.
 *   Autoplay control.
 *   Navigation arrows.
 *   Pagination.
@@ -82,6 +81,11 @@ After successfully installing and activating the plugin, you will find "Logo Sho
 15. Backend: Logo Categories
 
 == Changelog ==
+= 1.2.0 =
+* Add: WordPress 5.8 compatibility
+* Improve: Performance
+* Improve: Design
+* Fix: Design issues
 = 1.1.4 =
 * Add: WordPress 5.7 compatibility
 = 1.1.3 =

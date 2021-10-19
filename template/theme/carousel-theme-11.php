@@ -12,9 +12,9 @@
 
     <div class="wpwax-lsu-item-flip-card__back">
 
-        <h4 class="wpwax-lsu-item-flip-card__back--title">Company Name</h4>
+        <h4 class="wpwax-lsu-item-flip-card__back--title"><?php echo get_the_title(); ?></h4>
 
-        <p class="wpwax-lsu-item-flip-card__back--text">Lorem ipsum dolor sit amet consectetur adip iscing eltellus.</p>
+        <p class="wpwax-lsu-item-flip-card__back--text"><?php echo ! empty( $short_description ) ? $short_description : ''; ?></p>
         
     </div>
 

@@ -281,8 +281,10 @@ class Lcg_shortcode
 
                     <?php
                     while ($adl_logo->have_posts()) : $adl_logo->the_post();
-                        $tooltip  = get_post_meta(get_the_id(), 'img_tool', true);
-                        $img_link = get_post_meta(get_the_id(), 'img_link', true);
+                        $tooltip            = get_post_meta(get_the_id(), 'img_tool', true);
+                        $img_link           = get_post_meta(get_the_id(), 'img_link', true);
+                        $short_description  = get_post_meta(get_the_id(), 'short_description', true);
+
                         $image_id = get_post_thumbnail_id();
                         $im = wp_get_attachment_image_src($image_id, 'full', true);
                         //$img = aq_resize($im[0], $image_width, $image_height,true,true, $upscale);

@@ -2,7 +2,7 @@
     <div class="lcsp-tabs-menu-wrapper">
         <ul class="lcsp-tabs-menu">
             <li class="current"><a href="#lcsp-tab-1"><span
-                        class="fas fa-code"></span><?php esc_html_e('Shortcodes', WCPCSU_TEXTDOMAIN); ?></a></li>
+                        class="fas fa-code"></span><?php esc_html_e('Shortcodes', LCG_TEXTDOMAIN); ?></a></li>
             <li><a href="#lcsp-tab-5"><span
                         class="fas fa-cog"></span><?php esc_html_e('General Settings', LCG_TEXTDOMAIN); ?></a></li>
             <li style="display: <?php if(!empty($layout) && $layout == "grid"){ echo "none";}else{ echo "block";}?>;"

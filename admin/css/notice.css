@@ -1,0 +1,28 @@
+/* Notice style */
+.lcg-dashboard-notice{
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    width: calc(100% - 53px);
+    border: 1px solid #c3c4c7;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 4%);
+    padding: 10px 15px;
+    position: relative;
+}
+.lcg-dashboard-notice:before{
+    position: absolute;
+    content: '';
+    width: 3px;
+    height: calc(100% + 2px);
+    background: #834eff;
+    left: -1px;
+    top:-1px;
+}
+.lcg-dashboard-notice p{
+    margin: 0;
+}
+.lcg-dashboard-notice a{
+    text-decoration: none;
+}

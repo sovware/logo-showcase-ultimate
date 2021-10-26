@@ -59,6 +59,9 @@ if (!class_exists('Lcg_Main_Class')) {
                 add_filter('plugin_action_links_' . plugin_basename(__FILE__), array(self::$instance, 'display_pro_version_logo_link'));
                 // support svg format
                 add_filter('upload_mimes', array(self::$instance, 'lcg_support_svg'));
+                if( empty( get_option('lcg_dismiss_notice') ) ) {
+                    add_action( 'admin_notices', array( self::$instance, 'admin_notices') );
+                }
                 self::$instance->lcg_include_required_files();
                 self::$instance->custom_post                = new Lcg_Custom_Post();
                 self::$instance->featured_img_customizer    = new Lcg_Featured_Img_Customizer(array(
@@ -81,16 +84,21 @@ if (!class_exists('Lcg_Main_Class')) {
          */
         public function define_lcg_adl_constants()
         {
-
             if (!defined('LCG_PLUGIN_URI')) define('LCG_PLUGIN_URI', plugin_dir_url(__FILE__));
             if (!defined('LCG_PLUGIN_DIR')) define('LCG_PLUGIN_DIR', plugin_dir_path(__FILE__));
             if (!defined('LCG_TEXTDOMAIN')) define('LCG_TEXTDOMAIN', 'logo-showcase-ultimate');
         }
 
+        public function admin_notices() {
+            global $pagenow, $typenow;
+            if ( 'index.php' == $pagenow || 'plugins.php' == $pagenow || 'lcg_mainpost' == $typenow || 'lcg_shortcode' == $typenow ) {
+                require_once LCG_PLUGIN_DIR . 'template/notice.php';
+            }
+        }
+
         //include all file for plugin
         public function lcg_include_required_files()
         {
-
             require_once LCG_PLUGIN_DIR . 'classes/lcg-adl-custom-post.php';
             require_once LCG_PLUGIN_DIR . 'classes/lcg-metabox-overrider.php';
             require_once LCG_PLUGIN_DIR . 'classes/lcg-adl-metabox.php';
@@ -122,11 +130,16 @@ if (!class_exists('Lcg_Main_Class')) {
         //method for enqueue admins's style and script
         public function lcg_admin_enqueue_scripts()
         {
+            global $typenow, $pagenow;
 
             wp_enqueue_style('cmb2-min', PLUGINS_URL('admin/css/cmb2.min.css', __FILE__));
             wp_enqueue_style('admin-style', PLUGINS_URL('admin/css/lcsp-admin-styles.css', __FILE__));
             wp_enqueue_style('wp-color-picker');
             wp_enqueue_script('admin-script', PLUGINS_URL('admin/js/lcsp-admin-script.js', __FILE__), array('jquery', 'wp-color-picker'));
+
+            if ( 'index.php' == $pagenow || 'plugins.php' == $pagenow || 'lcg_mainpost' == $typenow || 'lcg_shortcode' == $typenow ) {
+                wp_enqueue_style('lcg-notice', LCG_PLUGIN_URI . 'admin/css/notice.css');
+            }
         }
 
         //method for pro plugin's link

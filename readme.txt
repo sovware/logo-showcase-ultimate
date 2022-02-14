@@ -1,4 +1,4 @@
-﻿=== Logo Showcase Ultimate - Carousel, Slider & Grid ===
+﻿=== Logo Showcase Ultimate - Logo Carousel, Logo Slider & Logo Grid ===
 Contributors: wpwax
 Tags: Logo, logo showcase, logo carousel, logo grid, logo slider
 Requires at least: 4.0
@@ -7,51 +7,88 @@ Stable tag: 1.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-It allows you to easily create Logo Showcase to display logos of your clients, partners, sponsors, affiliates etc in a beautiful Slider and Grid.
+Ultimate logo showcase plugin to create responsive logo carousel, logo slider & logo grid and display unlimited clients, partners, sponsors logos
 
 == Description ==
 
-Live demo: <https://demo.wpwax.com/plugin/logo-showcase-ultimate-carousel-slider-grid/>
+👉 [Demos](https://demo.wpwax.com/plugin/logo-showcase-ultimate-carousel-slider-grid/) | [Pro Version](https://wpwax.com/product/logo-showcase-ultimate-pro/) | [Documentation]( https://wpwax.com/docs/logo-showcase-ultimate/) | [Support](https://wpwax.com/contact/) 👈
 
-Logo Showcase Ultimate is an excellent and best plugin to display the logos of your clients, partners, sponsors, and affiliates and more along with a title, tooltip, and URL on your website. It is 100% responsive and mobile friendly. You can generate dynamic shortcode by just a few mouse clicks and use the shortcode anywhere in your posts, pages or widgets to display your logos. Your users from any devices can view the logo carousel/slider/grid nicely.
+Looking for a tool to display your personalized logos easily? Logo Showcase Ultimate - Logo Carousel, Logo Slider & Logo Grid allows you to display all your preferred logos in a slider, carousel, or grid. You can customize and display your logos by category, ID, randomly, yearly, latest, and older published. 
+
+Set up your WordPress logo slider, logo carousel, logo grid and showcase it in a responsive way using a shortcode with just a few clicks.
+
+[youtube https://www.youtube.com/watch?v=-LYwBu783yc]
+
+Logo Showcase Ultimate is the best WordPress logo showcase plugin to display the logos of your clients, partners, sponsors, affiliates, and more along with a title, tooltip, and URL on your website. It is 100% responsive and mobile-friendly. You can generate dynamic shortcodes with just a few mouse clicks and use the shortcode anywhere in your posts, pages, or widgets to display your logos. Users from any device can view the logo carousel, logo slider, and logo grid nicely.
+
+== HERE’S WHAT USERS SAY ABOUT  LOGO SHOWCASE ULTIMATE – LOGO CAROUSEL, LOGO SLIDER & LOGO GRID ==
+
+>👨 __Fantastic plugin that is easy to use__
+
+>This plugin is perfect for making a nice-looking logo grid that looks great on any website. It’s also very simple and easy to use so you do not need to waste time getting it set up. I recommend this to anyone looking for a good logo showcase plugin. 🙂
+- By @akrsmanovic
+
+>💁 __Create and easy__
+
+>The plugin installation and config is really easy.
+together with the usage of the shortcoding.
+Recommended for every site.
+- By @schuseb
+
+>👨 __Great Plugin!__
+
+>I spent a considerable amount of time looking for a plugin that was clean, easy to use, and looked **** as hell! Luckily I found that in Logo Showcase Ultimate. Loads quickly, with lots of options, highly recommended.
+- By @dawngribble
 
 = Features of this plugin =
-*   6 beautiful themes.
 *   100% Responsive and mobile friendly.
-*   Unique settings for each logo.
-*   Easy Shortcode Generator and insert generated Shortcode easily via TinyMCE button.
-*   Customizable columns for any devices.
-*   External/external logo linking.
-*   Display logo with or without a title
-*   Display logo with or without a border around.
-*   Control number of logos to be displayed.
-*   Unlimited logos display.
-*   Auto logos resize and crop.
+*   3 different themes for Logo Carousel & Logo Slider.
+*   3 different themes for Logo Grid.
+*   Latest/Recent, Older, and Featured products display.
+*   Display Unlimited products.
+*   Create Unlimited Logo Carousels, Logo Sliders, and Logo Grids.
+*   Unique settings for each theme.
+*   Advanced Shortcode Generator
+*   Advanced and easy-to-use Settings Panel.
+*   Customize ribbon/badge.
+*   Control the number of products to display on desktop, tablet, and mobile devices.
+*   Auto images resize and crop option.
 *   Autoplay control.
-*   Navigation arrows.
-*   Pagination.
-*   Logo-hover effect enable/disable.
+*   Slide speed control.
+*   Customize the Navigation option.
+*   Display/hide Product Title, Price, Star Ratings, and Cart buttons.
+*   Product title font size, color, hover color change options.
+*   Price font size and color change options.
+*   Product Star Rating size and color change options.
+*   Cart button background color, font size, font color change options.
+*   Quick View.
+*   Touch and Swipe enabled.
 *   Translation ready.
-*   Many more…
 
-More amazing features available in [__Pro version__](https://wpwax.com/product/logo-showcase-ultimate-pro/).
+FEATURES OF THE  LOGO SHOWCASE ULTIMATE – LOGO CAROUSEL, LOGO SLIDER & LOGO GRID PRO VERSION
 
 = Features of the Pro version =
-*   24 different themes
-*   Short description
-*   WPBakery addon
-*   Display logos by category, logo id, randomly,alphabetical order title(A to Z)(Z to A), month, year, the latest and older published.
-*   Tooltip position, font-size, text and background color change options.
-*   Supports Pagination in Grid.
-*   Ajax load More Pagination in Grid.
-*   Display logo in your desired order with Drag & Drop functionality.
-*   Navigation arrows, background and hover color change options.
-*   Logo border size and color change option.
-*   Pagination color change option.
-*   Short description text color change option.
+*   15 different premium themes for Logo Carousel & Logo Slider.
+*   15 different premium themes for Logo Grid.
+*   Add to Wishlist.
+*   Show total wishlist on any page/post via shortcode.
+*   Display On sale, Best Selling, Top Rated, and Featured products.
+*   Display by ID, SKU, tags, category, month, and year.
+*   Display products randomly.
+*   Ready Ribbons & Custom Ribbons.
+*   Product excerpt and option to limit excerpt words.
+*   Display/hide excerpt with font size and color change options.
+*   Display/hide out-of-stock products.
+*   Enable/disable hover effect on the product image.
+*   Scroll by per item or page.
+*   Scroll direction
+*   Marquee
+*   Premium Support
 *   And many more…
 
-Live demo: <https://demo.wpwax.com/plugin/logo-showcase-ultimate-carousel-slider-grid/#proversion>
+
+👉 Like us on Facebook : [wpWax](https://www.facebook.com/wpwax)
+👉 Official YouTube Channel : [YouTube](https://www.youtube.com/c/wpWax)
 
 
 == Installation ==

@@ -40,7 +40,7 @@ Recommended for every site.
 >I spent a considerable amount of time looking for a plugin that was clean, easy to use, and looked **** as hell! Luckily I found that in Logo Showcase Ultimate. Loads quickly, with lots of options, highly recommended.
 - By @dawngribble
 
-= Features of this plugin =
+= Features =
 *   100% Responsive and mobile friendly.
 *   3 different themes for Logo Carousel & Logo Slider.
 *   3 different themes for Logo Grid.
@@ -65,9 +65,7 @@ Recommended for every site.
 *   Touch and Swipe enabled.
 *   Translation ready.
 
-FEATURES OF THE  LOGO SHOWCASE ULTIMATE – LOGO CAROUSEL, LOGO SLIDER & LOGO GRID PRO VERSION
-
-= Features of the Pro version =
+= FEATURES OF THE  LOGO SHOWCASE ULTIMATE – LOGO CAROUSEL, LOGO SLIDER & LOGO GRID PRO VERSION =
 *   15 different premium themes for Logo Carousel & Logo Slider.
 *   15 different premium themes for Logo Grid.
 *   Add to Wishlist.

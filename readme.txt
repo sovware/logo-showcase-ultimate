@@ -44,45 +44,37 @@ Recommended for every site.
 *   100% Responsive and mobile friendly.
 *   3 different themes for Logo Carousel & Logo Slider.
 *   3 different themes for Logo Grid.
-*   Latest/Recent, Older, and Featured products display.
-*   Display Unlimited products.
+*   Latest/Recent, Older logos display.
+*   Display Unlimited logos.
+*   Display logo with or without a title
 *   Create Unlimited Logo Carousels, Logo Sliders, and Logo Grids.
 *   Unique settings for each theme.
 *   Advanced Shortcode Generator
 *   Advanced and easy-to-use Settings Panel.
-*   Customize ribbon/badge.
-*   Control the number of products to display on desktop, tablet, and mobile devices.
+*   Control the number of logos to display on desktop, tablet, and mobile devices.
 *   Auto images resize and crop option.
 *   Autoplay control.
 *   Slide speed control.
 *   Customize the Navigation option.
-*   Display/hide Product Title, Price, Star Ratings, and Cart buttons.
-*   Product title font size, color, hover color change options.
-*   Price font size and color change options.
-*   Product Star Rating size and color change options.
-*   Cart button background color, font size, font color change options.
-*   Quick View.
 *   Touch and Swipe enabled.
 *   Translation ready.
 
 = FEATURES OF THE  LOGO SHOWCASE ULTIMATE – LOGO CAROUSEL, LOGO SLIDER & LOGO GRID PRO VERSION =
-*   15 different premium themes for Logo Carousel & Logo Slider.
-*   15 different premium themes for Logo Grid.
-*   Add to Wishlist.
-*   Show total wishlist on any page/post via shortcode.
-*   Display On sale, Best Selling, Top Rated, and Featured products.
-*   Display by ID, SKU, tags, category, month, and year.
-*   Display products randomly.
-*   Ready Ribbons & Custom Ribbons.
-*   Product excerpt and option to limit excerpt words.
-*   Display/hide excerpt with font size and color change options.
-*   Display/hide out-of-stock products.
+*   16 different premium themes for Logo Carousel & Logo Slider.
+*   8 different premium themes for Logo Grid.
+*   Display logos by category, logo id, randomly,alphabetical order title(A to Z)(Z to A), month, year, the latest and older published.
+*   Short description
 *   Enable/disable hover effect on the product image.
 *   Scroll by per item or page.
 *   Scroll direction
 *   Marquee
+*   Navigation arrows, background and hover color change options.
+*   Tooltip position, font-size, text and background color change options.
+*   Pagination color change option.
+*   Ajax load More Pagination in Grid.
 *   Premium Support
 *   And many more…
+
 
 
 👉 Like us on Facebook : [wpWax](https://www.facebook.com/wpwax)

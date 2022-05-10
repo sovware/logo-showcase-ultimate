@@ -168,13 +168,12 @@ class Lcg_Metabox
         if(!empty($_POST['post_type']) && ('lcg_mainpost' == $_POST['post_type']) ){
             
             // get the meta value
-                $img_link = !empty($_POST["img_link"]) ? esc_url_raw( $_POST["img_link"] ) : '';
-                $img_tool = !empty($_POST["img_tool"]) ? sanitize_text_field( $_POST["img_tool"] ) : '';
+            $img_link = !empty($_POST["img_link"]) ? esc_url_raw( $_POST["img_link"] ) : '';
+            $img_tool = !empty($_POST["img_tool"]) ? sanitize_text_field( $_POST["img_tool"] ) : '';
             
             //save the meta value
             update_post_meta($post_id, "img_link", $img_link);
             update_post_meta($post_id, "img_tool", $img_tool);
-            
             
         }
 
@@ -204,18 +203,21 @@ class Lcg_Metabox
     //security check
     private function lcg_security_check($nonce_name, $action, $post_id){
         // checks are divided into 3 parts for readability.
-        if ( !empty( $_POST[$nonce_name] ) && wp_verify_nonce( $_POST[$nonce_name], $action ) ) {
-            return true;
+        if ( empty( $_POST[ $nonce_name ] ) || ! wp_verify_nonce( $_POST[ $nonce_name ], $action ) ) {
+            return false;
         }
+
         // If this is an autosave, our form has not been submitted, so we don't want to do anything. returns false
         if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
             return false;
         }
+
         // Check the user's permissions.
-        if ( current_user_can( 'edit_post', $post_id ) ) {
-            return true;
+        if ( ! current_user_can( 'edit_post', $post_id ) ) {
+            return false;
         }
-        return false;
+
+        return true;
     }
 
 

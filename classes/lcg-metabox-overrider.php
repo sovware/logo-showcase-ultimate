@@ -11,9 +11,9 @@ if ( ! defined( 'ABSPATH' ) ) die( 'direct access not allow' );
 		function __construct($args = array()) {
 
 				$this->post_type     = !empty($args['post_type']) ? $args['post_type'] : '';
-				$this->metabox_title = !empty($args['metabox_title'])? $args['metabox_title'] : __('Featured Image', LCS_TEXTDOMAIN);
-				$this->set_text      = !empty($args['set_text'])? $args['set_text'] : __('Set Featured Image', LCS_TEXTDOMAIN);
-				$this->remove_text   = !empty($args['remove_text'])? $args['remove_text'] : __('Remove Featured Image', LCS_TEXTDOMAIN);
+				$this->metabox_title = !empty($args['metabox_title'])? $args['metabox_title'] : __('Featured Image', 'logo-showcase-ultimate');
+				$this->set_text      = !empty($args['set_text'])? $args['set_text'] : __('Set Featured Image', 'logo-showcase-ultimate');
+				$this->remove_text   = !empty($args['remove_text'])? $args['remove_text'] : __('Remove Featured Image', 'logo-showcase-ultimate');
 
 
 			if ( !empty($this->post_type) ) {

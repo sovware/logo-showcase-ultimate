@@ -11,7 +11,7 @@ $g_columns_mobile       = ! empty( $g_columns_mobile ) ? esc_attr( $g_columns_mo
             <!--Select theme-->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
-                    <label for="lcsp_ap"><?php esc_html_e('Select Theme', LCG_TEXTDOMAIN); ?></label>
+                    <label for="lcsp_ap"><?php esc_html_e('Select Theme', 'logo-showcase-ultimate'); ?></label>
                 </div>
                 <div class="cmb-td">
                     <select id="g_theme" name="lcg_scode[g_theme]">
@@ -30,7 +30,7 @@ $g_columns_mobile       = ! empty( $g_columns_mobile ) ? esc_attr( $g_columns_mo
             <!--Select Column for desktop-->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
-                    <label for="lcsp_ap"><?php esc_html_e('Select Columns', LCG_TEXTDOMAIN); ?></label>
+                    <label for="lcsp_ap"><?php esc_html_e('Select Columns', 'logo-showcase-ultimate'); ?></label>
                 </div>
                 <div class="cmb-td">
                     <select id="g_theme" name="lcg_scode[g_columns]">
@@ -47,7 +47,7 @@ $g_columns_mobile       = ! empty( $g_columns_mobile ) ? esc_attr( $g_columns_mo
             <!--Select Column for Tablet-->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
-                    <label for="lcsp_ap"><?php esc_html_e('Select Columns for Tablet', LCG_TEXTDOMAIN); ?></label>
+                    <label for="lcsp_ap"><?php esc_html_e('Select Columns for Tablet', 'logo-showcase-ultimate'); ?></label>
                 </div>
                 <div class="cmb-td">
                     <select id="g_theme" name="lcg_scode[g_columns_tablet]">
@@ -62,7 +62,7 @@ $g_columns_mobile       = ! empty( $g_columns_mobile ) ? esc_attr( $g_columns_mo
             <!--Select Column for Mobile-->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
-                    <label for="lcsp_ap"><?php esc_html_e('Select Columns for Mobile', LCG_TEXTDOMAIN); ?></label>
+                    <label for="lcsp_ap"><?php esc_html_e('Select Columns for Mobile', 'logo-showcase-ultimate'); ?></label>
                 </div>
                 <div class="cmb-td">
                     <select id="g_theme" name="lcg_scode[g_columns_mobile]">

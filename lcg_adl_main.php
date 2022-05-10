@@ -66,9 +66,9 @@ if (!class_exists('Lcg_Main_Class')) {
                 self::$instance->custom_post                = new Lcg_Custom_Post();
                 self::$instance->featured_img_customizer    = new Lcg_Featured_Img_Customizer(array(
                     'post_type'     => 'lcg_mainpost',
-                    'metabox_title' => esc_html__('Logo', LCG_TEXTDOMAIN),
-                    'set_text'      => esc_html__('Set logo', LCG_TEXTDOMAIN),
-                    'remove_text'   => esc_html__('Remove logo', LCG_TEXTDOMAIN)
+                    'metabox_title' => esc_html__('Logo', 'logo-showcase-ultimate'),
+                    'set_text'      => esc_html__('Set logo', 'logo-showcase-ultimate'),
+                    'remove_text'   => esc_html__('Remove logo', 'logo-showcase-ultimate')
                 ));
                 self::$instance->metabox                    = new Lcg_Metabox();
                 self::$instance->shortcode                  = new Lcg_shortcode();
@@ -145,14 +145,14 @@ if (!class_exists('Lcg_Main_Class')) {
         //method for pro plugin's link
         public function display_pro_version_logo_link($links)
         {
-            $links[] = '<a href="' . esc_url('https://wpwax.com/product/logo-showcase-ultimate-pro/') . '" target="_blank">' . esc_html__('Pro Version', LCG_TEXTDOMAIN) . '</a>';
+            $links[] = '<a href="' . esc_url('https://wpwax.com/product/logo-showcase-ultimate-pro/') . '" target="_blank">' . esc_html__('Pro Version', 'logo-showcase-ultimate') . '</a>';
             return $links;
         }
 
         //add page for usage & support
         public function lcg_hook_usage_and_support_submenu()
         {
-            add_submenu_page('edit.php?post_type=lcg_mainpost', __('Usage & Support', LCG_TEXTDOMAIN), __('Usage & Support', LCG_TEXTDOMAIN), 'manage_options', 'lcg_usage_support', array($this, 'lcg_display_usage_and_support'));
+            add_submenu_page('edit.php?post_type=lcg_mainpost', __('Usage & Support', 'logo-showcase-ultimate'), __('Usage & Support', 'logo-showcase-ultimate'), 'manage_options', 'lcg_usage_support', array($this, 'lcg_display_usage_and_support'));
         }
 
         public function lcg_display_usage_and_support()

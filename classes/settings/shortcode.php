@@ -6,8 +6,8 @@
                     <div id="cmb2-metabox">
                         <div class="cmb2-metabox-content">
                             <div class="cmb2-metabox-card cmb2-metabox-card2">
-                                <h6><?php esc_html_e('Shortcode',LCG_TEXTDOMAIN); ?></h6>
-                                <p><?php esc_html_e('Copy this shortcode and paste on page or post where you want to display logos.Use PHP code to your themes file to display them.',LCG_TEXTDOMAIN); ?>
+                                <h6><?php esc_html_e('Shortcode','logo-showcase-ultimate'); ?></h6>
+                                <p><?php esc_html_e('Copy this shortcode and paste on page or post where you want to display logos.Use PHP code to your themes file to display them.','logo-showcase-ultimate'); ?>
                                 </p>
                                 <div class="cmb2-metabox-card-textarea">
                                     <textarea
@@ -15,8 +15,8 @@
                                 </div>
                             </div>
                             <div class="cmb2-metabox-card cmb2-metabox-card3">
-                                <h6><?php esc_html_e('PHP Code:',LCG_TEXTDOMAIN); ?></h6>
-                                <p><?php esc_html_e('Copy this shortcode and paste on page or post where you want to display logos.Use PHP code to your themes file to display them.',LCG_TEXTDOMAIN); ?>
+                                <h6><?php esc_html_e('PHP Code:','logo-showcase-ultimate'); ?></h6>
+                                <p><?php esc_html_e('Copy this shortcode and paste on page or post where you want to display logos.Use PHP code to your themes file to display them.','logo-showcase-ultimate'); ?>
                                 </p>
                                 <div class="cmb2-metabox-card-textarea">
                                     <textarea

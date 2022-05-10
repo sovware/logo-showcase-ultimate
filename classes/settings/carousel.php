@@ -17,7 +17,7 @@ $carousel_pagination      = ! empty( $carousel_pagination ) ? esc_attr( $carouse
             <!--Select theme-->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
-                    <label for="lcsp_ap"><?php esc_html_e('Select Theme', LCG_TEXTDOMAIN); ?></label>
+                    <label for="lcsp_ap"><?php esc_html_e('Select Theme', 'logo-showcase-ultimate'); ?></label>
                 </div>
                 <div class="cmb-td">
                     <select id="c_theme" name="lcg_scode[c_theme]">
@@ -44,7 +44,7 @@ $carousel_pagination      = ! empty( $carousel_pagination ) ? esc_attr( $carouse
             <!--Auto Play-->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
-                    <label for="lcsp_ap"><?php esc_html_e('Auto Play', LCG_TEXTDOMAIN); ?></label>
+                    <label for="lcsp_ap"><?php esc_html_e('Auto Play', 'logo-showcase-ultimate'); ?></label>
                 </div>
                 <div class="cmb-td">
                     <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
@@ -53,14 +53,14 @@ $carousel_pagination      = ! empty( $carousel_pagination ) ? esc_attr( $carouse
                             name="lcg_scode[A_play]"
                             id="lcsp_ap1"
                             value="yes" <?php checked('yes', $A_play, true); ?>>
-                            <label for="lcsp_ap1"><?php esc_html_e('Yes', LCG_TEXTDOMAIN); ?></label>
+                            <label for="lcsp_ap1"><?php esc_html_e('Yes', 'logo-showcase-ultimate'); ?></label>
                         </li>
                         <li>
                             <input type="radio" class="cmb2-option cmb2-radio-switch2"
                             name="lcg_scode[A_play]"
                             id="lcsp_ap2"
                             value="no" <?php checked('no', $A_play, true); ?>>
-                            <label for="lcsp_ap2"><?php esc_html_e('No', LCG_TEXTDOMAIN); ?></label>
+                            <label for="lcsp_ap2"><?php esc_html_e('No', 'logo-showcase-ultimate'); ?></label>
                         </li>
                     </ul>
                 </div>
@@ -69,7 +69,7 @@ $carousel_pagination      = ! empty( $carousel_pagination ) ? esc_attr( $carouse
             <!--Repeat product-->
             <div class="cmb-row cmb-type-radio cmb2-radio-switch1">
                 <div class="cmb-th">
-                    <label for="lcsp_ap"><?php esc_html_e('Repeat Logo', LCG_TEXTDOMAIN); ?></label>
+                    <label for="lcsp_ap"><?php esc_html_e('Repeat Logo', 'logo-showcase-ultimate'); ?></label>
                 </div>
                 <div class="cmb-td">
                     <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
@@ -78,14 +78,14 @@ $carousel_pagination      = ! empty( $carousel_pagination ) ? esc_attr( $carouse
                                    name="lcg_scode[repeat_product]"
                                    id="repeat_product1"
                                    value="yes" <?php checked('yes', $repeat_product, true); ?>>
-                            <label for="repeat_product1"><?php esc_html_e('Yes', LCG_TEXTDOMAIN); ?></label>
+                            <label for="repeat_product1"><?php esc_html_e('Yes', 'logo-showcase-ultimate'); ?></label>
                         </li>
                         <li>
                             <input type="radio" class="cmb2-option cmb2-radio-switch2"
                                    name="lcg_scode[repeat_product]"
                                    id="repeat_product2"
                                    value="no" <?php checked('no', $repeat_product, true); ?>>
-                            <label for="repeat_product2"><?php esc_html_e('No', LCG_TEXTDOMAIN); ?></label>
+                            <label for="repeat_product2"><?php esc_html_e('No', 'logo-showcase-ultimate'); ?></label>
                         </li>
                     </ul>
                 </div>
@@ -94,7 +94,7 @@ $carousel_pagination      = ! empty( $carousel_pagination ) ? esc_attr( $carouse
             <!--Stop on hover-->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
-                    <label for="lcsp_soh"><?php esc_html_e('Stop on Hover', LCG_TEXTDOMAIN); ?></label>
+                    <label for="lcsp_soh"><?php esc_html_e('Stop on Hover', 'logo-showcase-ultimate'); ?></label>
                 </div>
                 <div class="cmb-td">
                     <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
@@ -103,7 +103,7 @@ $carousel_pagination      = ! empty( $carousel_pagination ) ? esc_attr( $carouse
                             id="lcsp_soh1"
                             value="yes" <?php checked('yes', $stop_hover, true); ?>>
                             <label for="lcsp_soh1">
-                                <?php esc_html_e('Yes', LCG_TEXTDOMAIN); ?>
+                                <?php esc_html_e('Yes', 'logo-showcase-ultimate'); ?>
                             </label>
                         </li>
                         <li><input type="radio" class="cmb2-option cmb2-radio-switch2"
@@ -111,7 +111,7 @@ $carousel_pagination      = ! empty( $carousel_pagination ) ? esc_attr( $carouse
                             id="lcsp_soh2"
                             value="no" <?php checked('no', $stop_hover, true);  ?>>
                             <label for="lcsp_soh2">
-                                <?php esc_html_e('No', LCG_TEXTDOMAIN); ?>
+                                <?php esc_html_e('No', 'logo-showcase-ultimate'); ?>
                             </label>
                         </li>
                     </ul>
@@ -121,7 +121,7 @@ $carousel_pagination      = ! empty( $carousel_pagination ) ? esc_attr( $carouse
             <div class="cmb-row cmb-type-text-medium">
                 <div class="cmb-th">
                     <label for="lcsp_li_desktop">
-                        <?php esc_html_e('Logos Column', LCG_TEXTDOMAIN); ?>
+                        <?php esc_html_e('Logos Column', 'logo-showcase-ultimate'); ?>
                     </label>
                 </div>
                 <div class="cmb-td">
@@ -169,7 +169,7 @@ $carousel_pagination      = ! empty( $carousel_pagination ) ? esc_attr( $carouse
                     </div>
 
                     <p class="cmb2-metabox-description">
-                        <?php esc_html_e('Set logos column(s) in different devices.', LCG_TEXTDOMAIN); ?>
+                        <?php esc_html_e('Set logos column(s) in different devices.', 'logo-showcase-ultimate'); ?>
                     </p>
 
                 </div>
@@ -178,7 +178,7 @@ $carousel_pagination      = ! empty( $carousel_pagination ) ? esc_attr( $carouse
             <div class="cmb-row cmb-type-text-medium">
                 <div class="cmb-th">
                     <label for="lcsp_ss">
-                        <?php esc_html_e('Slide Speed', LCG_TEXTDOMAIN); ?>
+                        <?php esc_html_e('Slide Speed', 'logo-showcase-ultimate'); ?>
                     </label>
                 </div>
                 <div class="cmb-td">
@@ -186,14 +186,14 @@ $carousel_pagination      = ! empty( $carousel_pagination ) ? esc_attr( $carouse
                     name="lcg_scode[slide_speed]"
                     id="lcg_scode[slide_speed]"
                     value="<?php echo !empty($slide_speed) ? intval($slide_speed) : 1000; ?>">
-                    <p class="cmb2-metabox-description"><?php esc_html_e('Here 1000 is equal to 1 second. So provide a speed accordingly', LCG_TEXTDOMAIN); ?></p>
+                    <p class="cmb2-metabox-description"><?php esc_html_e('Here 1000 is equal to 1 second. So provide a speed accordingly', 'logo-showcase-ultimate'); ?></p>
                 </div>
             </div>
             <!--slide Timeout-->
             <div class="cmb-row cmb-type-text-medium">
                 <div class="cmb-th">
                     <label for="lcsp_ss">
-                        <?php esc_html_e('Slide Timeout', LCG_TEXTDOMAIN); ?>
+                        <?php esc_html_e('Slide Timeout', 'logo-showcase-ultimate'); ?>
                     </label>
                 </div>
                 <div class="cmb-td">
@@ -201,14 +201,14 @@ $carousel_pagination      = ! empty( $carousel_pagination ) ? esc_attr( $carouse
                            name="lcg_scode[slide_time]"
                            id="lcg_scode[slide_time]"
                            value="<?php echo !empty($slide_time) ? intval($slide_time) : 1000; ?>">
-                    <p class="cmb2-metabox-description"><?php esc_html_e('Here 1000 is equal to 1 second. So provide a timeout accordingly', LCG_TEXTDOMAIN); ?></p>
+                    <p class="cmb2-metabox-description"><?php esc_html_e('Here 1000 is equal to 1 second. So provide a timeout accordingly', 'logo-showcase-ultimate'); ?></p>
                 </div>
             </div>
             <!--Scrolling-->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
                     <label for="lcsp_spp">
-                        <?php esc_html_e('Scroll', LCG_TEXTDOMAIN); ?>
+                        <?php esc_html_e('Scroll', 'logo-showcase-ultimate'); ?>
                     </label>
                 </div>
                 <div class="cmb-td">
@@ -219,7 +219,7 @@ $carousel_pagination      = ! empty( $carousel_pagination ) ? esc_attr( $carouse
                             id="lcsp_spp1"
                             value="per_item" <?php checked('per_item', $scrool, true); ?>>
                             <label for="lcsp_spp1">
-                                <?php esc_html_e('Per Item', LCG_TEXTDOMAIN); ?>
+                                <?php esc_html_e('Per Item', 'logo-showcase-ultimate'); ?>
                             </label>
                         </li>
                         <li><input type="radio" class="cmb2-option"
@@ -227,7 +227,7 @@ $carousel_pagination      = ! empty( $carousel_pagination ) ? esc_attr( $carouse
                             id="lcsp_spp2"
                             value="per_page" <?php checked('per_page', $scrool, true); ?>>
                             <label for="lcsp_spp2">
-                                <?php esc_html_e('Per Page', LCG_TEXTDOMAIN); ?>
+                                <?php esc_html_e('Per Page', 'logo-showcase-ultimate'); ?>
                             </label>
                         </li>
                     </ul>
@@ -237,18 +237,18 @@ $carousel_pagination      = ! empty( $carousel_pagination ) ? esc_attr( $carouse
             <!--scrolling direction-->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
-                    <label for="lcsp_scrol_dir"><?php esc_html_e('Scrolling Direction', LCG_TEXTDOMAIN); ?></label>
+                    <label for="lcsp_scrol_dir"><?php esc_html_e('Scrolling Direction', 'logo-showcase-ultimate'); ?></label>
                 </div>
                 <div class="cmb-td">
                     <ul class="cmb2-radio-list cmb2-list">
-                        <li><input type="radio" class="cmb2-option" name="lcg_scode[scrol_direction]" id="lcg_scode[scrol_direction]2" value="left" <?php checked('left', $scrol_direction, true); ?>> <label for="lcg_scode[scrol_direction]2"><?php esc_html_e('Slide from Right to Left', LCG_TEXTDOMAIN); ?></label></li>
-                        <li><input type="radio" class="cmb2-option" name="lcg_scode[scrol_direction]" id="lcg_scode[scrol_direction]1" value="right" <?php checked('right', $scrol_direction, true); ?>> <label for="lcg_scode[scrol_direction]1"><?php esc_html_e('Slide from Left to Right', LCG_TEXTDOMAIN); ?></label></li>                                </ul>
+                        <li><input type="radio" class="cmb2-option" name="lcg_scode[scrol_direction]" id="lcg_scode[scrol_direction]2" value="left" <?php checked('left', $scrol_direction, true); ?>> <label for="lcg_scode[scrol_direction]2"><?php esc_html_e('Slide from Right to Left', 'logo-showcase-ultimate'); ?></label></li>
+                        <li><input type="radio" class="cmb2-option" name="lcg_scode[scrol_direction]" id="lcg_scode[scrol_direction]1" value="right" <?php checked('right', $scrol_direction, true); ?>> <label for="lcg_scode[scrol_direction]1"><?php esc_html_e('Slide from Left to Right', 'logo-showcase-ultimate'); ?></label></li>                                </ul>
                 </div>
             </div>
             <!-- display navigation -->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
-                    <label for="lcsp_soh"><?php esc_html_e('Navigation', LCG_TEXTDOMAIN); ?></label>
+                    <label for="lcsp_soh"><?php esc_html_e('Navigation', 'logo-showcase-ultimate'); ?></label>
                 </div>
                 <div class="cmb-td">
                     <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
@@ -257,7 +257,7 @@ $carousel_pagination      = ! empty( $carousel_pagination ) ? esc_attr( $carouse
                             id="lcsp_nav1"
                             value="yes" <?php checked('yes', $navigation, true); ?>>
                             <label for="lcsp_nav1">
-                                <?php esc_html_e('Yes', LCG_TEXTDOMAIN); ?>
+                                <?php esc_html_e('Yes', 'logo-showcase-ultimate'); ?>
                             </label>
                         </li>
                         <li><input type="radio" class="cmb2-option cmb2-radio-switch2"
@@ -265,7 +265,7 @@ $carousel_pagination      = ! empty( $carousel_pagination ) ? esc_attr( $carouse
                             id="lcsp_nav2"
                             value="no" <?php checked('no', $navigation, true);  ?>>
                             <label for="lcsp_nav2">
-                                <?php esc_html_e('No', LCG_TEXTDOMAIN); ?>
+                                <?php esc_html_e('No', 'logo-showcase-ultimate'); ?>
                             </label>
                         </li>
                     </ul>
@@ -274,7 +274,7 @@ $carousel_pagination      = ! empty( $carousel_pagination ) ? esc_attr( $carouse
             <!-- display carousel_pagination -->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
-                    <label for="lcsp_soh"><?php esc_html_e('Pagination', LCG_TEXTDOMAIN); ?></label>
+                    <label for="lcsp_soh"><?php esc_html_e('Pagination', 'logo-showcase-ultimate'); ?></label>
                 </div>
                 <div class="cmb-td">
                     <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
@@ -283,7 +283,7 @@ $carousel_pagination      = ! empty( $carousel_pagination ) ? esc_attr( $carouse
                             id="lcsp_c_pagi1"
                             value="yes" <?php checked('yes', $carousel_pagination, true); ?>>
                             <label for="lcsp_c_pagi1">
-                                <?php esc_html_e('Yes', LCG_TEXTDOMAIN); ?>
+                                <?php esc_html_e('Yes', 'logo-showcase-ultimate'); ?>
                             </label>
                         </li>
                         <li><input type="radio" class="cmb2-option cmb2-radio-switch2"
@@ -291,7 +291,7 @@ $carousel_pagination      = ! empty( $carousel_pagination ) ? esc_attr( $carouse
                             id="lcsp_c_pagi2"
                             value="no" <?php checked('no', $carousel_pagination, true);  ?>>
                             <label for="lcsp_c_pagi2">
-                                <?php esc_html_e('No', LCG_TEXTDOMAIN); ?>
+                                <?php esc_html_e('No', 'logo-showcase-ultimate'); ?>
                             </label>
                         </li>
                     </ul>

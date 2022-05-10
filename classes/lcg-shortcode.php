@@ -24,7 +24,7 @@ class Lcg_shortcode
             );
 
 		if ( empty( $id) ) {
-                return esc_html__('No shortcode ID provided', LCG_TEXTDOMAIN);
+                return esc_html__('No shortcode ID provided', 'logo-showcase-ultimate');
         }
         $this->lcg_enqueue_files();
 

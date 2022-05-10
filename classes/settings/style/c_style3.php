@@ -9,7 +9,7 @@ $c3_pagination   = !empty($c3_pagination)? $c3_pagination : 'yes';
     <div class="cmb-row cmb-type-radio">
         <div class="cmb-th">
             <label for="lcg_scode[c3_border]">
-                <?php esc_html_e('Border Show', LCG_TEXTDOMAIN); ?>
+                <?php esc_html_e('Border Show', 'logo-showcase-ultimate'); ?>
             </label>
         </div>    
         <div class="cmb-td">
@@ -20,7 +20,7 @@ $c3_pagination   = !empty($c3_pagination)? $c3_pagination : 'yes';
                     id="lcg_scode[c3_border]1" 
                     value="yes" <?php checked('yes', $c3_border, true);  ?>>
                     <label for="lcg_scode[c3_border]1">
-                        <?php esc_html_e('yes', LCG_TEXTDOMAIN); ?>
+                        <?php esc_html_e('yes', 'logo-showcase-ultimate'); ?>
                     </label>
                 </li>
                 <li>
@@ -30,7 +30,7 @@ $c3_pagination   = !empty($c3_pagination)? $c3_pagination : 'yes';
                     id="lcg_scode[c3_border]2" 
                     value="no" <?php checked('no', $c3_border, true);  ?>>
                     <label for="lcg_scode[c3_border]2">
-                        <?php esc_html_e('no', LCG_TEXTDOMAIN); ?>
+                        <?php esc_html_e('no', 'logo-showcase-ultimate'); ?>
                     </label>
                 </li>
             </ul>
@@ -42,7 +42,7 @@ $c3_pagination   = !empty($c3_pagination)? $c3_pagination : 'yes';
     <div class="cmb-row cmb-type-radio">
         <div class="cmb-th">
             <label for="lcg_scode[tooltip_posi]">
-                <?php esc_html_e('Pagination Show', LCG_TEXTDOMAIN); ?>
+                <?php esc_html_e('Pagination Show', 'logo-showcase-ultimate'); ?>
             </label>
         </div>    
         <div class="cmb-td">
@@ -53,7 +53,7 @@ $c3_pagination   = !empty($c3_pagination)? $c3_pagination : 'yes';
                     id="lcg_scode[c3_pagination]1" 
                     value="yes" <?php checked('yes', $c3_pagination, true);  ?>>
                     <label for="lcg_scode[c3_pagination]1">
-                        <?php esc_html_e('yes', LCG_TEXTDOMAIN); ?>
+                        <?php esc_html_e('yes', 'logo-showcase-ultimate'); ?>
                     </label>
                 </li>
                 <li>
@@ -63,7 +63,7 @@ $c3_pagination   = !empty($c3_pagination)? $c3_pagination : 'yes';
                     id="lcg_scode[c3_pagination]2" 
                     value="no" <?php checked('no', $c3_pagination, true);  ?>>
                     <label for="lcg_scode[c3_pagination]2">
-                        <?php esc_html_e('no', LCG_TEXTDOMAIN); ?>
+                        <?php esc_html_e('no', 'logo-showcase-ultimate'); ?>
                     </label>
                 </li>
             </ul>

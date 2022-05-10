@@ -12,7 +12,7 @@ $image_hover     = !empty($image_hover) ? $image_hover : 'yes';
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
                     <label for="lcg_scode[image_hover]">
-                        <?php esc_html_e('Image Hover Effect', LCG_TEXTDOMAIN); ?>
+                        <?php esc_html_e('Image Hover Effect', 'logo-showcase-ultimate'); ?>
                     </label>
                 </div>
                 <div class="cmb-td">
@@ -23,7 +23,7 @@ $image_hover     = !empty($image_hover) ? $image_hover : 'yes';
                             id="lcg_scode[image_hover]1" 
                             value="yes" <?php checked('yes', $image_hover, true);  ?>>
                             <label for="lcg_scode[image_hover]1">
-                                <?php esc_html_e('Yes', LCG_TEXTDOMAIN); ?>
+                                <?php esc_html_e('Yes', 'logo-showcase-ultimate'); ?>
                             </label>
                         </li>
                         <li>
@@ -33,7 +33,7 @@ $image_hover     = !empty($image_hover) ? $image_hover : 'yes';
                             id="lcg_scode[image_hover]2" 
                             value="no" <?php checked('no', $image_hover, true);  ?>>
                             <label for="lcg_scode[image_hover]2">
-                                <?php esc_html_e('No', LCG_TEXTDOMAIN); ?>
+                                <?php esc_html_e('No', 'logo-showcase-ultimate'); ?>
                             </label>
                         </li>
                     </ul>
@@ -44,7 +44,7 @@ $image_hover     = !empty($image_hover) ? $image_hover : 'yes';
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
                     <label for="lcg_scode[tooltip]">
-                        <?php esc_html_e('Display Tooltip', LCG_TEXTDOMAIN); ?>
+                        <?php esc_html_e('Display Tooltip', 'logo-showcase-ultimate'); ?>
                     </label>
                 </div>
                 <div class="cmb-td">
@@ -55,7 +55,7 @@ $image_hover     = !empty($image_hover) ? $image_hover : 'yes';
                                    id="lcg_scode[tooltip]1"
                                    value="yes" <?php checked('yes', $tooltip, true);  ?>>
                             <label for="lcg_scode[tooltip]1">
-                                <?php esc_html_e('Yes', LCG_TEXTDOMAIN); ?>
+                                <?php esc_html_e('Yes', 'logo-showcase-ultimate'); ?>
                             </label>
                         </li>
                         <li>
@@ -65,7 +65,7 @@ $image_hover     = !empty($image_hover) ? $image_hover : 'yes';
                                    id="lcg_scode[tooltip]2"
                                    value="no" <?php checked('no', $tooltip, true);  ?>>
                             <label for="lcg_scode[tooltip]2">
-                                <?php esc_html_e('No', LCG_TEXTDOMAIN); ?>
+                                <?php esc_html_e('No', 'logo-showcase-ultimate'); ?>
                             </label>
                         </li>
                     </ul>

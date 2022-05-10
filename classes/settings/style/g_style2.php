@@ -9,7 +9,7 @@ $g2_border = !empty($g2_border)? $g2_border : 'yes';
 
         <div class="cmb-th">
             <label for="lcg_scode[g2_border]">
-                <?php esc_html_e('Border Show', LCG_TEXTDOMAIN); ?>
+                <?php esc_html_e('Border Show', 'logo-showcase-ultimate'); ?>
             </label>
         </div>
         <div class="cmb-td">
@@ -20,7 +20,7 @@ $g2_border = !empty($g2_border)? $g2_border : 'yes';
                            id="lcg_scode[g2_border]1"
                            value="yes" <?php checked('yes', $g2_border, true);  ?>>
                     <label for="lcg_scode[g2_border]1">
-                        <?php esc_html_e('Yes', LCG_TEXTDOMAIN); ?>
+                        <?php esc_html_e('Yes', 'logo-showcase-ultimate'); ?>
                     </label>
                 </li>
                 <li>
@@ -30,7 +30,7 @@ $g2_border = !empty($g2_border)? $g2_border : 'yes';
                            id="lcg_scode[g2_border]2"
                            value="no" <?php checked('no', $g2_border, true);  ?>>
                     <label for="lcg_scode[g2_border]2">
-                        <?php esc_html_e('No', LCG_TEXTDOMAIN); ?>
+                        <?php esc_html_e('No', 'logo-showcase-ultimate'); ?>
                     </label>
                 </li>
             </ul>

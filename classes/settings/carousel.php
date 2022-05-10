@@ -1,14 +1,14 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) die( 'Are you cheating??? Accessing this file directly is forbidden.' );
-$stop_hover      = !empty($stop_hover) ? $stop_hover : 'yes';
-$A_play          = !empty($A_play) ? $A_play : 'yes';
-$repeat_product  = !empty($repeat_product) ? $repeat_product : 'yes';
-$pagination      = !empty($pagination) ? $pagination : 'yes';
-$scrol_direction = !empty($scrol_direction) ? $scrol_direction : 'left';
-$scrool          = !empty($scrool) ? $scrool : 'per_item';
-$c_theme         = ! empty( $c_theme ) ? $c_theme : 'carousel-theme-1';
-$navigation      = !empty($navigation) ? $navigation : 'yes';
-$carousel_pagination      = !empty($carousel_pagination) ? $carousel_pagination : 'no';
+$stop_hover               = ! empty( $stop_hover ) ? esc_attr( $stop_hover ) : 'yes';
+$A_play                   = ! empty( $A_play ) ? esc_attr( $A_play ) : 'yes';
+$repeat_product           = ! empty( $repeat_product ) ? esc_attr( $repeat_product ) : 'yes';
+$pagination               = ! empty( $pagination ) ? esc_attr( $pagination ) : 'yes';
+$scrol_direction          = ! empty( $scrol_direction ) ? esc_attr( $scrol_direction ) : 'left';
+$scrool                   = ! empty( $scrool ) ? esc_attr( $scrool ) : 'per_item';
+$c_theme                  = ! empty( $c_theme ) ? esc_attr( $c_theme ) : 'carousel-theme-1';
+$navigation               = ! empty( $navigation ) ? esc_attr( $navigation ) : 'yes';
+$carousel_pagination      = ! empty( $carousel_pagination ) ? esc_attr( $carousel_pagination ) : 'no';
 ?>
 <!--TAB 2  Carousel setting -->
 <div id="lcsp-tab-2" class="lcsp-tab-content">

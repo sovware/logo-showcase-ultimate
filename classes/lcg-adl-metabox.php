@@ -181,10 +181,24 @@ class Lcg_Metabox
         // save the meta data if it is our post type lcg_mainpost post type
         if(!empty($_POST['post_type']) && ('lcg_shortcode' == $_POST['post_type']) ){
 
-            $lcg_scode = !empty($_POST['lcg_scode']) ? lcg()::adl_enc_serialize($_POST['lcg_scode']) : lcg()::adl_enc_serialize(array());
+            $lcg_scode = ! empty( $_POST['lcg_scode'] ) ? lcg()::adl_enc_serialize( $this->lcg_sanitize_array( $_POST['lcg_scode'] ) ) : lcg()::adl_enc_serialize( array() );
 
-            update_post_meta($post_id, "lcg_scode", $lcg_scode);
+            update_post_meta( $post_id, "lcg_scode", $lcg_scode );
         }
+    }
+
+    public function lcg_sanitize_array(&$array)
+    {
+        foreach ($array as &$value) {
+            if (!is_array($value)) {
+                // sanitize if value is not an array
+                $value = sanitize_text_field($value);
+            } else {
+                // go inside this function again
+                $this->lcg_sanitize_array($value);
+            }
+        }
+        return $array;
     }
 
     //security check

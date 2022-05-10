@@ -1,10 +1,10 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) die( 'Are you cheating??? Accessing this file directly is forbidden.' );
-$cg_title_show   = !empty($cg_title_show) ? $cg_title_show : 'no';
-$lcg_type        = !empty($lcg_type) ? $lcg_type : 'latest';
-$image_crop      = !empty($image_crop) ? $image_crop : 'no';
-$upscale         = !empty($upscale) ? $upscale : 'yes';
-$target          = !empty($target) ? $target : '_blank';
+$cg_title_show   = ! empty( $cg_title_show ) ? esc_attr( $cg_title_show ) : 'no';
+$lcg_type        = ! empty( $lcg_type ) ? esc_attr( $lcg_type ) : 'latest';
+$image_crop      = ! empty( $image_crop ) ? esc_attr( $image_crop ) : 'no';
+$upscale         = ! empty( $upscale ) ? esc_attr( $upscale ) : 'yes';
+$target          = ! empty( $target ) ? esc_attr( $target ) : '_blank';
 ?>
 <!--TAB 1 General setting -->
 <div id="lcsp-tab-5" class="lcsp-tab-content">

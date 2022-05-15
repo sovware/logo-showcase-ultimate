@@ -72,7 +72,6 @@ if (!class_exists('Lcg_Main_Class')) {
                 ));
                 self::$instance->metabox                    = new Lcg_Metabox();
                 self::$instance->shortcode                  = new Lcg_shortcode();
-                self::$instance->migration                  = new Lcg_Migration();
             }
 
             return self::$instance;
@@ -104,7 +103,6 @@ if (!class_exists('Lcg_Main_Class')) {
             require_once LCG_PLUGIN_DIR . 'classes/lcg-adl-metabox.php';
             require_once LCG_PLUGIN_DIR . 'classes/lcg-resize.php';
             require_once LCG_PLUGIN_DIR . 'classes/lcg-shortcode.php';
-            require_once LCG_PLUGIN_DIR . 'classes/lcg-migration.php';
         }
 
         //enqueues all the styles and scripts

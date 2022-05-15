@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) die( 'Are you cheating??? Accessing this file directly is forbidden.' );
-$g1_border = !empty($g1_border) ? $g1_border : 'yes';
+$g1_border = ! empty( $g1_border ) ? $g1_border : 'yes';
 ?>
 <div class="grid_theme" id="g_theme1">
     

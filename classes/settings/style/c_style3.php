@@ -1,7 +1,7 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) die( 'Are you cheating??? Accessing this file directly is forbidden.' );
-$c3_border       = !empty($c3_border)? $c3_border : 'yes';
-$c3_pagination   = !empty($c3_pagination)? $c3_pagination : 'yes';
+$c3_border       = ! empty( $c3_border ) ? $c3_border : 'yes';
+$c3_pagination   = ! empty( $c3_pagination ) ? $c3_pagination : 'yes';
 ?>
 <!-- Carousel style 1 -->
 <!-- Border show/hide -->
@@ -70,4 +70,4 @@ $c3_pagination   = !empty($c3_pagination)? $c3_pagination : 'yes';
         </div>
     </div>
     
-</div>  
+</div>

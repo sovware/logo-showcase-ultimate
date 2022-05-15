@@ -1,8 +1,8 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) die( 'Are you cheating??? Accessing this file directly is forbidden.' );
-$c1_border       = !empty($c1_border) ? $c1_border : 'yes';
-$c1_nav_position = !empty($c1_nav_position) ? $c1_nav_position : 'top_right';
-$c1_nav          = !empty($c1_nav) ? $c1_nav : 'yes';
+$c1_border       = ! empty( $c1_border ) ? $c1_border : 'yes';
+$c1_nav_position = ! empty( $c1_nav_position ) ? $c1_nav_position : 'top_right';
+$c1_nav          = ! empty( $c1_nav ) ? $c1_nav : 'yes';
 ?>
 <!-- Carousel style 1 -->
 <!-- Border show/hide -->

@@ -1,8 +1,8 @@
 <?php 
-$g_theme                = ! empty( $g_theme ) ? esc_attr( $g_theme) : 'grid-theme-1';
-$g_columns              = ! empty( $g_columns ) ? esc_attr( $g_columns) : '4';
-$g_columns_tablet       = ! empty( $g_columns_tablet ) ? esc_attr( $g_columns_tablet) : '2';
-$g_columns_mobile       = ! empty( $g_columns_mobile ) ? esc_attr( $g_columns_mobile) : '2';
+$g_theme                = ! empty( $g_theme ) ? $g_theme : 'grid-theme-1';
+$g_columns              = ! empty( $g_columns ) ? $g_columns : '4';
+$g_columns_tablet       = ! empty( $g_columns_tablet ) ? $g_columns_tablet : '2';
+$g_columns_mobile       = ! empty( $g_columns_mobile ) ? $g_columns_mobile : '2';
 ?>
 <!--TAB 3  Grid setting -->
 <div id="lcsp-tab-3" class="lcsp-tab-content">

@@ -1,8 +1,8 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) die( 'Are you cheating??? Accessing this file directly is forbidden.' );
-$tooltip         = !empty($tooltip) ? $tooltip : 'yes';
-$tooltip_posi    = !empty($tooltip_posi) ? $tooltip_posi : 'bottom';
-$image_hover     = !empty($image_hover) ? $image_hover : 'yes';
+$tooltip         = ! empty( $tooltip ) ? $tooltip : 'yes';
+$tooltip_posi    = ! empty( $tooltip_posi ) ? $tooltip_posi : 'bottom';
+$image_hover     = ! empty( $image_hover ) ? $image_hover : 'yes';
 ?>
 <!--TAB 4  Style setting -->
 <div id="lcsp-tab-4" class="lcsp-tab-content">

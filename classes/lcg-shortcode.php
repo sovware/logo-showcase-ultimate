@@ -14,64 +14,69 @@ class Lcg_shortcode
      * @param null $content
      * @return string
      */
-    public function lcg_shortcode_creat($atts, $content = null ) {
+    public function lcg_shortcode_creat( $atts, $content = null ) {
 		ob_start();
 
-		extract( shortcode_atts(array(
-                    'id' => "",
-                ), $atts
-                )
-            );
-
-		if ( empty( $id) ) {
-                return esc_html__('No shortcode ID provided', 'logo-showcase-ultimate');
+        $atts = shortcode_atts( array(
+            'id'    =>  ''
+        ), $atts );
+        
+        if ( empty( $atts['id'] ) ) {
+            return;
         }
+            
+        $post_id =  absint( $atts['id'] );
+        
+        if ( empty( $post_id ) ) {
+            return;
+        }
+
         $this->lcg_enqueue_files();
 
-        $lcg_value = get_post_meta($id,'lcg_scode',true);
+        $lcg_value = get_post_meta( $post_id, 'lcg_scode', true );
 
         $data_encoded   = ( !empty($lcg_value) ) ? lcg()::adl_enc_unserialize( $lcg_value ) : array();
         extract($data_encoded);
         $rand_id            = rand();
-        $cg_title 			= ! empty( $cg_title ) ? esc_attr( $cg_title ) : '';
-        $cg_title_show      = ! empty( $cg_title_show ) ? esc_attr( $cg_title_show ) : 'no';
-        $lcg_type 			= ! empty( $lcg_type ) ? esc_attr( $lcg_type ) : 'latest';
-        $layout   			= ! empty( $layout ) ? esc_attr( $layout ) : 'carousel';
-        $c_theme  			= ! empty( $c_theme ) ? esc_attr( $c_theme ) : 'carousel-theme-1';
-        $g_theme  			= ! empty( $g_theme ) ? esc_attr( $g_theme ) : 'grid-theme-1';
-        $image_crop 		= ! empty( $image_crop ) ? esc_attr( $image_crop ) : "yes";
-		$upscale		   	= ! empty( $upscale ) ? esc_attr( $upscale ) : "yes";
-        $image_width 		= ! empty( $image_width ) ? esc_attr( $image_width ) : 185; // Image width for cropping
-        $image_height 		= ! empty( $image_height ) ? esc_attr( $image_height ) : 119;
-        $target				= ! empty( $target ) ? esc_attr( $target ) : '_blank';
-        $c1_nav             = ! empty( $c1_nav ) ? esc_attr( $c1_nav ) : 'yes';
-        $tooltip_show       = ! empty( $tooltip ) ? esc_attr( $tooltip ) : 'yes';
-        $c1_nav_position    = ! empty( $c1_nav_position ) ? esc_attr( $c1_nav_position ) : 'top_right';
-        $c2_nav             = ! empty( $c2_nav ) ? esc_attr( $c2_nav ) : 'yes';
-        $g_columns          = ! empty( $g_columns ) ? intval( esc_attr( $g_columns ) ) : 6;
-        $g_columns_tablet   = ! empty( $g_columns_tablet ) ? intval( esc_attr( $g_columns_tablet ) ) : 4;
-        $g_columns_mobile   = ! empty( $g_columns_mobile ) ? intval( esc_attr( $g_columns_mobile ) ) : 2;
+        $cg_title 			= ! empty( $cg_title ) ? $cg_title : '';
+        $cg_title_show      = ! empty( $cg_title_show ) ? $cg_title_show : 'no';
+        $lcg_type 			= ! empty( $lcg_type ) ? $lcg_type : 'latest';
+        $layout   			= ! empty( $layout ) ? $layout : 'carousel';
+        $c_theme  			= ! empty( $c_theme ) ? $c_theme : 'carousel-theme-1';
+        $g_theme  			= ! empty( $g_theme ) ? $g_theme : 'grid-theme-1';
+        $image_crop 		= ! empty( $image_crop ) ? $image_crop : "yes";
+		$upscale		   	= ! empty( $upscale ) ? $upscale : "yes";
+        $image_width 		= ! empty( $image_width ) ? $image_width : 185; // Image width for cropping
+        $image_height 		= ! empty( $image_height ) ? $image_height : 119;
+        $target				= ! empty( $target ) ? $target : '_blank';
+        $c1_nav             = ! empty( $c1_nav ) ? $c1_nav : 'yes';
+        $tooltip_show       = ! empty( $tooltip ) ? $tooltip : 'yes';
+        $c1_nav_position    = ! empty( $c1_nav_position ) ? $c1_nav_position : 'top_right';
+        $c2_nav             = ! empty( $c2_nav ) ? $c2_nav : 'yes';
+        $g_columns          = ! empty( $g_columns ) ? intval( $g_columns ) : 6;
+        $g_columns_tablet   = ! empty( $g_columns_tablet ) ? intval( $g_columns_tablet ) : 4;
+        $g_columns_mobile   = ! empty( $g_columns_mobile ) ? intval( $g_columns_mobile ) : 2;
 
-        $c_desktop          = ! empty( $c_desktop ) ? intval( esc_attr( $c_desktop ) ) : 5;
-        $c_desktop_small    = ! empty( $c_desktop_small ) ? intval( esc_attr( $c_desktop_small ) ) : 4;
-        $c_tablet           = ! empty( $c_tablet ) ? intval( esc_attr( $c_tablet ) ) : 3;
-        $c_mobile           = ! empty( $c_mobile ) ? intval( esc_attr( $c_mobile ) ) : 2;
+        $c_desktop          = ! empty( $c_desktop ) ? intval( $c_desktop ) : 5;
+        $c_desktop_small    = ! empty( $c_desktop_small ) ? intval( $c_desktop_small ) : 4;
+        $c_tablet           = ! empty( $c_tablet ) ? intval( $c_tablet ) : 3;
+        $c_mobile           = ! empty( $c_mobile ) ? intval( $c_mobile ) : 2;
 
-        $tooltip_posi       = ! empty( $tooltip_posi ) ? esc_attr( $tooltip_posi ) : "top";
-        $total_logos        = ! empty( $total_logos ) ? intval( esc_attr( $total_logos ) ) : 12;
+        $tooltip_posi       = ! empty( $tooltip_posi ) ? $tooltip_posi : "top";
+        $total_logos        = ! empty( $total_logos ) ? intval( $total_logos ) : 12;
 
         //carousel settings
-        $navigation                  = ! empty( $navigation ) ? esc_attr( $navigation ) : 'yes';
-        $carousel_pagination         = ! empty( $carousel_pagination ) ? esc_attr( $carousel_pagination ) : 'no';
-        $A_play                      = ! empty( $A_play ) ? esc_attr( $A_play ) : 'yes';
-        $slide_speed                 = ! empty( $slide_speed ) ? esc_attr( $slide_speed ) : '2000';
-        $slide_time                  = ! empty( $slide_time ) ? intval( esc_attr( $slide_time ) ) : '2000';
-        $scrool                      = ! empty( $scrool ) ? esc_attr( $scrool ) : 'per_item';
-        $repeat_product              = ! empty( $repeat_product ) ? esc_attr( $repeat_product ) : 'yes';
-        $stop_hover                  = ! empty( $stop_hover ) ? esc_attr( $stop_hover ) : 'yes';
-        $scrol_direction             = ! empty( $scrol_direction ) ? esc_attr( $scrol_direction ) : 'left';
+        $navigation                  = ! empty( $navigation ) ? $navigation : 'yes';
+        $carousel_pagination         = ! empty( $carousel_pagination ) ? $carousel_pagination : 'no';
+        $A_play                      = ! empty( $A_play ) ? $A_play : 'yes';
+        $slide_speed                 = ! empty( $slide_speed ) ? $slide_speed : '2000';
+        $slide_time                  = ! empty( $slide_time ) ? intval( $slide_time ) : '2000';
+        $scrool                      = ! empty( $scrool ) ? $scrool : 'per_item';
+        $repeat_product              = ! empty( $repeat_product ) ? $repeat_product : 'yes';
+        $stop_hover                  = ! empty( $stop_hover ) ? $stop_hover : 'yes';
+        $scrol_direction             = ! empty( $scrol_direction ) ? $scrol_direction : 'left';
 
-        $image_hover     = ! empty( $image_hover ) ? esc_attr( $image_hover ) : 'yes';
+        $image_hover     = ! empty( $image_hover ) ? $image_hover : 'yes';
 
         $image_hover_effect = '';
         if( ! empty( 'yes' == $image_hover ) ) {
@@ -110,20 +115,20 @@ class Lcg_shortcode
         if ( $adl_logo->have_posts() ) { ?>
 
         <?php if( 'yes' == $cg_title_show ) { ?>
-        <h4 class="wpwax-lsu-title"><?php echo ! empty( $cg_title ) ? $cg_title : ''; ?></h4>
+        <h4 class="wpwax-lsu-title"><?php echo ! empty( $cg_title ) ? esc_html( $cg_title ) : ''; ?></h4>
         <?php } ?>
 
-            <div class="wpwax-lsu-ultimate <?php echo $image_hover_effect; ?> wpwax-lsu-grid wpwax-lsu-<?php echo $theme; ?> <?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-logo-col-lg-' . $g_columns . ' wpwax-lsu-logo-col-md-' . $g_columns_tablet . ' wpwax-lsu-logo-col-sm-' . $g_columns_mobile . '' : 'wpwax-lsu-carousel wpwax-lsu-' . $theme . ' wpwax-lsu-carousel-nav-top'; ?> <?php echo $box_shadow_class; ?>"
+            <div class="wpwax-lsu-ultimate <?php echo esc_attr( $image_hover_effect ); ?> wpwax-lsu-grid wpwax-lsu-<?php echo esc_attr( $theme ); ?> <?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-logo-col-lg-' . esc_attr( $g_columns ) . ' wpwax-lsu-logo-col-md-' . esc_attr( $g_columns_tablet ) . ' wpwax-lsu-logo-col-sm-' . esc_attr( $g_columns_mobile ) . '' : 'wpwax-lsu-carousel wpwax-lsu-' . esc_attr( $theme ) . ' wpwax-lsu-carousel-nav-top'; ?> <?php echo esc_attr( $box_shadow_class ); ?>"
             <?php if( 'carousel' == $layout ) { ?>
                 data-lsu-items      = "5"
                 data-lsu-margin     = "20" 
                 data-lsu-loop       = "<?php echo ( 'yes' == $repeat_product ) ? 'true' : 'false'; ?>" 
                 data-lsu-perslide   = "1"
-                data-lsu-speed      = "<?php echo $slide_speed; ?>"
+                data-lsu-speed      = "<?php echo esc_attr( $slide_speed ); ?>"
                 data-lsu-autoplay   = '
                 <?php if( 'yes' == $A_play ) { ?>
                 {
-                    "delay": "<?php echo $slide_time; ?>",
+                    "delay": "<?php echo esc_attr( $slide_time ); ?>",
                     "pauseOnMouseEnter": <?php echo ( 'yes' == $stop_hover ) ? 'true' : 'false'; ?>,
                     "disableOnInteraction": false,
                     "stopOnLastSlide": true,
@@ -134,10 +139,10 @@ class Lcg_shortcode
                 <?php } ?>
                 '
                 data-lsu-responsive ='{
-                    "0": {"slidesPerView": "<?php echo $c_mobile; ?>",  "slidesPerGroup": "<?php echo 'per_item' == $scrool ? '1' : $c_mobile; ?>", "spaceBetween": "15"}, 
-                    "768": {"slidesPerView": "<?php echo $c_tablet; ?>",  "slidesPerGroup": "<?php echo 'per_item' == $scrool ? '1' : $c_tablet; ?>", "spaceBetween": "15"}, 
-                    "979": {"slidesPerView": "<?php echo $c_desktop_small; ?>",  "slidesPerGroup": "<?php echo 'per_item' == $scrool ? '1' : $c_desktop_small; ?>", "spaceBetween": "20"}, 
-                    "1199": {"slidesPerView": "<?php echo $c_desktop; ?>",  "slidesPerGroup": "<?php echo 'per_item' == $scrool ? '1' : $c_desktop; ?>", "spaceBetween": "30"}
+                    "0": {"slidesPerView": "<?php echo esc_attr( $c_mobile ); ?>",  "slidesPerGroup": "<?php echo 'per_item' == $scrool ? '1' : $c_mobile; ?>", "spaceBetween": "15"}, 
+                    "768": {"slidesPerView": "<?php echo esc_attr( $c_tablet ); ?>",  "slidesPerGroup": "<?php echo 'per_item' == $scrool ? '1' : $c_tablet; ?>", "spaceBetween": "15"}, 
+                    "979": {"slidesPerView": "<?php echo esc_attr( $c_desktop_small ); ?>",  "slidesPerGroup": "<?php echo 'per_item' == $scrool ? '1' : $c_desktop_small; ?>", "spaceBetween": "20"}, 
+                    "1199": {"slidesPerView": "<?php echo esc_attr( $c_desktop ); ?>",  "slidesPerGroup": "<?php echo 'per_item' == $scrool ? '1' : $c_desktop; ?>", "spaceBetween": "30"}
                 }'
             <?php } ?>
             >

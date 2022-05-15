@@ -1,14 +1,14 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) die( 'Are you cheating??? Accessing this file directly is forbidden.' );
-$stop_hover               = ! empty( $stop_hover ) ? esc_attr( $stop_hover ) : 'yes';
-$A_play                   = ! empty( $A_play ) ? esc_attr( $A_play ) : 'yes';
-$repeat_product           = ! empty( $repeat_product ) ? esc_attr( $repeat_product ) : 'yes';
-$pagination               = ! empty( $pagination ) ? esc_attr( $pagination ) : 'yes';
-$scrol_direction          = ! empty( $scrol_direction ) ? esc_attr( $scrol_direction ) : 'left';
-$scrool                   = ! empty( $scrool ) ? esc_attr( $scrool ) : 'per_item';
-$c_theme                  = ! empty( $c_theme ) ? esc_attr( $c_theme ) : 'carousel-theme-1';
-$navigation               = ! empty( $navigation ) ? esc_attr( $navigation ) : 'yes';
-$carousel_pagination      = ! empty( $carousel_pagination ) ? esc_attr( $carousel_pagination ) : 'no';
+$stop_hover               = ! empty( $stop_hover ) ? $stop_hover : 'yes';
+$A_play                   = ! empty( $A_play ) ? $A_play : 'yes';
+$repeat_product           = ! empty( $repeat_product ) ? $repeat_product : 'yes';
+$pagination               = ! empty( $pagination ) ? $pagination : 'yes';
+$scrol_direction          = ! empty( $scrol_direction ) ? $scrol_direction : 'left';
+$scrool                   = ! empty( $scrool ) ? $scrool : 'per_item';
+$c_theme                  = ! empty( $c_theme ) ? $c_theme : 'carousel-theme-1';
+$navigation               = ! empty( $navigation ) ? $navigation : 'yes';
+$carousel_pagination      = ! empty( $carousel_pagination ) ? $carousel_pagination : 'no';
 ?>
 <!--TAB 2  Carousel setting -->
 <div id="lcsp-tab-2" class="lcsp-tab-content">
@@ -134,7 +134,7 @@ $carousel_pagination      = ! empty( $carousel_pagination ) ? esc_attr( $carouse
                             <input type="text" class="cmb2-text-small"
                             name="lcg_scode[c_desktop]"
                             id="lcsp_li_desktop"
-                            value="<?php echo !empty($c_desktop) ? intval($c_desktop) : 5; ?>">
+                            value="<?php echo ! empty( $c_desktop ) ? intval( $c_desktop ) : 5; ?>">
                         </div>
                         <div class="input-group">
                             <div class="input-group-prepend">
@@ -144,7 +144,7 @@ $carousel_pagination      = ! empty( $carousel_pagination ) ? esc_attr( $carouse
                             <input type="text" class="cmb2-text-small"
                             name="lcg_scode[c_desktop_small]"
                             id="lcsp_li_desktop_small"
-                            value="<?php echo !empty($c_desktop_small) ? intval($c_desktop_small) : 4; ?>">
+                            value="<?php echo ! empty( $c_desktop_small ) ? intval( $c_desktop_small ) : 4; ?>">
                         </div>
                         <div class="input-group">
                             <div class="input-group-prepend">
@@ -154,7 +154,7 @@ $carousel_pagination      = ! empty( $carousel_pagination ) ? esc_attr( $carouse
                             <input type="text" class="cmb2-text-small"
                             name="lcg_scode[c_tablet]"
                             id="lcsp_li_tablet"
-                            value="<?php echo !empty($c_tablet) ? intval($c_tablet) : 3; ?>">
+                            value="<?php echo ! empty( $c_tablet ) ? intval( $c_tablet ) : 3; ?>">
                         </div>
                         <div class="input-group">
                             <div class="input-group-prepend">
@@ -164,7 +164,7 @@ $carousel_pagination      = ! empty( $carousel_pagination ) ? esc_attr( $carouse
                             <input type="text" class="cmb2-text-small"
                             name="lcg_scode[c_mobile]"
                             id="lcsp_li_mobile"
-                            value="<?php echo !empty($c_mobile) ? intval($c_mobile) : 2; ?>">
+                            value="<?php echo ! empty( $c_mobile ) ? intval( $c_mobile ) : 2; ?>">
                         </div>
                     </div>
 
@@ -185,7 +185,7 @@ $carousel_pagination      = ! empty( $carousel_pagination ) ? esc_attr( $carouse
                     <input type="text" class="cmb2-text-small"
                     name="lcg_scode[slide_speed]"
                     id="lcg_scode[slide_speed]"
-                    value="<?php echo !empty($slide_speed) ? intval($slide_speed) : 1000; ?>">
+                    value="<?php echo ! empty( $slide_speed ) ? intval( $slide_speed ) : 1000; ?>">
                     <p class="cmb2-metabox-description"><?php esc_html_e('Here 1000 is equal to 1 second. So provide a speed accordingly', 'logo-showcase-ultimate'); ?></p>
                 </div>
             </div>
@@ -200,7 +200,7 @@ $carousel_pagination      = ! empty( $carousel_pagination ) ? esc_attr( $carouse
                     <input type="text" class="cmb2-text-small"
                            name="lcg_scode[slide_time]"
                            id="lcg_scode[slide_time]"
-                           value="<?php echo !empty($slide_time) ? intval($slide_time) : 1000; ?>">
+                           value="<?php echo ! empty( $slide_time ) ? intval( $slide_time ) : 1000; ?>">
                     <p class="cmb2-metabox-description"><?php esc_html_e('Here 1000 is equal to 1 second. So provide a timeout accordingly', 'logo-showcase-ultimate'); ?></p>
                 </div>
             </div>

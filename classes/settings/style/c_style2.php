@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) die( 'Are you cheating??? Accessing this file directly is forbidden.' );
-$c2_nav          = !empty($c2_nav) ? $c2_nav : 'yes';
+$c2_nav          = ! empty( $c2_nav ) ? $c2_nav : 'yes';
 ?>
 <div class="lcg_theme" id="c_theme2">
     

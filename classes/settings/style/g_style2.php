@@ -1,5 +1,11 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) die( 'Are you cheating??? Accessing this file directly is forbidden.' );
+/**
+ * Exit if accessed directly
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 $g2_border = ! empty( $g2_border ) ? $g2_border : 'yes';
 ?>
 <div class="grid_theme" id="g_theme2">
@@ -9,7 +15,7 @@ $g2_border = ! empty( $g2_border ) ? $g2_border : 'yes';
 
         <div class="cmb-th">
             <label for="lcg_scode[g2_border]">
-                <?php esc_html_e('Border Show', 'logo-showcase-ultimate'); ?>
+                <?php esc_html_e( 'Border Show', 'logo-showcase-ultimate' ); ?>
             </label>
         </div>
         <div class="cmb-td">
@@ -18,9 +24,9 @@ $g2_border = ! empty( $g2_border ) ? $g2_border : 'yes';
                     <input type="radio" class="cmb2-option"
                            name="lcg_scode[g2_border]"
                            id="lcg_scode[g2_border]1"
-                           value="yes" <?php checked('yes', $g2_border, true);  ?>>
+                           value="yes" <?php checked( 'yes', $g2_border, true );  ?>>
                     <label for="lcg_scode[g2_border]1">
-                        <?php esc_html_e('Yes', 'logo-showcase-ultimate'); ?>
+                        <?php esc_html_e( 'Yes', 'logo-showcase-ultimate' ); ?>
                     </label>
                 </li>
                 <li>
@@ -28,9 +34,9 @@ $g2_border = ! empty( $g2_border ) ? $g2_border : 'yes';
                            class="cmb2-option"
                            name="lcg_scode[g2_border]"
                            id="lcg_scode[g2_border]2"
-                           value="no" <?php checked('no', $g2_border, true);  ?>>
+                           value="no" <?php checked( 'no', $g2_border, true );  ?>>
                     <label for="lcg_scode[g2_border]2">
-                        <?php esc_html_e('No', 'logo-showcase-ultimate'); ?>
+                        <?php esc_html_e( 'No', 'logo-showcase-ultimate' ); ?>
                     </label>
                 </li>
             </ul>

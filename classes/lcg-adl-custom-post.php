@@ -1,19 +1,20 @@
-<?php 
+<?php
+/**
+ * Exit if accessed directly
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
- //Protect direct access
-if ( ! defined( 'ABSPATH' ) ) die( 'Are you cheating??? Accessing this file directly is forbidden.' );
-
-class Lcg_Custom_Post
-{
-	public function __construct() {
-
+class Lcg_Custom_Post {
+    
+	public function __construct () {
 		//register custom post and taxonomy
-		add_action('init',array($this,'lcg_custom_post_taxonomy'));
-		
+		add_action( 'init', array( $this, 'register' ) );
 	}
 
 	//method for custom post and taxonomy
-	public function lcg_custom_post_taxonomy() {
+	public function register() {
 
 		$main_labels = array(
 			'name'               => _x( 'Logos', 'logo-showcase-ultimate' ),
@@ -84,9 +85,7 @@ class Lcg_Custom_Post
         //register shortcode generator/carousel post type
         register_post_type( 'lcg_shortcode', $shortcode_args );
 
-
 		// logo category taxonomy registration
-
         $cat_tax_labels = array(
             'name'              => __( 'Logo Categories', 'logo-showcase-ultimate' ),
             'singular_name'     => __( 'Logo Category', 'logo-showcase-ultimate' ),
@@ -111,9 +110,8 @@ class Lcg_Custom_Post
         );
 
         register_taxonomy( 'lcg_category', 'lcg_mainpost', $cat_tax_args );
-
-	}//end lcg_custom_post_taxonomy
-
-	
+    
+		flush_rewrite_rules();
+	}//end register
 
 }//end class

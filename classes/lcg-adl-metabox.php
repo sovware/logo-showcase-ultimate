@@ -1,20 +1,22 @@
 <?php
-//Protect direct access
-if ( ! defined( 'ABSPATH' ) ) die( 'Are you cheating??? Accessing this file directly is forbidden.' );
+/**
+ * Exit if accessed directly
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 class Lcg_Metabox
 {
-	public function __construct() {
+	public function __construct () {
 		// Customize the updated messages for lcg custom posts
-        add_filter( 'post_updated_messages', array($this, 'lcg_customize_updated_messages') );
+        add_filter( 'post_updated_messages', array( $this, 'lcg_customize_updated_messages' ) );
         // customize the column name on the carousel listing page.
-        add_filter('manage_lcg_shortcode_posts_columns', array($this, 'lcg_custom_column_carousel_screen'));
-
-        add_action('manage_lcg_shortcode_posts_custom_column', array($this, 'lcg_manage_custom_columns_carousel_screen'), 10, 2);
-
-        add_action('do_meta_boxes', array($this, 'lcg_change_logo_meta_box_position'));
-        add_action( 'add_meta_boxes', array($this, 'add_meta_boxes') );
-        add_action( 'edit_post', array($this, 'lcg_save_post_meta') );
+        add_filter( 'manage_lcg_shortcode_posts_columns', array( $this, 'lcg_custom_column_carousel_screen' ) );
+        add_action( 'manage_lcg_shortcode_posts_custom_column', array( $this, 'lcg_manage_custom_columns_carousel_screen' ), 10, 2 );
+        add_action( 'do_meta_boxes', array( $this, 'lcg_change_logo_meta_box_position' ) );
+        add_action( 'add_meta_boxes', array( $this, 'add_meta_boxes') );
+        add_action( 'edit_post', array( $this, 'lcg_save_post_meta' ) );
 
 	}
 

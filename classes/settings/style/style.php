@@ -1,5 +1,11 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) die( 'Are you cheating??? Accessing this file directly is forbidden.' );
+/**
+ * Exit if accessed directly
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 $tooltip         = ! empty( $tooltip ) ? $tooltip : 'yes';
 $tooltip_posi    = ! empty( $tooltip_posi ) ? $tooltip_posi : 'bottom';
 $image_hover     = ! empty( $image_hover ) ? $image_hover : 'yes';
@@ -12,7 +18,7 @@ $image_hover     = ! empty( $image_hover ) ? $image_hover : 'yes';
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
                     <label for="lcg_scode[image_hover]">
-                        <?php esc_html_e('Image Hover Effect', 'logo-showcase-ultimate'); ?>
+                        <?php esc_html_e( 'Image Hover Effect', 'logo-showcase-ultimate' ); ?>
                     </label>
                 </div>
                 <div class="cmb-td">
@@ -21,9 +27,9 @@ $image_hover     = ! empty( $image_hover ) ? $image_hover : 'yes';
                             <input type="radio" class="cmb2-option cmb2-radio-switch1" 
                             name="lcg_scode[image_hover]" 
                             id="lcg_scode[image_hover]1" 
-                            value="yes" <?php checked('yes', $image_hover, true);  ?>>
+                            value="yes" <?php checked( 'yes', $image_hover, true );  ?>>
                             <label for="lcg_scode[image_hover]1">
-                                <?php esc_html_e('Yes', 'logo-showcase-ultimate'); ?>
+                                <?php esc_html_e( 'Yes', 'logo-showcase-ultimate' ); ?>
                             </label>
                         </li>
                         <li>
@@ -31,9 +37,9 @@ $image_hover     = ! empty( $image_hover ) ? $image_hover : 'yes';
                             class="cmb2-option cmb2-radio-switch2" 
                             name="lcg_scode[image_hover]" 
                             id="lcg_scode[image_hover]2" 
-                            value="no" <?php checked('no', $image_hover, true);  ?>>
+                            value="no" <?php checked( 'no', $image_hover, true );  ?>>
                             <label for="lcg_scode[image_hover]2">
-                                <?php esc_html_e('No', 'logo-showcase-ultimate'); ?>
+                                <?php esc_html_e( 'No', 'logo-showcase-ultimate' ); ?>
                             </label>
                         </li>
                     </ul>
@@ -44,7 +50,7 @@ $image_hover     = ! empty( $image_hover ) ? $image_hover : 'yes';
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
                     <label for="lcg_scode[tooltip]">
-                        <?php esc_html_e('Display Tooltip', 'logo-showcase-ultimate'); ?>
+                        <?php esc_html_e( 'Display Tooltip', 'logo-showcase-ultimate' ); ?>
                     </label>
                 </div>
                 <div class="cmb-td">
@@ -53,9 +59,9 @@ $image_hover     = ! empty( $image_hover ) ? $image_hover : 'yes';
                             <input type="radio" class="cmb2-option cmb2-radio-switch1"
                                    name="lcg_scode[tooltip]"
                                    id="lcg_scode[tooltip]1"
-                                   value="yes" <?php checked('yes', $tooltip, true);  ?>>
+                                   value="yes" <?php checked( 'yes', $tooltip, true ); ?>>
                             <label for="lcg_scode[tooltip]1">
-                                <?php esc_html_e('Yes', 'logo-showcase-ultimate'); ?>
+                                <?php esc_html_e( 'Yes', 'logo-showcase-ultimate' ); ?>
                             </label>
                         </li>
                         <li>
@@ -63,17 +69,14 @@ $image_hover     = ! empty( $image_hover ) ? $image_hover : 'yes';
                                    class="cmb2-option cmb2-radio-switch2"
                                    name="lcg_scode[tooltip]"
                                    id="lcg_scode[tooltip]2"
-                                   value="no" <?php checked('no', $tooltip, true);  ?>>
+                                   value="no" <?php checked( 'no', $tooltip, true ); ?>>
                             <label for="lcg_scode[tooltip]2">
-                                <?php esc_html_e('No', 'logo-showcase-ultimate'); ?>
+                                <?php esc_html_e( 'No', 'logo-showcase-ultimate' ); ?>
                             </label>
                         </li>
                     </ul>
                 </div>
             </div>
-          
-
-
         </div> <!-- end cmb2-metabox -->
     </div> <!-- end cmb2-wrap -->
 </div> <!-- end lcsp-tab-4 

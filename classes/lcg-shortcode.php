@@ -1,20 +1,24 @@
 <?php 
-if ( ! defined( 'ABSPATH' ) ) die( 'Direct access is not allow' );
-class Lcg_shortcode
-{
-	public function __construct() {
-		//shortcode hook
-		add_shortcode("logo_showcase", array( $this, 'lcg_shortcode_creat' ) );
-	}
+/**
+ * Exit if accessed directly
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
-	//shortcode cr
+class Lcg_shortcode {
+
+	public function __construct () {
+		//shortcode hook
+		add_shortcode("logo_showcase", array( $this, 'shortcode_create' ) );
+	}
 
     /**
      * @param $atts
      * @param null $content
      * @return string
      */
-    public function lcg_shortcode_creat( $atts, $content = null ) {
+    public function shortcode_create( $atts, $content = null ) {
 		ob_start();
 
         $atts = shortcode_atts( array(
@@ -36,7 +40,7 @@ class Lcg_shortcode
         $lcg_value = get_post_meta( $post_id, 'lcg_scode', true );
 
         $data_encoded   = ( !empty($lcg_value) ) ? lcg()::adl_enc_unserialize( $lcg_value ) : array();
-        extract($data_encoded);
+        extract( $data_encoded );
         $rand_id            = rand();
         $cg_title 			= ! empty( $cg_title ) ? $cg_title : '';
         $cg_title_show      = ! empty( $cg_title_show ) ? $cg_title_show : 'no';
@@ -150,18 +154,18 @@ class Lcg_shortcode
                 <div class="<?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-content' : 'swiper-wrapper'; ?>">
 
                     <?php
-                    while ($adl_logo->have_posts()) : $adl_logo->the_post();
-                        $tooltip  = get_post_meta(get_the_id(), 'img_tool', true);
-                        $img_link = get_post_meta(get_the_id(), 'img_link', true);
+                    while( $adl_logo->have_posts() ) : $adl_logo->the_post();
+                        $tooltip  = get_post_meta( get_the_id(), 'img_tool', true );
+                        $img_link = get_post_meta( get_the_id(), 'img_link', true );
                         $image_id = get_post_thumbnail_id();
-                        $im = wp_get_attachment_image_src($image_id, 'full', true);
+                        $im = wp_get_attachment_image_src( $image_id, 'full', true );
                         //$img = aq_resize($im[0], $image_width, $image_height,true,true, $upscale);
                         $thumb = get_post_thumbnail_id();
                         // crop the image if the cropping is enabled.
-                        if (!empty($image_crop) && 'no' != $image_crop) {
-                            $lcg_img = lcg_image_cropping($thumb, $image_width, $image_height, true, 100)['url'];
+                        if ( ! empty( $image_crop ) && 'no' != $image_crop ) {
+                            $lcg_img = lcg_image_cropping( $thumb, $image_width, $image_height, true, 100 )['url'];
                         } else {
-                            $aazz_thumb = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'large');
+                            $aazz_thumb = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'large' );
                             $lcg_img = $aazz_thumb['0'];
                         }
                     ?>
@@ -195,13 +199,13 @@ class Lcg_shortcode
 
 	//enqueue all files to shortcode
 	public function lcg_enqueue_files () {
-		wp_enqueue_style('lcg-style');
-        wp_enqueue_style('lcg-tooltip');
-        wp_enqueue_style('lcg-swiper-min-css');
+		wp_enqueue_style( 'lcg-style' );
+        wp_enqueue_style( 'lcg-tooltip' );
+        wp_enqueue_style( 'lcg-swiper-min-css' );
 
-		wp_enqueue_script('main-js');
-        wp_enqueue_script('lcg-swiper-min-js');
-        wp_enqueue_script('lcg-popper-js');
-        wp_enqueue_script('lcg-tooltip-js');
+		wp_enqueue_script( 'main-js' );
+        wp_enqueue_script( 'lcg-swiper-min-js' );
+        wp_enqueue_script( 'lcg-popper-js' );
+        wp_enqueue_script( 'lcg-tooltip-js' );
 	}
 }

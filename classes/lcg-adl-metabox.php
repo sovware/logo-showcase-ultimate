@@ -8,6 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 class Lcg_Metabox
 {
+
 	public function __construct () {
 		// Customize the updated messages for lcg custom posts
         add_filter( 'post_updated_messages', array( $this, 'lcg_customize_updated_messages' ) );
@@ -19,7 +20,6 @@ class Lcg_Metabox
         add_action( 'edit_post', array( $this, 'lcg_save_post_meta' ) );
 
 	}
-
 
 	//customizes post update message
 	public function lcg_customize_updated_messages( $messages ) {
@@ -63,7 +63,7 @@ class Lcg_Metabox
         return $messages;
 	}
 
-	 public function lcg_custom_column_carousel_screen($new_columns){
+	 public function lcg_custom_column_carousel_screen( $new_columns ){
         $new_columns = array();
         $new_columns['cb']   = '<input type="checkbox" />';
         $new_columns['title']   = esc_html__('Title', 'logo-showcase-ultimate');
@@ -74,16 +74,16 @@ class Lcg_Metabox
     }
 
     //manage custom columns method
-    public function lcg_manage_custom_columns_carousel_screen($column_name, $post_id ) {
+    public function lcg_manage_custom_columns_carousel_screen( $column_name, $post_id ) {
 
-        switch($column_name){
+        switch( $column_name ){
             case 'shortcode': ?>
-                <textarea style="resize: none; background-color: #2e85de; color: #fff;" cols="32" rows="1" onClick="this.select();" >[logo_showcase id="<?php echo intval($post_id);?>"]</textarea>
+                <textarea style="resize: none; background-color: #2e85de; color: #fff;" cols="32" rows="1" onClick="this.select();" >[logo_showcase id="<?php echo intval( $post_id );?>"]</textarea>
                 <?php
                 break;
             case 'logo_id':
                 ?>
-                <strong><?= intval($post_id); ?></strong>
+                <strong><?php echo intval( $post_id ); ?></strong>
                 <?php
                 break;
 
@@ -106,39 +106,37 @@ class Lcg_Metabox
     }
 
 
-    public function lcg_meta_logo_tooltip_markup($post) {
+    public function lcg_meta_logo_tooltip_markup( $post ) {
 
     	// Add a nonce field so we can check for it later.
         wp_nonce_field( 'lcg_action', 'lcg_nonce' );
 
         $img_link = get_post_meta( $post->ID, 'img_link', true );
         $img_tool = get_post_meta( $post->ID, 'img_tool', true );
-        
-
         ?>
         <!-- logo link -->
         <div class="lcsp-row">
             <div class="lcsp-th">
-                <label for="img_link"><?php esc_html_e('Logo link', 'logo-showcase-ultimate'); ?></label>
+                <label for="img_link"><?php esc_html_e( 'Logo link', 'logo-showcase-ultimate' ); ?></label>
             </div>
             <div class="lcsp-td">
                 <input type="text" class="lcsp-text-input" 
                 name="img_link" 
                 id="img_link" 
-                value="<?php echo !empty($img_link) ? esc_url($img_link) : ''; ?>">
+                value="<?php echo ! empty( $img_link ) ? esc_url( $img_link ) : ''; ?>">
             </div>
         </div>
 
         <!--Tool tip-->
         <div class="lcsp-row">
             <div class="lcsp-th">
-                <label for="img_tool"><?php esc_html_e('Tooltip Text', 'logo-showcase-ultimate'); ?></label>
+                <label for="img_tool"><?php esc_html_e( 'Tooltip Text', 'logo-showcase-ultimate' ); ?></label>
             </div>
             <div class="lcsp-td">
                 <input type ="text" class="lcsp-text-input"
-                name="img_tool" 
-                id="img_tool" 
-                value="<?php echo !empty($img_tool) ? esc_attr($img_tool) : ''; ?>">
+                name="img_tool"
+                id="img_tool"
+                value="<?php echo ! empty( $img_tool ) ? esc_attr( $img_tool ) : ''; ?>">
             </div>
         </div>
 
@@ -162,25 +160,25 @@ class Lcg_Metabox
     public function lcg_save_post_meta( $post_id ) {
             
         // vail if the security check fails
-        if (! $this->lcg_security_check('lcg_nonce', 'lcg_action', $post_id)) 
+        if (! $this->lcg_security_check( 'lcg_nonce', 'lcg_action', $post_id ) ) 
             return;
 
         
         // save the meta data if it is our post type lcg_mainpost post type
-        if(!empty($_POST['post_type']) && ('lcg_mainpost' == $_POST['post_type']) ){
+        if ( ! empty( $_POST['post_type'] ) && ( 'lcg_mainpost' == $_POST['post_type'] ) ) {
             
             // get the meta value
-            $img_link = !empty($_POST["img_link"]) ? esc_url_raw( $_POST["img_link"] ) : '';
-            $img_tool = !empty($_POST["img_tool"]) ? sanitize_text_field( $_POST["img_tool"] ) : '';
+            $img_link = ! empty( $_POST["img_link"] ) ? esc_url_raw( $_POST["img_link"] ) : '';
+            $img_tool = ! empty( $_POST["img_tool"] ) ? sanitize_text_field( $_POST["img_tool"] ) : '';
             
             //save the meta value
-            update_post_meta($post_id, "img_link", $img_link);
-            update_post_meta($post_id, "img_tool", $img_tool);
+            update_post_meta( $post_id, "img_link", $img_link );
+            update_post_meta( $post_id, "img_tool", $img_tool );
             
         }
 
         // save the meta data if it is our post type lcg_mainpost post type
-        if(!empty($_POST['post_type']) && ('lcg_shortcode' == $_POST['post_type']) ){
+        if( ! empty( $_POST['post_type'] ) && ( 'lcg_shortcode' == $_POST['post_type'] ) ){
 
             $lcg_scode = ! empty( $_POST['lcg_scode'] ) ? lcg()::adl_enc_serialize( $this->lcg_sanitize_array( $_POST['lcg_scode'] ) ) : lcg()::adl_enc_serialize( array() );
 
@@ -188,22 +186,21 @@ class Lcg_Metabox
         }
     }
 
-    public function lcg_sanitize_array(&$array)
-    {
-        foreach ($array as &$value) {
-            if (!is_array($value)) {
+    public function lcg_sanitize_array( &$array ) {
+        foreach( $array as &$value ) {
+            if ( ! is_array( $value ) ) {
                 // sanitize if value is not an array
-                $value = sanitize_text_field($value);
+                $value = sanitize_text_field( $value );
             } else {
                 // go inside this function again
-                $this->lcg_sanitize_array($value);
+                $this->lcg_sanitize_array( $value );
             }
         }
         return $array;
     }
 
     //security check
-    private function lcg_security_check($nonce_name, $action, $post_id){
+    private function lcg_security_check( $nonce_name, $action, $post_id ) {
         // checks are divided into 3 parts for readability.
         if ( empty( $_POST[ $nonce_name ] ) || ! wp_verify_nonce( $_POST[ $nonce_name ], $action ) ) {
             return false;
@@ -221,7 +218,5 @@ class Lcg_Metabox
 
         return true;
     }
-
-
 
 }//end class

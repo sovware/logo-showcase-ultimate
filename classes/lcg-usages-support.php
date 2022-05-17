@@ -1,4 +1,11 @@
 <?php
+/**
+ * Exit if accessed directly
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 // usage and support view. It should be a nice page with tabbed content like the logo showcase plugin.
 ?>
     <h1 class="wpcs-admin-header">Usage & Support</h1>

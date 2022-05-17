@@ -5,8 +5,8 @@
 if ( ! defined('ABSPATH')) {
     exit;
 }
-class Lcg_Image_resizer
-{
+
+class Lcg_Image_resizer {
     /**
 	 * The attachment image ID
 	 *

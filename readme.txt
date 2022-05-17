@@ -108,6 +108,8 @@ After successfully installing and activating the plugin, you will find "Logo Sho
 15. Backend: Logo Categories
 
 == Changelog ==
+= 1.2.3 =
+* Fix: Security issue
 = 1.2.2 =
 * Add: WordPress 5.9 compatibility
 = 1.2.1 =

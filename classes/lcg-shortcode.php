@@ -143,10 +143,10 @@ class Lcg_shortcode {
                 <?php } ?>
                 '
                 data-lsu-responsive ='{
-                    "0": {"slidesPerView": "<?php echo esc_attr( $c_mobile ); ?>",  "slidesPerGroup": "<?php echo 'per_item' == $scrool ? '1' : $c_mobile; ?>", "spaceBetween": "15"}, 
-                    "768": {"slidesPerView": "<?php echo esc_attr( $c_tablet ); ?>",  "slidesPerGroup": "<?php echo 'per_item' == $scrool ? '1' : $c_tablet; ?>", "spaceBetween": "15"}, 
-                    "979": {"slidesPerView": "<?php echo esc_attr( $c_desktop_small ); ?>",  "slidesPerGroup": "<?php echo 'per_item' == $scrool ? '1' : $c_desktop_small; ?>", "spaceBetween": "20"}, 
-                    "1199": {"slidesPerView": "<?php echo esc_attr( $c_desktop ); ?>",  "slidesPerGroup": "<?php echo 'per_item' == $scrool ? '1' : $c_desktop; ?>", "spaceBetween": "30"}
+                    "0": {"slidesPerView": "<?php echo esc_js( $c_mobile ); ?>",  "slidesPerGroup": "<?php echo 'per_item' == $scrool ? '1' : esc_js( $c_mobile ); ?>", "spaceBetween": "15"}, 
+                    "768": {"slidesPerView": "<?php echo esc_js( $c_tablet ); ?>",  "slidesPerGroup": "<?php echo 'per_item' == $scrool ? '1' : esc_js( $c_tablet ); ?>", "spaceBetween": "15"}, 
+                    "979": {"slidesPerView": "<?php echo esc_js( $c_desktop_small ); ?>",  "slidesPerGroup": "<?php echo 'per_item' == $scrool ? '1' : esc_js( $c_desktop_small ); ?>", "spaceBetween": "20"}, 
+                    "1199": {"slidesPerView": "<?php echo esc_js( $c_desktop ); ?>",  "slidesPerGroup": "<?php echo 'per_item' == $scrool ? '1' : esc_js( $c_desktop ); ?>", "spaceBetween": "30"}
                 }'
             <?php } ?>
             >

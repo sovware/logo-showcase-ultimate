@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: Logo Showcase Ultimate - Logo Carousel, Logo Slider & Logo Grid
+Plugin Name: Logo Showcase Ultimate
 Plugin URI: https://wpwax.com/product/logo-showcase-ultimate-pro/
 Description: This plugin allows you to easily create Logo Showcase to display logos of your clients, partners, sponsors and affiliates etc in a beautiful carousel, slider and grid.
-Version:     1.2.3
+Version:     1.2.4
 Author:      wpWax
 Author URI:  https://wpwax.com
 License:     GPL2

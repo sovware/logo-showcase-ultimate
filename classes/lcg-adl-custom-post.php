@@ -1,35 +1,36 @@
-<?php 
+<?php
+/**
+ * Exit if accessed directly
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
- //Protect direct access
-if ( ! defined( 'ABSPATH' ) ) die( 'Are you cheating??? Accessing this file directly is forbidden.' );
-
-class Lcg_Custom_Post
-{
-	public function __construct() {
-
+class Lcg_Custom_Post {
+    
+	public function __construct () {
 		//register custom post and taxonomy
-		add_action('init',array($this,'lcg_custom_post_taxonomy'));
-		
+		add_action( 'init', array( $this, 'register' ) );
 	}
 
 	//method for custom post and taxonomy
-	public function lcg_custom_post_taxonomy() {
+	public function register() {
 
 		$main_labels = array(
-			'name'               => _x( 'Logos', LCG_TEXTDOMAIN ),
-			'singular_name'      => _x( 'Logo', LCG_TEXTDOMAIN ),
-			'menu_name'          => _x( 'Logo Showcase', LCG_TEXTDOMAIN ),
-			'name_admin_bar'     => _x( 'Logo', LCG_TEXTDOMAIN ),
-			'add_new'            => _x( 'Add New logo', LCG_TEXTDOMAIN ),
-			'add_new_item'       => __( 'Add New Logo', LCG_TEXTDOMAIN ),
-			'new_item'           => __( 'New Logo', LCG_TEXTDOMAIN ),
-			'edit_item'          => __( 'Edit Logo', LCG_TEXTDOMAIN ),
-			'view_item'          => __( 'View Logo', LCG_TEXTDOMAIN ),
-			'all_items'          => __( 'All Logos', LCG_TEXTDOMAIN ),
-			'search_items'       => __( 'Search Logos', LCG_TEXTDOMAIN ),
-			'parent_item_colon'  => __( 'Parent Logos:', LCG_TEXTDOMAIN ),
-			'not_found'          => __( 'No Logos found.', LCG_TEXTDOMAIN ),
-			'not_found_in_trash' => __( 'No Logos found in Trash.', LCG_TEXTDOMAIN )
+			'name'               => _x( 'Logos', 'logo-showcase-ultimate' ),
+			'singular_name'      => _x( 'Logo', 'logo-showcase-ultimate' ),
+			'menu_name'          => _x( 'Logo Showcase', 'logo-showcase-ultimate' ),
+			'name_admin_bar'     => _x( 'Logo', 'logo-showcase-ultimate' ),
+			'add_new'            => _x( 'Add New logo', 'logo-showcase-ultimate' ),
+			'add_new_item'       => __( 'Add New Logo', 'logo-showcase-ultimate' ),
+			'new_item'           => __( 'New Logo', 'logo-showcase-ultimate' ),
+			'edit_item'          => __( 'Edit Logo', 'logo-showcase-ultimate' ),
+			'view_item'          => __( 'View Logo', 'logo-showcase-ultimate' ),
+			'all_items'          => __( 'All Logos', 'logo-showcase-ultimate' ),
+			'search_items'       => __( 'Search Logos', 'logo-showcase-ultimate' ),
+			'parent_item_colon'  => __( 'Parent Logos:', 'logo-showcase-ultimate' ),
+			'not_found'          => __( 'No Logos found.', 'logo-showcase-ultimate' ),
+			'not_found_in_trash' => __( 'No Logos found in Trash.', 'logo-showcase-ultimate' )
 		);
 
 		$main_args = array(
@@ -48,20 +49,20 @@ class Lcg_Custom_Post
         );
 
         $shortcode_labels = array(
-            'name'               => __( 'Shortcode Generator', LCG_TEXTDOMAIN ),
-            'singular_name'      => __( 'Shortcode', LCG_TEXTDOMAIN ),
-            'menu_name'          => __( 'Shortcode Generator', LCG_TEXTDOMAIN ),
-            'all_items'          => __( 'Shortcode Generator', LCG_TEXTDOMAIN ),
-            'add_new'            => __( 'Generate New Shortcode', LCG_TEXTDOMAIN ),
-            'add_new_item'       => __( 'Generate New Shortcode', LCG_TEXTDOMAIN ),
-            'new_item'           => __( 'Generate New Shortcode', LCG_TEXTDOMAIN ),
-            'edit_item'          => __( 'Edit Generated Shortcode', LCG_TEXTDOMAIN ),
-            'view_item'          => __( 'View Generated Shortcode', LCG_TEXTDOMAIN ),
-            'name_admin_bar'     => __( 'Shortcode Generator', LCG_TEXTDOMAIN ),
-            'search_items'       => __( 'Search Generated Shortcode', LCG_TEXTDOMAIN ),
-            'parent_item_colon'  => __( 'Parent Generated Shortcode:', LCG_TEXTDOMAIN ),
-            'not_found'          => __( 'No Shortcode found.', LCG_TEXTDOMAIN ),
-            'not_found_in_trash' => __( 'No Shortcode found in Trash.', LCG_TEXTDOMAIN )
+            'name'               => __( 'Shortcode Generator', 'logo-showcase-ultimate' ),
+            'singular_name'      => __( 'Shortcode', 'logo-showcase-ultimate' ),
+            'menu_name'          => __( 'Shortcode Generator', 'logo-showcase-ultimate' ),
+            'all_items'          => __( 'Shortcode Generator', 'logo-showcase-ultimate' ),
+            'add_new'            => __( 'Generate New Shortcode', 'logo-showcase-ultimate' ),
+            'add_new_item'       => __( 'Generate New Shortcode', 'logo-showcase-ultimate' ),
+            'new_item'           => __( 'Generate New Shortcode', 'logo-showcase-ultimate' ),
+            'edit_item'          => __( 'Edit Generated Shortcode', 'logo-showcase-ultimate' ),
+            'view_item'          => __( 'View Generated Shortcode', 'logo-showcase-ultimate' ),
+            'name_admin_bar'     => __( 'Shortcode Generator', 'logo-showcase-ultimate' ),
+            'search_items'       => __( 'Search Generated Shortcode', 'logo-showcase-ultimate' ),
+            'parent_item_colon'  => __( 'Parent Generated Shortcode:', 'logo-showcase-ultimate' ),
+            'not_found'          => __( 'No Shortcode found.', 'logo-showcase-ultimate' ),
+            'not_found_in_trash' => __( 'No Shortcode found in Trash.', 'logo-showcase-ultimate' )
         );
 
         $shortcode_args = array(
@@ -84,21 +85,19 @@ class Lcg_Custom_Post
         //register shortcode generator/carousel post type
         register_post_type( 'lcg_shortcode', $shortcode_args );
 
-
 		// logo category taxonomy registration
-
         $cat_tax_labels = array(
-            'name'              => __( 'Logo Categories', LCG_TEXTDOMAIN ),
-            'singular_name'     => __( 'Logo Category', LCG_TEXTDOMAIN ),
-            'search_items'      => __( 'Search Logo Categories', LCG_TEXTDOMAIN ),
-            'all_items'         => __( 'All Logo Categories', LCG_TEXTDOMAIN ),
-            'parent_item'       => __( 'Parent Logo Category', LCG_TEXTDOMAIN ),
-            'parent_item_colon' => __( 'Parent Logo Category:', LCG_TEXTDOMAIN ),
-            'edit_item'         => __( 'Edit Logo Category' , LCG_TEXTDOMAIN),
-            'update_item'       => __( 'Update Logo Category', LCG_TEXTDOMAIN ),
-            'add_new_item'      => __( 'Add New Logo Category', LCG_TEXTDOMAIN ),
-            'new_item_name'     => __( 'New Logo Category Name' , LCG_TEXTDOMAIN),
-            'menu_name'         => __( 'Logo Categories', LCG_TEXTDOMAIN ),
+            'name'              => __( 'Logo Categories', 'logo-showcase-ultimate' ),
+            'singular_name'     => __( 'Logo Category', 'logo-showcase-ultimate' ),
+            'search_items'      => __( 'Search Logo Categories', 'logo-showcase-ultimate' ),
+            'all_items'         => __( 'All Logo Categories', 'logo-showcase-ultimate' ),
+            'parent_item'       => __( 'Parent Logo Category', 'logo-showcase-ultimate' ),
+            'parent_item_colon' => __( 'Parent Logo Category:', 'logo-showcase-ultimate' ),
+            'edit_item'         => __( 'Edit Logo Category' , 'logo-showcase-ultimate'),
+            'update_item'       => __( 'Update Logo Category', 'logo-showcase-ultimate' ),
+            'add_new_item'      => __( 'Add New Logo Category', 'logo-showcase-ultimate' ),
+            'new_item_name'     => __( 'New Logo Category Name' , 'logo-showcase-ultimate'),
+            'menu_name'         => __( 'Logo Categories', 'logo-showcase-ultimate' ),
         );
 
         $cat_tax_args = array(
@@ -111,9 +110,8 @@ class Lcg_Custom_Post
         );
 
         register_taxonomy( 'lcg_category', 'lcg_mainpost', $cat_tax_args );
-
-	}//end lcg_custom_post_taxonomy
-
-	
+    
+		flush_rewrite_rules();
+	}//end register
 
 }//end class

@@ -9,7 +9,7 @@
         
         </a>
 
-        <span class="wpwax-lsu-item-content"><?php the_title(); ?></span>
+        <span class="wpwax-lsu-item-content wpwax-title"><?php the_title(); ?></span>
         
     </div>
 

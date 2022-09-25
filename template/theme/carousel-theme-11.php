@@ -1,4 +1,6 @@
-
+<?php 
+$description = ! empty( $short_description ) ? $short_description : '';
+?>
 <div class="wpwax-lsu-item wpwax-lsu-item-flip-card swiper-slide">
 
 <div class="wpwax-lsu-item-inner" data-bs-toggle="<?php echo ( 'yes' == $tooltip_show ) ? 'tooltip' : ''; ?>" data-bs-placement="<?php echo $tooltip_posi; ?>"
@@ -12,9 +14,9 @@
 
     <div class="wpwax-lsu-item-flip-card__back">
 
-        <h4 class="wpwax-lsu-item-flip-card__back--title"><?php echo get_the_title(); ?></h4>
+        <h4 class="wpwax-lsu-item-flip-card__back--title wpwax-title"><?php echo get_the_title(); ?></h4>
 
-        <p class="wpwax-lsu-item-flip-card__back--text"><?php echo ! empty( $short_description ) ? $short_description : ''; ?></p>
+        <p class="wpwax-lsu-item-flip-card__back--text"><?php echo wp_trim_words( $short_description, 8 ); ?></p>
         
     </div>
 

@@ -10,7 +10,7 @@
 
         <div class="wpwax-lsu-item-content">
 
-            <p>Company Name</p>
+            <p class="wpwax-title"><?php echo get_the_title(); ?></p>
             
         </div>
 

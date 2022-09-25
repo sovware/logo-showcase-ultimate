@@ -69,6 +69,10 @@ if( ! in_array('logo-showcase-ultimate-pro/lcg_adl_main.php', apply_filters('act
                     add_action('plugin_loaded', array(self::$instance, 'lcg_load_textdomain'));
                     add_action('admin_enqueue_scripts', array(self::$instance, 'lcg_admin_enqueue_scripts'));
                     add_action('template_redirect', array(self::$instance, 'lcg_enqueue_style_front'));
+
+                    // enqueue for elementor 
+                    add_action( 'elementor/preview/enqueue_styles', [ self::$instance, 'elementor_enqueue_preview_style' ] );
+                    add_action( 'elementor/preview/enqueue_scripts', [ self::$instance, 'elementor_preview_enqueue_script' ] );
                     // support svg format
                     add_filter('upload_mimes', array(self::$instance, 'lcg_support_svg'));
                     self::$instance->lcg_include_required_files();
@@ -127,6 +131,7 @@ if( ! in_array('logo-showcase-ultimate-pro/lcg_adl_main.php', apply_filters('act
                 require_once LCG_PLUGIN_DIR . 'classes/lcg-shortcode.php';
                 require_once LCG_PLUGIN_DIR . 'classes/lcg-ajax.php';
                 require_once LCG_PLUGIN_DIR . 'classes/lcg-migration.php';
+                require_once LCG_PLUGIN_DIR . 'classes/elementor/init.php';
 
                 require_once LCG_PLUGIN_DIR . 'classes/license/class-license-controller.php';
                 if ( ! class_exists( 'EDD_SL_Plugin_Updater' ) ) {
@@ -159,6 +164,20 @@ if( ! in_array('logo-showcase-ultimate-pro/lcg_adl_main.php', apply_filters('act
                 wp_register_script('lcg-swiper-min-js', LCG_PLUGIN_URI . '/assets/js/vendor/swiper-bundle.min.js', array('jquery', 'lcg-tooltip-js'));
                 wp_register_script('main-js', LCG_PLUGIN_URI . '/assets/js/main.js', array('jquery', 'lcg-swiper-min-js'));
                 wp_register_script('ajax-js', LCG_PLUGIN_URI . '/assets/js/ajax.js', array('jquery'));
+            }
+
+            public function elementor_enqueue_preview_style() {
+                wp_enqueue_style('lcg-style', LCG_PLUGIN_URI . '/assets/css/style.css');
+                wp_enqueue_style('lcg-swiper-min-css', LCG_PLUGIN_URI . '/assets/css/vendor/swiper-bundle.min.css');
+                wp_enqueue_style('lcg-tooltip', LCG_PLUGIN_URI . '/assets/css/vendor/tooltip.css');
+            }
+
+            public function elementor_preview_enqueue_script() {
+                wp_enqueue_script('lcg-popper-js', LCG_PLUGIN_URI . '/assets/js/vendor/popper.min.js', array('jquery'));
+                wp_enqueue_script('lcg-tooltip-js', LCG_PLUGIN_URI . '/assets/js/vendor/tooltip.js', array('jquery', 'lcg-popper-js'));
+                wp_enqueue_script('lcg-swiper-min-js', LCG_PLUGIN_URI . '/assets/js/vendor/swiper-bundle.min.js', array('jquery', 'lcg-tooltip-js'));
+                wp_enqueue_script('main-js', LCG_PLUGIN_URI . '/assets/js/main.js', array('jquery', 'lcg-swiper-min-js'));
+                wp_enqueue_script('ajax-js', LCG_PLUGIN_URI . '/assets/js/ajax.js', array('jquery'));
             }
 
             public function lcg_load_textdomain()

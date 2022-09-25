@@ -17,18 +17,51 @@ class Lcg_shortcode
     public function lcg_shortcode_creat($atts, $content = null ) {
 		ob_start();
 
-		extract( shortcode_atts(array(
-                    'id' => "",
-                ), $atts
-                )
-            );
+		$atts = shortcode_atts(
+            array(
+                'id'                => "",
+                'layout'            => "",
+                'cg_title_show'     => "",
+                'cg_title'          => "",
+                'header_position'   => "",
+                'lcg_type'          => "",
+                'total_logos'       => "",
+                'c_theme'           => "",
+                'A_play'            => "",
+                'repeat_product'    => "",
+                'stop_hover'        => "",
+                'marquee'           => "",
+                'c_desktop'         => "",
+                'c_desktop_small'   => "",
+                'c_tablet'          => "",
+                'c_mobile'          => "",
+                'slide_speed'       => "",
+                'slide_time'        => "",
+                'scrol_direction'   => "",
+                'navigation'        => "",
+                'nav_position'       => "",
+                'carousel_pagination'  => "",
+                'g_theme'           => "",
+                'g_columns'         => "",
+                'g_columns_tablet'  => "",
+                'g_columns_mobile'  => "",
+                'grid_pagination'   => "",
+                'pagination_type'   => "",
 
-		if ( empty( $id) ) {
-                return esc_html__('No shortcode ID provided', LCG_TEXTDOMAIN);
-        }
+                'image_crop'         => "",
+                'image_width'        => "",
+                'image_height'       => "",
+                'target'             => "",
+                'image_hover'        => "",
+                'img_animation'      => "",
+            ), $atts
+        );
+        
+
+		
         $this->lcg_enqueue_files();
-
-        $lcg_value = get_post_meta($id,'lcg_scode',true);
+        $post_id =  ! empty( $atts['id'] ) ? $atts['id'] : '';
+        $lcg_value = get_post_meta( $post_id, 'lcg_scode', true );
 
         $data_encoded   = ( !empty($lcg_value) ) ? lcg()::adl_enc_unserialize( $lcg_value ) : array();
         extract($data_encoded);
@@ -40,6 +73,7 @@ class Lcg_shortcode
         $c_theme  			= !empty($c_theme) ? $c_theme : 'carousel-theme-1';
         $g_theme  			= !empty($g_theme) ? $g_theme : 'grid-theme-1';
         $image_crop 		= !empty($image_crop) ? $image_crop : "yes";
+        $image_hover        = !empty($image_hover) ? $image_hover : 'yes';
 		$upscale		   	= !empty($upscale) ? $upscale : "yes";
         $image_width 		= !empty($image_width) ? $image_width : 185; // Image width for cropping
         $image_height 		= !empty($image_height) ? $image_height : 119;
@@ -63,7 +97,7 @@ class Lcg_shortcode
         $navigation                  = ! empty( $navigation ) ? $navigation : 'yes';
         $scrool                      = ! empty( $scrool ) ? $scrool : 'per_item';
         $stop_hover                  = ! empty( $stop_hover ) ? $stop_hover : 'yes';
-        $marquee                     = ! empty( $marquee ) ? $marquee : 'yes';
+        $marquee                     = ! empty( $marquee ) ? $marquee : 'no';
         $slide_speed                 = ! empty( $slide_speed ) ? $slide_speed : '2000';
         $slide_time                  = ! empty( $slide_time )  ? $slide_time : '2000' ;
         $nav_position                = ! empty( $nav_position ) ? $nav_position : 'top-right';
@@ -92,8 +126,41 @@ class Lcg_shortcode
         $tooltip_back           = ! empty( $tooltip_back ) ? $tooltip_back : '#202428';
         $tooltip_size           = ! empty( $tooltip_size ) ? $tooltip_size : '16px';
 
+        // shortcode $atts 
+        $layout             			  = ! empty( $atts['layout'] ) ? $atts['layout'] : $layout;
+        $cg_title_show              	  = ! empty( $atts['cg_title_show'] ) ? $atts['cg_title_show'] : $cg_title_show;
+        $cg_title                         = ! empty( $atts['cg_title'] ) ? $atts['cg_title'] : $cg_title;
+        $header_position 	   			  = ! empty( $atts['header_position'] ) ? $atts['header_position'] : 'middle';
+        $lcg_type             		      = ! empty( $atts['lcg_type'] ) ? $atts['lcg_type'] : $lcg_type;
+        $total_logos             		  = ! empty( $atts['total_logos'] ) ? $atts['total_logos'] : $total_logos;
+        $c_theme             		      = ! empty( $atts['c_theme'] ) ? $atts['c_theme'] : $c_theme;
+        $A_play             		      = ! empty( $atts['A_play'] ) ? $atts['A_play'] : $A_play;
+        $repeat_product             	  = ! empty( $atts['repeat_product'] ) ? $atts['repeat_product'] : $repeat_product;
+        $stop_hover             		  = ! empty( $atts['stop_hover'] ) ? $atts['stop_hover'] : $stop_hover;
+        $marquee             		      = ! empty( $atts['marquee'] ) ? $atts['marquee'] : $marquee;
+        $c_desktop             		      = ! empty( $atts['c_desktop'] ) ? $atts['c_desktop'] : $c_desktop;
+        $c_desktop_small             	  = ! empty( $atts['c_desktop_small'] ) ? $atts['c_desktop_small'] : $c_desktop_small;
+        $c_tablet             		      = ! empty( $atts['c_tablet'] ) ? $atts['c_tablet'] : $c_tablet;
+        $c_mobile             		      = ! empty( $atts['c_mobile'] ) ? $atts['c_mobile'] : $c_mobile;
+        $slide_speed             		  = ! empty( $atts['slide_speed'] ) ? $atts['slide_speed'] : $slide_speed;
+        $slide_time             		  = ! empty( $atts['slide_time'] ) ? $atts['slide_time'] : $slide_time;
+        $scrol_direction             	  = ! empty( $atts['scrol_direction'] ) ? $atts['scrol_direction'] : $scrol_direction;
+        $navigation             		  = ! empty( $atts['navigation'] ) ? $atts['navigation'] : $navigation;
+        $nav_position             		  = ! empty( $atts['nav_position'] ) ? $atts['nav_position'] : $nav_position;
+        $carousel_pagination              = ! empty( $atts['carousel_pagination'] ) ? $atts['carousel_pagination'] : $carousel_pagination;
+        $g_theme                            = ! empty( $atts['g_theme'] ) ? $atts['g_theme'] : $g_theme;
+        $g_columns                          = ! empty( $atts['g_columns'] ) ? $atts['g_columns'] : $g_columns;
+        $g_columns_tablet                   = ! empty( $atts['g_columns_tablet'] ) ? $atts['g_columns_tablet'] : $g_columns_tablet;
+        $g_columns_mobile                   = ! empty( $atts['g_columns_mobile'] ) ? $atts['g_columns_mobile'] : $g_columns_mobile;
+        $grid_pagination                    = ! empty( $atts['grid_pagination'] ) ? $atts['grid_pagination'] : $grid_pagination;
+        $pagination_type                    = ! empty( $atts['pagination_type'] ) ? $atts['pagination_type'] : $pagination_type;
 
-        $image_hover     = !empty($image_hover) ? $image_hover : 'yes';
+        $image_crop                         = ! empty( $atts['image_crop'] ) ? $atts['image_crop'] : $image_crop;
+        $image_width                        = ! empty( $atts['image_width'] ) ? $atts['image_width'] : $image_width;
+        $image_height                       = ! empty( $atts['image_height'] ) ? $atts['image_height'] : $image_height;
+        $image_hover                        = ! empty( $atts['image_hover'] ) ? $atts['image_hover'] : $image_hover;
+        $img_animation                      = ! empty( $atts['img_animation'] ) ? $atts['img_animation'] : 'zoom-in';
+
 
         $zoom_effect_class  = '';
         if( 'yes' == $image_hover ) {
@@ -321,6 +388,8 @@ class Lcg_shortcode
 
             <?php
                         
+        } else {
+            esc_html_e('No logos found', 'logo-showcase-ultimate');
         }
 		$true =  ob_get_clean();
 		return $true;

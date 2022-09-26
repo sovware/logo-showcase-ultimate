@@ -22,21 +22,43 @@ class Lcg_shortcode {
 		ob_start();
 
         $atts = shortcode_atts( array(
-            'id'    =>  ''
+            'id'    =>  '',
+            'layout'            => "",
+            'cg_title_show'     => "",
+            'cg_title'          => "",
+            'header_position'   => "",
+            'lcg_type'          => "",
+            'total_logos'       => "",
+            'c_theme'           => "",
+            'A_play'            => "",
+            'repeat_product'    => "",
+            'stop_hover'        => "",
+            'c_desktop'         => "",
+            'c_desktop_small'   => "",
+            'c_tablet'          => "",
+            'c_mobile'          => "",
+            'slide_speed'       => "",
+            'slide_time'        => "",
+            'scrol_direction'   => "",
+            'navigation'        => "",
+            'nav_position'       => "",
+            'carousel_pagination'  => "",
+            'g_theme'           => "",
+            'g_columns'         => "",
+            'g_columns_tablet'  => "",
+            'g_columns_mobile'  => "",
+            'image_crop'         => "",
+            'image_width'        => "",
+            'image_height'       => "",
+            'target'             => "",
+            'image_hover'        => "",
+            'tooltip' => "",
         ), $atts );
         
-        if ( empty( $atts['id'] ) ) {
-            return;
-        }
-            
-        $post_id =  absint( $atts['id'] );
         
-        if ( empty( $post_id ) ) {
-            return;
-        }
 
         $this->lcg_enqueue_files();
-
+        $post_id =  ! empty( $atts['id'] ) ? $atts['id'] : '';
         $lcg_value = get_post_meta( $post_id, 'lcg_scode', true );
 
         $data_encoded   = ( !empty($lcg_value) ) ? lcg()::adl_enc_unserialize( $lcg_value ) : array();
@@ -81,6 +103,39 @@ class Lcg_shortcode {
         $scrol_direction             = ! empty( $scrol_direction ) ? $scrol_direction : 'left';
 
         $image_hover     = ! empty( $image_hover ) ? $image_hover : 'yes';
+
+        // shortcode $atts 
+        $layout             			  = ! empty( $atts['layout'] ) ? $atts['layout'] : $layout;
+        $cg_title_show              	  = ! empty( $atts['cg_title_show'] ) ? $atts['cg_title_show'] : $cg_title_show;
+        $cg_title                         = ! empty( $atts['cg_title'] ) ? $atts['cg_title'] : $cg_title;
+        $header_position 	   			  = ! empty( $atts['header_position'] ) ? $atts['header_position'] : 'middle';
+        $lcg_type             		      = ! empty( $atts['lcg_type'] ) ? $atts['lcg_type'] : $lcg_type;
+        $total_logos             		  = ! empty( $atts['total_logos'] ) ? $atts['total_logos'] : $total_logos;
+        $c_theme             		      = ! empty( $atts['c_theme'] ) ? $atts['c_theme'] : $c_theme;
+        $A_play             		      = ! empty( $atts['A_play'] ) ? $atts['A_play'] : $A_play;
+        $repeat_product             	  = ! empty( $atts['repeat_product'] ) ? $atts['repeat_product'] : $repeat_product;
+        $stop_hover             		  = ! empty( $atts['stop_hover'] ) ? $atts['stop_hover'] : $stop_hover;
+        $c_desktop             		      = ! empty( $atts['c_desktop'] ) ? $atts['c_desktop'] : $c_desktop;
+        $c_desktop_small             	  = ! empty( $atts['c_desktop_small'] ) ? $atts['c_desktop_small'] : $c_desktop_small;
+        $c_tablet             		      = ! empty( $atts['c_tablet'] ) ? $atts['c_tablet'] : $c_tablet;
+        $c_mobile             		      = ! empty( $atts['c_mobile'] ) ? $atts['c_mobile'] : $c_mobile;
+        $slide_speed             		  = ! empty( $atts['slide_speed'] ) ? $atts['slide_speed'] : $slide_speed;
+        $slide_time             		  = ! empty( $atts['slide_time'] ) ? $atts['slide_time'] : $slide_time;
+        $scrol_direction             	  = ! empty( $atts['scrol_direction'] ) ? $atts['scrol_direction'] : $scrol_direction;
+        $navigation             		  = ! empty( $atts['navigation'] ) ? $atts['navigation'] : $navigation;
+        $nav_position             		  = ! empty( $atts['nav_position'] ) ? $atts['nav_position'] : $nav_position;
+        $carousel_pagination              = ! empty( $atts['carousel_pagination'] ) ? $atts['carousel_pagination'] : $carousel_pagination;
+        $g_theme                            = ! empty( $atts['g_theme'] ) ? $atts['g_theme'] : $g_theme;
+        $g_columns                          = ! empty( $atts['g_columns'] ) ? $atts['g_columns'] : $g_columns;
+        $g_columns_tablet                   = ! empty( $atts['g_columns_tablet'] ) ? $atts['g_columns_tablet'] : $g_columns_tablet;
+        $g_columns_mobile                   = ! empty( $atts['g_columns_mobile'] ) ? $atts['g_columns_mobile'] : $g_columns_mobile;
+        $grid_pagination                    = ! empty( $atts['grid_pagination'] ) ? $atts['grid_pagination'] : $grid_pagination;
+
+        $image_crop                         = ! empty( $atts['image_crop'] ) ? $atts['image_crop'] : $image_crop;
+        $image_width                        = ! empty( $atts['image_width'] ) ? $atts['image_width'] : $image_width;
+        $image_height                       = ! empty( $atts['image_height'] ) ? $atts['image_height'] : $image_height;
+        $image_hover                        = ! empty( $atts['image_hover'] ) ? $atts['image_hover'] : $image_hover;
+        $tooltip_show                       = ! empty( $atts['tooltip'] ) ? $atts['tooltip'] : $tooltip_show;
 
         $image_hover_effect = '';
         if( ! empty( 'yes' == $image_hover ) ) {

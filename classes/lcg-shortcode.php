@@ -54,6 +54,11 @@ class Lcg_shortcode
                 'target'             => "",
                 'image_hover'        => "",
                 'img_animation'      => "",
+
+                'tooltip' => "",
+                'tooltip_posi' => "",
+                'tooltip_back' => "",
+                'tooltip_size' => "",
             ), $atts
         );
         
@@ -160,6 +165,11 @@ class Lcg_shortcode
         $image_height                       = ! empty( $atts['image_height'] ) ? $atts['image_height'] : $image_height;
         $image_hover                        = ! empty( $atts['image_hover'] ) ? $atts['image_hover'] : $image_hover;
         $img_animation                      = ! empty( $atts['img_animation'] ) ? $atts['img_animation'] : 'zoom-in';
+        $tooltip_show                       = ! empty( $atts['tooltip'] ) ? $atts['tooltip'] : $tooltip_show;
+        $tooltip_posi                       = ! empty( $atts['tooltip_posi'] ) ? $atts['tooltip_posi'] : $tooltip_posi;
+        $tooltip_text_color                 = ! empty( $atts['tooltip_text_color'] ) ? $atts['tooltip_text_color'] : $tooltip_text_color;
+        $tooltip_back                       = ! empty( $atts['tooltip_back'] ) ? $atts['tooltip_back'] : $tooltip_back;
+        $tooltip_size                       = ! empty( $atts['tooltip_size'] ) ? $atts['tooltip_size'] : $tooltip_size;
 
 
         $zoom_effect_class  = '';

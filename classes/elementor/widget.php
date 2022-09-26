@@ -1839,31 +1839,42 @@ class Elementor_Logo_Ultimate_Widget extends \Elementor\Widget_Base {
 			array(
 				'mode'    => 'section_start',
 				'tab'     => Controls_Manager::TAB_STYLE,
-				'id'      => 'tooltip',
+				'id'      => 'tooltip_',
 				'label'   => __( 'Tooltip', 'woocommerce-product-carousel-slider-and-ultimate' ),
 			),
 			array(
-				'type'      => Controls_Manager::COLOR,
-				'id'        => 'tooltip_font_color',
-				'label'     => __( 'Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'selectors' 	=> [
-					'{{WRAPPER}} .tooltip .tooltip-inner' => 'color: {{VALUE}} !important;',
-					],
+				'type'      => Controls_Manager::SWITCHER,
+				'id'        => 'tooltip',
+				'label'     => __( 'Display Tooltip', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => 'yes',
+			),
+			array(
+				'type'    => Controls_Manager::SELECT,
+				'id'      => 'tooltip_posi',
+				'label'   => __( 'Tooltip Position', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'options' => array(
+					'top' => __( 'Top', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'bottom' 		=> __( 'Bottom', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				),
+				'default' => 'top',
 			),
 			array(
 				'type'      => Controls_Manager::COLOR,
-				'id'        => 'tooltip_back_color',
+				'id'        => 'tooltip_text_color',
+				'label'     => __( 'Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#f4f4f4'
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'tooltip_back',
 				'label'     => __( 'Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'selectors' 	=> [
-				'{{WRAPPER}} .tooltip .tooltip-inner' 		=> 'background-color: {{VALUE}} !important;',
-				'{{WRAPPER}} .tooltip .tooltip-arrow:before' => 'border-bottom-color: {{VALUE}} !important;',
-				'{{WRAPPER}} .bs-tooltip-top .tooltip-arrow::before' => 'border-top-color: {{VALUE}} !important;',
-				'{{WRAPPER}} .bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before' => 'border-top-color: {{VALUE}} !important;',
-				'{{WRAPPER}} .bs-tooltip-left .tooltip-arrow::before' => 'border-left-color: {{VALUE}} !important;',
-				'{{WRAPPER}} .bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before' => 'border-left-color: {{VALUE}} !important;',
-				'{{WRAPPER}} .bs-tooltip-right .tooltip-arrow::before' => 'border-right-color: {{VALUE}} !important;',
-				'{{WRAPPER}} .bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before' => 'border-right-color: {{VALUE}} !important;',
-				],
+				'default'   => '#202428'
+			),
+			array(
+				'type'      => Controls_Manager::TEXT,
+				'id'        => 'tooltip_size',
+				'label'     => __( 'Transition Duration', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'  => '16px'
 			),
 			array(
 				'mode' => 'section_end',
@@ -1923,13 +1934,18 @@ class Elementor_Logo_Ultimate_Widget extends \Elementor\Widget_Base {
 			'g_columns_mobile'				=> $settings['g_columns_mobile'] ? $settings['g_columns_mobile'] : 'no',
 			'grid_pagination'				=> $settings['grid_pagination'] ? $settings['grid_pagination'] : 'no',
 			'pagination_type'				=> $settings['pagination_type'] ? $settings['pagination_type'] : 'number_pagi',
-
 			'image_crop'					=> $settings['image_crop'] ? $settings['image_crop'] : 'no',
 			'image_width'					=> $settings['image_width'] ? $settings['image_width'] : '185',
 			'image_height'					=> $settings['image_height'] ? $settings['image_height'] : '119',
 			'target'						=> $settings['target'] ? $settings['target'] : '_blank',
 			'image_hover'				    => $settings['image_hover'] ? $settings['image_hover'] : 'no',
 			'img_animation'					=> $settings['img_animation'] ? $settings['img_animation'] : 'zoom-in',
+
+			'tooltip'				    	=> $settings['tooltip'] ? $settings['tooltip'] : 'no',
+			'tooltip_posi'				    => $settings['tooltip_posi'] ? $settings['tooltip_posi'] : 'top',
+			'tooltip_text_color'			=> $settings['tooltip_text_color'] ? $settings['tooltip_text_color'] : '#f4f4f4',
+			'tooltip_back'					=> $settings['tooltip_back'] ? $settings['tooltip_back'] : '#202428',
+			'tooltip_size'					=> $settings['tooltip_size'] ? $settings['tooltip_size'] : '16',
 
 		);
 		$this->run_shortcode( 'logo_showcase', $atts );

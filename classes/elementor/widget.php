@@ -1448,7 +1448,7 @@ class Elementor_Logo_Ultimate_Widget extends \Elementor\Widget_Base {
 			array(
 				'mode'    => 'tab_start',
 				'id'      => 'grid_pagi_hover_tab',
-				'label'   => __( 'Hover', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'   => __( 'HOVER', 'woocommerce-product-carousel-slider-and-ultimate' ),
 			),
 			array(
 				'type'      => Controls_Manager::COLOR,
@@ -1495,7 +1495,7 @@ class Elementor_Logo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'label'     => __( 'Box Shadow', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'id'     	=> 'grid_pagi_hover_shadow',
 				'type'		=> \Elementor\Group_Control_Box_Shadow::get_type(),
-				'selector' 	=> [ 
+				'selectors' 	=> [ 
 					'{{WRAPPER}} .lsu-pagination .page-numbers:hover',
 					'{{WRAPPER}} .lsu-pagination .nav-links .current',
 				]
@@ -1505,7 +1505,7 @@ class Elementor_Logo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'label'     => __( 'Typography', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'id'     	=> 'grid_pagi_hover_typography',
 				'type'		=> Group_Control_Typography::get_type(),
-				'selector' 	=> [
+				'selectors' 	=> [
 					'{{WRAPPER}} .lsu-pagination .page-numbers:hover',
 					'{{WRAPPER}} .lsu-pagination .nav-links .current',
 				],

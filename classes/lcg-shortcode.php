@@ -171,12 +171,21 @@ class Lcg_shortcode
         $tooltip_back                       = ! empty( $atts['tooltip_back'] ) ? $atts['tooltip_back'] : $tooltip_back;
         $tooltip_size                       = ! empty( $atts['tooltip_size'] ) ? $atts['tooltip_size'] : $tooltip_size;
 
-
-        $zoom_effect_class  = '';
-        if( 'yes' == $image_hover ) {
-            $zoom_effect_class = 'wpwax-lsu-hover-active';
+        $nav_class = "";
+        if( "top-left" == $nav_position || "top-right" == $nav_position ) { 
+            $nav_class = "top";
+        } else {
+            $nav_class = "bottom";
         }
 
+        $img_animation_class     = 'wpwax-lsu-item-inner--' . $img_animation;
+
+        $img_animation_class = '';
+        $zoom_effect_class   = '';
+        if( 'yes' == $image_hover ) {
+            $zoom_effect_class = 'wpwax-lsu-hover-active';
+            $img_animation_class     = 'wpwax-lsu-item-inner--' . $img_animation;
+        }
         
 
         $paged 			    = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
@@ -328,7 +337,7 @@ class Lcg_shortcode
         <?php if( 'yes' == $cg_title_show ) { ?>
         <h4 class="wpwax-lsu-title <?php echo $header_class; ?>"><?php echo ! empty( $cg_title ) ? $cg_title : ''; ?></span> </h4>
         <?php } ?>
-            <div class="wpwax-lsu-ultimate <?php echo $zoom_effect_class; ?> wpwax-lsu-grid <?php echo $marquee_class; ?> wpwax-lsu-<?php echo $theme; ?> <?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-logo-col-lg-' . $g_columns . ' wpwax-lsu-logo-col-md-' . $g_columns_tablet . ' wpwax-lsu-logo-col-sm-' . $g_columns_mobile . '' : 'wpwax-lsu-carousel wpwax-lsu-' . $theme . ' wpwax-lsu-carousel-nav-top'; ?> "
+            <div class="wpwax-lsu-ultimate <?php echo $zoom_effect_class; ?> wpwax-lsu-grid <?php echo $marquee_class; ?> wpwax-lsu-<?php echo $theme; ?> <?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-logo-col-lg-' . $g_columns . ' wpwax-lsu-logo-col-md-' . $g_columns_tablet . ' wpwax-lsu-logo-col-sm-' . $g_columns_mobile . '' : 'wpwax-lsu-carousel wpwax-lsu-' . $theme . ' wpwax-lsu-carousel-nav-' . $nav_class; ?> "
             <?php if( 'carousel' == $layout ) { ?>
                 data-lsu-items="5"
                 data-lsu-margin="20" 

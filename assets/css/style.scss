@@ -208,11 +208,20 @@ $primary: #ff5500;
 .wpwax-lsu-title {
     font-size: 24px;
     text-align: center;
-    margin: 68px 0 65px;
+    margin: 38px 0 35px;
     color: $dark;
     text-align: center;
     .wpwax-lsu-serial {
         color: $primary;
+    }
+    &.wpwax-lsu-title--left {
+        text-align: left;
+    }
+    &.wpwax-lsu-title--middle {
+        text-align: center;
+    }
+    &.wpwax-lsu-title--right {
+        text-align: right;
     }
 }
 
@@ -220,17 +229,105 @@ $primary: #ff5500;
 /* Logo Showcase Item hover */
 
 .wpwax-lsu-ultimate {
-    &.wpwax-lsu-hover-active {
-        .wpwax-lsu-item {
-            img {
-                width: 100%;
-                max-width: 150px;
-                transition: 0.35s;
-                transform: scale(1);
-            }
-            &:hover {
+    .wpwax-lsu-item {
+        .wpwax-lsu-item-inner {
+            /* Image Zoom In hover effect */
+            .wpwax-lsu-item-inner--zoom-in {
+                &>a{
+                    display: block; 
+                    overflow: hidden;
+                }
                 img {
-                    transform: scale(1.1);
+                    transform: scale(1);
+                }
+                &:hover{
+                    img{
+                        transform: scale(1.15);
+                    }
+                }
+            }
+
+            /* Image Zoom Out hover effect */
+            .wpwax-lsu-item-innerzoom-out {
+                &>a{
+                    display: block; 
+                    overflow: hidden;
+                }
+                img {
+                    transform: scale(1.15);
+                }
+                &:hover{
+                    img{
+                        transform: scale(1);
+                    }
+                }
+            }
+
+            /* Image Blur In hover effect */
+            .wpwax-lsu-item-innerblur-in {
+                &>a{
+                    display: block; 
+                    overflow: hidden;
+                }
+                img {
+                    transform: scale(1);                
+                }
+                &:hover{
+                    img{
+                        filter: blur(2px);
+                        transform: scale(1.15);
+                    }
+                }
+            }
+
+            /* Image Blur Out hover effect */
+            .wpwax-lsu-item-innerblur-out {
+                &>a{
+                    display: block; 
+                    overflow: hidden;
+                }
+                img {
+                    transform: scale(1.15);
+                }
+                &:hover{
+                    img{
+                        filter: blur(2px);
+                        transform: scale(1);
+                    }
+                }
+            }
+
+            /* Image Grayscale In hover effect */
+            .wpwax-lsu-item-innergrayscale-in {
+                &>a{
+                    display: block; 
+                    overflow: hidden;
+                }
+                img {
+                    transform: scale(1);                
+                }
+                &:hover{
+                    img{
+                        filter: grayscale(80%);
+                        transform: scale(1.15);
+                    }
+                }
+            }
+
+            /* Image Grayscale Out hover effect */
+            .wpwax-lsu-item-innergrayscale-out {
+                &>a{
+                    display: block; 
+                    overflow: hidden;
+                }
+                img {
+                    transform: scale(1.15);
+                }
+                &:hover{
+                    img{
+                        filter: grayscale(80%);
+                        transform: scale(1);
+                    }
                 }
             }
         }
@@ -525,7 +622,7 @@ $primary: #ff5500;
         padding: 0 0 70px 0;
     }
     &.wpwax-lsu-carousel-nav-around {
-        padding: 0 30px;
+        padding: 0 15px;
     }
 }
 

@@ -137,12 +137,21 @@
 .wpwax-lsu-title {
   font-size: 24px;
   text-align: center;
-  margin: 68px 0 65px;
+  margin: 38px 0 35px;
   color: #202428;
   text-align: center;
 }
 .wpwax-lsu-title .wpwax-lsu-serial {
   color: #ff5500;
+}
+.wpwax-lsu-title.wpwax-lsu-title--left {
+  text-align: left;
+}
+.wpwax-lsu-title.wpwax-lsu-title--middle {
+  text-align: center;
+}
+.wpwax-lsu-title.wpwax-lsu-title--right {
+  text-align: right;
 }
 
 /* Logo Showcase Item hover */
@@ -383,7 +392,7 @@
   width: 10px;
   height: 10px;
   opacity: 1;
-  background-color: #00000020;
+  background-color: rgba(0, 0, 0, 0.1254901961);
 }
 .wpwax-lsu-carousel-pagination.swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: #000000;

@@ -182,11 +182,20 @@ $primary: #ff5500;
 .wpwax-lsu-title {
     font-size: 24px;
     text-align: center;
-    margin: 68px 0 65px;
+    margin: 38px 0 35px;
     color: $dark;
     text-align: center;
     .wpwax-lsu-serial {
         color: $primary;
+    }    
+    &.wpwax-lsu-title--left {
+        text-align: left;
+    }
+    &.wpwax-lsu-title--middle {
+        text-align: center;
+    }
+    &.wpwax-lsu-title--right {
+        text-align: right;
     }
 }
 

@@ -230,106 +230,125 @@ $primary: #ff5500;
 
 .wpwax-lsu-ultimate {
     .wpwax-lsu-item {
-        .wpwax-lsu-item-inner {
-            /* Image Zoom In hover effect */
-            .wpwax-lsu-item-inner--zoom-in {
-                &>a{
-                    display: block; 
-                    overflow: hidden;
+        img {
+            transition: all ease 0.35s;
+        }
+    }
+    /* Image Zoom In hover effect */
+    &.wpwax-lsu-item-inner--zoom-in {
+        .wpwax-lsu-item {
+            &>a{
+                display: block; 
+                overflow: hidden;
+            }
+            img {
+                transform: scale(1);
+            }
+            &:hover{
+                img{
+                    transform: scale(1.15);
                 }
-                img {
+            }
+
+        }
+    }
+
+    /* Image Zoom Out hover effect */
+    &.wpwax-lsu-item-inner--zoom-out {
+        .wpwax-lsu-item {
+            &>a{
+                display: block; 
+                overflow: hidden;
+            }
+            img {
+                transform: scale(1.15);
+            }
+            &:hover{
+                img{
                     transform: scale(1);
                 }
-                &:hover{
-                    img{
-                        transform: scale(1.15);
-                    }
-                }
             }
+        }
+    }
+        
 
-            /* Image Zoom Out hover effect */
-            .wpwax-lsu-item-innerzoom-out {
-                &>a{
-                    display: block; 
-                    overflow: hidden;
-                }
-                img {
+    /* Image Blur In hover effect */
+    &.wpwax-lsu-item-inner--blur-in {
+        .wpwax-lsu-item {
+            &>a{
+                display: block; 
+                overflow: hidden;
+            }
+            img {
+                transform: scale(1);                
+            }
+            &:hover{
+                img{
+                    filter: blur(2px);
                     transform: scale(1.15);
                 }
-                &:hover{
-                    img{
-                        transform: scale(1);
-                    }
-                }
             }
 
-            /* Image Blur In hover effect */
-            .wpwax-lsu-item-innerblur-in {
-                &>a{
-                    display: block; 
-                    overflow: hidden;
-                }
-                img {
-                    transform: scale(1);                
-                }
-                &:hover{
-                    img{
-                        filter: blur(2px);
-                        transform: scale(1.15);
-                    }
+        }
+    }
+
+    /* Image Blur Out hover effect */
+    &.wpwax-lsu-item-inner--blur-out {
+        .wpwax-lsu-item {
+            &>a{
+                display: block; 
+                overflow: hidden;
+            }
+            img {
+                transform: scale(1.15);
+            }
+            &:hover{
+                img{
+                    filter: blur(2px);
+                    transform: scale(1);
                 }
             }
+            
+        }
+    }
 
-            /* Image Blur Out hover effect */
-            .wpwax-lsu-item-innerblur-out {
-                &>a{
-                    display: block; 
-                    overflow: hidden;
-                }
-                img {
+    /* Image Grayscale In hover effect */
+    &.wpwax-lsu-item-inner--grayscale-in {
+        .wpwax-lsu-item {
+            &>a{
+                display: block; 
+                overflow: hidden;
+            }
+            img {
+                transform: scale(1);                
+            }
+            &:hover{
+                img{
+                    filter: grayscale(80%);
                     transform: scale(1.15);
                 }
-                &:hover{
-                    img{
-                        filter: blur(2px);
-                        transform: scale(1);
-                    }
-                }
             }
+            
+        }
+    }
 
-            /* Image Grayscale In hover effect */
-            .wpwax-lsu-item-innergrayscale-in {
-                &>a{
-                    display: block; 
-                    overflow: hidden;
-                }
-                img {
-                    transform: scale(1);                
-                }
-                &:hover{
-                    img{
-                        filter: grayscale(80%);
-                        transform: scale(1.15);
-                    }
+    /* Image Grayscale Out hover effect */
+    &.wpwax-lsu-item-inner--grayscale-out {
+        .wpwax-lsu-item {
+            &>a{
+                display: block; 
+                overflow: hidden;
+            }
+            img {
+                transform: scale(1.15);
+            }
+            &:hover{
+                img{
+                    filter: grayscale(80%);
+                    transform: scale(1);
                 }
             }
-
-            /* Image Grayscale Out hover effect */
-            .wpwax-lsu-item-innergrayscale-out {
-                &>a{
-                    display: block; 
-                    overflow: hidden;
-                }
-                img {
-                    transform: scale(1.15);
-                }
-                &:hover{
-                    img{
-                        filter: grayscale(80%);
-                        transform: scale(1);
-                    }
-                }
-            }
+            
         }
     }
 }

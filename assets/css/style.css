@@ -181,7 +181,7 @@
 }
 
 /* Logo Showcase Item hover */
-.wpwax-lsu-ultimate .wpwax-lsu-item .wpwax-lsu-item-inner {
+.wpwax-lsu-ultimate {
   /* Image Zoom In hover effect */
   /* Image Zoom Out hover effect */
   /* Image Blur In hover effect */
@@ -189,92 +189,97 @@
   /* Image Grayscale In hover effect */
   /* Image Grayscale Out hover effect */
 }
-.wpwax-lsu-ultimate .wpwax-lsu-item .wpwax-lsu-item-inner .wpwax-lsu-item-inner--zoom-in > a {
+.wpwax-lsu-ultimate .wpwax-lsu-item img {
+  -webkit-transition: all ease 0.35s;
+  -o-transition: all ease 0.35s;
+  transition: all ease 0.35s;
+}
+.wpwax-lsu-ultimate.wpwax-lsu-item-inner--zoom-in .wpwax-lsu-item > a {
   display: block;
   overflow: hidden;
 }
-.wpwax-lsu-ultimate .wpwax-lsu-item .wpwax-lsu-item-inner .wpwax-lsu-item-inner--zoom-in img {
+.wpwax-lsu-ultimate.wpwax-lsu-item-inner--zoom-in .wpwax-lsu-item img {
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
 }
-.wpwax-lsu-ultimate .wpwax-lsu-item .wpwax-lsu-item-inner .wpwax-lsu-item-inner--zoom-in:hover img {
+.wpwax-lsu-ultimate.wpwax-lsu-item-inner--zoom-in .wpwax-lsu-item:hover img {
   -webkit-transform: scale(1.15);
       -ms-transform: scale(1.15);
           transform: scale(1.15);
 }
-.wpwax-lsu-ultimate .wpwax-lsu-item .wpwax-lsu-item-inner .wpwax-lsu-item-innerzoom-out > a {
+.wpwax-lsu-ultimate.wpwax-lsu-item-inner--zoom-out .wpwax-lsu-item > a {
   display: block;
   overflow: hidden;
 }
-.wpwax-lsu-ultimate .wpwax-lsu-item .wpwax-lsu-item-inner .wpwax-lsu-item-innerzoom-out img {
+.wpwax-lsu-ultimate.wpwax-lsu-item-inner--zoom-out .wpwax-lsu-item img {
   -webkit-transform: scale(1.15);
       -ms-transform: scale(1.15);
           transform: scale(1.15);
 }
-.wpwax-lsu-ultimate .wpwax-lsu-item .wpwax-lsu-item-inner .wpwax-lsu-item-innerzoom-out:hover img {
+.wpwax-lsu-ultimate.wpwax-lsu-item-inner--zoom-out .wpwax-lsu-item:hover img {
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
 }
-.wpwax-lsu-ultimate .wpwax-lsu-item .wpwax-lsu-item-inner .wpwax-lsu-item-innerblur-in > a {
+.wpwax-lsu-ultimate.wpwax-lsu-item-inner--blur-in .wpwax-lsu-item > a {
   display: block;
   overflow: hidden;
 }
-.wpwax-lsu-ultimate .wpwax-lsu-item .wpwax-lsu-item-inner .wpwax-lsu-item-innerblur-in img {
+.wpwax-lsu-ultimate.wpwax-lsu-item-inner--blur-in .wpwax-lsu-item img {
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
 }
-.wpwax-lsu-ultimate .wpwax-lsu-item .wpwax-lsu-item-inner .wpwax-lsu-item-innerblur-in:hover img {
+.wpwax-lsu-ultimate.wpwax-lsu-item-inner--blur-in .wpwax-lsu-item:hover img {
   -webkit-filter: blur(2px);
           filter: blur(2px);
   -webkit-transform: scale(1.15);
       -ms-transform: scale(1.15);
           transform: scale(1.15);
 }
-.wpwax-lsu-ultimate .wpwax-lsu-item .wpwax-lsu-item-inner .wpwax-lsu-item-innerblur-out > a {
+.wpwax-lsu-ultimate.wpwax-lsu-item-inner--blur-out .wpwax-lsu-item > a {
   display: block;
   overflow: hidden;
 }
-.wpwax-lsu-ultimate .wpwax-lsu-item .wpwax-lsu-item-inner .wpwax-lsu-item-innerblur-out img {
+.wpwax-lsu-ultimate.wpwax-lsu-item-inner--blur-out .wpwax-lsu-item img {
   -webkit-transform: scale(1.15);
       -ms-transform: scale(1.15);
           transform: scale(1.15);
 }
-.wpwax-lsu-ultimate .wpwax-lsu-item .wpwax-lsu-item-inner .wpwax-lsu-item-innerblur-out:hover img {
+.wpwax-lsu-ultimate.wpwax-lsu-item-inner--blur-out .wpwax-lsu-item:hover img {
   -webkit-filter: blur(2px);
           filter: blur(2px);
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
 }
-.wpwax-lsu-ultimate .wpwax-lsu-item .wpwax-lsu-item-inner .wpwax-lsu-item-innergrayscale-in > a {
+.wpwax-lsu-ultimate.wpwax-lsu-item-inner--grayscale-in .wpwax-lsu-item > a {
   display: block;
   overflow: hidden;
 }
-.wpwax-lsu-ultimate .wpwax-lsu-item .wpwax-lsu-item-inner .wpwax-lsu-item-innergrayscale-in img {
+.wpwax-lsu-ultimate.wpwax-lsu-item-inner--grayscale-in .wpwax-lsu-item img {
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
 }
-.wpwax-lsu-ultimate .wpwax-lsu-item .wpwax-lsu-item-inner .wpwax-lsu-item-innergrayscale-in:hover img {
+.wpwax-lsu-ultimate.wpwax-lsu-item-inner--grayscale-in .wpwax-lsu-item:hover img {
   -webkit-filter: grayscale(80%);
           filter: grayscale(80%);
   -webkit-transform: scale(1.15);
       -ms-transform: scale(1.15);
           transform: scale(1.15);
 }
-.wpwax-lsu-ultimate .wpwax-lsu-item .wpwax-lsu-item-inner .wpwax-lsu-item-innergrayscale-out > a {
+.wpwax-lsu-ultimate.wpwax-lsu-item-inner--grayscale-out .wpwax-lsu-item > a {
   display: block;
   overflow: hidden;
 }
-.wpwax-lsu-ultimate .wpwax-lsu-item .wpwax-lsu-item-inner .wpwax-lsu-item-innergrayscale-out img {
+.wpwax-lsu-ultimate.wpwax-lsu-item-inner--grayscale-out .wpwax-lsu-item img {
   -webkit-transform: scale(1.15);
       -ms-transform: scale(1.15);
           transform: scale(1.15);
 }
-.wpwax-lsu-ultimate .wpwax-lsu-item .wpwax-lsu-item-inner .wpwax-lsu-item-innergrayscale-out:hover img {
+.wpwax-lsu-ultimate.wpwax-lsu-item-inner--grayscale-out .wpwax-lsu-item:hover img {
   -webkit-filter: grayscale(80%);
           filter: grayscale(80%);
   -webkit-transform: scale(1);

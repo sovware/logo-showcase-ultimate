@@ -1,2 +1,9 @@
-node_modules
-package-lock.json
+/.idea
+/node_modules
+/package-lock.json
+.DS_Store
+__*/
+/.vscode
+/.cache/*
+*.map
+/vendor

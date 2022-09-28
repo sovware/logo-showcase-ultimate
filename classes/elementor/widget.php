@@ -168,14 +168,14 @@ class Elementor_Logo_Ultimate_Widget extends \Elementor\Widget_Base {
 			),
 			array(
 				'type'      => Controls_Manager::SWITCHER,
-				'id'        => 'A_play',
+				'id'        => 'auto_play',
 				'label'     => __( 'Auto Play', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'default'   => 'yes',
 			),
 			array(
 				'type'      => Controls_Manager::SWITCHER,
 				'id'        => 'repeat_product',
-				'label'     => __( 'Repeat Post', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'     => __( 'Repeat Logo', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'default'   => 'yes',
 			),
 			array(
@@ -1716,7 +1716,7 @@ class Elementor_Logo_Ultimate_Widget extends \Elementor\Widget_Base {
 			array(
 				'mode'    => 'tab_start',
 				'id'      => 'load_more_hover_normal_tab',
-				'label'   => __( 'NORMAL', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'   => __( 'HOVER', 'woocommerce-product-carousel-slider-and-ultimate' ),
 			),
 			array(
 				'type'      => Controls_Manager::COLOR,
@@ -1873,7 +1873,7 @@ class Elementor_Logo_Ultimate_Widget extends \Elementor\Widget_Base {
 			array(
 				'type'      => Controls_Manager::TEXT,
 				'id'        => 'tooltip_size',
-				'label'     => __( 'Transition Duration', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'     => __( 'Font Size', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'default'  => '16px'
 			),
 			array(
@@ -1914,7 +1914,7 @@ class Elementor_Logo_Ultimate_Widget extends \Elementor\Widget_Base {
 			'lcg_type'						=> $settings['lcg_type'] ? $settings['lcg_type'] : 'latest',
 			'total_logos'					=> $settings['total_logos'] ? $settings['total_logos'] : '12',
 			'c_theme'						=> $settings['c_theme'] ? $settings['c_theme'] : 'carousel-theme-1',
-			'A_play'						=> $settings['A_play'] ? $settings['A_play'] : 'no',
+			'auto_play'						=> $settings['auto_play'] ? $settings['auto_play'] : 'no',
 			'repeat_product'				=> $settings['repeat_product'] ? $settings['repeat_product'] : 'no',
 			'stop_hover'					=> $settings['stop_hover'] ? $settings['stop_hover'] : 'no',
 			'marquee'						=> $settings['marquee'] ? $settings['marquee'] : 'no',
@@ -1940,12 +1940,11 @@ class Elementor_Logo_Ultimate_Widget extends \Elementor\Widget_Base {
 			'target'						=> $settings['target'] ? $settings['target'] : '_blank',
 			'image_hover'				    => $settings['image_hover'] ? $settings['image_hover'] : 'no',
 			'img_animation'					=> $settings['img_animation'] ? $settings['img_animation'] : 'zoom-in',
-
 			'tooltip'				    	=> $settings['tooltip'] ? $settings['tooltip'] : 'no',
 			'tooltip_posi'				    => $settings['tooltip_posi'] ? $settings['tooltip_posi'] : 'top',
 			'tooltip_text_color'			=> $settings['tooltip_text_color'] ? $settings['tooltip_text_color'] : '#f4f4f4',
 			'tooltip_back'					=> $settings['tooltip_back'] ? $settings['tooltip_back'] : '#202428',
-			'tooltip_size'					=> $settings['tooltip_size'] ? $settings['tooltip_size'] : '16',
+			'tooltip_size'					=> $settings['tooltip_size'] ? $settings['tooltip_size'] : '16px',
 
 		);
 		$this->run_shortcode( 'logo_showcase', $atts );

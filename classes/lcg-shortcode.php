@@ -27,7 +27,7 @@ class Lcg_shortcode
                 'lcg_type'          => "",
                 'total_logos'       => "",
                 'c_theme'           => "",
-                'A_play'            => "",
+                'auto_play'            => "",
                 'repeat_product'    => "",
                 'stop_hover'        => "",
                 'marquee'           => "",
@@ -47,16 +47,15 @@ class Lcg_shortcode
                 'g_columns_mobile'  => "",
                 'grid_pagination'   => "",
                 'pagination_type'   => "",
-
                 'image_crop'         => "",
                 'image_width'        => "",
                 'image_height'       => "",
                 'target'             => "",
                 'image_hover'        => "",
                 'img_animation'      => "",
-
                 'tooltip' => "",
                 'tooltip_posi' => "",
+                "tooltip_text_color" => "",
                 'tooltip_back' => "",
                 'tooltip_size' => "",
             ), $atts
@@ -139,7 +138,7 @@ class Lcg_shortcode
         $lcg_type             		      = ! empty( $atts['lcg_type'] ) ? $atts['lcg_type'] : $lcg_type;
         $total_logos             		  = ! empty( $atts['total_logos'] ) ? $atts['total_logos'] : $total_logos;
         $c_theme             		      = ! empty( $atts['c_theme'] ) ? $atts['c_theme'] : $c_theme;
-        $A_play             		      = ! empty( $atts['A_play'] ) ? $atts['A_play'] : $A_play;
+        $A_play             		      = ! empty( $atts['auto_play'] ) ? $atts['auto_play'] : $A_play;
         $repeat_product             	  = ! empty( $atts['repeat_product'] ) ? $atts['repeat_product'] : $repeat_product;
         $stop_hover             		  = ! empty( $atts['stop_hover'] ) ? $atts['stop_hover'] : $stop_hover;
         $marquee             		      = ! empty( $atts['marquee'] ) ? $atts['marquee'] : $marquee;
@@ -170,10 +169,12 @@ class Lcg_shortcode
         $tooltip_text_color                 = ! empty( $atts['tooltip_text_color'] ) ? $atts['tooltip_text_color'] : $tooltip_text_color;
         $tooltip_back                       = ! empty( $atts['tooltip_back'] ) ? $atts['tooltip_back'] : $tooltip_back;
         $tooltip_size                       = ! empty( $atts['tooltip_size'] ) ? $atts['tooltip_size'] : $tooltip_size;
-
+        
         $nav_class = "";
         if( "top-left" == $nav_position || "top-right" == $nav_position ) { 
             $nav_class = "top";
+        } elseif( "around" == $nav_position ) {
+            $nav_class = "around";
         } else {
             $nav_class = "bottom";
         }
@@ -183,7 +184,7 @@ class Lcg_shortcode
         $img_animation_class = '';
         $zoom_effect_class   = '';
         if( 'yes' == $image_hover ) {
-            $zoom_effect_class = 'wpwax-lsu-hover-active';
+            
             $img_animation_class     = 'wpwax-lsu-item-inner--' . $img_animation;
         }
         
@@ -337,7 +338,7 @@ class Lcg_shortcode
         <?php if( 'yes' == $cg_title_show ) { ?>
         <h4 class="wpwax-lsu-title <?php echo $header_class; ?>"><?php echo ! empty( $cg_title ) ? $cg_title : ''; ?></span> </h4>
         <?php } ?>
-            <div class="wpwax-lsu-ultimate <?php echo $zoom_effect_class; ?> wpwax-lsu-grid <?php echo $marquee_class; ?> wpwax-lsu-<?php echo $theme; ?> <?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-logo-col-lg-' . $g_columns . ' wpwax-lsu-logo-col-md-' . $g_columns_tablet . ' wpwax-lsu-logo-col-sm-' . $g_columns_mobile . '' : 'wpwax-lsu-carousel wpwax-lsu-' . $theme . ' wpwax-lsu-carousel-nav-' . $nav_class; ?> "
+            <div class="wpwax-lsu-ultimate wpwax-lsu-item-inner--zoom-in <?php echo $img_animation_class; ?> wpwax-lsu-grid <?php echo $marquee_class; ?> wpwax-lsu-<?php echo $theme; ?> <?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-logo-col-lg-' . $g_columns . ' wpwax-lsu-logo-col-md-' . $g_columns_tablet . ' wpwax-lsu-logo-col-sm-' . $g_columns_mobile . '' : 'wpwax-lsu-carousel wpwax-lsu-' . $theme . ' wpwax-lsu-carousel-nav-' . $nav_class; ?> "
             <?php if( 'carousel' == $layout ) { ?>
                 data-lsu-items="5"
                 data-lsu-margin="20" 

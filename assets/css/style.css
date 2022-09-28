@@ -1363,3 +1363,7 @@
   text-align: center;
   margin: 30px 0;
 }
+
+.elementor-widget-container .lsu_load_more:after {
+  content: "" !important;
+}

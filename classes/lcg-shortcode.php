@@ -163,6 +163,7 @@ class Lcg_shortcode
         $image_width                        = ! empty( $atts['image_width'] ) ? $atts['image_width'] : $image_width;
         $image_height                       = ! empty( $atts['image_height'] ) ? $atts['image_height'] : $image_height;
         $image_hover                        = ! empty( $atts['image_hover'] ) ? $atts['image_hover'] : $image_hover;
+        $target                             = ! empty( $atts['target'] ) ? $atts['target'] : $target;
         $img_animation                      = ! empty( $atts['img_animation'] ) ? $atts['img_animation'] : 'zoom-in';
         $tooltip_show                       = ! empty( $atts['tooltip'] ) ? $atts['tooltip'] : $tooltip_show;
         $tooltip_posi                       = ! empty( $atts['tooltip_posi'] ) ? $atts['tooltip_posi'] : $tooltip_posi;

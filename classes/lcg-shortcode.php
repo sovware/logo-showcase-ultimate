@@ -128,11 +128,11 @@ class Lcg_shortcode {
         $g_columns                          = ! empty( $atts['g_columns'] ) ? $atts['g_columns'] : $g_columns;
         $g_columns_tablet                   = ! empty( $atts['g_columns_tablet'] ) ? $atts['g_columns_tablet'] : $g_columns_tablet;
         $g_columns_mobile                   = ! empty( $atts['g_columns_mobile'] ) ? $atts['g_columns_mobile'] : $g_columns_mobile;
-
         $image_crop                         = ! empty( $atts['image_crop'] ) ? $atts['image_crop'] : $image_crop;
         $image_width                        = ! empty( $atts['image_width'] ) ? $atts['image_width'] : $image_width;
         $image_height                       = ! empty( $atts['image_height'] ) ? $atts['image_height'] : $image_height;
         $image_hover                        = ! empty( $atts['image_hover'] ) ? $atts['image_hover'] : $image_hover;
+        $target                             = ! empty( $atts['target'] ) ? $atts['target'] : $target;
         $tooltip_show                       = ! empty( $atts['tooltip'] ) ? $atts['tooltip'] : $tooltip_show;
 
         $image_hover_effect = '';

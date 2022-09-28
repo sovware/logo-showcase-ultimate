@@ -1,4 +1,4 @@
-<div class="wpwax-lsu-carousel-nav wpwax-lsu-carousel-nav--top-right">
+<div class="wpwax-lsu-carousel-nav wpwax-lsu-carousel-nav--around">
 
     <div class="wpwax-lsu-carousel-nav__btn wpwax-lsu-carousel-nav__btn-prev">
 

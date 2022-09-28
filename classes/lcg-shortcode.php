@@ -30,7 +30,7 @@ class Lcg_shortcode {
             'lcg_type'          => "",
             'total_logos'       => "",
             'c_theme'           => "",
-            'A_play'            => "",
+            'auto_play'         => "",
             'repeat_product'    => "",
             'stop_hover'        => "",
             'c_desktop'         => "",
@@ -112,7 +112,7 @@ class Lcg_shortcode {
         $lcg_type             		      = ! empty( $atts['lcg_type'] ) ? $atts['lcg_type'] : $lcg_type;
         $total_logos             		  = ! empty( $atts['total_logos'] ) ? $atts['total_logos'] : $total_logos;
         $c_theme             		      = ! empty( $atts['c_theme'] ) ? $atts['c_theme'] : $c_theme;
-        $A_play             		      = ! empty( $atts['A_play'] ) ? $atts['A_play'] : $A_play;
+        $A_play             		      = ! empty( $atts['auto_play'] ) ? $atts['auto_play'] : $A_play;
         $repeat_product             	  = ! empty( $atts['repeat_product'] ) ? $atts['repeat_product'] : $repeat_product;
         $stop_hover             		  = ! empty( $atts['stop_hover'] ) ? $atts['stop_hover'] : $stop_hover;
         $c_desktop             		      = ! empty( $atts['c_desktop'] ) ? $atts['c_desktop'] : $c_desktop;
@@ -123,13 +123,11 @@ class Lcg_shortcode {
         $slide_time             		  = ! empty( $atts['slide_time'] ) ? $atts['slide_time'] : $slide_time;
         $scrol_direction             	  = ! empty( $atts['scrol_direction'] ) ? $atts['scrol_direction'] : $scrol_direction;
         $navigation             		  = ! empty( $atts['navigation'] ) ? $atts['navigation'] : $navigation;
-        $nav_position             		  = ! empty( $atts['nav_position'] ) ? $atts['nav_position'] : $nav_position;
         $carousel_pagination              = ! empty( $atts['carousel_pagination'] ) ? $atts['carousel_pagination'] : $carousel_pagination;
         $g_theme                            = ! empty( $atts['g_theme'] ) ? $atts['g_theme'] : $g_theme;
         $g_columns                          = ! empty( $atts['g_columns'] ) ? $atts['g_columns'] : $g_columns;
         $g_columns_tablet                   = ! empty( $atts['g_columns_tablet'] ) ? $atts['g_columns_tablet'] : $g_columns_tablet;
         $g_columns_mobile                   = ! empty( $atts['g_columns_mobile'] ) ? $atts['g_columns_mobile'] : $g_columns_mobile;
-        $grid_pagination                    = ! empty( $atts['grid_pagination'] ) ? $atts['grid_pagination'] : $grid_pagination;
 
         $image_crop                         = ! empty( $atts['image_crop'] ) ? $atts['image_crop'] : $image_crop;
         $image_width                        = ! empty( $atts['image_width'] ) ? $atts['image_width'] : $image_width;
@@ -171,13 +169,21 @@ class Lcg_shortcode {
 
         $adl_logo = new WP_Query( $args );
 
+        $header_class = "";
+        if( 'left' == $header_position ) {
+            $header_class = 'wpwax-lsu-title--left';
+        } elseif( 'right' == $header_position ) {
+            $header_class = 'wpwax-lsu-title--right';
+        }
+        
+
         if ( $adl_logo->have_posts() ) { ?>
 
         <?php if( 'yes' == $cg_title_show ) { ?>
-        <h4 class="wpwax-lsu-title wpwax-lsu-title--left"><?php echo ! empty( $cg_title ) ? esc_html( $cg_title ) : ''; ?></h4>
+        <h4 class="wpwax-lsu-title <?php echo $header_class; ?>"><?php echo ! empty( $cg_title ) ? esc_html( $cg_title ) : ''; ?></h4>
         <?php } ?>
 
-            <div class="wpwax-lsu-ultimate <?php echo esc_attr( $image_hover_effect ); ?> wpwax-lsu-grid wpwax-lsu-<?php echo esc_attr( $theme ); ?> <?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-logo-col-lg-' . esc_attr( $g_columns ) . ' wpwax-lsu-logo-col-md-' . esc_attr( $g_columns_tablet ) . ' wpwax-lsu-logo-col-sm-' . esc_attr( $g_columns_mobile ) . '' : 'wpwax-lsu-carousel wpwax-lsu-' . esc_attr( $theme ) . ' wpwax-lsu-carousel-nav-top'; ?> <?php echo esc_attr( $box_shadow_class ); ?>"
+            <div class="wpwax-lsu-ultimate <?php echo esc_attr( $image_hover_effect ); ?> wpwax-lsu-grid wpwax-lsu-<?php echo esc_attr( $theme ); ?> <?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-logo-col-lg-' . esc_attr( $g_columns ) . ' wpwax-lsu-logo-col-md-' . esc_attr( $g_columns_tablet ) . ' wpwax-lsu-logo-col-sm-' . esc_attr( $g_columns_mobile ) . '' : 'wpwax-lsu-carousel wpwax-lsu-' . esc_attr( $theme ) . ' wpwax-lsu-carousel-nav-around'; ?> <?php echo esc_attr( $box_shadow_class ); ?>"
             <?php if( 'carousel' == $layout ) { ?>
                 data-lsu-items      = "5"
                 data-lsu-margin     = "20" 

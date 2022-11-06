@@ -109,7 +109,7 @@ After successfully installing and activating the plugin, you will find "Logo Sho
 
 == Changelog ==
 = 1.2.5 =
-* Add: WordPress 6.0 compatibility
+* Add: WordPress 6.1 compatibility
 = 1.2.4 =
 * Add: WordPress 6.0 compatibility
 = 1.2.3 =

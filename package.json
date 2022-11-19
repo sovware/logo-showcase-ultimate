@@ -4,7 +4,9 @@
   "description": "Logo Showcase Ultimate is an excellent and best plugin to display the logos of your clients, partners, sponsors, and affiliates and more along with a title, tooltip, and URL on your website. It is 100% responsive and mobile friendly. You can generate dynamic shortcode by just a few mouse clicks and use the shortcode anywhere in your posts, pages or widgets to display your logos. Your users from any devices can view the logo carousel/slider/grid nicely.",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "wp-scripts start",
+    "build": "wp-scripts build"
   },
   "repository": {
     "type": "git",
@@ -27,6 +29,11 @@
     "url": "https://github.com/Armanul46/logo-showcase-ultimate/issues"
   },
   "dependencies": {
+    "@wordpress/block-editor": "^10.5.0",
+    "@wordpress/blocks": "^11.21.0",
+    "@wordpress/components": "^22.1.0",
+    "@wordpress/element": "^4.20.0",
+    "@wordpress/server-side-render": "^3.20.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-notify": "^3.2.0",
@@ -35,5 +42,8 @@
     "gulp-sourcemaps": "^3.0.0",
     "sass": "^1.35.2"
   },
-  "homepage": "https://github.com/Armanul46/logo-showcase-ultimate#readme"
+  "homepage": "https://github.com/Armanul46/logo-showcase-ultimate#readme",
+  "devDependencies": {
+    "@wordpress/scripts": "24.6.0"
+  }
 }

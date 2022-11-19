@@ -1,0 +1,1 @@
+import './blocks/lcg-ultimate-block.js'

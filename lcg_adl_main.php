@@ -132,7 +132,7 @@ if( ! in_array('logo-showcase-ultimate-pro/lcg_adl_main.php', apply_filters('act
                 require_once LCG_PLUGIN_DIR . 'classes/lcg-ajax.php';
                 require_once LCG_PLUGIN_DIR . 'classes/lcg-migration.php';
                 require_once LCG_PLUGIN_DIR . 'classes/elementor/init.php';
-
+                require_once LCG_PLUGIN_DIR . 'classes/gutenberg/init.php';
                 require_once LCG_PLUGIN_DIR . 'classes/license/class-license-controller.php';
                 if ( ! class_exists( 'EDD_SL_Plugin_Updater' ) ) {
                     // load our custom updater if it doesn't already exist 

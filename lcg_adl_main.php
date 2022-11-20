@@ -106,6 +106,7 @@ if ( ! class_exists( 'Lcg_Main_Class' ) ) {
             require_once LCG_PLUGIN_DIR . 'classes/lcg-resize.php';
             require_once LCG_PLUGIN_DIR . 'classes/lcg-shortcode.php';
             require_once LCG_PLUGIN_DIR . 'classes/elementor/init.php';
+            require_once LCG_PLUGIN_DIR . 'classes/gutenberg/init.php';
         }
 
         //enqueues all the styles and scripts

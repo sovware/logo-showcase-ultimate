@@ -1,0 +1,115 @@
+{
+  "layout":{
+    "type":"string",
+    "default":"carousel"
+  },
+  "cg_title_show":{
+    "type":"boolean",
+    "default":false
+  },
+  "cg_title":{
+    "type":"string",
+    "default": ""
+  },
+  "header_position":{
+    "type":"string",
+    "default": "middle"
+  },
+  "lcg_type":{
+    "type":"string",
+    "default": "latest"
+  },
+  "total_logos":{
+    "type":"string",
+    "default": "12"
+  },
+
+  "c_theme":{
+    "type":"string",
+    "default":"carousel-theme-1"
+  },
+  "auto_play":{
+    "type":"boolean",
+    "default": true
+  },
+  "repeat_product":{
+    "type":"boolean",
+    "default": true
+  },
+  "stop_hover":{
+    "type":"boolean",
+    "default": false
+  },
+  "c_desktop":{
+    "type":"string",
+    "default": "2"
+  },
+  "c_desktop_small":{
+    "type":"string",
+    "default": "2"
+  },
+  "c_tablet":{
+    "type":"string",
+    "default": "2"
+  },
+  "c_mobile":{
+    "type":"string",
+    "default": "1"
+  },
+  "slide_speed":{
+    "type":"string",
+    "default": "2000"
+  },
+  "slide_time":{
+    "type":"string",
+    "default": "2000"
+  },
+  "scrol_direction":{
+    "type":"string",
+    "default": "left"
+  },
+  "navigation":{
+    "type":"boolean",
+    "default": true
+  },
+  "carousel_pagination":{
+    "type":"boolean",
+    "default": false
+  },
+  "g_theme":{
+    "type":"string",
+    "default": "grid-theme-1"
+  },
+  "g_columns":{
+    "type":"string",
+    "default": "3"
+  },
+  "g_columns_tablet":{
+    "type":"string",
+    "default": "2"
+  },
+  "g_columns_mobile":{
+    "type":"string",
+    "default": "1"
+  },
+  "image_crop":{
+    "type":"boolean",
+    "default": false
+  },
+  "image_width":{
+    "type":"string",
+    "default": "185"
+  },
+  "image_hight":{
+    "type":"string",
+    "default": "119"
+  },
+  "target":{
+    "type":"string",
+    "default": "_blank"
+  },
+  "image_hover":{
+    "type":"boolean",
+    "default": true
+  }
+}

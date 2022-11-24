@@ -17,6 +17,8 @@ Looking for a tool to display your personalized logos easily? Logo Showcase Ulti
 
 Set up your WordPress logo slider, logo carousel, logo grid and showcase it in a responsive way using a shortcode with just a few clicks.
 
+**NEW UPDATE**: Now Supports Elementor & Gutenberg Page Builders
+
 [youtube https://www.youtube.com/watch?v=-LYwBu783yc]
 
 Logo Showcase Ultimate is the best WordPress logo showcase plugin to display the logos of your clients, partners, sponsors, affiliates, and more along with a title, tooltip, and URL on your website. It is 100% responsive and mobile-friendly. You can generate dynamic shortcodes with just a few mouse clicks and use the shortcode anywhere in your posts, pages, or widgets to display your logos. Users from any device can view the logo carousel, logo slider, and logo grid nicely.
@@ -44,6 +46,8 @@ Recommended for every site.
 *   100% Responsive and mobile friendly.
 *   3 different themes for Logo Carousel & Logo Slider.
 *   3 different themes for Logo Grid.
+*   Gutenberg Block [New]
+*   Elementor Page Builder Support [New]
 *   Latest/Recent, Older logos display.
 *   Display Unlimited logos.
 *   Display logo with or without a title
@@ -62,6 +66,8 @@ Recommended for every site.
 = FEATURES OF THE  LOGO SHOWCASE ULTIMATE – LOGO CAROUSEL, LOGO SLIDER & LOGO GRID PRO VERSION =
 *   16 different premium themes for Logo Carousel & Logo Slider.
 *   8 different premium themes for Logo Grid.
+*   Gutenberg Block [New]
+*   Elementor Page Builder Support [New]
 *   Display logos by category, logo id, randomly,alphabetical order title(A to Z)(Z to A), month, year, the latest and older published.
 *   Short description
 *   Enable/disable hover effect on the product image.
@@ -75,6 +81,15 @@ Recommended for every site.
 *   Premium Support
 *   And many more…
 
+
+**ELEMENTOR PAGE BUILDER SUPPORT**
+
+Logo Showcase Ultimate – Logo Carousel, Logo Slider & Logo Grid now supports the most popular page builder Elementor. With just a few clicks you can create an unlimited number of logo sliders, grids, and carousels within the Elementor interface. Just drag and drop the Logo Showcase Elementor Widget and personalize the layout, select from a variety of themes, and customize the elements. The Elementor widget simply increases brand awareness by showcasing logos in the most eye-catching way. 
+
+
+**GUTENBERG BLOCK**
+
+With the release of Logo Showcase Ultimate Gutenberg block, the default WordPress editor, Gutenberg, allows you to create an assortment of logos in multiple layouts such as grids, carousels, and sliders along with different themes so you can increase brand awareness in the most effective manner. All the features required to create 100% responsive and smooth logo sliders, grids, and carousels are already present in your existing workflow so you can promote brands, partners, and sponsors. 
 
 
 👉 Like us on Facebook : [wpWax](https://www.facebook.com/wpwax)
@@ -109,8 +124,8 @@ After successfully installing and activating the plugin, you will find "Logo Sho
 
 == Changelog ==
 = 1.3.0 =
-* Add: Elementor compatibility
-* Add: Gutenberg Compatibility
+* Add: Elementor support
+* Add: Gutenberg support
 = 1.2.5 =
 * Add: WordPress 6.1 compatibility
 = 1.2.4 =

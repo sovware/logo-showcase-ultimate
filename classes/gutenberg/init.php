@@ -17,16 +17,6 @@ function lcg_register_block() {
         ] 
     );
 
-    wp_enqueue_style('lcg-style', LCG_PLUGIN_URI . '/assets/css/style.css');
-    wp_enqueue_style('lcg-swiper-min-css', LCG_PLUGIN_URI . '/assets/css/vendor/swiper-bundle.min.css');
-    wp_enqueue_style('lcg-tooltip', LCG_PLUGIN_URI . '/assets/css/vendor/tooltip.css');
-    
-    wp_enqueue_script('lcg-popper-js', LCG_PLUGIN_URI . '/assets/js/vendor/popper.min.js', array('jquery'));
-    wp_enqueue_script('lcg-tooltip-js', LCG_PLUGIN_URI . '/assets/js/vendor/tooltip.js', array('jquery', 'lcg-popper-js'));
-    wp_enqueue_script('lcg-swiper-min-js', LCG_PLUGIN_URI . '/assets/js/vendor/swiper-bundle.min.js', array('jquery', 'lcg-tooltip-js'));
-    wp_enqueue_script('main-js', LCG_PLUGIN_URI . '/assets/js/main.js', array('jquery', 'lcg-swiper-min-js'));
-    wp_enqueue_script('ajax-js', LCG_PLUGIN_URI . '/assets/js/ajax.js', array('jquery'));
-
 
     $attributes = lcg_get_attributes_from_metadata( trailingslashit( __DIR__ ) );
 

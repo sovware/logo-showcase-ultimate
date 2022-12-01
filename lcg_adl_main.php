@@ -3,7 +3,7 @@
 Plugin Name: Logo Showcase Ultimate
 Plugin URI: https://wpwax.com/product/logo-showcase-ultimate-pro/
 Description: This plugin allows you to easily create Logo Showcase to display logos of your clients, partners, sponsors and affiliates etc in a beautiful carousel, slider and grid.
-Version:     1.3.1
+Version:     1.3.2
 Author:      wpWax
 Author URI:  https://wpwax.com
 License:     GPL2
@@ -65,9 +65,11 @@ if ( ! class_exists( 'Lcg_Main_Class' ) ) {
 
                 // support svg format
                 add_filter( 'upload_mimes', array( self::$instance, 'lcg_support_svg' ) );
-                if( empty( get_option('lcg_dismiss_notice') ) ) {
-                    add_action( 'admin_notices', array( self::$instance, 'admin_notices') );
-                }
+
+                // if( empty( get_option('lcg_dismiss_notice') ) ) {
+                //     add_action( 'admin_notices', array( self::$instance, 'admin_notices') );
+                // }
+
                 self::$instance->lcg_include_required_files();
                 self::$instance->custom_post                = new Lcg_Custom_Post();
                 self::$instance->featured_img_customizer    = new Lcg_Featured_Img_Customizer(array(

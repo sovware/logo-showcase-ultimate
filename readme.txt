@@ -95,6 +95,18 @@ With the release of Logo Showcase Ultimate Gutenberg block, the default WordPres
 👉 Like us on Facebook : [wpWax](https://www.facebook.com/wpwax)
 👉 Official YouTube Channel : [YouTube](https://www.youtube.com/c/wpWax)
 
+**OTHER AMAZING PRODUCTS FROM WPWAX**
+
+👉  [Directorist](https://wordpress.org/plugins/directorist/) – WordPress Business Directory Plugin with Classified Ads Listings
+
+👉  [HelpGent](https://wordpress.org/plugins/helpgent/) – Your Ultimate Help Agent for Video, Voice, and Text Messaging with Screen Record Facility
+
+👉  [Legal Pages](https://wordpress.org/plugins/legal-pages/) – Privacy Policy, Terms & Conditions, GDPR, CCPA, and Cookie Notice Generator
+
+👉  [Product Carousel Slider & Grid Ultimate for WooCommerce](https://wordpress.org/plugins/woo-product-carousel-slider-and-grid-ultimate/) – The most intuitive solution to make your eCommerce site visually appealing. Create & customize WooCommerce product carousel, sliders, or grids easily
+
+👉  [Post Grid, Slider & Carousel Ultimate](https://wordpress.org/plugins/post-grid-carousel-ultimate/) – The easiest and most useful plugin to display blog posts, pages, or custom posts in beautiful post layouts like post grid, post carousel & post slider
+
 
 == Installation ==
 
@@ -123,6 +135,9 @@ After successfully installing and activating the plugin, you will find "Logo Sho
 15. Backend: Logo Categories
 
 == Changelog ==
+= 1.3.3 =
+* Fix: Grid pagination issue
+* Improve: Carousel style
 = 1.3.2 =
 * Fix: Carousel style issue
 = 1.3.1 =

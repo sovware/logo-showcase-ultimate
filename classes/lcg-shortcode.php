@@ -180,7 +180,7 @@ class Lcg_shortcode {
         if ( $adl_logo->have_posts() ) { ?>
 
         <?php if( 'yes' == $cg_title_show ) { ?>
-        <h4 class="wpwax-lsu-title <?php echo $header_class; ?>"><?php echo ! empty( $cg_title ) ? esc_html( $cg_title ) : ''; ?></h4>
+        <h4 class="wpwax-lsu-title <?php echo $header_class; ?>"><?php echo ! empty( $cg_title ) ? esc_html( stripslashes( wp_unslash( $cg_title ) ) ) : ''; ?></h4>
         <?php } ?>
 
             <div class="wpwax-lsu-ultimate <?php echo esc_attr( $image_hover_effect ); ?> wpwax-lsu-grid wpwax-lsu-<?php echo esc_attr( $theme ); ?> <?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-logo-col-lg-' . esc_attr( $g_columns ) . ' wpwax-lsu-logo-col-md-' . esc_attr( $g_columns_tablet ) . ' wpwax-lsu-logo-col-sm-' . esc_attr( $g_columns_mobile ) . '' : 'wpwax-lsu-carousel wpwax-lsu-' . esc_attr( $theme ) . ' wpwax-lsu-carousel-nav-around'; ?> <?php echo esc_attr( $box_shadow_class ); ?>"

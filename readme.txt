@@ -3,7 +3,7 @@ Contributors: wpwax
 Tags: Logo, logo showcase, logo carousel, logo grid, logo slider
 Requires at least: 4.0
 Tested up to: 6.2
-Stable tag: 1.3.4
+Stable tag: 1.3.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -135,6 +135,9 @@ After successfully installing and activating the plugin, you will find "Logo Sho
 15. Backend: Logo Categories
 
 == Changelog ==
+= 1.3.5 =
+* Add: WordPress 6.2.2 compatibility
+* Fix: image undefine issue
 = 1.3.4 =
 * Add: WordPress 6.2 compatibility
 = 1.3.3 =

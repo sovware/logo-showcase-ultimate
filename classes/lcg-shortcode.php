@@ -226,8 +226,8 @@ class Lcg_shortcode {
                         if ( ! empty( $image_crop ) && 'no' != $image_crop ) {
                             $lcg_img = lcg_image_cropping( $thumb, $image_width, $image_height, true, 100 )['url'];
                         } else {
-                            $aazz_thumb = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'large' );
-                            $lcg_img = $aazz_thumb['0'];
+                            $aazz_thumb = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'large' );
+                            $lcg_img = is_array( $aazz_thumb ) ? $aazz_thumb['0'] : array();
                         }
                     ?>
 

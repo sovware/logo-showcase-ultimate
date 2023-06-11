@@ -1,6 +1,6 @@
 ﻿=== Logo Showcase Ultimate - Logo Carousel, Logo Slider & Logo Grid ===
 Contributors: wpwax
-Tags: Logo, logo showcase, logo carousel, logo grid, logo slider
+Tags: Logo, logo showcase, logo carousel, logo grid, logo slider, Branding, WordPress logos, Logo display, Logo plugin, Logo gallery, Logo slider plugin, Logo carousel plugin
 Requires at least: 4.0
 Tested up to: 6.2
 Stable tag: 1.3.5

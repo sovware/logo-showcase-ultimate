@@ -1,21 +1,21 @@
 <?php
-if( ! empty( $_GET['lcg-dismiss-notice'] ) && 'true' == $_GET['lcg-dismiss-notice'] ) {
-    update_option( 'lcg_dismiss_notice', true );
+if( ! empty( $_GET['lcg-dismiss-discount-notice'] ) && 'true' == $_GET['lcg-dismiss-discount-notice'] ) {
+    update_option( 'lcg_dismiss_discount_notice', true );
 }
 
-if( ! isset( $_GET['lcg-dismiss-notice'] ) ) { ?>
+if( ! isset( $_GET['lcg-dismiss-discount-notice'] ) ) { ?>
 
     <div class="lcg-dashboard-notice">
+
+        <a class="lcg-dashboard-notice__dismiss" href="<?php echo esc_url( wp_nonce_url( add_query_arg( 'lcg-dismiss-discount-notice', 'true' ) ) ); ?>"><?php esc_html_e( 'Dismiss', 'logo-showcase-ultimate' ); ?></a>
+
+        <img src="<?php echo esc_url( 'https://s12.gifyu.com/images/SuUGf.gif' ); ?>" alt="">
+        <h5><?php esc_html_e( 'EXCLUSIVE OFFER FOR LOGO SHOWCASE ULTIMATE!', 'logo-showcase-ultimate' ); ?></h5>
         <p>
-        <?php
-            echo wp_kses_post( sprintf(
-                /* translators: %s: documentation URL */
-                __( 'We are giving away 25 premium licenses to our users for FREE. Claim before it’s gone! To claim <a href="%s" target="_blank">Contact us.</a>', 'logo-showcase-ultimate' ),
-                'https://wpwax.com/contact'
-            ) );
-        ?>
+        <?php esc_html_e( "Save 35% this summer with Logo Showcase Ultimate! Elevate your brand presence by displaying stunning logo carousels, grids, and sliders. Showcase your brand identity effortlessly and captivate your audience. Upgrade today and make your brand shine!", "logo-showcase-ultimate" ); ?>
         </p>
-        <a class="lcg-dashboard-notice__dismiss" href="<?php echo esc_url( wp_nonce_url( add_query_arg( 'lcg-dismiss-notice', 'true' ) ) ); ?>"><?php esc_html_e( 'Dismiss', 'logo-showcase-ultimate' ); ?></a>
+        <a class="wpcu-dashboard-notice__dismiss" target="_blank" href="<?php echo esc_url( 'https://wpwax.com/product/logo-showcase-ultimate-pro/#single-plugin-pricing-plan' ); ?>"><?php esc_html_e( 'Get Now!', 'logo-showcase-ultimate' ); ?></a>
+        
     </div>
 
 <?php } ?>

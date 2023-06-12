@@ -66,9 +66,9 @@ if ( ! class_exists( 'Lcg_Main_Class' ) ) {
                 // support svg format
                 add_filter( 'upload_mimes', array( self::$instance, 'lcg_support_svg' ) );
 
-                // if( empty( get_option('lcg_dismiss_notice') ) ) {
-                //     add_action( 'admin_notices', array( self::$instance, 'admin_notices') );
-                // }
+                if( empty( get_option('lcg_dismiss_notice') ) ) {
+                    add_action( 'admin_notices', array( self::$instance, 'admin_notices') );
+                }
 
                 self::$instance->lcg_include_required_files();
                 self::$instance->custom_post                = new Lcg_Custom_Post();

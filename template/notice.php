@@ -6,16 +6,21 @@ if( ! empty( $_GET['lcg-dismiss-notice'] ) && 'true' == $_GET['lcg-dismiss-notic
 if( ! isset( $_GET['lcg-dismiss-notice'] ) ) { ?>
 
     <div class="lcg-dashboard-notice">
-        <p>
-        <?php
-            echo wp_kses_post( sprintf(
-                /* translators: %s: documentation URL */
-                __( 'We are giving away 25 premium licenses to our users for FREE. Claim before it’s gone! To claim <a href="%s" target="_blank">Contact us.</a>', 'logo-showcase-ultimate' ),
-                'https://wpwax.com/contact'
-            ) );
-        ?>
-        </p>
-        <a class="lcg-dashboard-notice__dismiss" href="<?php echo esc_url( wp_nonce_url( add_query_arg( 'lcg-dismiss-notice', 'true' ) ) ); ?>"><?php esc_html_e( 'Dismiss', 'logo-showcase-ultimate' ); ?></a>
+        <a class="lcg-dashboard-notice__dismiss lcg-dashboard-notice__close" href="<?php echo esc_url( wp_nonce_url( add_query_arg( 'lcg-dismiss-notice', 'true' ) ) ); ?>"><?php esc_html_e( 'x', 'logo-showcase-ultimate' ); ?></a>
+
+        <img src="<?php echo esc_url( 'https://s12.gifyu.com/images/SuUGf.gif' ); ?>" alt="">
+        <div class="lcg-dashboard-notice__content">
+            <h5><?php esc_html_e( 'EXCLUSIVE OFFER FOR LOGO SHOWCASE ULTIMATE!', 'logo-showcase-ultimate' ); ?></h5>
+            <p>
+                <?php
+                    $offer = '<strong>' . esc_html__( "Save 35% this summer with Logo Showcase Ultimate! ", "logo-showcase-ultimate" ) . '</strong>';
+                    $text = esc_html__( "Elevate your brand presence by displaying stunning logo carousels, grids, and sliders. Showcase your brand identity effortlessly and captivate your audience. Upgrade today and make your brand shine!", "logo-showcase-ultimate" );
+
+                    echo $offer . $text;
+                ?>
+            </p>
+            <a class="lcg-dashboard-notice__dismiss lcg-dashboard-notice__btn" target="_blank" href="<?php echo esc_url( 'https://wpwax.com/product/logo-showcase-ultimate-pro/#single-plugin-pricing-plan' ); ?>"><?php esc_html_e( 'Get Now!', 'logo-showcase-ultimate' ); ?></a>
+        </div>
     </div>
 
 <?php } ?>

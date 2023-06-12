@@ -6,7 +6,7 @@ if( ! empty( $_GET['lcg-dismiss-discount-notice'] ) && 'true' == $_GET['lcg-dism
 if( ! isset( $_GET['lcg-dismiss-discount-notice'] ) ) { ?>
 
     <div class="lcg-dashboard-notice">
-        <a class="lcg-dashboard-notice__dismiss lcg-dashboard-notice__close" href="<?php echo esc_url( wp_nonce_url( add_query_arg( 'lcg-dismiss-notice', 'true' ) ) ); ?>"><?php esc_html_e( 'x', 'logo-showcase-ultimate' ); ?></a>
+        <a class="lcg-dashboard-notice__dismiss lcg-dashboard-notice__close" href="<?php echo esc_url( wp_nonce_url( add_query_arg( 'lcg-dismiss-discount-notice', 'true' ) ) ); ?>"><?php esc_html_e( 'x', 'logo-showcase-ultimate' ); ?></a>
 
         <img src="<?php echo esc_url( 'https://s12.gifyu.com/images/SuUGf.gif' ); ?>" alt="">
         <div class="lcg-dashboard-notice__content">

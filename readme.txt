@@ -1,9 +1,9 @@
 ﻿=== Logo Showcase Ultimate - Logo Carousel, Logo Slider & Logo Grid ===
 Contributors: wpwax
-Tags: Logo, logo showcase, logo carousel, logo grid, logo slider
+Tags: Logo, logo showcase, logo carousel, logo grid, logo slider, Branding, WordPress logos, Logo display, Logo plugin, Logo gallery, Logo slider plugin, Logo carousel plugin
 Requires at least: 4.0
-Tested up to: 6.1
-Stable tag: 1.3.2
+Tested up to: 6.2
+Stable tag: 1.3.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -95,6 +95,18 @@ With the release of Logo Showcase Ultimate Gutenberg block, the default WordPres
 👉 Like us on Facebook : [wpWax](https://www.facebook.com/wpwax)
 👉 Official YouTube Channel : [YouTube](https://www.youtube.com/c/wpWax)
 
+**OTHER AMAZING PRODUCTS FROM WPWAX**
+
+👉  [Directorist](https://wordpress.org/plugins/directorist/) – WordPress Business Directory Plugin with Classified Ads Listings
+
+👉  [HelpGent](https://wordpress.org/plugins/helpgent/) – Your Ultimate Help Agent for Video, Voice, and Text Messaging with Screen Record Facility
+
+👉  [Legal Pages](https://wordpress.org/plugins/legal-pages/) – Privacy Policy, Terms & Conditions, GDPR, CCPA, and Cookie Notice Generator
+
+👉  [Product Carousel Slider & Grid Ultimate for WooCommerce](https://wordpress.org/plugins/woo-product-carousel-slider-and-grid-ultimate/) – The most intuitive solution to make your eCommerce site visually appealing. Create & customize WooCommerce product carousel, sliders, or grids easily
+
+👉  [Post Grid, Slider & Carousel Ultimate](https://wordpress.org/plugins/post-grid-carousel-ultimate/) – The easiest and most useful plugin to display blog posts, pages, or custom posts in beautiful post layouts like post grid, post carousel & post slider
+
 
 == Installation ==
 
@@ -123,6 +135,14 @@ After successfully installing and activating the plugin, you will find "Logo Sho
 15. Backend: Logo Categories
 
 == Changelog ==
+= 1.3.5 =
+* Add: WordPress 6.2.2 compatibility
+* Fix: image undefine issue
+= 1.3.4 =
+* Add: WordPress 6.2 compatibility
+= 1.3.3 =
+* Fix: Grid pagination issue
+* Improve: Carousel style
 = 1.3.2 =
 * Fix: Carousel style issue
 = 1.3.1 =

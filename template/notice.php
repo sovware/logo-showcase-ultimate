@@ -1,9 +1,9 @@
 <?php
-if( ! empty( $_GET['lcg-dismiss-notice'] ) && 'true' == $_GET['lcg-dismiss-notice'] ) {
-    update_option( 'lcg_dismiss_notice', true );
+if( ! empty( $_GET['lcg-dismiss-discount-notice'] ) && 'true' == $_GET['lcg-dismiss-discount-notice'] ) {
+    update_option( 'lcg_dismiss_discount_notice', true );
 }
 
-if( ! isset( $_GET['lcg-dismiss-notice'] ) ) { ?>
+if( ! isset( $_GET['lcg-dismiss-discount-notice'] ) ) { ?>
 
     <div class="lcg-dashboard-notice">
         <a class="lcg-dashboard-notice__dismiss lcg-dashboard-notice__close" href="<?php echo esc_url( wp_nonce_url( add_query_arg( 'lcg-dismiss-notice', 'true' ) ) ); ?>"><?php esc_html_e( 'x', 'logo-showcase-ultimate' ); ?></a>

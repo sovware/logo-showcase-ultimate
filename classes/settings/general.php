@@ -80,7 +80,7 @@ $layout          = ! empty( $layout ) ? $layout : 'carousel';
                     <input type="text" class="cmb2-text-medium"
                     name="lcg_scode[cg_title]"
                     id="lcsp_slider_title"
-                    value="<?php echo esc_attr( ! empty( $cg_title ) ? $cg_title : '' ); ?>">
+                    value="<?php echo esc_attr(  stripslashes( wp_unslash( ! empty( $cg_title ) ? $cg_title : '' ) ) ); ?>">
                 </div>
             </div>
 

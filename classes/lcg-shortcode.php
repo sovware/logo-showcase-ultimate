@@ -335,7 +335,7 @@ class Lcg_shortcode
 
         if ( $adl_logo->have_posts() ) { ?>
         <?php if( 'yes' == $cg_title_show ) { ?>
-        <h4 class="wpwax-lsu-title <?php echo $header_class; ?>"><?php echo ! empty( $cg_title ) ? $cg_title : ''; ?></span> </h4>
+        <h4 class="wpwax-lsu-title <?php echo $header_class; ?>"><?php echo ! empty( $cg_title ) ? esc_html( stripslashes( wp_unslash( $cg_title ) ) ) : ''; ?></span> </h4>
         <?php } ?>
             <div class="wpwax-lsu-ultimate <?php echo $img_animation_class; ?> wpwax-lsu-grid <?php echo $marquee_class; ?> wpwax-lsu-<?php echo $theme; ?> <?php echo ( 'grid' == $layout ) ? 'wpwax-lsu-logo-col-lg-' . $g_columns . ' wpwax-lsu-logo-col-md-' . $g_columns_tablet . ' wpwax-lsu-logo-col-sm-' . $g_columns_mobile . '' : 'wpwax-lsu-carousel wpwax-lsu-' . $theme . ' wpwax-lsu-carousel-nav-' . $nav_class; ?> "
             <?php if( 'carousel' == $layout ) { ?>

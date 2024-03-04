@@ -149,7 +149,7 @@ class Lcg_Metabox
         wp_nonce_field( 'lcg_action', 'lcg_nonce' );
 
         $lcg_svalue = get_post_meta( $post->ID, 'lcg_scode', true );
-        $s_value = lcg()::adl_enc_unserialize( $lcg_svalue );
+        $s_value = lcg()::json_decoded( $lcg_svalue );
         $value = is_array( $s_value ) ? $s_value : array();
         extract( $value );
 
@@ -180,7 +180,7 @@ class Lcg_Metabox
         // save the meta data if it is our post type lcg_mainpost post type
         if( ! empty( $_POST['post_type'] ) && ( 'lcg_shortcode' == $_POST['post_type'] ) ){
 
-            $lcg_scode = ! empty( $_POST['lcg_scode'] ) ? lcg()::adl_enc_serialize( $this->lcg_sanitize_array( $_POST['lcg_scode'] ) ) : lcg()::adl_enc_serialize( array() );
+            $lcg_scode = ! empty( $_POST['lcg_scode'] ) ? lcg()::json_encoded( $this->lcg_sanitize_array( $_POST['lcg_scode'] ) ) : lcg()::json_encoded( array() );
 
             update_post_meta( $post_id, "lcg_scode", $lcg_scode );
         }

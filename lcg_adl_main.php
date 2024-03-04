@@ -70,6 +70,10 @@ if ( ! class_exists( 'Lcg_Main_Class' ) ) {
                     add_action( 'admin_notices', array( self::$instance, 'admin_notices') );
                 }
 
+                if( empty( get_option('lcg_migrate_serialize_to_json') ) ) {
+                    add_action( 'admin_init', array( self::$instance, 'migrate_serialize_data') );
+                }
+
                 self::$instance->lcg_include_required_files();
                 self::$instance->custom_post                = new Lcg_Custom_Post();
                 self::$instance->featured_img_customizer    = new Lcg_Featured_Img_Customizer(array(
@@ -83,6 +87,45 @@ if ( ! class_exists( 'Lcg_Main_Class' ) ) {
             }
 
             return self::$instance;
+        }
+
+        public function migrate_serialize_data() {
+            
+            if ( ! current_user_can( 'manage_options' ) ) {
+                return;
+            }
+
+            $args = array(
+                'post_type'      => 'lcg_shortcode',
+            );
+
+            $query = new WP_Query( $args );
+            
+            // Check if there are posts in the query
+            if ( $query->have_posts() ) {
+                // Loop through each post
+                while ( $query->have_posts() ) {
+                    $query->the_post();
+                    $wcpscu_data = get_post_meta( get_the_ID(), 'lcg_scode', true );
+                    
+                    if ( ! empty( $wcpscu_data ) && ! $this->is_json_encoded( $wcpscu_data ) ) {
+                        $unserialized_data = unserialize( base64_decode( $wcpscu_data ) );
+                        
+                        $json_decode_data = self::json_encoded( $unserialized_data );
+                        update_post_meta( get_the_ID(), 'lcg_scode', $json_decode_data );
+                    }
+                }
+
+                // Restore the global post data
+                wp_reset_postdata();
+            }
+            update_option( 'lcg_migrate_serialize_to_json', true );
+
+        }
+
+        function is_json_encoded( $data ) {
+            json_decode( $data );
+            return (json_last_error() == JSON_ERROR_NONE);
         }
 
 
@@ -211,28 +254,30 @@ if ( ! class_exists( 'Lcg_Main_Class' ) ) {
             $client->insights()->init();
         }
 
-        //serialize and then encode the string and return the encoded data
-
         /**
+         * Encodes a PHP value into its JSON representation.
          * @param $data
          * @return string
          */
-        public static function adl_enc_serialize( $data ) {
-
-            return base64_encode( serialize( $data ) );
-            
+        public static function json_encoded( $data ) {
+            return json_encode( $data );
         }
 
-        //decode the data and then unserialize the data and return it
-
         /**
-         * @param $data
-         * @return mixed
+         * Decodes a JSON-encoded string into a PHP associative array.
+         * @param string $data The JSON-encoded string to be decoded.
+         * @return array Returns the decoded PHP associative array on success, or an empty array on failure.
          */
-        public static function adl_enc_unserialize( $data ) {
+        public static function json_decoded( $data ) {
+        
+            $decoded_data = json_decode( $data, true );
 
-            return unserialize( base64_decode( $data ) );
-
+            
+            if ( json_last_error() === JSON_ERROR_NONE && is_array( $decoded_data ) ) {
+                return $decoded_data;
+            } else {
+                return array();
+            }
         }
     } //end class
 

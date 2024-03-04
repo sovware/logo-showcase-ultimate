@@ -61,7 +61,7 @@ class Lcg_shortcode {
         $post_id =  ! empty( $atts['id'] ) ? $atts['id'] : '';
         $lcg_value = get_post_meta( $post_id, 'lcg_scode', true );
 
-        $data_encoded   = ( !empty($lcg_value) ) ? lcg()::adl_enc_unserialize( $lcg_value ) : array();
+        $data_encoded   = ( !empty($lcg_value) ) ? lcg()::json_decoded( $lcg_value ) : array();
         extract( $data_encoded );
         $rand_id            = rand();
         $cg_title 			= ! empty( $cg_title ) ? $cg_title : '';
